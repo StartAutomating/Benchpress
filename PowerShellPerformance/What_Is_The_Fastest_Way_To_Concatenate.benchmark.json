@@ -1,0 +1,7 @@
+{
+    "Technique":  {
+        "JoinStrings":  "\r\n            \u0027words\u0027, \u0027in\u0027, \u0027a\u0027, \u0027sentance.\u0027 -join \u0027 \u0027\r\n        ",
+        "StringBuilder":  "\r\n            $sb = [text.stringbuilder]::new()\r\n            $_ = $sb.Append(\u0027words \u0027)\r\n            $_ = $sb.Append(\u0027in \u0027)\r\n            $_ = $sb.Append(\u0027a \u0027)\r\n            $_ = $sb.Append(\u0027sentance.\u0027)\r\n            $sb.ToString()\r\n        ",
+        "AddStrings":  "\r\n            \u0027words \u0027 + \u0027in \u0027 + \u0027a \u0027 + \u0027sentance.\u0027\r\n        "
+    }
+}

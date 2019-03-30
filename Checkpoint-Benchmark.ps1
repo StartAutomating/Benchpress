@@ -122,6 +122,7 @@
                 }
             } }
              
+        Write-Progress "Running Benchmarks" "Complete" -Id $progID -Completed
 
         if (-not $outputPath) { return }
         #endregion Run Benchmarks

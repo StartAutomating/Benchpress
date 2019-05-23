@@ -69,8 +69,13 @@
           <TableColumnHeader>
           </TableColumnHeader>
           <TableColumnHeader>
+            <Label>Time</Label>
           </TableColumnHeader>
           <TableColumnHeader>
+            <Label>RelativeSpeed</Label>
+          </TableColumnHeader>
+          <TableColumnHeader>
+            <Label>Throughput</Label>
           </TableColumnHeader>
         </TableHeaders>
         <TableRowEntries>
@@ -80,10 +85,13 @@
                 <PropertyName>Technique</PropertyName>
               </TableColumnItem>
               <TableColumnItem>
-                <PropertyName>Timing</PropertyName>
+                <ScriptBlock> $_.Time.ToString().Substring(0,15) </ScriptBlock>
               </TableColumnItem>
               <TableColumnItem>
-                <PropertyName>RelativeSpeed</PropertyName>
+                <ScriptBlock> [Math]::Round($_.RelativeSpeed, 2).ToString() + 'x'</ScriptBlock>
+              </TableColumnItem>
+              <TableColumnItem>
+                <ScriptBlock>[Math]::Round($_.Throughput,2).ToString() + "/s"</ScriptBlock>
               </TableColumnItem>
             </TableColumnItems>
           </TableRowEntry>

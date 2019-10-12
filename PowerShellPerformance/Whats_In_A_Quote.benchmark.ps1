@@ -1,4 +1,4 @@
-﻿Import-Module Benchpress -Global
+﻿#requires -Module Benchpress
 bench -Technique @{
     'SingleQuote' = {
         'that which we call a single quotation'

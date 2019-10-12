@@ -1,4 +1,4 @@
-﻿#requires -Module Benchpress
+#requires -Module Benchpress
 
 $valueList = 1..100000
 
@@ -44,5 +44,29 @@ Measure-Benchmark -GroupName "Filtering by Property Values" -RepeatCount 10 -Tec
     }
     ".Where Method" = {
         $objectList.Where({$_.Value -gt 1000})
+    }
+}
+
+$IsOdd = { process { if ($_ % 2) { $_ }  } } 
+filter IsOdd { if ($_ % 2) { $_ }  } 
+Measure-Benchmark -GroupName 'Filtering a Pipeline' -Technique @{
+    "InlineScriptBlock" = {
+        1..10 | & { process { if ($_ % 2) { $_ }  } }
+    }
+    ScriptBlockVariable = { 
+        1..10 | 
+            & $IsOdd 
+    }
+    'DotInline' = {
+        1..10 | . { process { if ($_ % 2) { $_ }  } }
+    }
+    'DotScriptBlockVariable' = {
+        1..10 | . $IsOdd
+    }
+    Filter = {
+        1..10 | isOdd        
+    }
+    WhereObject = {
+        1..10 | ? $IsOdd
     }
 }

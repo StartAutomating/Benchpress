@@ -1,7 +1,7 @@
 ﻿#require -Module Benchpress
 $myScript = $MyInvocation.MyCommand.ScriptBlock.File
 
-bench @{
+$techniques = @{
     DotNet = { 
         [BitConverter]::ToString([Security.Cryptography.SHA1]::Create().ComputeHash([IO.File]::ReadAllBytes("$myScript"))).Replace('-','').ToLower()
     }
@@ -9,6 +9,12 @@ bench @{
         @(Get-FileHash "$myScript" -Algorithm SHA1).Hash
     }
     CertUtil = {
-            @(certutil.exe -hashfile "$myScript")[1]
+        @(certutil.exe -hashfile "$myScript")[1]
     }
-} -RepeatCount 100
+}
+
+if ($PSVersionTable.Platform -and $PSVersionTable.Platform -ne 'Windows') {
+    $techniques.Remove('CertUtil')
+}
+
+bench $techniques -RepeatCount 100

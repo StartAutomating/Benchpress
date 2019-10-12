@@ -1,5 +1,4 @@
-﻿Import-Module Benchpress -Global
-
+﻿#requires -Module Benchpress
 $splat = @{MemberType='NoteProperty';Name='Test';Value=1;Passthru=$true;Force=$true;InputObject=[PSObject]::new()}
 
 bench -Technique ([Ordered]@{
@@ -11,7 +10,7 @@ bench -Technique ([Ordered]@{
     }
     Piped = {
         [PSObject]::new() | 
-            Add-Member -MemberType NoteProperty -Name Test -Value 1
+            Add-Member -MemberType NoteProperty -Name Test -Value 1 -PassThru
     }
     Positional = {
         Add-Member -InputObject ([PSObject]::new()) -PassThru NoteProperty Test 1 

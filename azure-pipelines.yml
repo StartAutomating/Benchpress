@@ -11,7 +11,7 @@ jobs:
         if ($null -eq (Get-Module -ListAvailable pester)) {
           Install-Module -Name Pester -Repository PSGallery -Force -Scope CurrentUser
         }
-        $orgName, $moduleName = $env:BUILD_REPOSITORY_ID -split '/'
+        $orgName, $moduleName = $env:BUILD_REPOSITORY_ID -split "/"
         Import-Module ".\$moduleName.psd1" -Force -PassThru | Out-Host
         $result = Invoke-Pester -PassThru -Verbose
         if ($result.FailedCount -gt 0) {
@@ -44,7 +44,7 @@ jobs:
         if ($null -eq (Get-Module -ListAvailable pester)) {
             Install-Module -Name Pester -Repository PSGallery -Force -Scope CurrentUser
         }
-        $orgName, $moduleName = $env:BUILD_REPOSITORY_ID -split '/'
+        $orgName, $moduleName = $env:BUILD_REPOSITORY_ID -split "/"
         Import-Module ".\$moduleName.psd1" -Force -PassThru
         $result = Invoke-Pester -PassThru -Verbose
         if ($result.FailedCount -gt 0) {
@@ -74,7 +74,7 @@ jobs:
         if ($null -eq (Get-Module -ListAvailable pester)) {
             Install-Module -Name Pester -Repository PSGallery -Force -Scope CurrentUser
         }
-        $orgName, $moduleName = $env:BUILD_REPOSITORY_ID -split '/'
+        $orgName, $moduleName = $env:BUILD_REPOSITORY_ID -split "/"
         Import-Module ".\$moduleName.psd1" -Force -PassThru 
         $result = Invoke-Pester -PassThru -Verbose
         if ($result.FailedCount -gt 0) {

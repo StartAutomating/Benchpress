@@ -1,4 +1,4 @@
-Import-Module Benchpress -Global -ErrorAction SilentlyContinue
+#requires -Module Benchpress
 
 Measure-Benchmark -Technique @{
     ParameterBinding = {

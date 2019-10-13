@@ -21,8 +21,8 @@ jobs:
     - task: PublishTestResults@2
       inputs:
         testResultsFormat: 'NUnit'
-        testResultsFiles: '**/TEST-*.xml'
-        searchFolder: '$(Build.SourcesDirectory)'
+        testResultsFiles: '$(Build.SourcesDirectory)/TestResuts.xml'
+        mergeTestResults: true
   - job: Build_PSCore_Ubuntu1604
 
     pool:
@@ -55,8 +55,8 @@ jobs:
     - task: PublishTestResults@2
       inputs:
         testResultsFormat: 'NUnit'
-        testResultsFiles: '**/TEST-*.xml'
-        searchFolder: '$(Build.SourcesDirectory)'
+        testResultsFiles: '$(Build.SourcesDirectory)/TestResuts.xml'
+        mergeTestResults: true
   - job: Build_PSCore_MacOS1013
     pool:
       vmImage: xcode9-macos10.13
@@ -87,8 +87,8 @@ jobs:
     - task: PublishTestResults@2
       inputs:
         testResultsFormat: 'NUnit'
-        testResultsFiles: '**/TEST-*.xml'
-        searchFolder: '$(Build.SourcesDirectory)'
+        testResultsFiles: '$(Build.SourcesDirectory)/TestResuts.xml'
+        mergeTestResults: true
 trigger:
   paths:
     exclude:

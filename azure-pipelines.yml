@@ -18,10 +18,10 @@ jobs:
           throw "$($result.FailedCount) tests failed."
         }
       displayName: 'Run Tests on Windows'
-    - PublishTestResults:
+    - publishTestResults:
       inputs:
         testResultsFormat: 'NUnit'
-        testResultsFiles: "$(Build.SourcesDirectory)\TestResults.xml"
+        testResultsFiles: '$(Build.SourcesDirectory)\TestResults.xml'
   - job: Build_PSCore_Ubuntu1604
 
     pool:
@@ -51,10 +51,10 @@ jobs:
             throw "$($result.FailedCount) tests failed."
         }'
       displayName: 'Run Tests on Linux'
-    - PublishTestResults:
+    - publishTestResults:
       inputs:
         testResultsFormat: 'NUnit'
-        testResultsFiles: "$(Build.SourcesDirectory)\TestResults.xml"
+        testResultsFiles: '$(Build.SourcesDirectory)\TestResults.xml'
   - job: Build_PSCore_MacOS1013
     pool:
       vmImage: xcode9-macos10.13
@@ -82,10 +82,10 @@ jobs:
             throw "$($result.FailedCount) tests failed."
         }'
       displayName: 'Run Tests on macOS'
-    - PublishTestResults:
+    - publishTestResults:
       inputs:
         testResultsFormat: 'NUnit'
-        testResultsFiles: "$(Build.SourcesDirectory)\TestResults.xml"
+        testResultsFiles: '$(Build.SourcesDirectory)\TestResults.xml'
 trigger:
   paths:
     exclude:

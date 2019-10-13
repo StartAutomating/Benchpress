@@ -18,7 +18,7 @@ jobs:
           throw "$($result.FailedCount) tests failed."
         }
       displayName: 'Run Tests on Windows'
-    - publishTestResults:
+    - PublishTestResults:
       inputs:
         testResultsFormat: 'NUnit'
         testResultsFiles: '$(Build.SourcesDirectory)\TestResults.xml'
@@ -51,7 +51,7 @@ jobs:
             throw "$($result.FailedCount) tests failed."
         }'
       displayName: 'Run Tests on Linux'
-    - publishTestResults:
+    - PublishTestResults:
       inputs:
         testResultsFormat: 'NUnit'
         testResultsFiles: '$(Build.SourcesDirectory)\TestResults.xml'
@@ -82,7 +82,7 @@ jobs:
             throw "$($result.FailedCount) tests failed."
         }'
       displayName: 'Run Tests on macOS'
-    - publishTestResults:
+    - PublishTestResults:
       inputs:
         testResultsFormat: 'NUnit'
         testResultsFiles: '$(Build.SourcesDirectory)\TestResults.xml'

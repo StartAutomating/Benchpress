@@ -7,7 +7,7 @@
             Category='Performance'
         }
     }
-    ModuleVersion='1.1.1'
+    ModuleVersion='1.2'
     CompanyName='Start-Automating'
     Description='Easy Benchmarking with PowerShell'
     PowerShellVersion='3.0'

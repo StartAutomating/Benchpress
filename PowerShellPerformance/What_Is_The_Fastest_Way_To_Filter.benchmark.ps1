@@ -1,13 +1,15 @@
 #requires -Module Benchpress
 
-$valueList = 1..100000
+$valueList = 1..10000
+$linqWhere = [Func[object,bool]]{param($_) $_ -gt 1000}
+$whereGt1000 = { $_ -gt 1000 } 
 
 Measure-Benchmark -GroupName "Filtering Values" -RepeatCount 10 -Technique @{
     "ForEach Loop" = {
         foreach ($v in $valueList) { if ($v -gt 1000) { $v } }
     }
     "Where-Object Script (Positional)" = {
-        $valueList | Where-Object { $_ -gt 1000 }
+        $valueList | Where-Object $whereGt1000
     }
     "Pipe to ScriptBlock" = {
         $valueList | & { process { if ($_ -gt 1000) { $_ } } }
@@ -25,7 +27,7 @@ Measure-Benchmark -GroupName "Filtering Values" -RepeatCount 10 -Technique @{
         $valueList.Where({$_ -gt 1000})
     }
     "Linq.Enumerable::Where" = {
-        [System.Linq.Enumerable]::Where($valueList, [Func[object,bool]]{param($_) $_ -gt 1000})
+        [System.Linq.Enumerable]::Where($valueList, $linqWhere)
     }
 }
 

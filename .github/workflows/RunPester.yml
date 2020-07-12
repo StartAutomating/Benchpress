@@ -1,13 +1,11 @@
 on: 
-  workflow_dispatch: 
-    inputs: 
-      
+  workflow_dispatch:       
 jobs: 
   TestPowerShellOnLinux: 
     runs-on: ubuntu-latest
     steps: 
       - name: InstallPester
-        runs: |
+        run: |
           $Parameters = @{}
           $Parameters.PesterMaxVersion = ${env:PesterMaxVersion}
           foreach ($k in @($parameters.Keys)) {
@@ -24,7 +22,7 @@ jobs:
           Import-Module Pester -Force -PassThru -MaximumVersion $PesterMaxVersion} @Parameters
         shell: pwsh
       - name: RunPester
-        runs: |
+        run: |
           $Parameters = @{}
           $Parameters.ModulePath = ${env:ModulePath}
           $Parameters.PesterMaxVersion = ${env:PesterMaxVersion}

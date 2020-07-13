@@ -9,6 +9,7 @@ on:
         description: The Pester max version.  By default, this is pinned to 4.99.99.
       ModulePath: 
         required: false
+        default: ''
         description: The module path.  If not provided, will default to the second half of the repository ID.
 jobs: 
   TestPowerShellOnLinux: 

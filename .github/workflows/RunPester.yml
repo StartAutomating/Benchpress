@@ -1,6 +1,15 @@
 
 name: RunPester
-on: workflow_dispatch
+on: 
+  workflow_dispatch: 
+    inputs: 
+      PesterMaxVersion: 
+        required: false
+        default: '4.99.99'
+        description: The Pester max version.  By default, this is pinned to 4.99.99.
+      ModulePath: 
+        required: false
+        description: The module path.  If not provided, will default to the second half of the repository ID.
 jobs: 
   TestPowerShellOnLinux: 
     runs-on: ubuntu-latest
@@ -14,7 +23,14 @@ jobs:
                   $parameters.Remove($k)
               }
           }
-          & {param(
+          & {<#
+          .Synopsis
+              Installs Pester
+          .Description
+              Installs Pester
+          #>
+          param(
+          # The maximum pester version.  Defaults to 4.99.99.
           [string]
           $PesterMaxVersion = '4.99.99'
           )
@@ -22,6 +38,8 @@ jobs:
           Install-Module -Name Pester -Repository PSGallery -Force -Scope CurrentUser -MaximumVersion $PesterMaxVersion -SkipPublisherCheck -AllowClobber
           Import-Module Pester -Force -PassThru -MaximumVersion $PesterMaxVersion} @Parameters
         shell: pwsh
+        env: 
+          PesterMaxVersion: ${{github.events.inputs.PesterMaxVersion}}
       - name: Check out repository
         uses: actions/checkout@v2
       - name: RunPester
@@ -34,9 +52,17 @@ jobs:
                   $parameters.Remove($k)
               }
           }
-          & {param(
+          & {<#
+          .Synopsis
+              Runs Pester
+          .Description
+              Runs Pester tests after importing a PowerShell module
+          #>
+          param(
+          # The module path.  If not provided, will default to the second half of the repository ID.
           [string]
           $ModulePath,
+          # The Pester max version.  By default, this is pinned to 4.99.99.
           [string]
           $PesterMaxVersion = '4.99.99'
           )
@@ -60,4 +86,7 @@ jobs:
           }
           } @Parameters
         shell: pwsh
+        env: 
+          PesterMaxVersion: ${{github.events.inputs.PesterMaxVersion}}
+          ModulePath: ${{github.events.inputs.ModulePath}}
 

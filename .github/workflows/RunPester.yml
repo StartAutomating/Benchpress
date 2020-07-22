@@ -45,6 +45,11 @@ jobs:
           
           if ($ModulePath -like '*PSDevOps*') { 
               Remove-Module PSDeVOps # If running ScriptCop on PSDeVOps, we need to remove the global module first.
+          }
+          
+          if (-not $ModulePath) {
+              $orgName, $moduleName = $env:GITHUB_REPOSITORY -split "/"
+              $ModulePath = ".\$moduleName.psd1"
           } 
           $importedModule =Import-Module $ModulePath -Force -PassThru 
           

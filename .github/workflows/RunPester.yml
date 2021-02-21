@@ -1,5 +1,8 @@
 ﻿
 name: StaticAnalysisAndTests
+on: 
+- workflow_dispatch
+- push
 jobs: 
   PowerShellStaticAnalysis: 
     runs-on: ubuntu-latest

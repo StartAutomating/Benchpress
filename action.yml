@@ -1,0 +1,96 @@
+﻿
+name: Benchpress
+description: Easy Benchmarking with PowerShell
+inputs: 
+  BenchmarkPath: 
+    required: false
+    description: |
+      The path to the benchmark file.  
+      If not provided, any benchmark files in your repository will be used
+  ModulePath: 
+    required: false
+    description: The path to the module.
+  
+runs: 
+  using: composite
+  steps: 
+    - name: Check out Benchpress
+      uses: actions/checkout@v2
+      repository: StartAutomating/Benchpress
+      path: BenchpressRepository
+    - name: Check out Repository to Benchmark
+      uses: actions/checkout@v2
+      path: RepositoryToBenchmark
+    - name: Benchpress
+      shell: pwsh
+      env: 
+        BenchmarkPath: ${{inputs.BenchmarkPath}}
+        ModulePath: ${{inputs.ModulePath}}
+      run: |
+        $Parameters = @{}
+        $Parameters.BenchmarkPath = ${env:BenchmarkPath}
+        $Parameters.ModulePath = ${env:ModulePath}
+        foreach ($k in @($parameters.Keys)) {
+            if ([String]::IsNullOrEmpty($parameters[$k])) {
+                $parameters.Remove($k)
+            }
+        }
+        Write-Host "::debug:: Benchpress $(@(foreach ($p in $Parameters.GetEnumerator()) {'-' + $p.Key + ' ' + $p.Value}) -join ' ')"
+        & {<#
+        .Synopsis
+            Benchpress Action
+        .Description
+            Runs Benchmarks on your code.
+        #>
+        param(
+        # The path to the benchmark file.  
+        # If not provided, any benchmark files in your repository will be used
+        [string]
+        $BenchmarkPath,
+        # The path to the module.
+        [string]
+        $ModulePath
+        )
+        
+        if (-not $BenchmarkPath) {
+            $BenchmarkPath = Join-Path $env:GitHub_WorkSpace "RepositoryToBenchmark"
+        }
+        
+        if ($env:GitHub_WorkSpace) {
+            $benchPressPath = Join-Path $env:GitHub_WorkSpace "BenchpressRepository"
+            $benchPressPath = Join-Path $benchPressPath "Benchpress.psd1"
+            if (Test-path $benchPressPath) {
+                Import-Module $benchPressPath -Force -PassThru | Out-String
+            } else {
+                throw "Benchmark not found"
+            }
+        }
+        
+        if (-not $ModulePath) {
+            Get-ChildItem -ErrorAction SilentlyContinue -Path $BenchmarkPath -Filter *.psd1
+        } elseif (-not (Test-Path $ModulePath) -and $env:GitHub_WorkSpace) {
+            $ModulePath = Join-Path (Join-Path $env:GitHub_WorkSpace "RepositoryToBenchmark") $ModulePath
+        }
+        
+        if (Test-Path $ModulePath) {
+            Import-Module $ModulePath -Force -PassThru | Out-String
+        }
+        
+        $benchpressModule = Get-Module Benchpress
+        if (-not $benchpressModule) { throw "Benchpress not loaded" }
+        
+        Get-ChildItem -Path $BenchmarkPath -ErrorAction SilentlyContinue |
+            Where-Object Name -Like '*.benchmark.*' |
+            Checkpoint-Benchmark -OutputPath {
+                "$(Join-Path $(if ($env:GitHub_WorkSpace) { $env:GitHub_WorkSpace} else { $pwd }) +
+                    ($_.Name -replace '\.benchmark\.', '\.benchmarkOutput\.'))".Replace($_.Extension,'.json')
+            }
+        
+        } @Parameters
+    - name: PublishBenchmarks
+      uses: actions/upload-artifact@v2
+      with: 
+        name: Benchmarks
+        path: '**.benchmarkOutput.json'
+      if: ${{always()}}
+

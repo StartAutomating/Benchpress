@@ -88,11 +88,15 @@ runs:
         
         $endTime = [DateTime]::Now
         "::set-output name=TotalDuration::$(($endTime - $startTime).TotalSeconds)" | Out-Host
-        "::set-output name=OutputClixml::$([Management.Automation.PSSerializer]::Serialize($BenchMarkOutput, 5))"
-        "::set-output name=OutputJSON::$(ConvertTo-Json $BenchMarkOutput -Depth 5 -Compress)"
+        "::set-output name=OutputJSON::$(ConvertTo-Json $BenchMarkOutput -Depth 10 -Compress)"
         
-        $benchMarkOutput | Export-Clixml "BenchmarkOutput.clixml"
-        $benchMarkOutput | ConvertTo-Json -Depth 5 | Export-Clixml "benchmarkOutput.json" 
+        $benchMarkOutput | Export-Clixml "$(
+            "$env:GITHUB_WORKSPACE", "benchmarkOutput.clixml" -ne '' -join ([io.path]::DirectorySeparatorChar)    
+        )"
+        
+        $benchMarkOutput | ConvertTo-Json -Depth 10 | Set-Content -Encoding UTF8 -Path $(
+            "$env:GITHUB_WORKSPACE", "benchmarkOutput.json" -ne '' -join ([io.path]::DirectorySeparatorChar)
+        ) 
         
         
         } @Parameters

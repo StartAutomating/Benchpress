@@ -49,13 +49,16 @@ runs:
             $BenchmarkPath = Get-ChildItem -Recurse | Where-Object Name -Like '*.benchmark.*' | Split-Path | Select-Object -Unique
         }
         
-        if ($env:Action_Path) {
-            $benchPressPath = Join-Path $env:Action_Path $benchPressPath
+        if ($env:github_action_eath) {
+            $benchPressPath = Join-Path $env:github_action_eath $benchPressPath
             if (Test-path $benchPressPath) {
                 Import-Module $benchPressPath -Force -PassThru | Out-String
             } else {
                 throw "Benchmark not found"
             }
+        } else {
+            dir env: | Out-String
+            throw "Action Path not found"
         }
         
         if (-not $ModulePath) {

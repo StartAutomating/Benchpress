@@ -88,11 +88,6 @@ runs:
         
         $endTime = [DateTime]::Now
         "::set-output name=TotalDuration::$(($endTime - $startTime).TotalSeconds)" | Out-Host
-        "::set-output name=OutputJSON::$(ConvertTo-Json $BenchMarkOutput -Depth 10 -Compress)"
-        
-        $benchMarkOutput | Export-Clixml "$(
-            "$env:GITHUB_WORKSPACE", "benchmarkOutput.clixml" -ne '' -join ([io.path]::DirectorySeparatorChar)    
-        )"
         
         $benchMarkOutput | ConvertTo-Json -Depth 10 | Set-Content -Encoding UTF8 -Path $(
             "$env:GITHUB_WORKSPACE", "benchmarkOutput.json" -ne '' -join ([io.path]::DirectorySeparatorChar)

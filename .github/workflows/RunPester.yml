@@ -176,5 +176,5 @@ jobs:
     runs-on: ubuntu-latest
     steps: 
       - name: Check out Benchpress
-        uses: actions/Benchpress@1.2
+        uses: actions/StartAutomating/Benchpress@1.2
 

@@ -53,7 +53,7 @@ runs:
                 Select-Object -Unique
         }
         
-        "::debug::Benchmark Path:$($BenchmarkPath | Out-String)"
+        "::warning::Benchmark Path - $($BenchmarkPath | Out-String)"
         
         if ($env:GITHUB_ACTION_PATH) {
             $benchPressPath = Join-Path $env:GITHUB_ACTION_PATH 'Benchpress.psd1'
@@ -81,7 +81,8 @@ runs:
         if (-not $benchpressModule) { throw "Benchpress not loaded" }
         
         $startTime = [DateTime]::Now
-        $benchMarkOutput = $BenchmarkPath | Get-ChildItem -LiteralPath {$_ } -ErrorAction SilentlyContinue |
+        $benchMarkOutput = $BenchmarkPath | 
+            Get-ChildItem -LiteralPath {$_ } -ErrorAction SilentlyContinue |
             Where-Object Name -Like '*.benchmark.*' |
             Checkpoint-Benchmark
         

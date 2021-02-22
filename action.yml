@@ -53,6 +53,8 @@ runs:
                 Select-Object -Unique
         }
         
+        "::debug::Benchmark Path:$($BenchmarkPath | Out-String)"
+        
         if ($env:GITHUB_ACTION_PATH) {
             $benchPressPath = Join-Path $env:GITHUB_ACTION_PATH 'Benchpress.psd1'
             if (Test-path $benchPressPath) {

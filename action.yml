@@ -46,7 +46,7 @@ runs:
         )
         
         if (-not $BenchmarkPath) {
-            $BenchmarkPath = Join-Path $env:GitHub_WorkSpace "RepositoryToBenchmark"
+            $BenchmarkPath = Get-ChildItem -Recurse | Where-Object Name -Like '*.benchmark.*' | Split-Path | Select-Object -Unique
         }
         
         if ($env:Action_Path) {

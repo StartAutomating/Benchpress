@@ -1,5 +1,5 @@
 ﻿
-name: Benchpress
+name: Benchmark with Benchpress
 description: Easy Benchmarking with PowerShell
 inputs: 
   BenchmarkPath: 
@@ -14,13 +14,6 @@ inputs:
 runs: 
   using: composite
   steps: 
-    - name: Check out Benchpress
-      uses: actions/checkout@v2
-      repository: StartAutomating/Benchpress
-      path: BenchpressRepository
-    - name: Check out Repository to Benchmark
-      uses: actions/checkout@v2
-      path: RepositoryToBenchmark
     - name: Benchpress
       shell: pwsh
       env: 
@@ -56,9 +49,8 @@ runs:
             $BenchmarkPath = Join-Path $env:GitHub_WorkSpace "RepositoryToBenchmark"
         }
         
-        if ($env:GitHub_WorkSpace) {
-            $benchPressPath = Join-Path $env:GitHub_WorkSpace "BenchpressRepository"
-            $benchPressPath = Join-Path $benchPressPath "Benchpress.psd1"
+        if ($env:Action_Path) {
+            $benchPressPath = Join-Path $env:Action_Path $benchPressPath
             if (Test-path $benchPressPath) {
                 Import-Module $benchPressPath -Force -PassThru | Out-String
             } else {
@@ -72,25 +64,28 @@ runs:
             $ModulePath = Join-Path (Join-Path $env:GitHub_WorkSpace "RepositoryToBenchmark") $ModulePath
         }
         
-        if (Test-Path $ModulePath) {
+        if ($modulePath -and (Test-Path $ModulePath -ErrorAction SilentlyContinue )) {
             Import-Module $ModulePath -Force -PassThru | Out-String
         }
         
         $benchpressModule = Get-Module Benchpress
         if (-not $benchpressModule) { throw "Benchpress not loaded" }
         
-        Get-ChildItem -Path $BenchmarkPath -ErrorAction SilentlyContinue |
+        $startTime = [DateTime]::Now
+        $benchMarkOutput = Get-ChildItem -Path $BenchmarkPath -ErrorAction SilentlyContinue |
             Where-Object Name -Like '*.benchmark.*' |
-            Checkpoint-Benchmark -OutputPath {
-                "$(Join-Path $(if ($env:GitHub_WorkSpace) { $env:GitHub_WorkSpace} else { $pwd }) +
-                    ($_.Name -replace '\.benchmark\.', '\.benchmarkOutput\.'))".Replace($_.Extension,'.json')
-            }
+            Checkpoint-Benchmark
+        
+        
+        
+        $endTime = [DateTime]::Now
+        "::set-output name=TotalDuration::$(($endTime - $startTime).TotalSeconds)" | Out-Host
+        "::set-output name=OutputClixml::$([Management.Automation.PSSerializer]::Serialize($BenchMarkOutput, 5))"
+        "::set-output name=OutputJSON::$(ConvertTo-Json $BenchMarkOutput -Depth 5 -Compress)"
+        
+        $benchMarkOutput | Export-Clixml "BenchmarkOutput.clixml"
+        $benchMarkOutput | ConvertTo-Json -Depth 5 | Export-Clixml "benchmarkOutput.json" 
+        
         
         } @Parameters
-    - name: PublishBenchmarks
-      uses: actions/upload-artifact@v2
-      with: 
-        name: Benchmarks
-        path: '**.benchmarkOutput.json'
-      if: ${{always()}}
 

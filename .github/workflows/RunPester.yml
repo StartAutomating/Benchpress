@@ -177,4 +177,10 @@ jobs:
     steps: 
       - name: Check out Benchpress
         uses: StartAutomating/Benchpress@TestingAction
+      - name: PublishBenchmarks
+        uses: actions/upload-artifact@v2
+        with: 
+          name: Benchmarks
+          path: '**.benchmarkOutput.json'
+        if: ${{always()}}
 

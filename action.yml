@@ -46,11 +46,15 @@ runs:
         )
         
         if (-not $BenchmarkPath) {
-            $BenchmarkPath = Get-ChildItem -Recurse | Where-Object Name -Like '*.benchmark.*' | Split-Path | Select-Object -Unique
+            $BenchmarkPath = 
+                Get-ChildItem "$env:GITHUB_WORKSPACE" -Recurse | 
+                Where-Object Name -Like '*.benchmark.*' | 
+                Split-Path | 
+                Select-Object -Unique
         }
         
-        if ($env:github_action_eath) {
-            $benchPressPath = Join-Path $env:github_action_eath $benchPressPath
+        if ($env:GITHUB_ACTION_PATH) {
+            $benchPressPath = Join-Path $env:GITHUB_ACTION_PATH 'Benchpress.psd1'
             if (Test-path $benchPressPath) {
                 Import-Module $benchPressPath -Force -PassThru | Out-String
             } else {
@@ -63,8 +67,8 @@ runs:
         
         if (-not $ModulePath) {
             Get-ChildItem -ErrorAction SilentlyContinue -Path $BenchmarkPath -Filter *.psd1
-        } elseif (-not (Test-Path $ModulePath) -and $env:GitHub_WorkSpace) {
-            $ModulePath = Join-Path (Join-Path $env:GitHub_WorkSpace "RepositoryToBenchmark") $ModulePath
+        } elseif (-not (Test-Path $ModulePath) -and $env:GITHUB_WORKSPACE) {
+            $ModulePath = Join-Path (Join-Path $env:GITHUB_WORKSPACE "RepositoryToBenchmark") $ModulePath
         }
         
         if ($modulePath -and (Test-Path $ModulePath -ErrorAction SilentlyContinue )) {
@@ -75,11 +79,9 @@ runs:
         if (-not $benchpressModule) { throw "Benchpress not loaded" }
         
         $startTime = [DateTime]::Now
-        $benchMarkOutput = Get-ChildItem -Path $BenchmarkPath -ErrorAction SilentlyContinue |
+        $benchMarkOutput = $BenchmarkPath | Get-ChildItem -LiteralPath {$_ } -ErrorAction SilentlyContinue |
             Where-Object Name -Like '*.benchmark.*' |
             Checkpoint-Benchmark
-        
-        
         
         $endTime = [DateTime]::Now
         "::set-output name=TotalDuration::$(($endTime - $startTime).TotalSeconds)" | Out-Host

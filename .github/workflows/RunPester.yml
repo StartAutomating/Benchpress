@@ -175,6 +175,8 @@ jobs:
   RunBenchmarks: 
     runs-on: ubuntu-latest
     steps: 
+      - name: Check out repository
+        uses: actions/checkout@v2
       - name: Check out Benchpress
         uses: StartAutomating/Benchpress@TestingAction
       - name: PublishBenchmarks

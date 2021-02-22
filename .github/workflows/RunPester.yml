@@ -172,4 +172,9 @@ jobs:
           name: PesterResults
           path: '**.TestResults.xml'
         if: ${{always()}}
+  RunBenchmarks: 
+    runs-on: ubuntu-latest
+    steps: 
+      - name: Check out Benchpress
+        uses: actions/Benchpress@1.2
 

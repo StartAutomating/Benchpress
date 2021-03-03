@@ -177,12 +177,12 @@ jobs:
     steps: 
       - name: Check out repository
         uses: actions/checkout@v2
-      - name: Check out Benchpress
+      - name: Use Benchpress Action
         uses: StartAutomating/Benchpress@TestingAction
       - name: PublishBenchmarks
         uses: actions/upload-artifact@v2
         with: 
           name: Benchmarks
-          path: '**.benchmarkOutput.json'
+          path: '**.benchmarkOutput.*'
         if: ${{always()}}
 

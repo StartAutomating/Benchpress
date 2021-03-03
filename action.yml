@@ -78,7 +78,7 @@ runs:
         
         $benchpressModule = Get-Module Benchpress
         if (-not $benchpressModule) { throw "Benchpress not loaded" }
-        
+        $ProgressPreference = 'silentlycontinue'
         $startTime = [DateTime]::Now
         $benchMarkOutput = $BenchmarkPath | 
             Get-ChildItem -LiteralPath {$_ } -ErrorAction SilentlyContinue |
@@ -87,11 +87,10 @@ runs:
         
         $endTime = [DateTime]::Now
         "::set-output name=TotalDuration::$(($endTime - $startTime).TotalSeconds)" | Out-Host
-        return
-        ConvertTo-Json -Depth 100 -InputObject $benchMarkOutput -Compress |
-            Set-Content -Encoding UTF8 -Path $(
-                "$env:GITHUB_WORKSPACE", "benchmarkOutput.json" -ne '' -join ([io.path]::DirectorySeparatorChar)
-            )
+        
+        $benchmarkJson = ConvertTo-Json -Depth 100 -InputObject $benchMarkOutput -Compress
+        $outFilePath = Resolve-Path ("$env:GITHUB_WORKSPACE", "benchmarkOutput.json" -ne '' -join ([io.path]::DirectorySeparatorChar))
+        [io.file]::WriteAllText($outFilePath, $benchmarkJson)
         $lastExitCode = 0 
         
         

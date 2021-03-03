@@ -10,15 +10,14 @@ inputs:
   ModulePath: 
     required: false
     description: The path to the module.
-  
 runs: 
   using: composite
   steps: 
     - name: Benchpress
       shell: pwsh
       env: 
-        BenchmarkPath: ${{inputs.BenchmarkPath}}
-        ModulePath: ${{inputs.ModulePath}}
+        BenchmarkPath: ${{github.events.inputs.BenchmarkPath}}
+        ModulePath: ${{github.events.inputs.ModulePath}}
       run: |
         $Parameters = @{}
         $Parameters.BenchmarkPath = ${env:BenchmarkPath}
@@ -89,12 +88,11 @@ runs:
         $endTime = [DateTime]::Now
         "::set-output name=TotalDuration::$(($endTime - $startTime).TotalSeconds)" | Out-Host
         
-        Export-Clixml -InputObject $benchMarkOutput -Path $(
-            "$env:GITHUB_WORKSPACE", "benchmarkOutput.clixml" -ne '' -join ([io.path]::DirectorySeparatorChar)
-        )
-        ConvertTo-Json -Depth 100 -InputObject $benchMarkOutput -Compress | Set-Content -Encoding UTF8 -Path $(
-            "$env:GITHUB_WORKSPACE", "benchmarkOutput.json" -ne '' -join ([io.path]::DirectorySeparatorChar)
-        )
+        ConvertTo-Json -Depth 100 -InputObject $benchMarkOutput -Compress |
+            Set-Content -Encoding UTF8 -Path $(
+                "$env:GITHUB_WORKSPACE", "benchmarkOutput.json" -ne '' -join ([io.path]::DirectorySeparatorChar)
+            )
+        $lastExitCode = 0 
         
         
         } @Parameters

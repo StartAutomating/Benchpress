@@ -87,7 +87,7 @@ runs:
         
         $endTime = [DateTime]::Now
         "::set-output name=TotalDuration::$(($endTime - $startTime).TotalSeconds)" | Out-Host
-        
+        return
         ConvertTo-Json -Depth 100 -InputObject $benchMarkOutput -Compress |
             Set-Content -Encoding UTF8 -Path $(
                 "$env:GITHUB_WORKSPACE", "benchmarkOutput.json" -ne '' -join ([io.path]::DirectorySeparatorChar)

@@ -166,7 +166,8 @@
             } elseif ($matches.extension -eq 'clixml') {
                 $benchmarkResults|
                     Export-Clixml -Path $OutputPath
-            }             
+            }
+            Get-Item -Path $OutputPath -ErrorAction SilentlyContinue
         } else {
             if (-not (Test-Path $OutputPath)) {
                 $newDir = New-Item -ItemType Directory -Path $OutputPath

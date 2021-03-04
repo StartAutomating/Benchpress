@@ -17,7 +17,7 @@
     [Parameter(Mandatory=$true,ParameterSetName='Path',ValueFromPipelineByPropertyName=$true,Position=0)]
     [ValidatePattern('\.benchmark\.(psd1|ps1|clixml|csv|json)$')]
     [Alias('Fullname', 'FilePath')]
-    [string]
+    [string[]]
     $BenchmarkPath,
 
     # The name of a module
@@ -156,14 +156,14 @@
 
         if ($IsOutputFile?) {
             $null = $outputPath -match "\.(?<extension>json|csv|clixml)"
-            if ($matches.extension -eq '.json') {
+            if ($matches.extension -eq 'json') {
                 $benchmarkResults | 
                     ConvertTo-Json -Depth 10 | 
                     Set-Content $OutputPath
-            } elseif ($matches.extension -eq '.csv') {
+            } elseif ($matches.extension -eq 'csv') {
                 $benchmarkResults | 
                     Export-Csv -Path $OutputPath
-            } elseif ($matches.extension -eq '.clixml') {
+            } elseif ($matches.extension -eq 'clixml') {
                 $benchmarkResults|
                     Export-Clixml -Path $OutputPath
             }             

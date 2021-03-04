@@ -83,8 +83,10 @@ runs:
         $benchmarkOutputFiles = $BenchmarkPath | 
             Get-ChildItem -LiteralPath {$_ } -ErrorAction SilentlyContinue |
             Where-Object Name -Like '*.benchmark.*' |
-            Checkpoint-Benchmark -OutputPath {         
-                ($_.FullName -replace '\.benchmark\..+$') + '.benchmarkOutput.clixml'        
+            Checkpoint-Benchmark -OutputPath {
+                $fileName = $_.Name
+                $fileNameMinusExtension = $fileName.Substring(0, $fileName.IndexOf($_.Extension))
+                $fileNameMinusExtension + '.benchmarkOutput.clixml'
             }
         
         $benchmarkOutputFiles | Out-Host

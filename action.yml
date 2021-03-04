@@ -1,4 +1,4 @@
-﻿
+
 name: Benchmark with Benchpress
 description: Easy Benchmarking with PowerShell
 inputs: 
@@ -78,27 +78,20 @@ runs:
         
         $benchpressModule = Get-Module Benchpress
         if (-not $benchpressModule) { throw "Benchpress not loaded" }
-        $ProgressPreference = 'silentlycontinue'
         $startTime = [DateTime]::Now
-        $benchMarkOutput = $BenchmarkPath | 
+        
+        $BenchmarkPath | 
             Get-ChildItem -LiteralPath {$_ } -ErrorAction SilentlyContinue |
             Where-Object Name -Like '*.benchmark.*' |
-            Checkpoint-Benchmark
+            Checkpoint-Benchmark -OutputPath { 
+                Join-Path $BenchmarkPath (
+                    ($_.Name -replace '\.benchmark\..+$') + '.benchmarkOutput.clixml'
+                )
+            }
         
         $endTime = [DateTime]::Now
         "::set-output name=TotalDuration::$(($endTime - $startTime).TotalSeconds)" | Out-Host
-        
-        $benchmarkJson = ConvertTo-Json -Depth 100 -InputObject $benchMarkOutput -Compress
-        "::set-output name=BenchmarkJsonLength::$($benchmarkJson.Length)" | Out-Host
-        
-        
-        "::set-output name=BenchmarkJson::$([Web.HttpUtility]::UrlEncode($benchmarkJson).Replace('+','%20'))" | Out-Host
-        
         return
-        $outFilePath = Resolve-Path ("$env:GITHUB_WORKSPACE", "benchmarkOutput.json" -ne '' -join ([io.path]::DirectorySeparatorChar))
-        [io.file]::WriteAllText($outFilePath, $benchmarkJson)
-        $lastExitCode = 0 
-        
         
         } @Parameters
 

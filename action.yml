@@ -83,10 +83,8 @@ runs:
         $BenchmarkPath | 
             Get-ChildItem -LiteralPath {$_ } -ErrorAction SilentlyContinue |
             Where-Object Name -Like '*.benchmark.*' |
-            Checkpoint-Benchmark -OutputPath { 
-                Join-Path $BenchmarkPath (
-                    ($_.Name -replace '\.benchmark\..+$') + '.benchmarkOutput.clixml'
-                )
+            Checkpoint-Benchmark -OutputPath {         
+                ($_.FullName -replace '\.benchmark\..+$') + '.benchmarkOutput.clixml'        
             }
         
         $endTime = [DateTime]::Now

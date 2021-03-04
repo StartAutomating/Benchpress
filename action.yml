@@ -1,4 +1,4 @@
-
+﻿
 name: Benchmark with Benchpress
 description: Easy Benchmarking with PowerShell
 inputs: 
@@ -10,6 +10,9 @@ inputs:
   ModulePath: 
     required: false
     description: The path to the module.
+branding: 
+  icon: terminal
+  color: blue
 runs: 
   using: composite
   steps: 

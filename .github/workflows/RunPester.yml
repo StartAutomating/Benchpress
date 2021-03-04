@@ -1,4 +1,4 @@
-﻿
+
 name: StaticAnalysisAndTests
 on: 
 - workflow_dispatch
@@ -183,6 +183,6 @@ jobs:
         uses: actions/upload-artifact@v2
         with: 
           name: Benchmarks
-          path: '**.benchmarkOutput.*'
+          path: '**.clixml'
         if: ${{always()}}
 

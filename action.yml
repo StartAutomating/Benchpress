@@ -80,13 +80,14 @@ runs:
         if (-not $benchpressModule) { throw "Benchpress not loaded" }
         $startTime = [DateTime]::Now
         
-        $BenchmarkPath | 
+        $benchmarkOutputFiles = $BenchmarkPath | 
             Get-ChildItem -LiteralPath {$_ } -ErrorAction SilentlyContinue |
             Where-Object Name -Like '*.benchmark.*' |
             Checkpoint-Benchmark -OutputPath {         
                 ($_.FullName -replace '\.benchmark\..+$') + '.benchmarkOutput.clixml'        
             }
         
+        $benchmarkOutputFiles | Out-Host
         $endTime = [DateTime]::Now
         "::set-output name=TotalDuration::$(($endTime - $startTime).TotalSeconds)" | Out-Host
         return

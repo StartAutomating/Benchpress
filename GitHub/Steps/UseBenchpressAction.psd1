@@ -1,5 +1,5 @@
 ﻿@{
     name = 'Use Benchpress Action'
-    uses = 'StartAutomating/Benchpress'
+    uses = 'StartAutomating/Benchpress@master'
 }
 

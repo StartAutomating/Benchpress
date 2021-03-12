@@ -178,7 +178,7 @@ jobs:
       - name: Check out repository
         uses: actions/checkout@v2
       - name: Use Benchpress Action
-        uses: StartAutomating/Benchpress
+        uses: StartAutomating/Benchpress@master
       - name: PublishBenchmarks
         uses: actions/upload-artifact@v2
         with: 

@@ -1,5 +1,5 @@
 ﻿
-name: Benchpress
+name: Benchmark with Benchpress
 description: Easy Benchmarking with PowerShell
 inputs: 
   BenchmarkPath: 
@@ -10,22 +10,17 @@ inputs:
   ModulePath: 
     required: false
     description: The path to the module.
-  
+branding: 
+  icon: watch
+  color: blue
 runs: 
   using: composite
   steps: 
-    - name: Check out Benchpress
-      uses: actions/checkout@v2
-      repository: StartAutomating/Benchpress
-      path: BenchpressRepository
-    - name: Check out Repository to Benchmark
-      uses: actions/checkout@v2
-      path: RepositoryToBenchmark
     - name: Benchpress
       shell: pwsh
       env: 
-        BenchmarkPath: ${{inputs.BenchmarkPath}}
-        ModulePath: ${{inputs.ModulePath}}
+        BenchmarkPath: ${{github.events.inputs.BenchmarkPath}}
+        ModulePath: ${{github.events.inputs.ModulePath}}
       run: |
         $Parameters = @{}
         $Parameters.BenchmarkPath = ${env:BenchmarkPath}
@@ -53,44 +48,54 @@ runs:
         )
         
         if (-not $BenchmarkPath) {
-            $BenchmarkPath = Join-Path $env:GitHub_WorkSpace "RepositoryToBenchmark"
+            $BenchmarkPath = 
+                Get-ChildItem "$env:GITHUB_WORKSPACE" -Recurse | 
+                Where-Object Name -Like '*.benchmark.*' | 
+                Split-Path | 
+                Select-Object -Unique
         }
         
-        if ($env:GitHub_WorkSpace) {
-            $benchPressPath = Join-Path $env:GitHub_WorkSpace "BenchpressRepository"
-            $benchPressPath = Join-Path $benchPressPath "Benchpress.psd1"
+        "::warning::Benchmark Path - $($BenchmarkPath | Out-String)"
+        
+        if ($env:GITHUB_ACTION_PATH) {
+            $benchPressPath = Join-Path $env:GITHUB_ACTION_PATH 'Benchpress.psd1'
             if (Test-path $benchPressPath) {
                 Import-Module $benchPressPath -Force -PassThru | Out-String
             } else {
                 throw "Benchmark not found"
             }
+        } else {
+            dir env: | Out-String
+            throw "Action Path not found"
         }
         
         if (-not $ModulePath) {
             Get-ChildItem -ErrorAction SilentlyContinue -Path $BenchmarkPath -Filter *.psd1
-        } elseif (-not (Test-Path $ModulePath) -and $env:GitHub_WorkSpace) {
-            $ModulePath = Join-Path (Join-Path $env:GitHub_WorkSpace "RepositoryToBenchmark") $ModulePath
+        } elseif (-not (Test-Path $ModulePath) -and $env:GITHUB_WORKSPACE) {
+            $ModulePath = Join-Path (Join-Path $env:GITHUB_WORKSPACE "RepositoryToBenchmark") $ModulePath
         }
         
-        if (Test-Path $ModulePath) {
+        if ($modulePath -and (Test-Path $ModulePath -ErrorAction SilentlyContinue )) {
             Import-Module $ModulePath -Force -PassThru | Out-String
         }
         
         $benchpressModule = Get-Module Benchpress
         if (-not $benchpressModule) { throw "Benchpress not loaded" }
+        $startTime = [DateTime]::Now
         
-        Get-ChildItem -Path $BenchmarkPath -ErrorAction SilentlyContinue |
+        $benchmarkOutputFiles = $BenchmarkPath | 
+            Get-ChildItem -LiteralPath {$_ } -ErrorAction SilentlyContinue |
             Where-Object Name -Like '*.benchmark.*' |
             Checkpoint-Benchmark -OutputPath {
-                "$(Join-Path $(if ($env:GitHub_WorkSpace) { $env:GitHub_WorkSpace} else { $pwd }) +
-                    ($_.Name -replace '\.benchmark\.', '\.benchmarkOutput\.'))".Replace($_.Extension,'.json')
+                $fileName = $_.Name
+                $fileNameMinusExtension = $fileName.Substring(0, $fileName.IndexOf($_.Extension))
+                $fileNameMinusExtension + '.benchmarkOutput.clixml'
             }
         
+        $benchmarkOutputFiles | Out-Host
+        $endTime = [DateTime]::Now
+        "::set-output name=TotalDuration::$(($endTime - $startTime).TotalSeconds)" | Out-Host
+        return
+        
         } @Parameters
-    - name: PublishBenchmarks
-      uses: actions/upload-artifact@v2
-      with: 
-        name: Benchmarks
-        path: '**.benchmarkOutput.json'
-      if: ${{always()}}
 

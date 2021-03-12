@@ -17,7 +17,7 @@
     [Parameter(Mandatory=$true,ParameterSetName='Path',ValueFromPipelineByPropertyName=$true,Position=0)]
     [ValidatePattern('\.benchmark\.(psd1|ps1|clixml|csv|json)$')]
     [Alias('Fullname', 'FilePath')]
-    [string]
+    [string[]]
     $BenchmarkPath,
 
     # The name of a module
@@ -26,11 +26,11 @@
     $ModuleName,
 
     # The output path. If no OutputPath is provided, benchmarks will be executed and returned.
-    # If a path to a folder is provided, a file will be created for each output 
+    # If a path to a folder is provided, a file will be created for each output
     [Parameter(ValueFromPipelineByPropertyName=$true)]
     [string]
     $OutputPath,
-    
+
     # If set, will include the PSVersionInfo object in returned results.
     # If used with -OutputPath set to a folder, will include the PSVersion in the file names
     [Parameter(ValueFromPipelineByPropertyName=$true)]
@@ -44,16 +44,16 @@
     $IncludeModuleVersion,
 
     # If set, will not include a timestamp in output file names
-    # This is only used is -OutputPath is passed a directory name 
+    # This is only used is -OutputPath is passed a directory name
     [Parameter(ValueFromPipelineByPropertyName=$true)]
     [switch]
     $NoTimestamp
     )
 
     begin {
-        $getBenchmarkCmd = 
+        $getBenchmarkCmd =
             $ExecutionContext.SessionState.InvokeCommand.GetCommand('Get-Benchmark','Function')
-        $measureBenchmarkCmd = 
+        $measureBenchmarkCmd =
             $ExecutionContext.SessionState.InvokeCommand.GetCommand('Measure-Benchmark','Function')
     }
 
@@ -67,7 +67,7 @@
         }
 
         $theBenchmarks = @(Get-Benchmark @getBenchmarkSplat)
-        if (-not $theBenchmarks) { return } 
+        if (-not $theBenchmarks) { return }
         #endregion Get Benchmarks
 
         #region Run Benchmarks
@@ -75,23 +75,23 @@
 
         $c, $t, $progID = 0, $theBenchmarks.Count, $(Get-Random)
 
-        $theBenchmarks | 
+        $theBenchmarks |
             . { process {
                 $benchmark = $_
                 $c++
-                $p = $c * 100 / $t                
+                $p = $c * 100 / $t
                 Write-Progress "Running Benchmarks" "$($benchmark.FileName)" -PercentComplete $p -Id $progID
                 if ($Benchmark -is [Management.Automation.ExternalScriptInfo]) {
                     & $Benchmark
                 } else {
                     $benchmarkSplat = @{}
-                    $props = 
+                    $props =
                         @(if ($benchmark -is [Collections.IDictionary]) {
-                            $benchmark.Keys                     
+                            $benchmark.Keys
                         } else {
-                            foreach ($_ in $benchmark.psobject.properties) { 
+                            foreach ($_ in $benchmark.psobject.properties) {
                                 $_.Name
-                            }                        
+                            }
                         })
 
                     foreach ($prop in $props) {
@@ -108,20 +108,20 @@
                             $benchmarkSplat[$prop] = $benchmark.$prop
                         }
                     }
-                    
+
                     if ($benchmarkSplat.Count) {
                         Measure-Benchmark @benchmarkSplat
-                    }                    
+                    }
                 }
             } } |
             . { process {
                 if ($OutputPath) {
-                    $null = $benchmarkResults.Add($_)                    
+                    $null = $benchmarkResults.Add($_)
                 } else {
                     $_
                 }
             } }
-             
+
         Write-Progress "Running Benchmarks" "Complete" -Id $progID -Completed
 
         if (-not $outputPath) { return }
@@ -137,7 +137,7 @@
 
         if ($IncludeModuleVersion -and $ModuleName) {
             $theModule = Get-Module $ModuleName
-            $benchmarkResults | 
+            $benchmarkResults |
                 Add-Member NoteProperty ModuleVersion $theModule.Version -Force
             if (-not $IsOutputFile?) {
                 $fileNameParts += "v$($theModule.Version)"
@@ -146,27 +146,28 @@
 
 
         if ($IncludePSVersion) {
-            $benchmarkResults | 
+            $benchmarkResults |
                 Add-Member NoteProperty PSVersion $PSVersionTable -Force
             if ($IsOutputFile?) {
-                $fileNameParts += "ps$($PSVersionTable.PSVersion)"                
+                $fileNameParts += "ps$($PSVersionTable.PSVersion)"
             }
         }
 
 
         if ($IsOutputFile?) {
             $null = $outputPath -match "\.(?<extension>json|csv|clixml)"
-            if ($matches.extension -eq '.json') {
-                $benchmarkResults | 
-                    ConvertTo-Json -Depth 10 | 
+            if ($matches.extension -eq 'json') {
+                $benchmarkResults |
+                    ConvertTo-Json -Depth 10 |
                     Set-Content $OutputPath
-            } elseif ($matches.extension -eq '.csv') {
-                $benchmarkResults | 
+            } elseif ($matches.extension -eq 'csv') {
+                $benchmarkResults |
                     Export-Csv -Path $OutputPath
-            } elseif ($matches.extension -eq '.clixml') {
+            } elseif ($matches.extension -eq 'clixml') {
                 $benchmarkResults|
                     Export-Clixml -Path $OutputPath
-            }             
+            }
+            Get-Item -Path $OutputPath -ErrorAction SilentlyContinue
         } else {
             if (-not (Test-Path $OutputPath)) {
                 $newDir = New-Item -ItemType Directory -Path $OutputPath
@@ -174,9 +175,9 @@
             }
 
             $resolvedBasePath = Resolve-Path $OutputPath
-            
 
-            $benchmarkResults | 
+
+            $benchmarkResults |
                 Group-Object FileName |
                 & {
                     process {
@@ -187,6 +188,6 @@
                 }
         }
         #endregion Save Benchmark Results
-        
+
     }
-} 
+}

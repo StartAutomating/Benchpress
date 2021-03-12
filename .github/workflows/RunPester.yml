@@ -1,4 +1,4 @@
-﻿
+
 name: StaticAnalysisAndTests
 on: 
 - workflow_dispatch
@@ -171,5 +171,18 @@ jobs:
         with: 
           name: PesterResults
           path: '**.TestResults.xml'
+        if: ${{always()}}
+  RunBenchmarks: 
+    runs-on: ubuntu-latest
+    steps: 
+      - name: Check out repository
+        uses: actions/checkout@v2
+      - name: Use Benchpress Action
+        uses: StartAutomating/Benchpress@TestingAction
+      - name: PublishBenchmarks
+        uses: actions/upload-artifact@v2
+        with: 
+          name: Benchmarks
+          path: '**.clixml'
         if: ${{always()}}
 

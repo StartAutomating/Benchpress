@@ -11,7 +11,7 @@ inputs:
     required: false
     description: The path to the module.
 branding: 
-  icon: terminal
+  icon: watch
   color: blue
 runs: 
   using: composite

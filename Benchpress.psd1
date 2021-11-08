@@ -4,10 +4,18 @@
         PSData=@{
             Tags='performance',
                 'benchmarking'
-            Category='Performance'
+            Category     = 'Performance'
+            ProjectURI   = 'https://github.com/StartAutomating/Benchpress'
+            LicenseURI   = 'https://github.com/StartAutomating/Benchpress/blob/master/LICENSE'
+            ReleaseNotes = @'
+### 1.3:
+---
+Now including .ClockSpeed in results (fixes #7)
+Formatting deserialized results (fixes #8)
+'@
         }
     }
-    ModuleVersion='1.2'
+    ModuleVersion='1.3'
     CompanyName='Start-Automating'
     Description='Easy Benchmarking with PowerShell'
     PowerShellVersion='3.0'

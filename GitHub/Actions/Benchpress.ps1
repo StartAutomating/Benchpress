@@ -59,7 +59,7 @@ $benchmarkOutputFiles = $BenchmarkPath |
         $fileNameMinusExtension + '.benchmarkOutput.clixml'
     }
 
-$benchmarkOutputFiles | Out-Host
+$benchmarkOutputFiles | Import-Clixml | Out-Host
 $endTime = [DateTime]::Now
 "::set-output name=TotalDuration::$(($endTime - $startTime).TotalSeconds)" | Out-Host
 return

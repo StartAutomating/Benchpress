@@ -1,31 +1,40 @@
-<?xml version="1.0" encoding="utf-16"?>
+﻿<?xml version="1.0" encoding="utf-16"?>
+<!-- Generated with EZOut 1.8.5: Install-Module EZOut or https://github.com/StartAutomating/EZOut -->
 <Configuration>
   <ViewDefinitions>
     <View>
-      <Name>Benchmark.Detail</Name>
+      <Name>Benchmark.DetailDeserialized.Benchmark.Detail</Name>
       <ViewSelectedBy>
         <TypeName>Benchmark.Detail</TypeName>
+        <TypeName>Deserialized.Benchmark.Detail</TypeName>
       </ViewSelectedBy>
       <GroupBy>
-        <ScriptBlock> $_.FileName + ' ' + $_.GroupName </ScriptBlock>
+        <ScriptBlock>
+            $_.FileName + ' ' + $_.GroupName + $(if ($_.ClockSpeed) { '@~'+ $_.ClockSpeed+' Mhz'})
+        </ScriptBlock>
         <Label>Benchmark</Label>
       </GroupBy>
       <TableControl>
         <AutoSize />
         <TableHeaders>
           <TableColumnHeader>
+            <Alignment>left</Alignment>
             <Width>40</Width>
+          </TableColumnHeader>
+          <TableColumnHeader>
             <Alignment>left</Alignment>
           </TableColumnHeader>
           <TableColumnHeader>
+            <Alignment>left</Alignment>
           </TableColumnHeader>
           <TableColumnHeader>
+            <Alignment>left</Alignment>
           </TableColumnHeader>
           <TableColumnHeader>
+            <Alignment>left</Alignment>
           </TableColumnHeader>
           <TableColumnHeader>
-          </TableColumnHeader>
-          <TableColumnHeader>
+            <Alignment>left</Alignment>
           </TableColumnHeader>
         </TableHeaders>
         <TableRowEntries>
@@ -56,12 +65,15 @@
       </TableControl>
     </View>
     <View>
-      <Name>Benchmark.Relative.Summary</Name>
+      <Name>Benchmark.Relative.SummaryDeserialized.Benchmark.Relative.Summary</Name>
       <ViewSelectedBy>
         <TypeName>Benchmark.Relative.Summary</TypeName>
+        <TypeName>Deserialized.Benchmark.Relative.Summary</TypeName>
       </ViewSelectedBy>
       <GroupBy>
-        <ScriptBlock> $_.FileName + ' ' + $_.GroupName </ScriptBlock>
+        <ScriptBlock>
+        $_.FileName + ' ' + $_.GroupName + $(if ($_.ClockSpeed) { '@~'+ $_.ClockSpeed+' Mhz'})
+    </ScriptBlock>
         <Label>Benchmark</Label>
       </GroupBy>
       <TableControl>

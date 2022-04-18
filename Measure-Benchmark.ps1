@@ -87,24 +87,20 @@
 
     begin {
         $cpuSpeed = 
-            if ($PSVersionTable.Platform -eq 'Unix') {
+            if (Get-Variable -ErrorAction Ignore -ValueOnly IsLinux) {
                 Get-Content /proc/cpuinfo -Raw -ErrorAction SilentlyContinue | 
                     Select-String "(?<Unit>Mhz|MIPS)\s+\:\s+(?<Value>[\d\.]+)" | 
                     Select-Object -First 1 -ExpandProperty Matches |
                     ForEach-Object {
                         $_.Groups["Value"].Value -as [int]
                     }
+            } elseif (Get-Variable -ErrorAction Ignore -ValueOnly IsMacOS) {
+                (sysctl -n hw.cpufrequency) / 1e6 -as [int]
             } else {
-                $getWmiObject = $ExecutionContext.SessionState.InvokeCommand.GetCommand('Get-WmiObject', 'Cmdlet')
-                if ($getWmiObject) {
-                    & $getWmiObject -Class Win32_Processor | 
+                $getCimInstance = $ExecutionContext.SessionState.InvokeCommand.GetCommand('Get-CimInstance','Cmdlet')
+                if ($getCimInstance) {
+                    & $getCimInstance -Class Win32_Processor |
                         Select-Object -ExpandProperty MaxClockSpeed
-                } else {
-                    $getCimInstance = $ExecutionContext.SessionState.InvokeCommand.GetCommand('Get-CimInstance','Cmdlet')
-                    if ($getCimInstance) {
-                        & $getCimInstance |
-                            Select-Object -ExpandProperty MaxClockSpeed
-                    }
                 }
             }
     }

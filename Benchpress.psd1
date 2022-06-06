@@ -19,7 +19,7 @@ Formatting deserialized results (fixes #8)
 '@
         }
     }
-    ModuleVersion='1.3'
+    ModuleVersion='1.3.1'
     CompanyName='Start-Automating'
     Description='Easy Benchmarking with PowerShell'
     PowerShellVersion='3.0'

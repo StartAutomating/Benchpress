@@ -87,14 +87,14 @@
 
     begin {
         $cpuSpeed = 
-            if (Get-Variable -ErrorAction Ignore -ValueOnly IsLinux) {
+            if ($executionContext.SessionState.PSVariable.Get('IsLinux').Value) {
                 Get-Content /proc/cpuinfo -Raw -ErrorAction SilentlyContinue | 
                     Select-String "(?<Unit>Mhz|MIPS)\s+\:\s+(?<Value>[\d\.]+)" | 
                     Select-Object -First 1 -ExpandProperty Matches |
                     ForEach-Object {
                         $_.Groups["Value"].Value -as [int]
                     }
-            } elseif (Get-Variable -ErrorAction Ignore -ValueOnly IsMacOS) {
+            } elseif ($executionContext.SessionState.PSVariable.Get('IsMacOS').Value) {
                 (sysctl -n hw.cpufrequency) / 1e6 -as [int]
             } else {
                 $getCimInstance = $ExecutionContext.SessionState.InvokeCommand.GetCommand('Get-CimInstance','Cmdlet')

@@ -63,8 +63,7 @@ $techniques = @{
             TestCount     = $resultJob.Count
             ExpectedCount = $expectedCount
         }
-        $thisTest = & $resultObject @hash
-        $resultGrid.Add($thisTest)
+        $thisTest = & $resultObject @hash        
     }
 
     "Runspace" = {
@@ -94,8 +93,7 @@ $techniques = @{
             TestCount     = $resultRunspace.Count
             ExpectedCount = $expectedCount
         }
-        $thisTest = & $resultObject @hash
-        $resultGrid.Add($thisTest)
+        $thisTest = & $resultObject @hash        
     }
 }
 
@@ -110,8 +108,7 @@ if($ThreadJobAvailable) {
             TestCount     = $resultThreadJob.Count
             ExpectedCount = $expectedCount
         }
-        $thisTest = & $resultObject @hash
-        $resultGrid.Add($thisTest)
+        $thisTest = & $resultObject @hash        
     }
 }
 
@@ -129,10 +126,8 @@ if($ParallelAvailable) {
             TestCount     = $resultParallel.Count
             ExpectedCount = $expectedCount
         }
-        $thisTest = & $resultObject @hash
-        $resultGrid.Add($thisTest)
+        $thisTest = & $resultObject @hash        
     }
 }
 
 Measure-Benchmark -GroupName "Multi-Threading" -RepeatCount 3 -Technique $techniques
-$resultGrid | Format-Table

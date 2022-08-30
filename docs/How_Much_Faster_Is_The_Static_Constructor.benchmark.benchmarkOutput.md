@@ -1,7 +1,7 @@
 
 How Much Faster Is The Static Constructor
 -----------------------------------------
-> @2095 Mhz
+> @2594 Mhz
 
 
 ### 
@@ -9,8 +9,9 @@ How Much Faster Is The Static Constructor
 
 |Technique        |Time           |RelativeSpeed|Throughput|
 |-----------------|---------------|-------------|----------|
-|StaticConstructor|00:00:00.457334|1x           |22390.61/s|
-|New-Object       |00:00:01.459618|3.19x        |7015.53/s |
+|StaticConstructor|00:00:00.395587|1x           |25885.54/s|
+|New-Object       |00:00:01.230106|3.11x        |8324.49/s |
+
 
 
 

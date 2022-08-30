@@ -106,7 +106,14 @@ if (-not $BenchmarkPath) {
 
 "::warning::Benchmark Path - $($BenchmarkPath | Out-String)"
 
-if ($env:GITHUB_ACTION_PATH) {
+$PSD1Found = Get-ChildItem -Recurse -Filter "*.psd1" |
+    Where-Object Name -eq 'Benchpress.psd1' | 
+    Select-Object -First 1
+
+if ($PSD1Found) {
+    $BenchpressPath = $PSD1Found
+    Import-Module $PSD1Found -Force -PassThru | Out-Host
+} elseif ($env:GITHUB_ACTION_PATH) {
     $benchPressPath = Join-Path $env:GITHUB_ACTION_PATH 'Benchpress.psd1'
     if (Test-path $benchPressPath) {
         Import-Module $benchPressPath -Force -PassThru | Out-String
@@ -117,6 +124,8 @@ if ($env:GITHUB_ACTION_PATH) {
     dir env: | Out-String
     throw "Action Path not found"
 }
+
+"::notice title=ModuleLoaded::HelpOut Loaded from Path - $($BenchpressPath)" | Out-Host
 
 if (-not $ModulePath) {
     Get-ChildItem -ErrorAction SilentlyContinue -Path $BenchmarkPath -Filter *.psd1

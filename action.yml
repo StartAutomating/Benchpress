@@ -245,7 +245,7 @@ runs:
             Import-Clixml |
             Out-Host
         
-        git pull | Out-Host
+        git pull -s ours| Out-Host
         
         $endTime = [DateTime]::Now
         "::set-output name=TotalDuration::$(($endTime - $startTime).TotalSeconds)" | Out-Host
@@ -266,7 +266,7 @@ runs:
             $checkDetached = git symbolic-ref -q HEAD
             if (-not $LASTEXITCODE) {
                 "::notice::Pulling Changes" | Out-Host
-                git pull | Out-Host
+                git pull -s ours | Out-Host
                 "::notice::Pushing Changes" | Out-Host
                 git push        
                 "Git Push Output: $($gitPushed  | Out-String)"

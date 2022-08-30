@@ -14,7 +14,7 @@
           <T>System.Object</T>
           <T>Benchmark.Measure</T>
         </TN>
-        <TS>PT0.4573346S</TS>
+        <TS>PT0.3702265S</TS>
         <MS>
           <S N="FileName">How Much Faster Is The Static Constructor</S>
           <S N="GroupName"></S>
@@ -41,9 +41,9 @@
         </MS>
       </Obj>
       <Db N="RelativeSpeed">1</Db>
-      <I32 N="ClockSpeed">2095</I32>
+      <I32 N="ClockSpeed">2594</I32>
       <S N="FileName">How Much Faster Is The Static Constructor</S>
-      <Db N="Throughput">22390.60853913087</Db>
+      <Db N="Throughput">27658.744039121997</Db>
       <Obj N="BenchmarkInput" RefId="3">
         <TNRef RefId="2" />
         <DCT>
@@ -65,7 +65,7 @@
       <S N="Technique">New-Object</S>
       <Obj N="Time" RefId="5">
         <TNRef RefId="1" />
-        <TS>PT1.4596184S</TS>
+        <TS>PT1.149951S</TS>
         <MS>
           <S N="FileName">How Much Faster Is The Static Constructor</S>
           <S N="GroupName"></S>
@@ -88,10 +88,10 @@
           </Obj>
         </MS>
       </Obj>
-      <Db N="RelativeSpeed">3.191576583096927</Db>
-      <I32 N="ClockSpeed">2095</I32>
+      <Db N="RelativeSpeed">3.1060742545441777</Db>
+      <I32 N="ClockSpeed">2594</I32>
       <S N="FileName">How Much Faster Is The Static Constructor</S>
-      <Db N="Throughput">7015.532278847676</Db>
+      <Db N="Throughput">8904.727244900001</Db>
       <Ref N="BenchmarkInput" RefId="3" />
     </MS>
   </Obj>

@@ -9,10 +9,10 @@ What Is The Fastest Way To Get All Loaded Modules
 
 |Technique                      |Time           |RelativeSpeed|Throughput|
 |-------------------------------|---------------|-------------|----------|
-|foreach Get-Module             |00:00:00.002917|1x           |3427.12/s |
-|Get-Module -ExpandProperty Name|00:00:00.004243|1.45x        |2356.32/s |
-|ExecutionContextAndArrayList   |00:00:00.009291|3.18x        |1076.28/s |
-|ExecutionContextAndHashtable   |00:00:00.013501|4.63x        |740.66/s  |
+|foreach Get-Module             |00:00:00.002903|1x           |3444.12/s |
+|Get-Module -ExpandProperty Name|00:00:00.004338|1.49x        |2305.16/s |
+|ExecutionContextAndHashtable   |00:00:00.011095|3.82x        |901.31/s  |
+|ExecutionContextAndArrayList   |00:00:00.013402|4.62x        |746.12/s  |
 
 
 

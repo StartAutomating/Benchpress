@@ -14,7 +14,7 @@
           <T>System.Object</T>
           <T>Benchmark.Measure</T>
         </TN>
-        <TS>PT0.6408548S</TS>
+        <TS>PT0.6159946S</TS>
         <MS>
           <S N="FileName">Comparing Command Lookup</S>
           <S N="GroupName">Applications</S>
@@ -25,12 +25,12 @@
             </TN>
             <DCT>
               <En>
-                <S N="Key">ScriptBlock</S>
-                <SBK N="Value">_x000A_        $ExecutionContext.SessionState.InvokeCommand.GetCommand('git','Application')_x000A_    </SBK>
-              </En>
-              <En>
                 <S N="Key">GroupName</S>
                 <S N="Value">Applications</S>
+              </En>
+              <En>
+                <S N="Key">ScriptBlock</S>
+                <SBK N="Value">_x000A_        $ExecutionContext.SessionState.InvokeCommand.GetCommand('git','Application')_x000A_    </SBK>
               </En>
               <En>
                 <S N="Key">FileName</S>
@@ -44,17 +44,17 @@
       <S N="GroupName">Applications</S>
       <I32 N="ClockSpeed">2594</I32>
       <S N="FileName">Comparing Command Lookup</S>
-      <Db N="Throughput">156.04158695542267</Db>
+      <Db N="Throughput">162.33908544003472</Db>
       <Obj N="BenchmarkInput" RefId="3">
         <TNRef RefId="2" />
         <DCT>
           <En>
-            <S N="Key">GroupName</S>
-            <S N="Value">Applications</S>
-          </En>
-          <En>
             <S N="Key">FileName</S>
             <S N="Value">Comparing Command Lookup</S>
+          </En>
+          <En>
+            <S N="Key">GroupName</S>
+            <S N="Value">Applications</S>
           </En>
         </DCT>
       </Obj>
@@ -66,7 +66,7 @@
       <S N="Technique">Get-Command</S>
       <Obj N="Time" RefId="5">
         <TNRef RefId="1" />
-        <TS>PT1.7443842S</TS>
+        <TS>PT1.7635316S</TS>
         <MS>
           <S N="FileName">Comparing Command Lookup</S>
           <S N="GroupName">Applications</S>
@@ -74,12 +74,12 @@
             <TNRef RefId="2" />
             <DCT>
               <En>
-                <S N="Key">ScriptBlock</S>
-                <SBK N="Value">_x000A_        Get-Command git -CommandType Application_x000A_    </SBK>
-              </En>
-              <En>
                 <S N="Key">GroupName</S>
                 <S N="Value">Applications</S>
+              </En>
+              <En>
+                <S N="Key">ScriptBlock</S>
+                <SBK N="Value">_x000A_        Get-Command git -CommandType Application_x000A_    </SBK>
               </En>
               <En>
                 <S N="Key">FileName</S>
@@ -89,21 +89,21 @@
           </Obj>
         </MS>
       </Obj>
-      <Db N="RelativeSpeed">2.7219647882796543</Db>
+      <Db N="RelativeSpeed">2.862901070886011</Db>
       <S N="GroupName">Applications</S>
       <I32 N="ClockSpeed">2594</I32>
       <S N="FileName">Comparing Command Lookup</S>
-      <Db N="Throughput">57.326820547904525</Db>
+      <Db N="Throughput">56.70439928606893</Db>
       <Ref N="BenchmarkInput" RefId="3" />
     </MS>
   </Obj>
   <Obj RefId="7">
     <TNRef RefId="0" />
     <MS>
-      <S N="Technique">Get-Command</S>
+      <S N="Technique">$executionContext</S>
       <Obj N="Time" RefId="8">
         <TNRef RefId="1" />
-        <TS>PT0.0129327S</TS>
+        <TS>PT0.0063071S</TS>
         <MS>
           <S N="FileName">Comparing Command Lookup</S>
           <S N="GroupName">Cmdlets</S>
@@ -111,12 +111,12 @@
             <TNRef RefId="2" />
             <DCT>
               <En>
-                <S N="Key">ScriptBlock</S>
-                <SBK N="Value">_x000A_        Get-Command Get-Process -CommandType Cmdlet_x000A_    </SBK>
-              </En>
-              <En>
                 <S N="Key">GroupName</S>
                 <S N="Value">Cmdlets</S>
+              </En>
+              <En>
+                <S N="Key">ScriptBlock</S>
+                <SBK N="Value">_x000A_        $ExecutionContext.SessionState.InvokeCommand.GetCommand('Get-Process','Cmdlet')_x000A_    </SBK>
               </En>
               <En>
                 <S N="Key">FileName</S>
@@ -130,17 +130,17 @@
       <S N="GroupName">Cmdlets</S>
       <I32 N="ClockSpeed">2594</I32>
       <S N="FileName">Comparing Command Lookup</S>
-      <Db N="Throughput">7732.337408275147</Db>
+      <Db N="Throughput">15855.147373594837</Db>
       <Obj N="BenchmarkInput" RefId="10">
         <TNRef RefId="2" />
         <DCT>
           <En>
-            <S N="Key">GroupName</S>
-            <S N="Value">Cmdlets</S>
-          </En>
-          <En>
             <S N="Key">FileName</S>
             <S N="Value">Comparing Command Lookup</S>
+          </En>
+          <En>
+            <S N="Key">GroupName</S>
+            <S N="Value">Cmdlets</S>
           </En>
         </DCT>
       </Obj>
@@ -149,10 +149,10 @@
   <Obj RefId="11">
     <TNRef RefId="0" />
     <MS>
-      <S N="Technique">$executionContext</S>
+      <S N="Technique">Get-Command</S>
       <Obj N="Time" RefId="12">
         <TNRef RefId="1" />
-        <TS>PT0.0330945S</TS>
+        <TS>PT0.0130235S</TS>
         <MS>
           <S N="FileName">Comparing Command Lookup</S>
           <S N="GroupName">Cmdlets</S>
@@ -160,12 +160,12 @@
             <TNRef RefId="2" />
             <DCT>
               <En>
-                <S N="Key">ScriptBlock</S>
-                <SBK N="Value">_x000A_        $ExecutionContext.SessionState.InvokeCommand.GetCommand('Get-Process','Cmdlet')_x000A_    </SBK>
-              </En>
-              <En>
                 <S N="Key">GroupName</S>
                 <S N="Value">Cmdlets</S>
+              </En>
+              <En>
+                <S N="Key">ScriptBlock</S>
+                <SBK N="Value">_x000A_        Get-Command Get-Process -CommandType Cmdlet_x000A_    </SBK>
               </En>
               <En>
                 <S N="Key">FileName</S>
@@ -175,11 +175,11 @@
           </Obj>
         </MS>
       </Obj>
-      <Db N="RelativeSpeed">2.558978403581618</Db>
+      <Db N="RelativeSpeed">2.064895118200124</Db>
       <S N="GroupName">Cmdlets</S>
       <I32 N="ClockSpeed">2594</I32>
       <S N="FileName">Comparing Command Lookup</S>
-      <Db N="Throughput">3021.6501231322427</Db>
+      <Db N="Throughput">7678.42745805659</Db>
       <Ref N="BenchmarkInput" RefId="10" />
     </MS>
   </Obj>
@@ -189,7 +189,7 @@
       <S N="Technique">$executionContext</S>
       <Obj N="Time" RefId="15">
         <TNRef RefId="1" />
-        <TS>PT0.0066157S</TS>
+        <TS>PT0.0068012S</TS>
         <MS>
           <S N="FileName">Comparing Command Lookup</S>
           <S N="GroupName">Aliases</S>
@@ -197,12 +197,12 @@
             <TNRef RefId="2" />
             <DCT>
               <En>
-                <S N="Key">ScriptBlock</S>
-                <SBK N="Value">_x000A_        $ExecutionContext.SessionState.InvokeCommand.GetCommand('gps','Alias')_x000A_    </SBK>
-              </En>
-              <En>
                 <S N="Key">GroupName</S>
                 <S N="Value">Aliases</S>
+              </En>
+              <En>
+                <S N="Key">ScriptBlock</S>
+                <SBK N="Value">_x000A_        $ExecutionContext.SessionState.InvokeCommand.GetCommand('gps','Alias')_x000A_    </SBK>
               </En>
               <En>
                 <S N="Key">FileName</S>
@@ -216,17 +216,17 @@
       <S N="GroupName">Aliases</S>
       <I32 N="ClockSpeed">2594</I32>
       <S N="FileName">Comparing Command Lookup</S>
-      <Db N="Throughput">15115.558444306724</Db>
+      <Db N="Throughput">14703.287655119684</Db>
       <Obj N="BenchmarkInput" RefId="17">
         <TNRef RefId="2" />
         <DCT>
           <En>
-            <S N="Key">GroupName</S>
-            <S N="Value">Aliases</S>
-          </En>
-          <En>
             <S N="Key">FileName</S>
             <S N="Value">Comparing Command Lookup</S>
+          </En>
+          <En>
+            <S N="Key">GroupName</S>
+            <S N="Value">Aliases</S>
           </En>
         </DCT>
       </Obj>
@@ -238,7 +238,7 @@
       <S N="Technique">Get-Command</S>
       <Obj N="Time" RefId="19">
         <TNRef RefId="1" />
-        <TS>PT0.0155504S</TS>
+        <TS>PT0.0156676S</TS>
         <MS>
           <S N="FileName">Comparing Command Lookup</S>
           <S N="GroupName">Aliases</S>
@@ -246,12 +246,12 @@
             <TNRef RefId="2" />
             <DCT>
               <En>
-                <S N="Key">ScriptBlock</S>
-                <SBK N="Value">_x000A_        Get-Command gps -CommandType Alias_x000A_    </SBK>
-              </En>
-              <En>
                 <S N="Key">GroupName</S>
                 <S N="Value">Aliases</S>
+              </En>
+              <En>
+                <S N="Key">ScriptBlock</S>
+                <SBK N="Value">_x000A_        Get-Command gps -CommandType Alias_x000A_    </SBK>
               </En>
               <En>
                 <S N="Key">FileName</S>
@@ -261,11 +261,11 @@
           </Obj>
         </MS>
       </Obj>
-      <Db N="RelativeSpeed">2.3505298003234727</Db>
+      <Db N="RelativeSpeed">2.303652296653532</Db>
       <S N="GroupName">Aliases</S>
       <I32 N="ClockSpeed">2594</I32>
       <S N="FileName">Comparing Command Lookup</S>
-      <Db N="Throughput">6430.702747196214</Db>
+      <Db N="Throughput">6382.5984834946</Db>
       <Ref N="BenchmarkInput" RefId="17" />
     </MS>
   </Obj>
@@ -275,7 +275,7 @@
       <S N="Technique">$executionContext</S>
       <Obj N="Time" RefId="22">
         <TNRef RefId="1" />
-        <TS>PT0.0060826S</TS>
+        <TS>PT0.0100559S</TS>
         <MS>
           <S N="FileName">Comparing Command Lookup</S>
           <S N="GroupName">Function</S>
@@ -283,12 +283,12 @@
             <TNRef RefId="2" />
             <DCT>
               <En>
-                <S N="Key">ScriptBlock</S>
-                <SBK N="Value">_x000A_        $ExecutionContext.SessionState.InvokeCommand.GetCommand('Measure-Benchmark','Function')_x000A_    </SBK>
-              </En>
-              <En>
                 <S N="Key">GroupName</S>
                 <S N="Value">Function</S>
+              </En>
+              <En>
+                <S N="Key">ScriptBlock</S>
+                <SBK N="Value">_x000A_        $ExecutionContext.SessionState.InvokeCommand.GetCommand('Measure-Benchmark','Function')_x000A_    </SBK>
               </En>
               <En>
                 <S N="Key">FileName</S>
@@ -302,17 +302,17 @@
       <S N="GroupName">Function</S>
       <I32 N="ClockSpeed">2594</I32>
       <S N="FileName">Comparing Command Lookup</S>
-      <Db N="Throughput">16440.338013349556</Db>
+      <Db N="Throughput">9944.410743941367</Db>
       <Obj N="BenchmarkInput" RefId="24">
         <TNRef RefId="2" />
         <DCT>
           <En>
-            <S N="Key">GroupName</S>
-            <S N="Value">Function</S>
-          </En>
-          <En>
             <S N="Key">FileName</S>
             <S N="Value">Comparing Command Lookup</S>
+          </En>
+          <En>
+            <S N="Key">GroupName</S>
+            <S N="Value">Function</S>
           </En>
         </DCT>
       </Obj>
@@ -324,7 +324,7 @@
       <S N="Technique">Get-Command</S>
       <Obj N="Time" RefId="26">
         <TNRef RefId="1" />
-        <TS>PT0.0162911S</TS>
+        <TS>PT0.0134266S</TS>
         <MS>
           <S N="FileName">Comparing Command Lookup</S>
           <S N="GroupName">Function</S>
@@ -332,12 +332,12 @@
             <TNRef RefId="2" />
             <DCT>
               <En>
-                <S N="Key">ScriptBlock</S>
-                <SBK N="Value">_x000A_        Get-Command Measure-Benchmark -CommandType Function_x000A_    </SBK>
-              </En>
-              <En>
                 <S N="Key">GroupName</S>
                 <S N="Value">Function</S>
+              </En>
+              <En>
+                <S N="Key">ScriptBlock</S>
+                <SBK N="Value">_x000A_        Get-Command Measure-Benchmark -CommandType Function_x000A_    </SBK>
               </En>
               <En>
                 <S N="Key">FileName</S>
@@ -347,11 +347,11 @@
           </Obj>
         </MS>
       </Obj>
-      <Db N="RelativeSpeed">2.678311906092789</Db>
+      <Db N="RelativeSpeed">1.3351962529460317</Db>
       <S N="GroupName">Function</S>
       <I32 N="ClockSpeed">2594</I32>
       <S N="FileName">Comparing Command Lookup</S>
-      <Db N="Throughput">6138.320923694533</Db>
+      <Db N="Throughput">7447.901926027438</Db>
       <Ref N="BenchmarkInput" RefId="24" />
     </MS>
   </Obj>
@@ -361,7 +361,7 @@
       <S N="Technique">$executionContext</S>
       <Obj N="Time" RefId="29">
         <TNRef RefId="1" />
-        <TS>PT0.0058007S</TS>
+        <TS>PT0.0058026S</TS>
         <MS>
           <S N="FileName">Comparing Command Lookup</S>
           <S N="GroupName">All</S>
@@ -369,12 +369,12 @@
             <TNRef RefId="2" />
             <DCT>
               <En>
-                <S N="Key">ScriptBlock</S>
-                <SBK N="Value">_x000A_        $ExecutionContext.SessionState.InvokeCommand.GetCommand('Measure-Benchmark','All')_x000A_    </SBK>
-              </En>
-              <En>
                 <S N="Key">GroupName</S>
                 <S N="Value">All</S>
+              </En>
+              <En>
+                <S N="Key">ScriptBlock</S>
+                <SBK N="Value">_x000A_        $ExecutionContext.SessionState.InvokeCommand.GetCommand('Measure-Benchmark','All')_x000A_    </SBK>
               </En>
               <En>
                 <S N="Key">FileName</S>
@@ -388,17 +388,17 @@
       <S N="GroupName">All</S>
       <I32 N="ClockSpeed">2594</I32>
       <S N="FileName">Comparing Command Lookup</S>
-      <Db N="Throughput">17239.298705328667</Db>
+      <Db N="Throughput">17233.65387929549</Db>
       <Obj N="BenchmarkInput" RefId="31">
         <TNRef RefId="2" />
         <DCT>
           <En>
-            <S N="Key">GroupName</S>
-            <S N="Value">All</S>
-          </En>
-          <En>
             <S N="Key">FileName</S>
             <S N="Value">Comparing Command Lookup</S>
+          </En>
+          <En>
+            <S N="Key">GroupName</S>
+            <S N="Value">All</S>
           </En>
         </DCT>
       </Obj>
@@ -410,7 +410,7 @@
       <S N="Technique">Get-Command</S>
       <Obj N="Time" RefId="33">
         <TNRef RefId="1" />
-        <TS>PT0.0148969S</TS>
+        <TS>PT0.0149685S</TS>
         <MS>
           <S N="FileName">Comparing Command Lookup</S>
           <S N="GroupName">All</S>
@@ -418,12 +418,12 @@
             <TNRef RefId="2" />
             <DCT>
               <En>
-                <S N="Key">ScriptBlock</S>
-                <SBK N="Value">_x000A_        Get-Command Measure-Benchmark_x000A_    </SBK>
-              </En>
-              <En>
                 <S N="Key">GroupName</S>
                 <S N="Value">All</S>
+              </En>
+              <En>
+                <S N="Key">ScriptBlock</S>
+                <SBK N="Value">_x000A_        Get-Command Measure-Benchmark_x000A_    </SBK>
               </En>
               <En>
                 <S N="Key">FileName</S>
@@ -433,11 +433,11 @@
           </Obj>
         </MS>
       </Obj>
-      <Db N="RelativeSpeed">2.5681210888341064</Db>
+      <Db N="RelativeSpeed">2.579619480922345</Db>
       <S N="GroupName">All</S>
       <I32 N="ClockSpeed">2594</I32>
       <S N="FileName">Comparing Command Lookup</S>
-      <Db N="Throughput">6712.806020044439</Db>
+      <Db N="Throughput">6680.696128536594</Db>
       <Ref N="BenchmarkInput" RefId="31" />
     </MS>
   </Obj>
@@ -447,7 +447,7 @@
       <S N="Technique">$executionContext</S>
       <Obj N="Time" RefId="36">
         <TNRef RefId="1" />
-        <TS>PT1.1100151S</TS>
+        <TS>PT1.1088554S</TS>
         <MS>
           <S N="FileName">Comparing Command Lookup</S>
           <S N="GroupName">WildcardMiss</S>
@@ -455,12 +455,12 @@
             <TNRef RefId="2" />
             <DCT>
               <En>
-                <S N="Key">ScriptBlock</S>
-                <SBK N="Value">_x000A_        $ExecutionContext.SessionState.InvokeCommand.GetCommands('*ThereShouldBeNoCommandNamedLikeThisOrSomeoneIsBeingVeryRude*','All', $true)_x000A_    </SBK>
-              </En>
-              <En>
                 <S N="Key">GroupName</S>
                 <S N="Value">WildcardMiss</S>
+              </En>
+              <En>
+                <S N="Key">ScriptBlock</S>
+                <SBK N="Value">_x000A_        $ExecutionContext.SessionState.InvokeCommand.GetCommands('*ThereShouldBeNoCommandNamedLikeThisOrSomeoneIsBeingVeryRude*','All', $true)_x000A_    </SBK>
               </En>
               <En>
                 <S N="Key">FileName</S>
@@ -474,17 +474,17 @@
       <S N="GroupName">WildcardMiss</S>
       <I32 N="ClockSpeed">2594</I32>
       <S N="FileName">Comparing Command Lookup</S>
-      <Db N="Throughput">90.08886455688756</Db>
+      <Db N="Throughput">90.18308428673387</Db>
       <Obj N="BenchmarkInput" RefId="38">
         <TNRef RefId="2" />
         <DCT>
           <En>
-            <S N="Key">GroupName</S>
-            <S N="Value">WildcardMiss</S>
-          </En>
-          <En>
             <S N="Key">FileName</S>
             <S N="Value">Comparing Command Lookup</S>
+          </En>
+          <En>
+            <S N="Key">GroupName</S>
+            <S N="Value">WildcardMiss</S>
           </En>
         </DCT>
       </Obj>
@@ -496,7 +496,7 @@
       <S N="Technique">Get-Command</S>
       <Obj N="Time" RefId="40">
         <TNRef RefId="1" />
-        <TS>PT3.6501053S</TS>
+        <TS>PT3.6824151S</TS>
         <MS>
           <S N="FileName">Comparing Command Lookup</S>
           <S N="GroupName">WildcardMiss</S>
@@ -504,12 +504,12 @@
             <TNRef RefId="2" />
             <DCT>
               <En>
-                <S N="Key">ScriptBlock</S>
-                <SBK N="Value">_x000A_        Get-Command *ThereShouldBeNoCommandNamedLikeThisOrSomeoneIsBeingVeryRude*_x000A_    </SBK>
-              </En>
-              <En>
                 <S N="Key">GroupName</S>
                 <S N="Value">WildcardMiss</S>
+              </En>
+              <En>
+                <S N="Key">ScriptBlock</S>
+                <SBK N="Value">_x000A_        Get-Command *ThereShouldBeNoCommandNamedLikeThisOrSomeoneIsBeingVeryRude*_x000A_    </SBK>
               </En>
               <En>
                 <S N="Key">FileName</S>
@@ -519,11 +519,11 @@
           </Obj>
         </MS>
       </Obj>
-      <Db N="RelativeSpeed">3.288338419900774</Db>
+      <Db N="RelativeSpeed">3.320915513420416</Db>
       <S N="GroupName">WildcardMiss</S>
       <I32 N="ClockSpeed">2594</I32>
       <S N="FileName">Comparing Command Lookup</S>
-      <Db N="Throughput">27.396469904580563</Db>
+      <Db N="Throughput">27.156091120743014</Db>
       <Ref N="BenchmarkInput" RefId="38" />
     </MS>
   </Obj>

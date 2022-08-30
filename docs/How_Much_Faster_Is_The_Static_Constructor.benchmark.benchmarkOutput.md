@@ -9,8 +9,8 @@ How Much Faster Is The Static Constructor
 
 |Technique        |Time           |RelativeSpeed|Throughput|
 |-----------------|---------------|-------------|----------|
-|StaticConstructor|00:00:00.462584|1x           |22136.48/s|
-|New-Object       |00:00:01.458518|3.15x        |7020.82/s |
+|StaticConstructor|00:00:00.460549|1x           |22234.29/s|
+|New-Object       |00:00:01.426500|3.1x         |7178.41/s |
 
 
 

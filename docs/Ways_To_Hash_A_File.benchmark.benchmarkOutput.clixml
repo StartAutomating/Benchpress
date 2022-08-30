@@ -14,7 +14,7 @@
           <T>System.Object</T>
           <T>Benchmark.Measure</T>
         </TN>
-        <TS>PT0.0150625S</TS>
+        <TS>PT0.0152094S</TS>
         <MS>
           <S N="FileName">Ways To Hash A File</S>
           <S N="GroupName"></S>
@@ -41,9 +41,9 @@
         </MS>
       </Obj>
       <Db N="RelativeSpeed">1</Db>
-      <I32 N="ClockSpeed">2594</I32>
+      <I32 N="ClockSpeed">2095</I32>
       <S N="FileName">Ways To Hash A File</S>
-      <Db N="Throughput">6639.004149377593</Db>
+      <Db N="Throughput">6574.881323392113</Db>
       <Obj N="BenchmarkInput" RefId="3">
         <TNRef RefId="2" />
         <DCT>
@@ -65,7 +65,7 @@
       <S N="Technique">GetFileHash</S>
       <Obj N="Time" RefId="5">
         <TNRef RefId="1" />
-        <TS>PT0.0266962S</TS>
+        <TS>PT0.0321659S</TS>
         <MS>
           <S N="FileName">Ways To Hash A File</S>
           <S N="GroupName"></S>
@@ -88,10 +88,10 @@
           </Obj>
         </MS>
       </Obj>
-      <Db N="RelativeSpeed">1.772361825726141</Db>
-      <I32 N="ClockSpeed">2594</I32>
+      <Db N="RelativeSpeed">2.114869751600984</Db>
+      <I32 N="ClockSpeed">2095</I32>
       <S N="FileName">Ways To Hash A File</S>
-      <Db N="Throughput">3745.8514694975315</Db>
+      <Db N="Throughput">3108.8823878703847</Db>
       <Ref N="BenchmarkInput" RefId="3" />
     </MS>
   </Obj>

@@ -6,7 +6,7 @@
       <T>System.Object</T>
     </TN>
     <MS>
-      <S N="Technique">Foreach Statement</S>
+      <S N="Technique">For loop</S>
       <Obj N="Time" RefId="1">
         <TN RefId="1">
           <T>System.TimeSpan</T>
@@ -14,7 +14,7 @@
           <T>System.Object</T>
           <T>Benchmark.Measure</T>
         </TN>
-        <TS>PT0.0068011S</TS>
+        <TS>PT0.0069559S</TS>
         <MS>
           <S N="FileName">Different Ways To Iterate</S>
           <S N="GroupName"></S>
@@ -25,12 +25,12 @@
             </TN>
             <DCT>
               <En>
-                <S N="Key">FileName</S>
-                <S N="Value">Different Ways To Iterate</S>
+                <S N="Key">ScriptBlock</S>
+                <SBK N="Value">for ( $i =1; $i -le 100; $i++) { $i } </SBK>
               </En>
               <En>
-                <S N="Key">ScriptBlock</S>
-                <SBK N="Value"> foreach ($n in 1..100) { $n }</SBK>
+                <S N="Key">FileName</S>
+                <S N="Value">Different Ways To Iterate</S>
               </En>
             </DCT>
           </Obj>
@@ -39,7 +39,7 @@
       <Db N="RelativeSpeed">1</Db>
       <I32 N="ClockSpeed">2594</I32>
       <S N="FileName">Different Ways To Iterate</S>
-      <Db N="Throughput">14703.503844966255</Db>
+      <Db N="Throughput">14376.284880461191</Db>
       <Obj N="BenchmarkInput" RefId="3">
         <TNRef RefId="2" />
         <DCT>
@@ -54,10 +54,10 @@
   <Obj RefId="4">
     <TNRef RefId="0" />
     <MS>
-      <S N="Technique">For loop</S>
+      <S N="Technique">For _</S>
       <Obj N="Time" RefId="5">
         <TNRef RefId="1" />
-        <TS>PT0.0068997S</TS>
+        <TS>PT0.0085561S</TS>
         <MS>
           <S N="FileName">Different Ways To Iterate</S>
           <S N="GroupName"></S>
@@ -65,31 +65,31 @@
             <TNRef RefId="2" />
             <DCT>
               <En>
-                <S N="Key">FileName</S>
-                <S N="Value">Different Ways To Iterate</S>
+                <S N="Key">ScriptBlock</S>
+                <SBK N="Value">for ( $_ =1; $_ -le 100; $_++) { $_ } </SBK>
               </En>
               <En>
-                <S N="Key">ScriptBlock</S>
-                <SBK N="Value">for ( $i =1; $i -le 100; $i++) { $i } </SBK>
+                <S N="Key">FileName</S>
+                <S N="Value">Different Ways To Iterate</S>
               </En>
             </DCT>
           </Obj>
         </MS>
       </Obj>
-      <Db N="RelativeSpeed">1.0144976547911368</Db>
+      <Db N="RelativeSpeed">1.2300493106571402</Db>
       <I32 N="ClockSpeed">2594</I32>
       <S N="FileName">Different Ways To Iterate</S>
-      <Db N="Throughput">14493.383770308854</Db>
+      <Db N="Throughput">11687.567933988616</Db>
       <Ref N="BenchmarkInput" RefId="3" />
     </MS>
   </Obj>
   <Obj RefId="7">
     <TNRef RefId="0" />
     <MS>
-      <S N="Technique">For _</S>
+      <S N="Technique">Foreach Statement</S>
       <Obj N="Time" RefId="8">
         <TNRef RefId="1" />
-        <TS>PT0.0078265S</TS>
+        <TS>PT0.0126915S</TS>
         <MS>
           <S N="FileName">Different Ways To Iterate</S>
           <S N="GroupName"></S>
@@ -97,31 +97,31 @@
             <TNRef RefId="2" />
             <DCT>
               <En>
-                <S N="Key">FileName</S>
-                <S N="Value">Different Ways To Iterate</S>
+                <S N="Key">ScriptBlock</S>
+                <SBK N="Value"> foreach ($n in 1..100) { $n }</SBK>
               </En>
               <En>
-                <S N="Key">ScriptBlock</S>
-                <SBK N="Value">for ( $_ =1; $_ -le 100; $_++) { $_ } </SBK>
+                <S N="Key">FileName</S>
+                <S N="Value">Different Ways To Iterate</S>
               </En>
             </DCT>
           </Obj>
         </MS>
       </Obj>
-      <Db N="RelativeSpeed">1.150769728426284</Db>
+      <Db N="RelativeSpeed">1.824566195603732</Db>
       <I32 N="ClockSpeed">2594</I32>
       <S N="FileName">Different Ways To Iterate</S>
-      <Db N="Throughput">12777.10343065227</Db>
+      <Db N="Throughput">7879.2892881062135</Db>
       <Ref N="BenchmarkInput" RefId="3" />
     </MS>
   </Obj>
   <Obj RefId="10">
     <TNRef RefId="0" />
     <MS>
-      <S N="Technique">Foreach _</S>
+      <S N="Technique">Pipe to ScriptBlock</S>
       <Obj N="Time" RefId="11">
         <TNRef RefId="1" />
-        <TS>PT0.0200052S</TS>
+        <TS>PT0.0172255S</TS>
         <MS>
           <S N="FileName">Different Ways To Iterate</S>
           <S N="GroupName"></S>
@@ -129,31 +129,31 @@
             <TNRef RefId="2" />
             <DCT>
               <En>
-                <S N="Key">FileName</S>
-                <S N="Value">Different Ways To Iterate</S>
+                <S N="Key">ScriptBlock</S>
+                <SBK N="Value">1..100 | . { process { $_ }}</SBK>
               </En>
               <En>
-                <S N="Key">ScriptBlock</S>
-                <SBK N="Value">foreach ($_ in 1..100) { $_ }</SBK>
+                <S N="Key">FileName</S>
+                <S N="Value">Different Ways To Iterate</S>
               </En>
             </DCT>
           </Obj>
         </MS>
       </Obj>
-      <Db N="RelativeSpeed">2.941465351193189</Db>
+      <Db N="RelativeSpeed">2.4763869520838426</Db>
       <I32 N="ClockSpeed">2594</I32>
       <S N="FileName">Different Ways To Iterate</S>
-      <Db N="Throughput">4998.7003379121425</Db>
+      <Db N="Throughput">5805.346724333111</Db>
       <Ref N="BenchmarkInput" RefId="3" />
     </MS>
   </Obj>
   <Obj RefId="13">
     <TNRef RefId="0" />
     <MS>
-      <S N="Technique">Pipe to ScriptBlock</S>
+      <S N="Technique">Foreach _</S>
       <Obj N="Time" RefId="14">
         <TNRef RefId="1" />
-        <TS>PT0.028986S</TS>
+        <TS>PT0.0187587S</TS>
         <MS>
           <S N="FileName">Different Ways To Iterate</S>
           <S N="GroupName"></S>
@@ -161,21 +161,21 @@
             <TNRef RefId="2" />
             <DCT>
               <En>
-                <S N="Key">FileName</S>
-                <S N="Value">Different Ways To Iterate</S>
+                <S N="Key">ScriptBlock</S>
+                <SBK N="Value">foreach ($_ in 1..100) { $_ }</SBK>
               </En>
               <En>
-                <S N="Key">ScriptBlock</S>
-                <SBK N="Value">1..100 | . { process { $_ }}</SBK>
+                <S N="Key">FileName</S>
+                <S N="Value">Different Ways To Iterate</S>
               </En>
             </DCT>
           </Obj>
         </MS>
       </Obj>
-      <Db N="RelativeSpeed">4.261957624501919</Db>
+      <Db N="RelativeSpeed">2.6968041518710737</Db>
       <I32 N="ClockSpeed">2594</I32>
       <S N="FileName">Different Ways To Iterate</S>
-      <Db N="Throughput">3449.9413509970327</Db>
+      <Db N="Throughput">5330.859814379462</Db>
       <Ref N="BenchmarkInput" RefId="3" />
     </MS>
   </Obj>
@@ -185,7 +185,7 @@
       <S N="Technique">Foreach-Object</S>
       <Obj N="Time" RefId="17">
         <TNRef RefId="1" />
-        <TS>PT0.077797S</TS>
+        <TS>PT0.0756713S</TS>
         <MS>
           <S N="FileName">Different Ways To Iterate</S>
           <S N="GroupName"></S>
@@ -193,21 +193,21 @@
             <TNRef RefId="2" />
             <DCT>
               <En>
-                <S N="Key">FileName</S>
-                <S N="Value">Different Ways To Iterate</S>
-              </En>
-              <En>
                 <S N="Key">ScriptBlock</S>
                 <SBK N="Value">1..100 | ForEach-Object { $_ }</SBK>
+              </En>
+              <En>
+                <S N="Key">FileName</S>
+                <S N="Value">Different Ways To Iterate</S>
               </En>
             </DCT>
           </Obj>
         </MS>
       </Obj>
-      <Db N="RelativeSpeed">11.438884886268397</Db>
+      <Db N="RelativeSpeed">10.87872166074843</Db>
       <I32 N="ClockSpeed">2594</I32>
       <S N="FileName">Different Ways To Iterate</S>
-      <Db N="Throughput">1285.396609123745</Db>
+      <Db N="Throughput">1321.5049827345374</Db>
       <Ref N="BenchmarkInput" RefId="3" />
     </MS>
   </Obj>

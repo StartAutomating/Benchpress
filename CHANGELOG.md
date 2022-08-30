@@ -1,3 +1,9 @@
+### 1.3.3:
+* Adding Show-Benchmark (Fixes #22)
+* Adding markdown formatting (Fixes #19)
+* Updating Action to check in files (Fixes #20)
+---
+
 ### 1.3.2:
 * Adding Benchmark for Multithreading (thanks @santysq)
 * Autogenerating formatting (#15)

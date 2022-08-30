@@ -14,7 +14,7 @@
           <T>System.Object</T>
           <T>Benchmark.Measure</T>
         </TN>
-        <TS>PT0.0043382S</TS>
+        <TS>PT0.0048041S</TS>
         <MS>
           <S N="FileName">Should I Include The System Namespace</S>
           <S N="GroupName"></S>
@@ -37,9 +37,9 @@
         </MS>
       </Obj>
       <Db N="RelativeSpeed">1</Db>
-      <I32 N="ClockSpeed">2594</I32>
+      <I32 N="ClockSpeed">2095</I32>
       <S N="FileName">Should I Include The System Namespace</S>
-      <Db N="Throughput">23051.034991471115</Db>
+      <Db N="Throughput">20815.553381486647</Db>
       <Obj N="BenchmarkInput" RefId="3">
         <TNRef RefId="2" />
         <DCT>
@@ -57,7 +57,7 @@
       <S N="Technique">SystemNamespaceIncluded</S>
       <Obj N="Time" RefId="5">
         <TNRef RefId="1" />
-        <TS>PT0.005558S</TS>
+        <TS>PT0.0061282S</TS>
         <MS>
           <S N="FileName">Should I Include The System Namespace</S>
           <S N="GroupName"></S>
@@ -76,10 +76,10 @@
           </Obj>
         </MS>
       </Obj>
-      <Db N="RelativeSpeed">1.2811765248259648</Db>
-      <I32 N="ClockSpeed">2594</I32>
+      <Db N="RelativeSpeed">1.2756187423242646</Db>
+      <I32 N="ClockSpeed">2095</I32>
       <S N="FileName">Should I Include The System Namespace</S>
-      <Db N="Throughput">17992.083483267364</Db>
+      <Db N="Throughput">16318.005287033711</Db>
       <Ref N="BenchmarkInput" RefId="3" />
     </MS>
   </Obj>

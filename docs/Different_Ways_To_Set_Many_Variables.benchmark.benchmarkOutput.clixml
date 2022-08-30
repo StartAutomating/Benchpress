@@ -6,7 +6,7 @@
       <T>System.Object</T>
     </TN>
     <MS>
-      <S N="Technique">Simple Assignment</S>
+      <S N="Technique">Multiple Assignment</S>
       <Obj N="Time" RefId="1">
         <TN RefId="1">
           <T>System.TimeSpan</T>
@@ -14,7 +14,7 @@
           <T>System.Object</T>
           <T>Benchmark.Measure</T>
         </TN>
-        <TS>PT0.0399474S</TS>
+        <TS>PT0.0410995S</TS>
         <MS>
           <S N="FileName">Different Ways To Set Many Variables</S>
           <S N="GroupName"></S>
@@ -25,12 +25,12 @@
             </TN>
             <DCT>
               <En>
-                <S N="Key">ScriptBlock</S>
-                <SBK N="Value">                $a = 'b'_x000D__x000A_                $c = 'd'_x000D__x000A_                $e = 'f'_x000D__x000A_                $h = 'i'</SBK>
-              </En>
-              <En>
                 <S N="Key">RepeatCount</S>
                 <U32 N="Value">1024</U32>
+              </En>
+              <En>
+                <S N="Key">ScriptBlock</S>
+                <SBK N="Value">                $a, $c, $e, $h = 'b','d','f','i'</SBK>
               </En>
               <En>
                 <S N="Key">FileName</S>
@@ -43,7 +43,7 @@
       <Db N="RelativeSpeed">1</Db>
       <I32 N="ClockSpeed">2594</I32>
       <S N="FileName">Different Ways To Set Many Variables</S>
-      <Db N="Throughput">25633.70832644928</Db>
+      <Db N="Throughput">24915.144953101622</Db>
       <Obj N="BenchmarkInput" RefId="3">
         <TNRef RefId="2" />
         <DCT>
@@ -62,10 +62,10 @@
   <Obj RefId="4">
     <TNRef RefId="0" />
     <MS>
-      <S N="Technique">Multiple Assignment</S>
+      <S N="Technique">Simple Assignment</S>
       <Obj N="Time" RefId="5">
         <TNRef RefId="1" />
-        <TS>PT0.043299S</TS>
+        <TS>PT0.042814S</TS>
         <MS>
           <S N="FileName">Different Ways To Set Many Variables</S>
           <S N="GroupName"></S>
@@ -73,12 +73,12 @@
             <TNRef RefId="2" />
             <DCT>
               <En>
-                <S N="Key">ScriptBlock</S>
-                <SBK N="Value">                $a, $c, $e, $h = 'b','d','f','i'</SBK>
-              </En>
-              <En>
                 <S N="Key">RepeatCount</S>
                 <U32 N="Value">1024</U32>
+              </En>
+              <En>
+                <S N="Key">ScriptBlock</S>
+                <SBK N="Value">                $a = 'b'_x000D__x000A_                $c = 'd'_x000D__x000A_                $e = 'f'_x000D__x000A_                $h = 'i'</SBK>
               </En>
               <En>
                 <S N="Key">FileName</S>
@@ -88,10 +88,10 @@
           </Obj>
         </MS>
       </Obj>
-      <Db N="RelativeSpeed">1.0839003289325462</Db>
+      <Db N="RelativeSpeed">1.041715835959075</Db>
       <I32 N="ClockSpeed">2594</I32>
       <S N="FileName">Different Ways To Set Many Variables</S>
-      <Db N="Throughput">23649.50691701887</Db>
+      <Db N="Throughput">23917.41019292755</Db>
       <Ref N="BenchmarkInput" RefId="3" />
     </MS>
   </Obj>
@@ -101,7 +101,7 @@
       <S N="Technique">ExecutionContext</S>
       <Obj N="Time" RefId="8">
         <TNRef RefId="1" />
-        <TS>PT0.0519829S</TS>
+        <TS>PT0.0518886S</TS>
         <MS>
           <S N="FileName">Different Ways To Set Many Variables</S>
           <S N="GroupName"></S>
@@ -109,12 +109,12 @@
             <TNRef RefId="2" />
             <DCT>
               <En>
-                <S N="Key">ScriptBlock</S>
-                <SBK N="Value">                $ExecutionContext.SessionState.PSVariable.Set('a', 'b')_x000D__x000A_                $ExecutionContext.SessionState.PSVariable.Set('c', 'd')_x000D__x000A_                $ExecutionContext.SessionState.PSVariable.Set('e', 'f')_x000D__x000A_                $ExecutionContext.SessionState.PSVariable.Set('h', 'i')</SBK>
-              </En>
-              <En>
                 <S N="Key">RepeatCount</S>
                 <U32 N="Value">1024</U32>
+              </En>
+              <En>
+                <S N="Key">ScriptBlock</S>
+                <SBK N="Value">                $ExecutionContext.SessionState.PSVariable.Set('a', 'b')_x000D__x000A_                $ExecutionContext.SessionState.PSVariable.Set('c', 'd')_x000D__x000A_                $ExecutionContext.SessionState.PSVariable.Set('e', 'f')_x000D__x000A_                $ExecutionContext.SessionState.PSVariable.Set('h', 'i')</SBK>
               </En>
               <En>
                 <S N="Key">FileName</S>
@@ -124,10 +124,10 @@
           </Obj>
         </MS>
       </Obj>
-      <Db N="RelativeSpeed">1.3012836880497853</Db>
+      <Db N="RelativeSpeed">1.2625117093881921</Db>
       <I32 N="ClockSpeed">2594</I32>
       <S N="FileName">Different Ways To Set Many Variables</S>
-      <Db N="Throughput">19698.785562175253</Db>
+      <Db N="Throughput">19734.58524608488</Db>
       <Ref N="BenchmarkInput" RefId="3" />
     </MS>
   </Obj>
@@ -137,7 +137,7 @@
       <S N="Technique">SetFromSplat</S>
       <Obj N="Time" RefId="11">
         <TNRef RefId="1" />
-        <TS>PT0.0610792S</TS>
+        <TS>PT0.0611323S</TS>
         <MS>
           <S N="FileName">Different Ways To Set Many Variables</S>
           <S N="GroupName"></S>
@@ -145,12 +145,12 @@
             <TNRef RefId="2" />
             <DCT>
               <En>
-                <S N="Key">ScriptBlock</S>
-                <SBK N="Value">                foreach ($_ in @{a='b';c='d';e='f';h='i'}.GetEnumerator()) {_x000D__x000A_                    $ExecutionContext.SessionState.PSVariable.Set($_.Key, $_.Value)        _x000D__x000A_                }</SBK>
-              </En>
-              <En>
                 <S N="Key">RepeatCount</S>
                 <U32 N="Value">1024</U32>
+              </En>
+              <En>
+                <S N="Key">ScriptBlock</S>
+                <SBK N="Value">                foreach ($_ in @{a='b';c='d';e='f';h='i'}.GetEnumerator()) {_x000D__x000A_                    $ExecutionContext.SessionState.PSVariable.Set($_.Key, $_.Value)        _x000D__x000A_                }</SBK>
               </En>
               <En>
                 <S N="Key">FileName</S>
@@ -160,10 +160,10 @@
           </Obj>
         </MS>
       </Obj>
-      <Db N="RelativeSpeed">1.5289906226688095</Db>
+      <Db N="RelativeSpeed">1.4874219881020452</Db>
       <I32 N="ClockSpeed">2594</I32>
       <S N="FileName">Different Ways To Set Many Variables</S>
-      <Db N="Throughput">16765.1180762027</Db>
+      <Db N="Throughput">16750.555761847663</Db>
       <Ref N="BenchmarkInput" RefId="3" />
     </MS>
   </Obj>
@@ -173,7 +173,7 @@
       <S N="Technique">Set-Variable</S>
       <Obj N="Time" RefId="14">
         <TNRef RefId="1" />
-        <TS>PT0.3939917S</TS>
+        <TS>PT0.3740767S</TS>
         <MS>
           <S N="FileName">Different Ways To Set Many Variables</S>
           <S N="GroupName"></S>
@@ -181,12 +181,12 @@
             <TNRef RefId="2" />
             <DCT>
               <En>
-                <S N="Key">ScriptBlock</S>
-                <SBK N="Value">                Set-Variable a b_x000D__x000A_                Set-Variable c d_x000D__x000A_                Set-Variable e f_x000D__x000A_                Set-Variable h i</SBK>
-              </En>
-              <En>
                 <S N="Key">RepeatCount</S>
                 <U32 N="Value">1024</U32>
+              </En>
+              <En>
+                <S N="Key">ScriptBlock</S>
+                <SBK N="Value">                Set-Variable a b_x000D__x000A_                Set-Variable c d_x000D__x000A_                Set-Variable e f_x000D__x000A_                Set-Variable h i</SBK>
               </En>
               <En>
                 <S N="Key">FileName</S>
@@ -196,10 +196,10 @@
           </Obj>
         </MS>
       </Obj>
-      <Db N="RelativeSpeed">9.862762032072174</Db>
+      <Db N="RelativeSpeed">9.101733597732332</Db>
       <I32 N="ClockSpeed">2594</I32>
       <S N="FileName">Different Ways To Set Many Variables</S>
-      <Db N="Throughput">2599.0395229138076</Db>
+      <Db N="Throughput">2737.406526522502</Db>
       <Ref N="BenchmarkInput" RefId="3" />
     </MS>
   </Obj>

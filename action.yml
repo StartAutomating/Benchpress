@@ -213,7 +213,8 @@ runs:
         
         $benchmarkOutputFiles = $BenchmarkPath | 
             Get-ChildItem -LiteralPath {$_ } -ErrorAction SilentlyContinue |
-            Where-Object Name -Match '\.benchmark.(?>ps1|psd1|json)' |
+            Where-Object Name -Like '*.benchmark.*' |
+            Where-Object Name -NotLike '*.benchmarkOutput.*' |
             Checkpoint-Benchmark -OutputPath {
                 $fileInfo = $_
                 $fileName = $fileInfo.Name        

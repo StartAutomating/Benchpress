@@ -1,7 +1,7 @@
 
 What Is The Fastest Way To Get All Loaded Modules
 -------------------------------------------------
-> @2095 Mhz
+> @2594 Mhz
 
 
 ### 
@@ -9,10 +9,11 @@ What Is The Fastest Way To Get All Loaded Modules
 
 |Technique                      |Time           |RelativeSpeed|Throughput|
 |-------------------------------|---------------|-------------|----------|
-|Get-Module -ExpandProperty Name|00:00:00.003206|1x           |3118.47/s |
-|foreach Get-Module             |00:00:00.004213|1.31x        |2373.61/s |
-|ExecutionContextAndArrayList   |00:00:00.017699|5.52x        |564.98/s  |
-|ExecutionContextAndHashtable   |00:00:00.023842|7.44x        |419.42/s  |
+|Get-Module -ExpandProperty Name|00:00:00.002999|1x           |3333.89/s |
+|foreach Get-Module             |00:00:00.003976|1.33x        |2514.96/s |
+|ExecutionContextAndArrayList   |00:00:00.016092|5.37x        |621.4/s   |
+|ExecutionContextAndHashtable   |00:00:00.041950|13.99x       |238.38/s  |
+
 
 
 

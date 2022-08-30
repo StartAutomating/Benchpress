@@ -14,7 +14,7 @@
           <T>System.Object</T>
           <T>Benchmark.Measure</T>
         </TN>
-        <TS>PT0.0193815S</TS>
+        <TS>PT0.0193399S</TS>
         <MS>
           <S N="FileName">Best Way To Accumulate Pipeline Results</S>
           <S N="GroupName"></S>
@@ -39,7 +39,7 @@
       <Db N="RelativeSpeed">1</Db>
       <I32 N="ClockSpeed">2095</I32>
       <S N="FileName">Best Way To Accumulate Pipeline Results</S>
-      <Db N="Throughput">5159.559373629492</Db>
+      <Db N="Throughput">5170.657552520954</Db>
       <Obj N="BenchmarkInput" RefId="3">
         <TNRef RefId="2" />
         <DCT>
@@ -57,7 +57,7 @@
       <S N="Technique">Queue</S>
       <Obj N="Time" RefId="5">
         <TNRef RefId="1" />
-        <TS>PT0.0195687S</TS>
+        <TS>PT0.0244163S</TS>
         <MS>
           <S N="FileName">Best Way To Accumulate Pipeline Results</S>
           <S N="GroupName"></S>
@@ -76,56 +76,24 @@
           </Obj>
         </MS>
       </Obj>
-      <Db N="RelativeSpeed">1.0096586951474344</Db>
+      <Db N="RelativeSpeed">1.2624832599961737</Db>
       <I32 N="ClockSpeed">2095</I32>
       <S N="FileName">Best Way To Accumulate Pipeline Results</S>
-      <Db N="Throughput">5110.201495244957</Db>
+      <Db N="Throughput">4095.624644192609</Db>
       <Ref N="BenchmarkInput" RefId="3" />
     </MS>
   </Obj>
   <Obj RefId="7">
     <TNRef RefId="0" />
     <MS>
-      <S N="Technique">Tee-Object</S>
+      <S N="Technique">Arraylist</S>
       <Obj N="Time" RefId="8">
         <TNRef RefId="1" />
-        <TS>PT0.0531732S</TS>
+        <TS>PT0.0267713S</TS>
         <MS>
           <S N="FileName">Best Way To Accumulate Pipeline Results</S>
           <S N="GroupName"></S>
           <Obj N="BenchmarkInput" RefId="9">
-            <TNRef RefId="2" />
-            <DCT>
-              <En>
-                <S N="Key">ScriptBlock</S>
-                <SBK N="Value"> _x000A_        &amp; { 1..3 } | Tee-Object -Variable n _x000A_    </SBK>
-              </En>
-              <En>
-                <S N="Key">FileName</S>
-                <S N="Value">Best Way To Accumulate Pipeline Results</S>
-              </En>
-            </DCT>
-          </Obj>
-        </MS>
-      </Obj>
-      <Db N="RelativeSpeed">2.743502824858757</Db>
-      <I32 N="ClockSpeed">2095</I32>
-      <S N="FileName">Best Way To Accumulate Pipeline Results</S>
-      <Db N="Throughput">1880.6466415412276</Db>
-      <Ref N="BenchmarkInput" RefId="3" />
-    </MS>
-  </Obj>
-  <Obj RefId="10">
-    <TNRef RefId="0" />
-    <MS>
-      <S N="Technique">Arraylist</S>
-      <Obj N="Time" RefId="11">
-        <TNRef RefId="1" />
-        <TS>PT0.0557919S</TS>
-        <MS>
-          <S N="FileName">Best Way To Accumulate Pipeline Results</S>
-          <S N="GroupName"></S>
-          <Obj N="BenchmarkInput" RefId="12">
             <TNRef RefId="2" />
             <DCT>
               <En>
@@ -140,10 +108,42 @@
           </Obj>
         </MS>
       </Obj>
-      <Db N="RelativeSpeed">2.878616206175993</Db>
+      <Db N="RelativeSpeed">1.3842522453580421</Db>
       <I32 N="ClockSpeed">2095</I32>
       <S N="FileName">Best Way To Accumulate Pipeline Results</S>
-      <Db N="Throughput">1792.3748787906488</Db>
+      <Db N="Throughput">3735.3434461531565</Db>
+      <Ref N="BenchmarkInput" RefId="3" />
+    </MS>
+  </Obj>
+  <Obj RefId="10">
+    <TNRef RefId="0" />
+    <MS>
+      <S N="Technique">Tee-Object</S>
+      <Obj N="Time" RefId="11">
+        <TNRef RefId="1" />
+        <TS>PT0.0796693S</TS>
+        <MS>
+          <S N="FileName">Best Way To Accumulate Pipeline Results</S>
+          <S N="GroupName"></S>
+          <Obj N="BenchmarkInput" RefId="12">
+            <TNRef RefId="2" />
+            <DCT>
+              <En>
+                <S N="Key">ScriptBlock</S>
+                <SBK N="Value"> _x000A_        &amp; { 1..3 } | Tee-Object -Variable n _x000A_    </SBK>
+              </En>
+              <En>
+                <S N="Key">FileName</S>
+                <S N="Value">Best Way To Accumulate Pipeline Results</S>
+              </En>
+            </DCT>
+          </Obj>
+        </MS>
+      </Obj>
+      <Db N="RelativeSpeed">4.119426677490577</Db>
+      <I32 N="ClockSpeed">2095</I32>
+      <S N="FileName">Best Way To Accumulate Pipeline Results</S>
+      <Db N="Throughput">1255.188636024165</Db>
       <Ref N="BenchmarkInput" RefId="3" />
     </MS>
   </Obj>

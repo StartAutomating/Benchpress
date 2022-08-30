@@ -6,7 +6,7 @@
       <T>System.Object</T>
     </TN>
     <MS>
-      <S N="Technique">DoubleQuote</S>
+      <S N="Technique">SingleQuote</S>
       <Obj N="Time" RefId="1">
         <TN RefId="1">
           <T>System.TimeSpan</T>
@@ -14,7 +14,7 @@
           <T>System.Object</T>
           <T>Benchmark.Measure</T>
         </TN>
-        <TS>PT0.5459968S</TS>
+        <TS>PT0.5519982S</TS>
         <MS>
           <S N="FileName">Whats In A Quote</S>
           <S N="GroupName"></S>
@@ -25,12 +25,12 @@
             </TN>
             <DCT>
               <En>
-                <S N="Key">ScriptBlock</S>
-                <SBK N="Value">_x000D__x000A_        "that which we call a double quotation"_x000D__x000A_    </SBK>
-              </En>
-              <En>
                 <S N="Key">RepeatCount</S>
                 <U32 N="Value">10240</U32>
+              </En>
+              <En>
+                <S N="Key">ScriptBlock</S>
+                <SBK N="Value">_x000D__x000A_        'that which we call a single quotation'_x000D__x000A_    </SBK>
               </En>
               <En>
                 <S N="Key">FileName</S>
@@ -43,7 +43,7 @@
       <Db N="RelativeSpeed">1</Db>
       <I32 N="ClockSpeed">2594</I32>
       <S N="FileName">Whats In A Quote</S>
-      <Db N="Throughput">18754.688672168042</Db>
+      <Db N="Throughput">18550.785129371798</Db>
       <Obj N="BenchmarkInput" RefId="3">
         <TNRef RefId="2" />
         <DCT>
@@ -62,10 +62,10 @@
   <Obj RefId="4">
     <TNRef RefId="0" />
     <MS>
-      <S N="Technique">SingleHerestring</S>
+      <S N="Technique">DoubleQuote</S>
       <Obj N="Time" RefId="5">
         <TNRef RefId="1" />
-        <TS>PT0.5470332S</TS>
+        <TS>PT0.5538411S</TS>
         <MS>
           <S N="FileName">Whats In A Quote</S>
           <S N="GroupName"></S>
@@ -73,12 +73,12 @@
             <TNRef RefId="2" />
             <DCT>
               <En>
-                <S N="Key">ScriptBlock</S>
-                <SBK N="Value">@'_x000D__x000A_that which we call a singly quoted herestring_x000D__x000A_'@</SBK>
-              </En>
-              <En>
                 <S N="Key">RepeatCount</S>
                 <U32 N="Value">10240</U32>
+              </En>
+              <En>
+                <S N="Key">ScriptBlock</S>
+                <SBK N="Value">_x000D__x000A_        "that which we call a double quotation"_x000D__x000A_    </SBK>
               </En>
               <En>
                 <S N="Key">FileName</S>
@@ -88,10 +88,10 @@
           </Obj>
         </MS>
       </Obj>
-      <Db N="RelativeSpeed">1.0018981796230306</Db>
+      <Db N="RelativeSpeed">1.0033385978432539</Db>
       <I32 N="ClockSpeed">2594</I32>
       <S N="FileName">Whats In A Quote</S>
-      <Db N="Throughput">18719.156351022204</Db>
+      <Db N="Throughput">18489.057601539505</Db>
       <Ref N="BenchmarkInput" RefId="3" />
     </MS>
   </Obj>
@@ -101,7 +101,7 @@
       <S N="Technique">DoubleHerestring</S>
       <Obj N="Time" RefId="8">
         <TNRef RefId="1" />
-        <TS>PT0.5601714S</TS>
+        <TS>PT0.566689S</TS>
         <MS>
           <S N="FileName">Whats In A Quote</S>
           <S N="GroupName"></S>
@@ -109,12 +109,12 @@
             <TNRef RefId="2" />
             <DCT>
               <En>
-                <S N="Key">ScriptBlock</S>
-                <SBK N="Value">@"_x000D__x000A_that which we call a doubly quoted herestring_x000D__x000A_"@_x000D__x000A_    </SBK>
-              </En>
-              <En>
                 <S N="Key">RepeatCount</S>
                 <U32 N="Value">10240</U32>
+              </En>
+              <En>
+                <S N="Key">ScriptBlock</S>
+                <SBK N="Value">@"_x000D__x000A_that which we call a doubly quoted herestring_x000D__x000A_"@_x000D__x000A_    </SBK>
               </En>
               <En>
                 <S N="Key">FileName</S>
@@ -124,20 +124,20 @@
           </Obj>
         </MS>
       </Obj>
-      <Db N="RelativeSpeed">1.0259609580129407</Db>
+      <Db N="RelativeSpeed">1.0266138549002515</Db>
       <I32 N="ClockSpeed">2594</I32>
       <S N="FileName">Whats In A Quote</S>
-      <Db N="Throughput">18280.11926349685</Db>
+      <Db N="Throughput">18069.8760695902</Db>
       <Ref N="BenchmarkInput" RefId="3" />
     </MS>
   </Obj>
   <Obj RefId="10">
     <TNRef RefId="0" />
     <MS>
-      <S N="Technique">SingleQuote</S>
+      <S N="Technique">SingleHerestring</S>
       <Obj N="Time" RefId="11">
         <TNRef RefId="1" />
-        <TS>PT0.569073S</TS>
+        <TS>PT0.572318S</TS>
         <MS>
           <S N="FileName">Whats In A Quote</S>
           <S N="GroupName"></S>
@@ -145,12 +145,12 @@
             <TNRef RefId="2" />
             <DCT>
               <En>
-                <S N="Key">ScriptBlock</S>
-                <SBK N="Value">_x000D__x000A_        'that which we call a single quotation'_x000D__x000A_    </SBK>
-              </En>
-              <En>
                 <S N="Key">RepeatCount</S>
                 <U32 N="Value">10240</U32>
+              </En>
+              <En>
+                <S N="Key">ScriptBlock</S>
+                <SBK N="Value">@'_x000D__x000A_that which we call a singly quoted herestring_x000D__x000A_'@</SBK>
               </En>
               <En>
                 <S N="Key">FileName</S>
@@ -160,10 +160,10 @@
           </Obj>
         </MS>
       </Obj>
-      <Db N="RelativeSpeed">1.0422643502672542</Db>
+      <Db N="RelativeSpeed">1.036811351921075</Db>
       <I32 N="ClockSpeed">2594</I32>
       <S N="FileName">Whats In A Quote</S>
-      <Db N="Throughput">17994.176494052608</Db>
+      <Db N="Throughput">17892.15086717524</Db>
       <Ref N="BenchmarkInput" RefId="3" />
     </MS>
   </Obj>

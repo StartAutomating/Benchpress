@@ -14,7 +14,7 @@
           <T>System.Object</T>
           <T>Benchmark.Measure</T>
         </TN>
-        <TS>PT0.0240093S</TS>
+        <TS>PT0.0180054S</TS>
         <MS>
           <S N="FileName">What Is The Fastest Way To Sort</S>
           <S N="GroupName"></S>
@@ -37,9 +37,9 @@
         </MS>
       </Obj>
       <Db N="RelativeSpeed">1</Db>
-      <I32 N="ClockSpeed">2095</I32>
+      <I32 N="ClockSpeed">2594</I32>
       <S N="FileName">What Is The Fastest Way To Sort</S>
-      <Db N="Throughput">4165.052708742029</Db>
+      <Db N="Throughput">5553.889388738933</Db>
       <Obj N="BenchmarkInput" RefId="3">
         <TNRef RefId="2" />
         <DCT>
@@ -57,7 +57,7 @@
       <S N="Technique">Sort-Object</S>
       <Obj N="Time" RefId="5">
         <TNRef RefId="1" />
-        <TS>PT0.0847222S</TS>
+        <TS>PT0.0672208S</TS>
         <MS>
           <S N="FileName">What Is The Fastest Way To Sort</S>
           <S N="GroupName"></S>
@@ -76,10 +76,10 @@
           </Obj>
         </MS>
       </Obj>
-      <Db N="RelativeSpeed">3.5287242860058394</Db>
-      <I32 N="ClockSpeed">2095</I32>
+      <Db N="RelativeSpeed">3.733368878225421</Db>
+      <I32 N="ClockSpeed">2594</I32>
       <S N="FileName">What Is The Fastest Way To Sort</S>
-      <Db N="Throughput">1180.3281784467354</Db>
+      <Db N="Throughput">1487.6347797110418</Db>
       <Ref N="BenchmarkInput" RefId="3" />
     </MS>
   </Obj>

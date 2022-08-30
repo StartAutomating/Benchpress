@@ -9,8 +9,8 @@ Ways To Hash A File
 
 |Technique  |Time           |RelativeSpeed|Throughput|
 |-----------|---------------|-------------|----------|
-|DotNet     |00:00:00.013089|1x           |7639.77/s |
-|GetFileHash|00:00:00.030156|2.3x         |3316.07/s |
+|DotNet     |00:00:00.015062|1x           |6639/s    |
+|GetFileHash|00:00:00.026696|1.77x        |3745.85/s |
 
 
 

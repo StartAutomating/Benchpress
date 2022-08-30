@@ -174,8 +174,7 @@ $filesToCheckin =
         $newName = $benchOutFile.Fullname -replace '\.clixml$', '.md'
         Show-Benchmark -BenchmarkPath $benchOutFile.Fullname  |
             Set-Content -Path $newName
-
-        $benchOutFile
+        
         Get-Item $newName
     }
 

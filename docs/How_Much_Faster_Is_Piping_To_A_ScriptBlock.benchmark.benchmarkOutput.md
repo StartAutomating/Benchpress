@@ -9,10 +9,10 @@ How Much Faster Is Piping To A ScriptBlock
 
 |Technique                       |Time           |RelativeSpeed|Throughput|
 |--------------------------------|---------------|-------------|----------|
-|ScriptBlock                     |00:00:00.177981|1x           |5753.4/s  |
-|DotScriptBlock                  |00:00:00.194176|1.09x        |5273.54/s |
-|ScriptBlockWithPipelineParameter|00:00:00.719402|4.04x        |1423.4/s  |
-|ForeachObject                   |00:00:00.898730|5.05x        |1139.39/s |
+|ScriptBlock                     |00:00:00.175514|1x           |5834.26/s |
+|DotScriptBlock                  |00:00:00.189522|1.08x        |5403.05/s |
+|ScriptBlockWithPipelineParameter|00:00:00.680859|3.88x        |1503.98/s |
+|ForeachObject                   |00:00:00.870617|4.96x        |1176.18/s |
 
 
 

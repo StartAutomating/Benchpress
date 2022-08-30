@@ -9,12 +9,11 @@ Different Ways To Set Many Variables
 
 |Technique          |Time           |RelativeSpeed|Throughput|
 |-------------------|---------------|-------------|----------|
-|Multiple Assignment|00:00:00.046412|1x           |22063.07/s|
-|Simple Assignment  |00:00:00.058050|1.25x        |17639.75/s|
-|ExecutionContext   |00:00:00.062634|1.35x        |16348.71/s|
-|SetFromSplat       |00:00:00.068700|1.48x        |14905.19/s|
-|Set-Variable       |00:00:00.432063|9.31x        |2370.02/s |
-
+|Multiple Assignment|00:00:00.047766|1x           |21437.44/s|
+|Simple Assignment  |00:00:00.054928|1.15x        |18642.35/s|
+|ExecutionContext   |00:00:00.056744|1.19x        |18045.96/s|
+|SetFromSplat       |00:00:00.062978|1.32x        |16259.47/s|
+|Set-Variable       |00:00:00.404481|8.47x        |2531.64/s |
 
 
 

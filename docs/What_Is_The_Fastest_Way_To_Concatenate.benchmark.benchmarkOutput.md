@@ -9,10 +9,9 @@ What Is The Fastest Way To Concatenate
 
 |Technique    |Time           |RelativeSpeed|Throughput|
 |-------------|---------------|-------------|----------|
-|AddStrings   |00:00:00.005581|1x           |17916.33/s|
-|StringBuilder|00:00:00.010316|1.85x        |9693.4/s  |
-|JoinStrings  |00:00:00.034066|6.1x         |2935.43/s |
-
+|AddStrings   |00:00:00.005393|1x           |18540.49/s|
+|StringBuilder|00:00:00.009858|1.83x        |10143.94/s|
+|JoinStrings  |00:00:00.031974|5.93x        |3127.52/s |
 
 
 

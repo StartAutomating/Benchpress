@@ -6,7 +6,7 @@
       <T>System.Object</T>
     </TN>
     <MS>
-      <S N="Technique">DotScriptBlock</S>
+      <S N="Technique">ScriptBlock</S>
       <Obj N="Time" RefId="1">
         <TN RefId="1">
           <T>System.TimeSpan</T>
@@ -14,7 +14,7 @@
           <T>System.Object</T>
           <T>Benchmark.Measure</T>
         </TN>
-        <TS>PT0.1979405S</TS>
+        <TS>PT0.1504109S</TS>
         <MS>
           <S N="FileName">How Much Faster Is Piping To A ScriptBlock</S>
           <S N="GroupName"></S>
@@ -26,7 +26,7 @@
             <DCT>
               <En>
                 <S N="Key">ScriptBlock</S>
-                <SBK N="Value">_x000D__x000A_                1..100 | . {_x000D__x000A_                    process { $_ } _x000D__x000A_                }_x000D__x000A_            </SBK>
+                <SBK N="Value">_x000D__x000A_                1..100 | &amp;{_x000D__x000A_                    process { $_}_x000D__x000A_                }_x000D__x000A_            </SBK>
               </En>
               <En>
                 <S N="Key">RepeatCount</S>
@@ -41,9 +41,9 @@
         </MS>
       </Obj>
       <Db N="RelativeSpeed">1</Db>
-      <I32 N="ClockSpeed">2095</I32>
+      <I32 N="ClockSpeed">2594</I32>
       <S N="FileName">How Much Faster Is Piping To A ScriptBlock</S>
-      <Db N="Throughput">5173.271766010494</Db>
+      <Db N="Throughput">6808.017238112398</Db>
       <Obj N="BenchmarkInput" RefId="3">
         <TNRef RefId="2" />
         <DCT>
@@ -62,10 +62,10 @@
   <Obj RefId="4">
     <TNRef RefId="0" />
     <MS>
-      <S N="Technique">ScriptBlock</S>
+      <S N="Technique">DotScriptBlock</S>
       <Obj N="Time" RefId="5">
         <TNRef RefId="1" />
-        <TS>PT0.201441S</TS>
+        <TS>PT0.157902S</TS>
         <MS>
           <S N="FileName">How Much Faster Is Piping To A ScriptBlock</S>
           <S N="GroupName"></S>
@@ -74,7 +74,7 @@
             <DCT>
               <En>
                 <S N="Key">ScriptBlock</S>
-                <SBK N="Value">_x000D__x000A_                1..100 | &amp;{_x000D__x000A_                    process { $_}_x000D__x000A_                }_x000D__x000A_            </SBK>
+                <SBK N="Value">_x000D__x000A_                1..100 | . {_x000D__x000A_                    process { $_ } _x000D__x000A_                }_x000D__x000A_            </SBK>
               </En>
               <En>
                 <S N="Key">RepeatCount</S>
@@ -88,10 +88,10 @@
           </Obj>
         </MS>
       </Obj>
-      <Db N="RelativeSpeed">1.0176846072430858</Db>
-      <I32 N="ClockSpeed">2095</I32>
+      <Db N="RelativeSpeed">1.0498042362621325</Db>
+      <I32 N="ClockSpeed">2594</I32>
       <S N="FileName">How Much Faster Is Piping To A ScriptBlock</S>
-      <Db N="Throughput">5083.374288253136</Db>
+      <Db N="Throughput">6485.035021722335</Db>
       <Ref N="BenchmarkInput" RefId="3" />
     </MS>
   </Obj>
@@ -101,7 +101,7 @@
       <S N="Technique">ScriptBlockWithPipelineParameter</S>
       <Obj N="Time" RefId="8">
         <TNRef RefId="1" />
-        <TS>PT0.7211255S</TS>
+        <TS>PT0.5417395S</TS>
         <MS>
           <S N="FileName">How Much Faster Is Piping To A ScriptBlock</S>
           <S N="GroupName"></S>
@@ -124,10 +124,10 @@
           </Obj>
         </MS>
       </Obj>
-      <Db N="RelativeSpeed">3.6431427625978516</Db>
-      <I32 N="ClockSpeed">2095</I32>
+      <Db N="RelativeSpeed">3.6017303267249914</Db>
+      <I32 N="ClockSpeed">2594</I32>
       <S N="FileName">How Much Faster Is Piping To A ScriptBlock</S>
-      <Db N="Throughput">1420.0024822309017</Db>
+      <Db N="Throughput">1890.207378269445</Db>
       <Ref N="BenchmarkInput" RefId="3" />
     </MS>
   </Obj>
@@ -137,7 +137,7 @@
       <S N="Technique">ForeachObject</S>
       <Obj N="Time" RefId="11">
         <TNRef RefId="1" />
-        <TS>PT0.9811665S</TS>
+        <TS>PT0.6967575S</TS>
         <MS>
           <S N="FileName">How Much Faster Is Piping To A ScriptBlock</S>
           <S N="GroupName"></S>
@@ -160,10 +160,10 @@
           </Obj>
         </MS>
       </Obj>
-      <Db N="RelativeSpeed">4.956875929888023</Db>
-      <I32 N="ClockSpeed">2095</I32>
+      <Db N="RelativeSpeed">4.632360420687597</Db>
+      <I32 N="ClockSpeed">2594</I32>
       <S N="FileName">How Much Faster Is Piping To A ScriptBlock</S>
-      <Db N="Throughput">1043.65568942682</Db>
+      <Db N="Throughput">1469.664840349763</Db>
       <Ref N="BenchmarkInput" RefId="3" />
     </MS>
   </Obj>

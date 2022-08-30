@@ -37,11 +37,11 @@ function Show-Benchmark {
 
         foreach ($path in $BenchmarkPath) {
             $benchmarkOutput = 
-                if ($path -match '\.benchmark\.') {
-                    Checkpoint-Benchmark -BenchmarkPath $path
-                }
-                elseif ($path -like '*.clixml') {
+                if ($path -match '\.benchmarkOutput\.clixml') {
                     Import-Clixml -Path $path
+                }
+                else {
+                    Checkpoint-Benchmark -BenchmarkPath $path
                 }
 
             $benchmarkOutputFile = [PSCustomObject]@{

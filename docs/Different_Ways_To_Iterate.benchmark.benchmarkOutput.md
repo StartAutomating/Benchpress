@@ -9,12 +9,12 @@ Different Ways To Iterate
 
 |Technique          |Time           |RelativeSpeed|Throughput|
 |-------------------|---------------|-------------|----------|
-|Foreach Statement  |00:00:00.006801|1x           |14703.5/s |
-|For loop           |00:00:00.006899|1.01x        |14493.38/s|
-|For _              |00:00:00.007826|1.15x        |12777.1/s |
-|Foreach _          |00:00:00.020005|2.94x        |4998.7/s  |
-|Pipe to ScriptBlock|00:00:00.028986|4.26x        |3449.94/s |
-|Foreach-Object     |00:00:00.077797|11.44x       |1285.4/s  |
+|For loop           |00:00:00.006955|1x           |14376.28/s|
+|For _              |00:00:00.008556|1.23x        |11687.57/s|
+|Foreach Statement  |00:00:00.012691|1.82x        |7879.29/s |
+|Pipe to ScriptBlock|00:00:00.017225|2.48x        |5805.35/s |
+|Foreach _          |00:00:00.018758|2.7x         |5330.86/s |
+|Foreach-Object     |00:00:00.075671|10.88x       |1321.5/s  |
 
 
 

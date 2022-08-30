@@ -6,7 +6,7 @@
       <T>System.Object</T>
     </TN>
     <MS>
-      <S N="Technique">QuickRandom</S>
+      <S N="Technique">[Random]::New().Next()</S>
       <Obj N="Time" RefId="1">
         <TN RefId="1">
           <T>System.TimeSpan</T>
@@ -14,7 +14,7 @@
           <T>System.Object</T>
           <T>Benchmark.Measure</T>
         </TN>
-        <TS>PT0.0069974S</TS>
+        <TS>PT0.0043167S</TS>
         <MS>
           <S N="FileName">Random Number Generation</S>
           <S N="GroupName">(AnyRandomNumber)</S>
@@ -29,12 +29,12 @@
                 <S N="Value">(AnyRandomNumber)</S>
               </En>
               <En>
-                <S N="Key">ScriptBlock</S>
-                <SBK N="Value">_x000D__x000A_        $global:QuickRandom.Next()        _x000D__x000A_    </SBK>
-              </En>
-              <En>
                 <S N="Key">FileName</S>
                 <S N="Value">Random Number Generation</S>
+              </En>
+              <En>
+                <S N="Key">ScriptBlock</S>
+                <SBK N="Value">_x000D__x000A_        [Random]::new().Next()_x000D__x000A_    </SBK>
               </En>
             </DCT>
           </Obj>
@@ -42,9 +42,9 @@
       </Obj>
       <Db N="RelativeSpeed">1</Db>
       <S N="GroupName">(AnyRandomNumber)</S>
-      <I32 N="ClockSpeed">2095</I32>
+      <I32 N="ClockSpeed">2594</I32>
       <S N="FileName">Random Number Generation</S>
-      <Db N="Throughput">14291.022379741047</Db>
+      <Db N="Throughput">23165.844279194756</Db>
       <Obj N="BenchmarkInput" RefId="3">
         <TNRef RefId="2" />
         <DCT>
@@ -63,10 +63,10 @@
   <Obj RefId="4">
     <TNRef RefId="0" />
     <MS>
-      <S N="Technique">[Random]::New().Next()</S>
+      <S N="Technique">QuickRandom</S>
       <Obj N="Time" RefId="5">
         <TNRef RefId="1" />
-        <TS>PT0.0070605S</TS>
+        <TS>PT0.0043456S</TS>
         <MS>
           <S N="FileName">Random Number Generation</S>
           <S N="GroupName">(AnyRandomNumber)</S>
@@ -78,22 +78,22 @@
                 <S N="Value">(AnyRandomNumber)</S>
               </En>
               <En>
-                <S N="Key">ScriptBlock</S>
-                <SBK N="Value">_x000D__x000A_        [Random]::new().Next()_x000D__x000A_    </SBK>
-              </En>
-              <En>
                 <S N="Key">FileName</S>
                 <S N="Value">Random Number Generation</S>
+              </En>
+              <En>
+                <S N="Key">ScriptBlock</S>
+                <SBK N="Value">_x000D__x000A_        $global:QuickRandom.Next()        _x000D__x000A_    </SBK>
               </En>
             </DCT>
           </Obj>
         </MS>
       </Obj>
-      <Db N="RelativeSpeed">1.0090176351216167</Db>
+      <Db N="RelativeSpeed">1.0066949289966873</Db>
       <S N="GroupName">(AnyRandomNumber)</S>
-      <I32 N="ClockSpeed">2095</I32>
+      <I32 N="ClockSpeed">2594</I32>
       <S N="FileName">Random Number Generation</S>
-      <Db N="Throughput">14163.302882232138</Db>
+      <Db N="Throughput">23011.78203240059</Db>
       <Ref N="BenchmarkInput" RefId="3" />
     </MS>
   </Obj>
@@ -103,7 +103,7 @@
       <S N="Technique">GetRandom</S>
       <Obj N="Time" RefId="8">
         <TNRef RefId="1" />
-        <TS>PT0.0127735S</TS>
+        <TS>PT0.0417095S</TS>
         <MS>
           <S N="FileName">Random Number Generation</S>
           <S N="GroupName">(AnyRandomNumber)</S>
@@ -115,22 +115,22 @@
                 <S N="Value">(AnyRandomNumber)</S>
               </En>
               <En>
-                <S N="Key">ScriptBlock</S>
-                <SBK N="Value">_x000D__x000A_        Get-Random_x000D__x000A_    </SBK>
-              </En>
-              <En>
                 <S N="Key">FileName</S>
                 <S N="Value">Random Number Generation</S>
+              </En>
+              <En>
+                <S N="Key">ScriptBlock</S>
+                <SBK N="Value">_x000D__x000A_        Get-Random_x000D__x000A_    </SBK>
               </En>
             </DCT>
           </Obj>
         </MS>
       </Obj>
-      <Db N="RelativeSpeed">1.8254637436762227</Db>
+      <Db N="RelativeSpeed">9.662357819630737</Db>
       <S N="GroupName">(AnyRandomNumber)</S>
-      <I32 N="ClockSpeed">2095</I32>
+      <I32 N="ClockSpeed">2594</I32>
       <S N="FileName">Random Number Generation</S>
-      <Db N="Throughput">7828.707871765765</Db>
+      <Db N="Throughput">2397.5353336769804</Db>
       <Ref N="BenchmarkInput" RefId="3" />
     </MS>
   </Obj>
@@ -140,7 +140,7 @@
       <S N="Technique">[Random]::New().Next()</S>
       <Obj N="Time" RefId="11">
         <TNRef RefId="1" />
-        <TS>PT0.0058749S</TS>
+        <TS>PT0.0042252S</TS>
         <MS>
           <S N="FileName">Random Number Generation</S>
           <S N="GroupName">(Min and Max)</S>
@@ -152,12 +152,12 @@
                 <S N="Value">(Min and Max)</S>
               </En>
               <En>
-                <S N="Key">ScriptBlock</S>
-                <SBK N="Value">_x000D__x000A_        [Random]::new().Next(10,100)_x000D__x000A_    </SBK>
-              </En>
-              <En>
                 <S N="Key">FileName</S>
                 <S N="Value">Random Number Generation</S>
+              </En>
+              <En>
+                <S N="Key">ScriptBlock</S>
+                <SBK N="Value">_x000D__x000A_        [Random]::new().Next(10,100)_x000D__x000A_    </SBK>
               </En>
             </DCT>
           </Obj>
@@ -165,9 +165,9 @@
       </Obj>
       <Db N="RelativeSpeed">1</Db>
       <S N="GroupName">(Min and Max)</S>
-      <I32 N="ClockSpeed">2095</I32>
+      <I32 N="ClockSpeed">2594</I32>
       <S N="FileName">Random Number Generation</S>
-      <Db N="Throughput">17021.566324533185</Db>
+      <Db N="Throughput">23667.51869733977</Db>
       <Obj N="BenchmarkInput" RefId="13">
         <TNRef RefId="2" />
         <DCT>
@@ -189,7 +189,7 @@
       <S N="Technique">QuickRandom</S>
       <Obj N="Time" RefId="15">
         <TNRef RefId="1" />
-        <TS>PT0.0082014S</TS>
+        <TS>PT0.0061363S</TS>
         <MS>
           <S N="FileName">Random Number Generation</S>
           <S N="GroupName">(Min and Max)</S>
@@ -201,22 +201,22 @@
                 <S N="Value">(Min and Max)</S>
               </En>
               <En>
-                <S N="Key">ScriptBlock</S>
-                <SBK N="Value">_x000D__x000A_        $global:QuickRandom.Next(10,100)        _x000D__x000A_    </SBK>
-              </En>
-              <En>
                 <S N="Key">FileName</S>
                 <S N="Value">Random Number Generation</S>
+              </En>
+              <En>
+                <S N="Key">ScriptBlock</S>
+                <SBK N="Value">_x000D__x000A_        $global:QuickRandom.Next(10,100)        _x000D__x000A_    </SBK>
               </En>
             </DCT>
           </Obj>
         </MS>
       </Obj>
-      <Db N="RelativeSpeed">1.3960067405402643</Db>
+      <Db N="RelativeSpeed">1.4523099498248604</Db>
       <S N="GroupName">(Min and Max)</S>
-      <I32 N="ClockSpeed">2095</I32>
+      <I32 N="ClockSpeed">2594</I32>
       <S N="FileName">Random Number Generation</S>
-      <Db N="Throughput">12193.040212646622</Db>
+      <Db N="Throughput">16296.465296677152</Db>
       <Ref N="BenchmarkInput" RefId="13" />
     </MS>
   </Obj>
@@ -226,7 +226,7 @@
       <S N="Technique">GetRandom</S>
       <Obj N="Time" RefId="18">
         <TNRef RefId="1" />
-        <TS>PT0.0142539S</TS>
+        <TS>PT0.010483S</TS>
         <MS>
           <S N="FileName">Random Number Generation</S>
           <S N="GroupName">(Min and Max)</S>
@@ -238,22 +238,22 @@
                 <S N="Value">(Min and Max)</S>
               </En>
               <En>
-                <S N="Key">ScriptBlock</S>
-                <SBK N="Value">_x000D__x000A_        Get-Random -Minimum 10 -Maximum 100 _x000D__x000A_    </SBK>
-              </En>
-              <En>
                 <S N="Key">FileName</S>
                 <S N="Value">Random Number Generation</S>
+              </En>
+              <En>
+                <S N="Key">ScriptBlock</S>
+                <SBK N="Value">_x000D__x000A_        Get-Random -Minimum 10 -Maximum 100 _x000D__x000A_    </SBK>
               </En>
             </DCT>
           </Obj>
         </MS>
       </Obj>
-      <Db N="RelativeSpeed">2.426237042332635</Db>
+      <Db N="RelativeSpeed">2.4810659850421284</Db>
       <S N="GroupName">(Min and Max)</S>
-      <I32 N="ClockSpeed">2095</I32>
+      <I32 N="ClockSpeed">2594</I32>
       <S N="FileName">Random Number Generation</S>
-      <Db N="Throughput">7015.623794189661</Db>
+      <Db N="Throughput">9539.254030334829</Db>
       <Ref N="BenchmarkInput" RefId="13" />
     </MS>
   </Obj>
@@ -263,7 +263,7 @@
       <S N="Technique">[Random]::New().Next()</S>
       <Obj N="Time" RefId="21">
         <TNRef RefId="1" />
-        <TS>PT0.0010618S</TS>
+        <TS>PT0.0008179S</TS>
         <MS>
           <S N="FileName">Random Number Generation</S>
           <S N="GroupName">(Random Byte Buffer)</S>
@@ -275,10 +275,6 @@
                 <S N="Value">(Random Byte Buffer)</S>
               </En>
               <En>
-                <S N="Key">ScriptBlock</S>
-                <SBK N="Value">_x000D__x000A_        $buff = [byte[]]::new(1kb)_x000D__x000A_        [random]::new().NextBytes($buff)_x000D__x000A_        $buff = $null_x000D__x000A_    </SBK>
-              </En>
-              <En>
                 <S N="Key">RepeatCount</S>
                 <U32 N="Value">10</U32>
               </En>
@@ -286,15 +282,19 @@
                 <S N="Key">FileName</S>
                 <S N="Value">Random Number Generation</S>
               </En>
+              <En>
+                <S N="Key">ScriptBlock</S>
+                <SBK N="Value">_x000D__x000A_        $buff = [byte[]]::new(1kb)_x000D__x000A_        [random]::new().NextBytes($buff)_x000D__x000A_        $buff = $null_x000D__x000A_    </SBK>
+              </En>
             </DCT>
           </Obj>
         </MS>
       </Obj>
       <Db N="RelativeSpeed">1</Db>
       <S N="GroupName">(Random Byte Buffer)</S>
-      <I32 N="ClockSpeed">2095</I32>
+      <I32 N="ClockSpeed">2594</I32>
       <S N="FileName">Random Number Generation</S>
-      <Db N="Throughput">9417.969485778867</Db>
+      <Db N="Throughput">12226.43354933366</Db>
       <Obj N="BenchmarkInput" RefId="23">
         <TNRef RefId="2" />
         <DCT>
@@ -320,7 +320,7 @@
       <S N="Technique">QuickRandom</S>
       <Obj N="Time" RefId="25">
         <TNRef RefId="1" />
-        <TS>PT0.0043851S</TS>
+        <TS>PT0.0025607S</TS>
         <MS>
           <S N="FileName">Random Number Generation</S>
           <S N="GroupName">(Random Byte Buffer)</S>
@@ -332,10 +332,6 @@
                 <S N="Value">(Random Byte Buffer)</S>
               </En>
               <En>
-                <S N="Key">ScriptBlock</S>
-                <SBK N="Value">_x000D__x000A_        $buff = [byte[]]::new(1kb)_x000D__x000A_        $global:QuickRandom.NextBytes($buff)_x000D__x000A_        $buff = $null_x000D__x000A_    </SBK>
-              </En>
-              <En>
                 <S N="Key">RepeatCount</S>
                 <U32 N="Value">10</U32>
               </En>
@@ -343,15 +339,19 @@
                 <S N="Key">FileName</S>
                 <S N="Value">Random Number Generation</S>
               </En>
+              <En>
+                <S N="Key">ScriptBlock</S>
+                <SBK N="Value">_x000D__x000A_        $buff = [byte[]]::new(1kb)_x000D__x000A_        $global:QuickRandom.NextBytes($buff)_x000D__x000A_        $buff = $null_x000D__x000A_    </SBK>
+              </En>
             </DCT>
           </Obj>
         </MS>
       </Obj>
-      <Db N="RelativeSpeed">4.129873799208891</Db>
+      <Db N="RelativeSpeed">3.1308228389778705</Db>
       <S N="GroupName">(Random Byte Buffer)</S>
-      <I32 N="ClockSpeed">2095</I32>
+      <I32 N="ClockSpeed">2594</I32>
       <S N="FileName">Random Number Generation</S>
-      <Db N="Throughput">2280.4497046817633</Db>
+      <Db N="Throughput">3905.1821767485453</Db>
       <Ref N="BenchmarkInput" RefId="23" />
     </MS>
   </Obj>
@@ -361,7 +361,7 @@
       <S N="Technique">GetRandom</S>
       <Obj N="Time" RefId="28">
         <TNRef RefId="1" />
-        <TS>PT0.9507617S</TS>
+        <TS>PT0.659344S</TS>
         <MS>
           <S N="FileName">Random Number Generation</S>
           <S N="GroupName">(Random Byte Buffer)</S>
@@ -373,10 +373,6 @@
                 <S N="Value">(Random Byte Buffer)</S>
               </En>
               <En>
-                <S N="Key">ScriptBlock</S>
-                <SBK N="Value">_x000D__x000A_        $buff = @(foreach ($n in 1..1kb) { Get-Random -Minimum 0 -Maximum 255}) -as [byte[]]        _x000D__x000A_    </SBK>
-              </En>
-              <En>
                 <S N="Key">RepeatCount</S>
                 <U32 N="Value">10</U32>
               </En>
@@ -384,15 +380,19 @@
                 <S N="Key">FileName</S>
                 <S N="Value">Random Number Generation</S>
               </En>
+              <En>
+                <S N="Key">ScriptBlock</S>
+                <SBK N="Value">_x000D__x000A_        $buff = @(foreach ($n in 1..1kb) { Get-Random -Minimum 0 -Maximum 255}) -as [byte[]]        _x000D__x000A_    </SBK>
+              </En>
             </DCT>
           </Obj>
         </MS>
       </Obj>
-      <Db N="RelativeSpeed">895.424467884724</Db>
+      <Db N="RelativeSpeed">806.1425602151853</Db>
       <S N="GroupName">(Random Byte Buffer)</S>
-      <I32 N="ClockSpeed">2095</I32>
+      <I32 N="ClockSpeed">2594</I32>
       <S N="FileName">Random Number Generation</S>
-      <Db N="Throughput">10.517882661869951</Db>
+      <Db N="Throughput">15.166589822611565</Db>
       <Ref N="BenchmarkInput" RefId="23" />
     </MS>
   </Obj>

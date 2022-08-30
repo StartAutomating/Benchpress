@@ -230,10 +230,9 @@ runs:
         $filesToCheckin =
             foreach ($benchOutFile in $benchmarkOutputFiles) {
                 $newName = $benchOutFile.Fullname -replace '\.clixml$', '.md'
-                Show-Benchmark -BenchmarkPath $benchOutFile.Fullname  |
+                Show-Benchmark -BenchmarkPath $benchOutFile.Fullname -Encoding UTF8 |
                     Set-Content -Path $newName
-        
-                $benchOutFile
+                
                 Get-Item $newName
             }
         

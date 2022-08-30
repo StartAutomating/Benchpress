@@ -14,7 +14,7 @@
           <T>System.Object</T>
           <T>Benchmark.Measure</T>
         </TN>
-        <TS>PT0.01174S</TS>
+        <TS>PT0.0115354S</TS>
         <MS>
           <S N="FileName">What Is The Fastest Way To Filter</S>
           <S N="GroupName">Filtering Values</S>
@@ -25,16 +25,16 @@
             </TN>
             <DCT>
               <En>
+                <S N="Key">GroupName</S>
+                <S N="Value">Filtering Values</S>
+              </En>
+              <En>
                 <S N="Key">RepeatCount</S>
                 <U32 N="Value">10</U32>
               </En>
               <En>
                 <S N="Key">ScriptBlock</S>
                 <SBK N="Value">_x000A_        # VERY DANGEROUS if $valueList isn't already typed as an array, it will_x000A_        # return $true/$false instead of acting as a filter on single objects_x000A_        $valueList -gt 1000_x000A_    </SBK>
-              </En>
-              <En>
-                <S N="Key">GroupName</S>
-                <S N="Value">Filtering Values</S>
               </En>
               <En>
                 <S N="Key">FileName</S>
@@ -48,7 +48,7 @@
       <S N="GroupName">Filtering Values</S>
       <I32 N="ClockSpeed">2095</I32>
       <S N="FileName">What Is The Fastest Way To Filter</S>
-      <Db N="Throughput">851.7887563884157</Db>
+      <Db N="Throughput">866.8966832532899</Db>
       <Obj N="BenchmarkInput" RefId="3">
         <TNRef RefId="2" />
         <DCT>
@@ -71,10 +71,10 @@
   <Obj RefId="4">
     <TNRef RefId="0" />
     <MS>
-      <S N="Technique">Operator Filter (Explicit Array)</S>
+      <S N="Technique">ForEach Loop</S>
       <Obj N="Time" RefId="5">
         <TNRef RefId="1" />
-        <TS>PT0.0148702S</TS>
+        <TS>PT0.0148102S</TS>
         <MS>
           <S N="FileName">What Is The Fastest Way To Filter</S>
           <S N="GroupName">Filtering Values</S>
@@ -82,46 +82,9 @@
             <TNRef RefId="2" />
             <DCT>
               <En>
-                <S N="Key">RepeatCount</S>
-                <U32 N="Value">10</U32>
-              </En>
-              <En>
-                <S N="Key">ScriptBlock</S>
-                <SBK N="Value">_x000A_        # Safe for arrays or single values_x000A_        @($valueList) -gt 1000_x000A_    </SBK>
-              </En>
-              <En>
                 <S N="Key">GroupName</S>
                 <S N="Value">Filtering Values</S>
               </En>
-              <En>
-                <S N="Key">FileName</S>
-                <S N="Value">What Is The Fastest Way To Filter</S>
-              </En>
-            </DCT>
-          </Obj>
-        </MS>
-      </Obj>
-      <Db N="RelativeSpeed">1.266626916524702</Db>
-      <S N="GroupName">Filtering Values</S>
-      <I32 N="ClockSpeed">2095</I32>
-      <S N="FileName">What Is The Fastest Way To Filter</S>
-      <Db N="Throughput">672.4859114201557</Db>
-      <Ref N="BenchmarkInput" RefId="3" />
-    </MS>
-  </Obj>
-  <Obj RefId="7">
-    <TNRef RefId="0" />
-    <MS>
-      <S N="Technique">ForEach Loop</S>
-      <Obj N="Time" RefId="8">
-        <TNRef RefId="1" />
-        <TS>PT0.0158464S</TS>
-        <MS>
-          <S N="FileName">What Is The Fastest Way To Filter</S>
-          <S N="GroupName">Filtering Values</S>
-          <Obj N="BenchmarkInput" RefId="9">
-            <TNRef RefId="2" />
-            <DCT>
               <En>
                 <S N="Key">RepeatCount</S>
                 <U32 N="Value">10</U32>
@@ -131,8 +94,45 @@
                 <SBK N="Value">_x000A_        foreach ($v in $valueList) { if ($v -gt 1000) { $v } }_x000A_    </SBK>
               </En>
               <En>
+                <S N="Key">FileName</S>
+                <S N="Value">What Is The Fastest Way To Filter</S>
+              </En>
+            </DCT>
+          </Obj>
+        </MS>
+      </Obj>
+      <Db N="RelativeSpeed">1.2838913258317874</Db>
+      <S N="GroupName">Filtering Values</S>
+      <I32 N="ClockSpeed">2095</I32>
+      <S N="FileName">What Is The Fastest Way To Filter</S>
+      <Db N="Throughput">675.2103280171773</Db>
+      <Ref N="BenchmarkInput" RefId="3" />
+    </MS>
+  </Obj>
+  <Obj RefId="7">
+    <TNRef RefId="0" />
+    <MS>
+      <S N="Technique">Operator Filter (Explicit Array)</S>
+      <Obj N="Time" RefId="8">
+        <TNRef RefId="1" />
+        <TS>PT0.0481592S</TS>
+        <MS>
+          <S N="FileName">What Is The Fastest Way To Filter</S>
+          <S N="GroupName">Filtering Values</S>
+          <Obj N="BenchmarkInput" RefId="9">
+            <TNRef RefId="2" />
+            <DCT>
+              <En>
                 <S N="Key">GroupName</S>
                 <S N="Value">Filtering Values</S>
+              </En>
+              <En>
+                <S N="Key">RepeatCount</S>
+                <U32 N="Value">10</U32>
+              </En>
+              <En>
+                <S N="Key">ScriptBlock</S>
+                <SBK N="Value">_x000A_        # Safe for arrays or single values_x000A_        @($valueList) -gt 1000_x000A_    </SBK>
               </En>
               <En>
                 <S N="Key">FileName</S>
@@ -142,11 +142,11 @@
           </Obj>
         </MS>
       </Obj>
-      <Db N="RelativeSpeed">1.3497785349233389</Db>
+      <Db N="RelativeSpeed">4.174905074813184</Db>
       <S N="GroupName">Filtering Values</S>
       <I32 N="ClockSpeed">2095</I32>
       <S N="FileName">What Is The Fastest Way To Filter</S>
-      <Db N="Throughput">631.0581583198708</Db>
+      <Db N="Throughput">207.64464525988805</Db>
       <Ref N="BenchmarkInput" RefId="3" />
     </MS>
   </Obj>
@@ -156,13 +156,17 @@
       <S N="Technique">Pipe to ScriptBlock</S>
       <Obj N="Time" RefId="11">
         <TNRef RefId="1" />
-        <TS>PT0.1155502S</TS>
+        <TS>PT0.1402072S</TS>
         <MS>
           <S N="FileName">What Is The Fastest Way To Filter</S>
           <S N="GroupName">Filtering Values</S>
           <Obj N="BenchmarkInput" RefId="12">
             <TNRef RefId="2" />
             <DCT>
+              <En>
+                <S N="Key">GroupName</S>
+                <S N="Value">Filtering Values</S>
+              </En>
               <En>
                 <S N="Key">RepeatCount</S>
                 <U32 N="Value">10</U32>
@@ -172,10 +176,6 @@
                 <SBK N="Value">_x000A_        $valueList | &amp; { process { if ($_ -gt 1000) { $_ } } }_x000A_    </SBK>
               </En>
               <En>
-                <S N="Key">GroupName</S>
-                <S N="Value">Filtering Values</S>
-              </En>
-              <En>
                 <S N="Key">FileName</S>
                 <S N="Value">What Is The Fastest Way To Filter</S>
               </En>
@@ -183,11 +183,11 @@
           </Obj>
         </MS>
       </Obj>
-      <Db N="RelativeSpeed">9.84243611584327</Db>
+      <Db N="RelativeSpeed">12.154515664823068</Db>
       <S N="GroupName">Filtering Values</S>
       <I32 N="ClockSpeed">2095</I32>
       <S N="FileName">What Is The Fastest Way To Filter</S>
-      <Db N="Throughput">86.54247244920388</Db>
+      <Db N="Throughput">71.32301336878562</Db>
       <Ref N="BenchmarkInput" RefId="3" />
     </MS>
   </Obj>
@@ -197,13 +197,17 @@
       <S N="Technique">.Where Method</S>
       <Obj N="Time" RefId="14">
         <TNRef RefId="1" />
-        <TS>PT0.5535007S</TS>
+        <TS>PT0.5962994S</TS>
         <MS>
           <S N="FileName">What Is The Fastest Way To Filter</S>
           <S N="GroupName">Filtering Values</S>
           <Obj N="BenchmarkInput" RefId="15">
             <TNRef RefId="2" />
             <DCT>
+              <En>
+                <S N="Key">GroupName</S>
+                <S N="Value">Filtering Values</S>
+              </En>
               <En>
                 <S N="Key">RepeatCount</S>
                 <U32 N="Value">10</U32>
@@ -213,10 +217,6 @@
                 <SBK N="Value">_x000A_        $valueList.Where({$_ -gt 1000})_x000A_    </SBK>
               </En>
               <En>
-                <S N="Key">GroupName</S>
-                <S N="Value">Filtering Values</S>
-              </En>
-              <En>
                 <S N="Key">FileName</S>
                 <S N="Value">What Is The Fastest Way To Filter</S>
               </En>
@@ -224,11 +224,11 @@
           </Obj>
         </MS>
       </Obj>
-      <Db N="RelativeSpeed">47.14656729131176</Db>
+      <Db N="RelativeSpeed">51.69299720859268</Db>
       <S N="GroupName">Filtering Values</S>
       <I32 N="ClockSpeed">2095</I32>
       <S N="FileName">What Is The Fastest Way To Filter</S>
-      <Db N="Throughput">18.066824486400833</Db>
+      <Db N="Throughput">16.770099047558993</Db>
       <Ref N="BenchmarkInput" RefId="3" />
     </MS>
   </Obj>
@@ -238,13 +238,17 @@
       <S N="Technique">Linq.Enumerable::Where</S>
       <Obj N="Time" RefId="17">
         <TNRef RefId="1" />
-        <TS>PT0.7952227S</TS>
+        <TS>PT0.8088959S</TS>
         <MS>
           <S N="FileName">What Is The Fastest Way To Filter</S>
           <S N="GroupName">Filtering Values</S>
           <Obj N="BenchmarkInput" RefId="18">
             <TNRef RefId="2" />
             <DCT>
+              <En>
+                <S N="Key">GroupName</S>
+                <S N="Value">Filtering Values</S>
+              </En>
               <En>
                 <S N="Key">RepeatCount</S>
                 <U32 N="Value">10</U32>
@@ -254,10 +258,6 @@
                 <SBK N="Value">_x000A_        [System.Linq.Enumerable]::Where($valueList, $linqWhere)_x000A_    </SBK>
               </En>
               <En>
-                <S N="Key">GroupName</S>
-                <S N="Value">Filtering Values</S>
-              </En>
-              <En>
                 <S N="Key">FileName</S>
                 <S N="Value">What Is The Fastest Way To Filter</S>
               </En>
@@ -265,11 +265,11 @@
           </Obj>
         </MS>
       </Obj>
-      <Db N="RelativeSpeed">67.73617546848382</Db>
+      <Db N="RelativeSpeed">70.12291728071848</Db>
       <S N="GroupName">Filtering Values</S>
       <I32 N="ClockSpeed">2095</I32>
       <S N="FileName">What Is The Fastest Way To Filter</S>
-      <Db N="Throughput">12.57509374418009</Db>
+      <Db N="Throughput">12.362530209387883</Db>
       <Ref N="BenchmarkInput" RefId="3" />
     </MS>
   </Obj>
@@ -279,13 +279,17 @@
       <S N="Technique">Where-Object Script (Positional)</S>
       <Obj N="Time" RefId="20">
         <TNRef RefId="1" />
-        <TS>PT1.6396552S</TS>
+        <TS>PT1.7268372S</TS>
         <MS>
           <S N="FileName">What Is The Fastest Way To Filter</S>
           <S N="GroupName">Filtering Values</S>
           <Obj N="BenchmarkInput" RefId="21">
             <TNRef RefId="2" />
             <DCT>
+              <En>
+                <S N="Key">GroupName</S>
+                <S N="Value">Filtering Values</S>
+              </En>
               <En>
                 <S N="Key">RepeatCount</S>
                 <U32 N="Value">10</U32>
@@ -295,10 +299,6 @@
                 <SBK N="Value">_x000A_        $valueList | Where-Object $whereGt1000_x000A_    </SBK>
               </En>
               <En>
-                <S N="Key">GroupName</S>
-                <S N="Value">Filtering Values</S>
-              </En>
-              <En>
                 <S N="Key">FileName</S>
                 <S N="Value">What Is The Fastest Way To Filter</S>
               </En>
@@ -306,11 +306,11 @@
           </Obj>
         </MS>
       </Obj>
-      <Db N="RelativeSpeed">139.66398637137988</Db>
+      <Db N="RelativeSpeed">149.6989441198398</Db>
       <S N="GroupName">Filtering Values</S>
       <I32 N="ClockSpeed">2095</I32>
       <S N="FileName">What Is The Fastest Way To Filter</S>
-      <Db N="Throughput">6.098843220208737</Db>
+      <Db N="Throughput">5.790933852942246</Db>
       <Ref N="BenchmarkInput" RefId="3" />
     </MS>
   </Obj>
@@ -320,7 +320,7 @@
       <S N="Technique">ForEach Loop</S>
       <Obj N="Time" RefId="23">
         <TNRef RefId="1" />
-        <TS>PT0.4135112S</TS>
+        <TS>PT0.4012294S</TS>
         <MS>
           <S N="FileName">What Is The Fastest Way To Filter</S>
           <S N="GroupName">Filtering by Property Values</S>
@@ -328,16 +328,16 @@
             <TNRef RefId="2" />
             <DCT>
               <En>
+                <S N="Key">GroupName</S>
+                <S N="Value">Filtering by Property Values</S>
+              </En>
+              <En>
                 <S N="Key">RepeatCount</S>
                 <U32 N="Value">10</U32>
               </En>
               <En>
                 <S N="Key">ScriptBlock</S>
                 <SBK N="Value">_x000A_        foreach ($o in $objectList) { if ($o.Value -gt 1000) { $o } }_x000A_    </SBK>
-              </En>
-              <En>
-                <S N="Key">GroupName</S>
-                <S N="Value">Filtering by Property Values</S>
               </En>
               <En>
                 <S N="Key">FileName</S>
@@ -351,7 +351,7 @@
       <S N="GroupName">Filtering by Property Values</S>
       <I32 N="ClockSpeed">2095</I32>
       <S N="FileName">What Is The Fastest Way To Filter</S>
-      <Db N="Throughput">24.183141835094187</Db>
+      <Db N="Throughput">24.923397936442342</Db>
       <Obj N="BenchmarkInput" RefId="25">
         <TNRef RefId="2" />
         <DCT>
@@ -377,13 +377,17 @@
       <S N="Technique">Pipe to ScriptBlock</S>
       <Obj N="Time" RefId="27">
         <TNRef RefId="1" />
-        <TS>PT1.1550475S</TS>
+        <TS>PT0.9338572S</TS>
         <MS>
           <S N="FileName">What Is The Fastest Way To Filter</S>
           <S N="GroupName">Filtering by Property Values</S>
           <Obj N="BenchmarkInput" RefId="28">
             <TNRef RefId="2" />
             <DCT>
+              <En>
+                <S N="Key">GroupName</S>
+                <S N="Value">Filtering by Property Values</S>
+              </En>
               <En>
                 <S N="Key">RepeatCount</S>
                 <U32 N="Value">10</U32>
@@ -393,10 +397,6 @@
                 <SBK N="Value">_x000A_        $objectList | &amp; { process { if ($_.Value -gt 1000) { $_ } } }_x000A_    </SBK>
               </En>
               <En>
-                <S N="Key">GroupName</S>
-                <S N="Value">Filtering by Property Values</S>
-              </En>
-              <En>
                 <S N="Key">FileName</S>
                 <S N="Value">What Is The Fastest Way To Filter</S>
               </En>
@@ -404,11 +404,11 @@
           </Obj>
         </MS>
       </Obj>
-      <Db N="RelativeSpeed">2.7932677518770954</Db>
+      <Db N="RelativeSpeed">2.3274894611411825</Db>
       <S N="GroupName">Filtering by Property Values</S>
       <I32 N="ClockSpeed">2095</I32>
       <S N="FileName">What Is The Fastest Way To Filter</S>
-      <Db N="Throughput">8.657652607360303</Db>
+      <Db N="Throughput">10.708275312328265</Db>
       <Ref N="BenchmarkInput" RefId="25" />
     </MS>
   </Obj>
@@ -418,13 +418,17 @@
       <S N="Technique">.Where Method</S>
       <Obj N="Time" RefId="30">
         <TNRef RefId="1" />
-        <TS>PT5.3757492S</TS>
+        <TS>PT4.4232171S</TS>
         <MS>
           <S N="FileName">What Is The Fastest Way To Filter</S>
           <S N="GroupName">Filtering by Property Values</S>
           <Obj N="BenchmarkInput" RefId="31">
             <TNRef RefId="2" />
             <DCT>
+              <En>
+                <S N="Key">GroupName</S>
+                <S N="Value">Filtering by Property Values</S>
+              </En>
               <En>
                 <S N="Key">RepeatCount</S>
                 <U32 N="Value">10</U32>
@@ -434,10 +438,6 @@
                 <SBK N="Value">_x000A_        $objectList.Where({$_.Value -gt 1000})_x000A_    </SBK>
               </En>
               <En>
-                <S N="Key">GroupName</S>
-                <S N="Value">Filtering by Property Values</S>
-              </En>
-              <En>
                 <S N="Key">FileName</S>
                 <S N="Value">What Is The Fastest Way To Filter</S>
               </En>
@@ -445,11 +445,11 @@
           </Obj>
         </MS>
       </Obj>
-      <Db N="RelativeSpeed">13.000250537349412</Db>
+      <Db N="RelativeSpeed">11.02415999425765</Db>
       <S N="GroupName">Filtering by Property Values</S>
       <I32 N="ClockSpeed">2095</I32>
       <S N="FileName">What Is The Fastest Way To Filter</S>
-      <Db N="Throughput">1.8602058295427921</Db>
+      <Db N="Throughput">2.2607979156166675</Db>
       <Ref N="BenchmarkInput" RefId="25" />
     </MS>
   </Obj>
@@ -459,13 +459,17 @@
       <S N="Technique">Where-Object Property (Positional)</S>
       <Obj N="Time" RefId="33">
         <TNRef RefId="1" />
-        <TS>PT11.7033212S</TS>
+        <TS>PT9.4704643S</TS>
         <MS>
           <S N="FileName">What Is The Fastest Way To Filter</S>
           <S N="GroupName">Filtering by Property Values</S>
           <Obj N="BenchmarkInput" RefId="34">
             <TNRef RefId="2" />
             <DCT>
+              <En>
+                <S N="Key">GroupName</S>
+                <S N="Value">Filtering by Property Values</S>
+              </En>
               <En>
                 <S N="Key">RepeatCount</S>
                 <U32 N="Value">10</U32>
@@ -475,10 +479,6 @@
                 <SBK N="Value">_x000A_        $objectList | Where-Object Value -GT 1000_x000A_    </SBK>
               </En>
               <En>
-                <S N="Key">GroupName</S>
-                <S N="Value">Filtering by Property Values</S>
-              </En>
-              <En>
                 <S N="Key">FileName</S>
                 <S N="Value">What Is The Fastest Way To Filter</S>
               </En>
@@ -486,21 +486,21 @@
           </Obj>
         </MS>
       </Obj>
-      <Db N="RelativeSpeed">28.302307652126476</Db>
+      <Db N="RelativeSpeed">23.60361503917709</Db>
       <S N="GroupName">Filtering by Property Values</S>
       <I32 N="ClockSpeed">2095</I32>
       <S N="FileName">What Is The Fastest Way To Filter</S>
-      <Db N="Throughput">0.8544583053911227</Db>
+      <Db N="Throughput">1.0559144391685211</Db>
       <Ref N="BenchmarkInput" RefId="25" />
     </MS>
   </Obj>
   <Obj RefId="35">
     <TNRef RefId="0" />
     <MS>
-      <S N="Technique">DotScriptBlockVariable</S>
+      <S N="Technique">DotInline</S>
       <Obj N="Time" RefId="36">
         <TNRef RefId="1" />
-        <TS>PT0.0112523S</TS>
+        <TS>PT0.0116626S</TS>
         <MS>
           <S N="FileName">What Is The Fastest Way To Filter</S>
           <S N="GroupName">Filtering a Pipeline</S>
@@ -508,16 +508,16 @@
             <TNRef RefId="2" />
             <DCT>
               <En>
-                <S N="Key">ScriptBlock</S>
-                <SBK N="Value">_x000A_        1..10 | . $IsOdd_x000A_    </SBK>
-              </En>
-              <En>
                 <S N="Key">GroupName</S>
                 <S N="Value">Filtering a Pipeline</S>
               </En>
               <En>
                 <S N="Key">FileName</S>
                 <S N="Value">What Is The Fastest Way To Filter</S>
+              </En>
+              <En>
+                <S N="Key">ScriptBlock</S>
+                <SBK N="Value">_x000A_        1..10 | . { process { if ($_ % 2) { $_ }  } }_x000A_    </SBK>
               </En>
             </DCT>
           </Obj>
@@ -527,17 +527,17 @@
       <S N="GroupName">Filtering a Pipeline</S>
       <I32 N="ClockSpeed">2095</I32>
       <S N="FileName">What Is The Fastest Way To Filter</S>
-      <Db N="Throughput">8887.071976395937</Db>
+      <Db N="Throughput">8574.41736833982</Db>
       <Obj N="BenchmarkInput" RefId="38">
         <TNRef RefId="2" />
         <DCT>
           <En>
-            <S N="Key">GroupName</S>
-            <S N="Value">Filtering a Pipeline</S>
-          </En>
-          <En>
             <S N="Key">FileName</S>
             <S N="Value">What Is The Fastest Way To Filter</S>
+          </En>
+          <En>
+            <S N="Key">GroupName</S>
+            <S N="Value">Filtering a Pipeline</S>
           </En>
         </DCT>
       </Obj>
@@ -546,10 +546,10 @@
   <Obj RefId="39">
     <TNRef RefId="0" />
     <MS>
-      <S N="Technique">InlineScriptBlock</S>
+      <S N="Technique">Filter</S>
       <Obj N="Time" RefId="40">
         <TNRef RefId="1" />
-        <TS>PT0.012203S</TS>
+        <TS>PT0.0129871S</TS>
         <MS>
           <S N="FileName">What Is The Fastest Way To Filter</S>
           <S N="GroupName">Filtering a Pipeline</S>
@@ -557,10 +557,6 @@
             <TNRef RefId="2" />
             <DCT>
               <En>
-                <S N="Key">ScriptBlock</S>
-                <SBK N="Value">_x000A_        1..10 | &amp; { process { if ($_ % 2) { $_ }  } }_x000A_    </SBK>
-              </En>
-              <En>
                 <S N="Key">GroupName</S>
                 <S N="Value">Filtering a Pipeline</S>
               </En>
@@ -568,25 +564,29 @@
                 <S N="Key">FileName</S>
                 <S N="Value">What Is The Fastest Way To Filter</S>
               </En>
+              <En>
+                <S N="Key">ScriptBlock</S>
+                <SBK N="Value">_x000A_        1..10 | isOdd        _x000A_    </SBK>
+              </En>
             </DCT>
           </Obj>
         </MS>
       </Obj>
-      <Db N="RelativeSpeed">1.084489393279596</Db>
+      <Db N="RelativeSpeed">1.113568158043661</Db>
       <S N="GroupName">Filtering a Pipeline</S>
       <I32 N="ClockSpeed">2095</I32>
       <S N="FileName">What Is The Fastest Way To Filter</S>
-      <Db N="Throughput">8194.706219782021</Db>
+      <Db N="Throughput">7699.948410345651</Db>
       <Ref N="BenchmarkInput" RefId="38" />
     </MS>
   </Obj>
   <Obj RefId="42">
     <TNRef RefId="0" />
     <MS>
-      <S N="Technique">Filter</S>
+      <S N="Technique">DotScriptBlockVariable</S>
       <Obj N="Time" RefId="43">
         <TNRef RefId="1" />
-        <TS>PT0.0126956S</TS>
+        <TS>PT0.0130903S</TS>
         <MS>
           <S N="FileName">What Is The Fastest Way To Filter</S>
           <S N="GroupName">Filtering a Pipeline</S>
@@ -594,10 +594,6 @@
             <TNRef RefId="2" />
             <DCT>
               <En>
-                <S N="Key">ScriptBlock</S>
-                <SBK N="Value">_x000A_        1..10 | isOdd        _x000A_    </SBK>
-              </En>
-              <En>
                 <S N="Key">GroupName</S>
                 <S N="Value">Filtering a Pipeline</S>
               </En>
@@ -605,25 +601,29 @@
                 <S N="Key">FileName</S>
                 <S N="Value">What Is The Fastest Way To Filter</S>
               </En>
+              <En>
+                <S N="Key">ScriptBlock</S>
+                <SBK N="Value">_x000A_        1..10 | . $IsOdd_x000A_    </SBK>
+              </En>
             </DCT>
           </Obj>
         </MS>
       </Obj>
-      <Db N="RelativeSpeed">1.1282671098353225</Db>
+      <Db N="RelativeSpeed">1.1224169567677875</Db>
       <S N="GroupName">Filtering a Pipeline</S>
       <I32 N="ClockSpeed">2095</I32>
       <S N="FileName">What Is The Fastest Way To Filter</S>
-      <Db N="Throughput">7876.744698950818</Db>
+      <Db N="Throughput">7639.2443259512775</Db>
       <Ref N="BenchmarkInput" RefId="38" />
     </MS>
   </Obj>
   <Obj RefId="45">
     <TNRef RefId="0" />
     <MS>
-      <S N="Technique">WhereObject</S>
+      <S N="Technique">InlineScriptBlock</S>
       <Obj N="Time" RefId="46">
         <TNRef RefId="1" />
-        <TS>PT0.0327943S</TS>
+        <TS>PT0.0230143S</TS>
         <MS>
           <S N="FileName">What Is The Fastest Way To Filter</S>
           <S N="GroupName">Filtering a Pipeline</S>
@@ -631,10 +631,6 @@
             <TNRef RefId="2" />
             <DCT>
               <En>
-                <S N="Key">ScriptBlock</S>
-                <SBK N="Value">_x000A_        1..10 | ? $IsOdd_x000A_    </SBK>
-              </En>
-              <En>
                 <S N="Key">GroupName</S>
                 <S N="Value">Filtering a Pipeline</S>
               </En>
@@ -642,25 +638,29 @@
                 <S N="Key">FileName</S>
                 <S N="Value">What Is The Fastest Way To Filter</S>
               </En>
+              <En>
+                <S N="Key">ScriptBlock</S>
+                <SBK N="Value">_x000A_        1..10 | &amp; { process { if ($_ % 2) { $_ }  } }_x000A_    </SBK>
+              </En>
             </DCT>
           </Obj>
         </MS>
       </Obj>
-      <Db N="RelativeSpeed">2.914453045155213</Db>
+      <Db N="RelativeSpeed">1.9733421364018315</Db>
       <S N="GroupName">Filtering a Pipeline</S>
       <I32 N="ClockSpeed">2095</I32>
       <S N="FileName">What Is The Fastest Way To Filter</S>
-      <Db N="Throughput">3049.31039845339</Db>
+      <Db N="Throughput">4345.124552995311</Db>
       <Ref N="BenchmarkInput" RefId="38" />
     </MS>
   </Obj>
   <Obj RefId="48">
     <TNRef RefId="0" />
     <MS>
-      <S N="Technique">DotInline</S>
+      <S N="Technique">ScriptBlockVariable</S>
       <Obj N="Time" RefId="49">
         <TNRef RefId="1" />
-        <TS>PT0.0400408S</TS>
+        <TS>PT0.0231464S</TS>
         <MS>
           <S N="FileName">What Is The Fastest Way To Filter</S>
           <S N="GroupName">Filtering a Pipeline</S>
@@ -668,10 +668,6 @@
             <TNRef RefId="2" />
             <DCT>
               <En>
-                <S N="Key">ScriptBlock</S>
-                <SBK N="Value">_x000A_        1..10 | . { process { if ($_ % 2) { $_ }  } }_x000A_    </SBK>
-              </En>
-              <En>
                 <S N="Key">GroupName</S>
                 <S N="Value">Filtering a Pipeline</S>
               </En>
@@ -679,25 +675,29 @@
                 <S N="Key">FileName</S>
                 <S N="Value">What Is The Fastest Way To Filter</S>
               </En>
+              <En>
+                <S N="Key">ScriptBlock</S>
+                <SBK N="Value"> _x000A_        1..10 | _x000A_            &amp; $IsOdd _x000A_    </SBK>
+              </En>
             </DCT>
           </Obj>
         </MS>
       </Obj>
-      <Db N="RelativeSpeed">3.558454715924744</Db>
+      <Db N="RelativeSpeed">1.9846689417454084</Db>
       <S N="GroupName">Filtering a Pipeline</S>
       <I32 N="ClockSpeed">2095</I32>
       <S N="FileName">What Is The Fastest Way To Filter</S>
-      <Db N="Throughput">2497.4525983496833</Db>
+      <Db N="Throughput">4320.326271039989</Db>
       <Ref N="BenchmarkInput" RefId="38" />
     </MS>
   </Obj>
   <Obj RefId="51">
     <TNRef RefId="0" />
     <MS>
-      <S N="Technique">ScriptBlockVariable</S>
+      <S N="Technique">WhereObject</S>
       <Obj N="Time" RefId="52">
         <TNRef RefId="1" />
-        <TS>PT0.0406748S</TS>
+        <TS>PT0.0332836S</TS>
         <MS>
           <S N="FileName">What Is The Fastest Way To Filter</S>
           <S N="GroupName">Filtering a Pipeline</S>
@@ -705,10 +705,6 @@
             <TNRef RefId="2" />
             <DCT>
               <En>
-                <S N="Key">ScriptBlock</S>
-                <SBK N="Value"> _x000A_        1..10 | _x000A_            &amp; $IsOdd _x000A_    </SBK>
-              </En>
-              <En>
                 <S N="Key">GroupName</S>
                 <S N="Value">Filtering a Pipeline</S>
               </En>
@@ -716,15 +712,19 @@
                 <S N="Key">FileName</S>
                 <S N="Value">What Is The Fastest Way To Filter</S>
               </En>
+              <En>
+                <S N="Key">ScriptBlock</S>
+                <SBK N="Value">_x000A_        1..10 | ? $IsOdd_x000A_    </SBK>
+              </En>
             </DCT>
           </Obj>
         </MS>
       </Obj>
-      <Db N="RelativeSpeed">3.614798752255094</Db>
+      <Db N="RelativeSpeed">2.853874779208753</Db>
       <S N="GroupName">Filtering a Pipeline</S>
       <I32 N="ClockSpeed">2095</I32>
       <S N="FileName">What Is The Fastest Way To Filter</S>
-      <Db N="Throughput">2458.5246885049223</Db>
+      <Db N="Throughput">3004.4826881707504</Db>
       <Ref N="BenchmarkInput" RefId="38" />
     </MS>
   </Obj>

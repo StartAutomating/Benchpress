@@ -14,7 +14,7 @@
           <T>System.Object</T>
           <T>Benchmark.Measure</T>
         </TN>
-        <TS>PT0.0032067S</TS>
+        <TS>PT0.0024627S</TS>
         <MS>
           <S N="FileName">What Is The Fastest Way To Get All Loaded Modules</S>
           <S N="GroupName"></S>
@@ -41,9 +41,9 @@
         </MS>
       </Obj>
       <Db N="RelativeSpeed">1</Db>
-      <I32 N="ClockSpeed">2095</I32>
+      <I32 N="ClockSpeed">2594</I32>
       <S N="FileName">What Is The Fastest Way To Get All Loaded Modules</S>
-      <Db N="Throughput">3118.4707019677553</Db>
+      <Db N="Throughput">4060.5839119665407</Db>
       <Obj N="BenchmarkInput" RefId="3">
         <TNRef RefId="2" />
         <DCT>
@@ -65,7 +65,7 @@
       <S N="Technique">foreach Get-Module</S>
       <Obj N="Time" RefId="5">
         <TNRef RefId="1" />
-        <TS>PT0.004213S</TS>
+        <TS>PT0.0030861S</TS>
         <MS>
           <S N="FileName">What Is The Fastest Way To Get All Loaded Modules</S>
           <S N="GroupName"></S>
@@ -88,10 +88,10 @@
           </Obj>
         </MS>
       </Obj>
-      <Db N="RelativeSpeed">1.3138117067390152</Db>
-      <I32 N="ClockSpeed">2095</I32>
+      <Db N="RelativeSpeed">1.2531368010719943</Db>
+      <I32 N="ClockSpeed">2594</I32>
       <S N="FileName">What Is The Fastest Way To Get All Loaded Modules</S>
-      <Db N="Throughput">2373.605506764776</Db>
+      <Db N="Throughput">3240.335698778393</Db>
       <Ref N="BenchmarkInput" RefId="3" />
     </MS>
   </Obj>
@@ -101,7 +101,7 @@
       <S N="Technique">ExecutionContextAndArrayList</S>
       <Obj N="Time" RefId="8">
         <TNRef RefId="1" />
-        <TS>PT0.0176998S</TS>
+        <TS>PT0.0068713S</TS>
         <MS>
           <S N="FileName">What Is The Fastest Way To Get All Loaded Modules</S>
           <S N="GroupName"></S>
@@ -124,10 +124,10 @@
           </Obj>
         </MS>
       </Obj>
-      <Db N="RelativeSpeed">5.5196307730688865</Db>
-      <I32 N="ClockSpeed">2095</I32>
+      <Db N="RelativeSpeed">2.7901490234295694</Db>
+      <I32 N="ClockSpeed">2594</I32>
       <S N="FileName">What Is The Fastest Way To Get All Loaded Modules</S>
-      <Db N="Throughput">564.978135346162</Db>
+      <Db N="Throughput">1455.3286859837294</Db>
       <Ref N="BenchmarkInput" RefId="3" />
     </MS>
   </Obj>
@@ -137,7 +137,7 @@
       <S N="Technique">ExecutionContextAndHashtable</S>
       <Obj N="Time" RefId="11">
         <TNRef RefId="1" />
-        <TS>PT0.0238426S</TS>
+        <TS>PT0.0135097S</TS>
         <MS>
           <S N="FileName">What Is The Fastest Way To Get All Loaded Modules</S>
           <S N="GroupName"></S>
@@ -160,10 +160,10 @@
           </Obj>
         </MS>
       </Obj>
-      <Db N="RelativeSpeed">7.43524495587364</Db>
-      <I32 N="ClockSpeed">2095</I32>
+      <Db N="RelativeSpeed">5.485727047549438</Db>
+      <I32 N="ClockSpeed">2594</I32>
       <S N="FileName">What Is The Fastest Way To Get All Loaded Modules</S>
-      <Db N="Throughput">419.41734542373734</Db>
+      <Db N="Throughput">740.2088869478968</Db>
       <Ref N="BenchmarkInput" RefId="3" />
     </MS>
   </Obj>

@@ -14,7 +14,7 @@
           <T>System.Object</T>
           <T>Benchmark.Measure</T>
         </TN>
-        <TS>PT0.0410995S</TS>
+        <TS>PT0.0502904S</TS>
         <MS>
           <S N="FileName">Different Ways To Set Many Variables</S>
           <S N="GroupName"></S>
@@ -41,9 +41,9 @@
         </MS>
       </Obj>
       <Db N="RelativeSpeed">1</Db>
-      <I32 N="ClockSpeed">2594</I32>
+      <I32 N="ClockSpeed">2095</I32>
       <S N="FileName">Different Ways To Set Many Variables</S>
-      <Db N="Throughput">24915.144953101622</Db>
+      <Db N="Throughput">20361.73901977316</Db>
       <Obj N="BenchmarkInput" RefId="3">
         <TNRef RefId="2" />
         <DCT>
@@ -65,7 +65,7 @@
       <S N="Technique">Simple Assignment</S>
       <Obj N="Time" RefId="5">
         <TNRef RefId="1" />
-        <TS>PT0.042814S</TS>
+        <TS>PT0.0527722S</TS>
         <MS>
           <S N="FileName">Different Ways To Set Many Variables</S>
           <S N="GroupName"></S>
@@ -88,10 +88,10 @@
           </Obj>
         </MS>
       </Obj>
-      <Db N="RelativeSpeed">1.041715835959075</Db>
-      <I32 N="ClockSpeed">2594</I32>
+      <Db N="RelativeSpeed">1.0493493788078838</Db>
+      <I32 N="ClockSpeed">2095</I32>
       <S N="FileName">Different Ways To Set Many Variables</S>
-      <Db N="Throughput">23917.41019292755</Db>
+      <Db N="Throughput">19404.155976063154</Db>
       <Ref N="BenchmarkInput" RefId="3" />
     </MS>
   </Obj>
@@ -101,7 +101,7 @@
       <S N="Technique">ExecutionContext</S>
       <Obj N="Time" RefId="8">
         <TNRef RefId="1" />
-        <TS>PT0.0518886S</TS>
+        <TS>PT0.0635762S</TS>
         <MS>
           <S N="FileName">Different Ways To Set Many Variables</S>
           <S N="GroupName"></S>
@@ -124,10 +124,10 @@
           </Obj>
         </MS>
       </Obj>
-      <Db N="RelativeSpeed">1.2625117093881921</Db>
-      <I32 N="ClockSpeed">2594</I32>
+      <Db N="RelativeSpeed">1.2641816330751</Db>
+      <I32 N="ClockSpeed">2095</I32>
       <S N="FileName">Different Ways To Set Many Variables</S>
-      <Db N="Throughput">19734.58524608488</Db>
+      <Db N="Throughput">16106.656264451163</Db>
       <Ref N="BenchmarkInput" RefId="3" />
     </MS>
   </Obj>
@@ -137,7 +137,7 @@
       <S N="Technique">SetFromSplat</S>
       <Obj N="Time" RefId="11">
         <TNRef RefId="1" />
-        <TS>PT0.0611323S</TS>
+        <TS>PT0.0772037S</TS>
         <MS>
           <S N="FileName">Different Ways To Set Many Variables</S>
           <S N="GroupName"></S>
@@ -160,10 +160,10 @@
           </Obj>
         </MS>
       </Obj>
-      <Db N="RelativeSpeed">1.4874219881020452</Db>
-      <I32 N="ClockSpeed">2594</I32>
+      <Db N="RelativeSpeed">1.5351578034774032</Db>
+      <I32 N="ClockSpeed">2095</I32>
       <S N="FileName">Different Ways To Set Many Variables</S>
-      <Db N="Throughput">16750.555761847663</Db>
+      <Db N="Throughput">13263.613013365939</Db>
       <Ref N="BenchmarkInput" RefId="3" />
     </MS>
   </Obj>
@@ -173,7 +173,7 @@
       <S N="Technique">Set-Variable</S>
       <Obj N="Time" RefId="14">
         <TNRef RefId="1" />
-        <TS>PT0.3740767S</TS>
+        <TS>PT0.4367821S</TS>
         <MS>
           <S N="FileName">Different Ways To Set Many Variables</S>
           <S N="GroupName"></S>
@@ -196,10 +196,10 @@
           </Obj>
         </MS>
       </Obj>
-      <Db N="RelativeSpeed">9.101733597732332</Db>
-      <I32 N="ClockSpeed">2594</I32>
+      <Db N="RelativeSpeed">8.685198367879357</Db>
+      <I32 N="ClockSpeed">2095</I32>
       <S N="FileName">Different Ways To Set Many Variables</S>
-      <Db N="Throughput">2737.406526522502</Db>
+      <Db N="Throughput">2344.4184182456193</Db>
       <Ref N="BenchmarkInput" RefId="3" />
     </MS>
   </Obj>

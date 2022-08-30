@@ -13,3 +13,4 @@ Fixing #10 (crossplatform / core issues with CPU data).   Thanks @mklement0!
 Now including .ClockSpeed in results (fixes #7)
 Formatting deserialized results (fixes #8)
 
+

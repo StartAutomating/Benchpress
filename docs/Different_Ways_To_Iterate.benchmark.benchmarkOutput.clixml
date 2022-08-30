@@ -14,7 +14,7 @@
           <T>System.Object</T>
           <T>Benchmark.Measure</T>
         </TN>
-        <TS>PT0.0081619S</TS>
+        <TS>PT0.0078978S</TS>
         <MS>
           <S N="FileName">Different Ways To Iterate</S>
           <S N="GroupName"></S>
@@ -39,7 +39,7 @@
       <Db N="RelativeSpeed">1</Db>
       <I32 N="ClockSpeed">2095</I32>
       <S N="FileName">Different Ways To Iterate</S>
-      <Db N="Throughput">12252.049155221212</Db>
+      <Db N="Throughput">12661.75390615108</Db>
       <Obj N="BenchmarkInput" RefId="3">
         <TNRef RefId="2" />
         <DCT>
@@ -57,7 +57,7 @@
       <S N="Technique">For _</S>
       <Obj N="Time" RefId="5">
         <TNRef RefId="1" />
-        <TS>PT0.0085692S</TS>
+        <TS>PT0.0109499S</TS>
         <MS>
           <S N="FileName">Different Ways To Iterate</S>
           <S N="GroupName"></S>
@@ -76,10 +76,10 @@
           </Obj>
         </MS>
       </Obj>
-      <Db N="RelativeSpeed">1.049902596209216</Db>
+      <Db N="RelativeSpeed">1.386449390969637</Db>
       <I32 N="ClockSpeed">2095</I32>
       <S N="FileName">Different Ways To Iterate</S>
-      <Db N="Throughput">11669.700788871773</Db>
+      <Db N="Throughput">9132.503493182587</Db>
       <Ref N="BenchmarkInput" RefId="3" />
     </MS>
   </Obj>
@@ -89,7 +89,7 @@
       <S N="Technique">For loop</S>
       <Obj N="Time" RefId="8">
         <TNRef RefId="1" />
-        <TS>PT0.0088148S</TS>
+        <TS>PT0.011505S</TS>
         <MS>
           <S N="FileName">Different Ways To Iterate</S>
           <S N="GroupName"></S>
@@ -108,10 +108,10 @@
           </Obj>
         </MS>
       </Obj>
-      <Db N="RelativeSpeed">1.0799936289344394</Db>
+      <Db N="RelativeSpeed">1.4567347869026819</Db>
       <I32 N="ClockSpeed">2095</I32>
       <S N="FileName">Different Ways To Iterate</S>
-      <Db N="Throughput">11344.556881608205</Db>
+      <Db N="Throughput">8691.87309865276</Db>
       <Ref N="BenchmarkInput" RefId="3" />
     </MS>
   </Obj>
@@ -121,7 +121,7 @@
       <S N="Technique">Foreach _</S>
       <Obj N="Time" RefId="11">
         <TNRef RefId="1" />
-        <TS>PT0.0120998S</TS>
+        <TS>PT0.0122605S</TS>
         <MS>
           <S N="FileName">Different Ways To Iterate</S>
           <S N="GroupName"></S>
@@ -140,10 +140,10 @@
           </Obj>
         </MS>
       </Obj>
-      <Db N="RelativeSpeed">1.4824734436834561</Db>
+      <Db N="RelativeSpeed">1.552394337663653</Db>
       <I32 N="ClockSpeed">2095</I32>
       <S N="FileName">Different Ways To Iterate</S>
-      <Db N="Throughput">8264.599414866361</Db>
+      <Db N="Throughput">8156.274213939072</Db>
       <Ref N="BenchmarkInput" RefId="3" />
     </MS>
   </Obj>
@@ -153,7 +153,7 @@
       <S N="Technique">Pipe to ScriptBlock</S>
       <Obj N="Time" RefId="14">
         <TNRef RefId="1" />
-        <TS>PT0.0247594S</TS>
+        <TS>PT0.0193732S</TS>
         <MS>
           <S N="FileName">Different Ways To Iterate</S>
           <S N="GroupName"></S>
@@ -172,10 +172,10 @@
           </Obj>
         </MS>
       </Obj>
-      <Db N="RelativeSpeed">3.0335338585378406</Db>
+      <Db N="RelativeSpeed">2.452986907746461</Db>
       <I32 N="ClockSpeed">2095</I32>
       <S N="FileName">Different Ways To Iterate</S>
-      <Db N="Throughput">4038.870085704823</Db>
+      <Db N="Throughput">5161.7698676522205</Db>
       <Ref N="BenchmarkInput" RefId="3" />
     </MS>
   </Obj>
@@ -185,7 +185,7 @@
       <S N="Technique">Foreach-Object</S>
       <Obj N="Time" RefId="17">
         <TNRef RefId="1" />
-        <TS>PT0.0911823S</TS>
+        <TS>PT0.0885583S</TS>
         <MS>
           <S N="FileName">Different Ways To Iterate</S>
           <S N="GroupName"></S>
@@ -204,10 +204,10 @@
           </Obj>
         </MS>
       </Obj>
-      <Db N="RelativeSpeed">11.171700216861272</Db>
+      <Db N="RelativeSpeed">11.213034009470991</Db>
       <I32 N="ClockSpeed">2095</I32>
       <S N="FileName">Different Ways To Iterate</S>
-      <Db N="Throughput">1096.7040752426733</Db>
+      <Db N="Throughput">1129.1996345909981</Db>
       <Ref N="BenchmarkInput" RefId="3" />
     </MS>
   </Obj>

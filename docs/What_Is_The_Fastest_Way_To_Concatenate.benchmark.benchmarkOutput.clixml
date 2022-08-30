@@ -14,7 +14,7 @@
           <T>System.Object</T>
           <T>Benchmark.Measure</T>
         </TN>
-        <TS>PT0.0054411S</TS>
+        <TS>PT0.0062847S</TS>
         <MS>
           <S N="FileName">What Is The Fastest Way To Concatenate</S>
           <S N="GroupName"></S>
@@ -37,9 +37,9 @@
         </MS>
       </Obj>
       <Db N="RelativeSpeed">1</Db>
-      <I32 N="ClockSpeed">2594</I32>
+      <I32 N="ClockSpeed">2095</I32>
       <S N="FileName">What Is The Fastest Way To Concatenate</S>
-      <Db N="Throughput">18378.636672731616</Db>
+      <Db N="Throughput">15911.658472162553</Db>
       <Obj N="BenchmarkInput" RefId="3">
         <TNRef RefId="2" />
         <DCT>
@@ -57,7 +57,7 @@
       <S N="Technique">AddStrings</S>
       <Obj N="Time" RefId="5">
         <TNRef RefId="1" />
-        <TS>PT0.0057022S</TS>
+        <TS>PT0.0063504S</TS>
         <MS>
           <S N="FileName">What Is The Fastest Way To Concatenate</S>
           <S N="GroupName"></S>
@@ -76,10 +76,10 @@
           </Obj>
         </MS>
       </Obj>
-      <Db N="RelativeSpeed">1.0479866203525023</Db>
-      <I32 N="ClockSpeed">2594</I32>
+      <Db N="RelativeSpeed">1.0104539596162108</Db>
+      <I32 N="ClockSpeed">2095</I32>
       <S N="FileName">What Is The Fastest Way To Concatenate</S>
-      <Db N="Throughput">17537.090947353652</Db>
+      <Db N="Throughput">15747.039556563366</Db>
       <Ref N="BenchmarkInput" RefId="3" />
     </MS>
   </Obj>
@@ -89,7 +89,7 @@
       <S N="Technique">StringBuilder</S>
       <Obj N="Time" RefId="8">
         <TNRef RefId="1" />
-        <TS>PT0.0357435S</TS>
+        <TS>PT0.0447529S</TS>
         <MS>
           <S N="FileName">What Is The Fastest Way To Concatenate</S>
           <S N="GroupName"></S>
@@ -108,10 +108,10 @@
           </Obj>
         </MS>
       </Obj>
-      <Db N="RelativeSpeed">6.569167999117825</Db>
-      <I32 N="ClockSpeed">2594</I32>
+      <Db N="RelativeSpeed">7.120928604388435</Db>
+      <I32 N="ClockSpeed">2095</I32>
       <S N="FileName">What Is The Fastest Way To Concatenate</S>
-      <Db N="Throughput">2797.711472015891</Db>
+      <Db N="Throughput">2234.4920664359183</Db>
       <Ref N="BenchmarkInput" RefId="3" />
     </MS>
   </Obj>

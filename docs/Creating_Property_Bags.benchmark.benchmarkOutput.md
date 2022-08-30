@@ -9,11 +9,11 @@ Creating Property Bags
 
 |Technique                        |Time           |RelativeSpeed  |Throughput|
 |---------------------------------|---------------|---------------|----------|
-|PSCustomObject                   |00:00:00.011874|1x             |8421.27/s |
-|Static Constructors Only         |00:00:00.017110|1.44x          |5844.47/s |
-|New-Object ; Add-Member          |00:00:00.031124|2.62x          |3212.9/s  |
-|New-Object PSObject -Property @{}|00:00:00.043148|3.63x          |2317.58/s |
-|New-Object `                     | Add-Member    |00:00:00.082295|6.93x     |1215.14/s|
+|PSCustomObject                   |00:00:00.008288|1x             |12065.05/s|
+|Static Constructors Only         |00:00:00.014061|1.7x           |7111.87/s |
+|New-Object PSObject -Property @{}|00:00:00.014392|1.74x          |6948.21/s |
+|New-Object ; Add-Member          |00:00:00.026707|3.22x          |3744.29/s |
+|New-Object `                     | Add-Member    |00:00:00.072006|8.69x     |1388.76/s|
 
 
 ### (2 properties)
@@ -21,12 +21,11 @@ Creating Property Bags
 
 |Technique                        |Time           |RelativeSpeed  |Throughput|
 |---------------------------------|---------------|---------------|----------|
-|PSCustomObject                   |00:00:00.007528|1x             |13283.74/s|
-|Static Constructors Only         |00:00:00.011144|1.48x          |8972.71/s |
-|New-Object PSObject -Property @{}|00:00:00.027439|3.64x          |3644.42/s |
-|New-Object ; Add-Member          |00:00:00.042814|5.69x          |2335.68/s |
-|New-Object `                     | Add-Member    |00:00:00.138618|18.41x    |721.4/s|
-
+|PSCustomObject                   |00:00:00.006300|1x             |15872.01/s|
+|Static Constructors Only         |00:00:00.009417|1.49x          |10618.87/s|
+|New-Object PSObject -Property @{}|00:00:00.016684|2.65x          |5993.62/s |
+|New-Object ; Add-Member          |00:00:00.041082|6.52x          |2434.11/s |
+|New-Object `                     | Add-Member    |00:00:00.125841|19.97x    |794.65/s|
 
 
 

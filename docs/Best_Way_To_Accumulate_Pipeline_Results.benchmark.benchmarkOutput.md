@@ -1,7 +1,7 @@
 
 Best Way To Accumulate Pipeline Results
 ---------------------------------------
-> @2095 Mhz
+> @2793 Mhz
 
 
 ### 
@@ -9,10 +9,10 @@ Best Way To Accumulate Pipeline Results
 
 |Technique |Time           |RelativeSpeed|Throughput|
 |----------|---------------|-------------|----------|
-|Array     |00:00:00.019339|1x           |5170.66/s |
-|Queue     |00:00:00.024416|1.26x        |4095.62/s |
-|Arraylist |00:00:00.026771|1.38x        |3735.34/s |
-|Tee-Object|00:00:00.079669|4.12x        |1255.19/s |
+|Arraylist |00:00:00.015908|1x           |6285.87/s |
+|Array     |00:00:00.015986|1x           |6255.28/s |
+|Tee-Object|00:00:00.043430|2.73x        |2302.55/s |
+|Queue     |00:00:00.045470|2.86x        |2199.25/s |
 
 
 

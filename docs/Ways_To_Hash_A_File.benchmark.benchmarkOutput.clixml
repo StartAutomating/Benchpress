@@ -14,7 +14,7 @@
           <T>System.Object</T>
           <T>Benchmark.Measure</T>
         </TN>
-        <TS>PT0.0152094S</TS>
+        <TS>PT0.0166931S</TS>
         <MS>
           <S N="FileName">Ways To Hash A File</S>
           <S N="GroupName"></S>
@@ -25,16 +25,16 @@
             </TN>
             <DCT>
               <En>
+                <S N="Key">FileName</S>
+                <S N="Value">Ways To Hash A File</S>
+              </En>
+              <En>
                 <S N="Key">RepeatCount</S>
                 <U32 N="Value">100</U32>
               </En>
               <En>
                 <S N="Key">ScriptBlock</S>
                 <SBK N="Value"> _x000D__x000A_        [BitConverter]::ToString([Security.Cryptography.SHA1]::Create().ComputeHash([IO.File]::ReadAllBytes("$myScript"))).Replace('-','').ToLower()_x000D__x000A_    </SBK>
-              </En>
-              <En>
-                <S N="Key">FileName</S>
-                <S N="Value">Ways To Hash A File</S>
               </En>
             </DCT>
           </Obj>
@@ -43,17 +43,17 @@
       <Db N="RelativeSpeed">1</Db>
       <I32 N="ClockSpeed">2095</I32>
       <S N="FileName">Ways To Hash A File</S>
-      <Db N="Throughput">6574.881323392113</Db>
+      <Db N="Throughput">5990.499068477396</Db>
       <Obj N="BenchmarkInput" RefId="3">
         <TNRef RefId="2" />
         <DCT>
           <En>
-            <S N="Key">RepeatCount</S>
-            <U32 N="Value">100</U32>
-          </En>
-          <En>
             <S N="Key">FileName</S>
             <S N="Value">Ways To Hash A File</S>
+          </En>
+          <En>
+            <S N="Key">RepeatCount</S>
+            <U32 N="Value">100</U32>
           </En>
         </DCT>
       </Obj>
@@ -65,13 +65,17 @@
       <S N="Technique">GetFileHash</S>
       <Obj N="Time" RefId="5">
         <TNRef RefId="1" />
-        <TS>PT0.0321659S</TS>
+        <TS>PT0.0630475S</TS>
         <MS>
           <S N="FileName">Ways To Hash A File</S>
           <S N="GroupName"></S>
           <Obj N="BenchmarkInput" RefId="6">
             <TNRef RefId="2" />
             <DCT>
+              <En>
+                <S N="Key">FileName</S>
+                <S N="Value">Ways To Hash A File</S>
+              </En>
               <En>
                 <S N="Key">RepeatCount</S>
                 <U32 N="Value">100</U32>
@@ -80,18 +84,14 @@
                 <S N="Key">ScriptBlock</S>
                 <SBK N="Value">_x000D__x000A_        @(Get-FileHash "$myScript" -Algorithm SHA1).Hash_x000D__x000A_    </SBK>
               </En>
-              <En>
-                <S N="Key">FileName</S>
-                <S N="Value">Ways To Hash A File</S>
-              </En>
             </DCT>
           </Obj>
         </MS>
       </Obj>
-      <Db N="RelativeSpeed">2.114869751600984</Db>
+      <Db N="RelativeSpeed">3.776859900198285</Db>
       <I32 N="ClockSpeed">2095</I32>
       <S N="FileName">Ways To Hash A File</S>
-      <Db N="Throughput">3108.8823878703847</Db>
+      <Db N="Throughput">1586.1057139458344</Db>
       <Ref N="BenchmarkInput" RefId="3" />
     </MS>
   </Obj>

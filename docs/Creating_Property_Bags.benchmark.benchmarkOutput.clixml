@@ -14,7 +14,7 @@
           <T>System.Object</T>
           <T>Benchmark.Measure</T>
         </TN>
-        <TS>PT0.0116145S</TS>
+        <TS>PT0.0099675S</TS>
         <MS>
           <S N="FileName">Creating Property Bags</S>
           <S N="GroupName">(1 property)</S>
@@ -29,12 +29,12 @@
                 <S N="Value">(1 property)</S>
               </En>
               <En>
-                <S N="Key">ScriptBlock</S>
-                <SBK N="Value">_x000D__x000A_        [PSCustomObject]@{_x000D__x000A_            a='b'_x000D__x000A_        }_x000D__x000A_    </SBK>
-              </En>
-              <En>
                 <S N="Key">FileName</S>
                 <S N="Value">Creating Property Bags</S>
+              </En>
+              <En>
+                <S N="Key">ScriptBlock</S>
+                <SBK N="Value">_x000D__x000A_        [PSCustomObject]@{_x000D__x000A_            a='b'_x000D__x000A_        }_x000D__x000A_    </SBK>
               </En>
             </DCT>
           </Obj>
@@ -42,9 +42,9 @@
       </Obj>
       <Db N="RelativeSpeed">1</Db>
       <S N="GroupName">(1 property)</S>
-      <I32 N="ClockSpeed">2095</I32>
+      <I32 N="ClockSpeed">2594</I32>
       <S N="FileName">Creating Property Bags</S>
-      <Db N="Throughput">8609.92724611477</Db>
+      <Db N="Throughput">10032.60596940055</Db>
       <Obj N="BenchmarkInput" RefId="3">
         <TNRef RefId="2" />
         <DCT>
@@ -66,7 +66,7 @@
       <S N="Technique">New-Object PSObject -Property @{}</S>
       <Obj N="Time" RefId="5">
         <TNRef RefId="1" />
-        <TS>PT0.028123S</TS>
+        <TS>PT0.0186924S</TS>
         <MS>
           <S N="FileName">Creating Property Bags</S>
           <S N="GroupName">(1 property)</S>
@@ -78,32 +78,32 @@
                 <S N="Value">(1 property)</S>
               </En>
               <En>
-                <S N="Key">ScriptBlock</S>
-                <SBK N="Value">_x000D__x000A_        New-Object PSObject -Property @{_x000D__x000A_            a = 'b'_x000D__x000A_        }_x000D__x000A_    </SBK>
-              </En>
-              <En>
                 <S N="Key">FileName</S>
                 <S N="Value">Creating Property Bags</S>
+              </En>
+              <En>
+                <S N="Key">ScriptBlock</S>
+                <SBK N="Value">_x000D__x000A_        New-Object PSObject -Property @{_x000D__x000A_            a = 'b'_x000D__x000A_        }_x000D__x000A_    </SBK>
               </En>
             </DCT>
           </Obj>
         </MS>
       </Obj>
-      <Db N="RelativeSpeed">2.421369839424857</Db>
+      <Db N="RelativeSpeed">1.8753348382242288</Db>
       <S N="GroupName">(1 property)</S>
-      <I32 N="ClockSpeed">2095</I32>
+      <I32 N="ClockSpeed">2594</I32>
       <S N="FileName">Creating Property Bags</S>
-      <Db N="Throughput">3555.8084130427055</Db>
+      <Db N="Throughput">5349.767820076609</Db>
       <Ref N="BenchmarkInput" RefId="3" />
     </MS>
   </Obj>
   <Obj RefId="7">
     <TNRef RefId="0" />
     <MS>
-      <S N="Technique">New-Object ; Add-Member</S>
+      <S N="Technique">Static Constructors Only</S>
       <Obj N="Time" RefId="8">
         <TNRef RefId="1" />
-        <TS>PT0.0484011S</TS>
+        <TS>PT0.0226037S</TS>
         <MS>
           <S N="FileName">Creating Property Bags</S>
           <S N="GroupName">(1 property)</S>
@@ -115,32 +115,32 @@
                 <S N="Value">(1 property)</S>
               </En>
               <En>
-                <S N="Key">ScriptBlock</S>
-                <SBK N="Value">_x000D__x000A_        $o = New-Object PSObject_x000D__x000A_        Add-Member -InputObject $o -MemberType NoteProperty -Name a -Value b  -PassThru_x000D__x000A_    </SBK>
-              </En>
-              <En>
                 <S N="Key">FileName</S>
                 <S N="Value">Creating Property Bags</S>
+              </En>
+              <En>
+                <S N="Key">ScriptBlock</S>
+                <SBK N="Value">_x000D__x000A_        $o = [PSObject]::new()_x000D__x000A_        $o.psobject.Properties.Add([Management.Automation.PSNoteProperty]::new('a','b'))_x000D__x000A_        $o_x000D__x000A_    </SBK>
               </En>
             </DCT>
           </Obj>
         </MS>
       </Obj>
-      <Db N="RelativeSpeed">4.167299496319256</Db>
+      <Db N="RelativeSpeed">2.267740155505393</Db>
       <S N="GroupName">(1 property)</S>
-      <I32 N="ClockSpeed">2095</I32>
+      <I32 N="ClockSpeed">2594</I32>
       <S N="FileName">Creating Property Bags</S>
-      <Db N="Throughput">2066.0687463714667</Db>
+      <Db N="Throughput">4424.054468958621</Db>
       <Ref N="BenchmarkInput" RefId="3" />
     </MS>
   </Obj>
   <Obj RefId="10">
     <TNRef RefId="0" />
     <MS>
-      <S N="Technique">Static Constructors Only</S>
+      <S N="Technique">New-Object ; Add-Member</S>
       <Obj N="Time" RefId="11">
         <TNRef RefId="1" />
-        <TS>PT0.0576668S</TS>
+        <TS>PT0.0454091S</TS>
         <MS>
           <S N="FileName">Creating Property Bags</S>
           <S N="GroupName">(1 property)</S>
@@ -152,22 +152,22 @@
                 <S N="Value">(1 property)</S>
               </En>
               <En>
-                <S N="Key">ScriptBlock</S>
-                <SBK N="Value">_x000D__x000A_        $o = [PSObject]::new()_x000D__x000A_        $o.psobject.Properties.Add([Management.Automation.PSNoteProperty]::new('a','b'))_x000D__x000A_        $o_x000D__x000A_    </SBK>
-              </En>
-              <En>
                 <S N="Key">FileName</S>
                 <S N="Value">Creating Property Bags</S>
+              </En>
+              <En>
+                <S N="Key">ScriptBlock</S>
+                <SBK N="Value">_x000D__x000A_        $o = New-Object PSObject_x000D__x000A_        Add-Member -InputObject $o -MemberType NoteProperty -Name a -Value b  -PassThru_x000D__x000A_    </SBK>
               </En>
             </DCT>
           </Obj>
         </MS>
       </Obj>
-      <Db N="RelativeSpeed">4.965069525162512</Db>
+      <Db N="RelativeSpeed">4.555716077251066</Db>
       <S N="GroupName">(1 property)</S>
-      <I32 N="ClockSpeed">2095</I32>
+      <I32 N="ClockSpeed">2594</I32>
       <S N="FileName">Creating Property Bags</S>
-      <Db N="Throughput">1734.1000367629208</Db>
+      <Db N="Throughput">2202.2017613209687</Db>
       <Ref N="BenchmarkInput" RefId="3" />
     </MS>
   </Obj>
@@ -177,7 +177,7 @@
       <S N="Technique">New-Object | Add-Member</S>
       <Obj N="Time" RefId="14">
         <TNRef RefId="1" />
-        <TS>PT0.1077451S</TS>
+        <TS>PT0.0776865S</TS>
         <MS>
           <S N="FileName">Creating Property Bags</S>
           <S N="GroupName">(1 property)</S>
@@ -189,22 +189,22 @@
                 <S N="Value">(1 property)</S>
               </En>
               <En>
-                <S N="Key">ScriptBlock</S>
-                <SBK N="Value"> _x000D__x000A_        New-Object PSObject | _x000D__x000A_            Add-Member NoteProperty a b -PassThru_x000D__x000A_    </SBK>
-              </En>
-              <En>
                 <S N="Key">FileName</S>
                 <S N="Value">Creating Property Bags</S>
+              </En>
+              <En>
+                <S N="Key">ScriptBlock</S>
+                <SBK N="Value"> _x000D__x000A_        New-Object PSObject | _x000D__x000A_            Add-Member NoteProperty a b -PassThru_x000D__x000A_    </SBK>
               </En>
             </DCT>
           </Obj>
         </MS>
       </Obj>
-      <Db N="RelativeSpeed">9.276774721253606</Db>
+      <Db N="RelativeSpeed">7.79398043641836</Db>
       <S N="GroupName">(1 property)</S>
-      <I32 N="ClockSpeed">2095</I32>
+      <I32 N="ClockSpeed">2594</I32>
       <S N="FileName">Creating Property Bags</S>
-      <Db N="Throughput">928.1164526275442</Db>
+      <Db N="Throughput">1287.2249361214624</Db>
       <Ref N="BenchmarkInput" RefId="3" />
     </MS>
   </Obj>
@@ -214,7 +214,7 @@
       <S N="Technique">PSCustomObject</S>
       <Obj N="Time" RefId="17">
         <TNRef RefId="1" />
-        <TS>PT0.0098743S</TS>
+        <TS>PT0.0071941S</TS>
         <MS>
           <S N="FileName">Creating Property Bags</S>
           <S N="GroupName">(2 properties)</S>
@@ -226,12 +226,12 @@
                 <S N="Value">(2 properties)</S>
               </En>
               <En>
-                <S N="Key">ScriptBlock</S>
-                <SBK N="Value">_x000D__x000A_        [PSCustomObject]@{_x000D__x000A_            a='b'_x000D__x000A_            c='d'_x000D__x000A_        }_x000D__x000A_    </SBK>
-              </En>
-              <En>
                 <S N="Key">FileName</S>
                 <S N="Value">Creating Property Bags</S>
+              </En>
+              <En>
+                <S N="Key">ScriptBlock</S>
+                <SBK N="Value">_x000D__x000A_        [PSCustomObject]@{_x000D__x000A_            a='b'_x000D__x000A_            c='d'_x000D__x000A_        }_x000D__x000A_    </SBK>
               </En>
             </DCT>
           </Obj>
@@ -239,9 +239,9 @@
       </Obj>
       <Db N="RelativeSpeed">1</Db>
       <S N="GroupName">(2 properties)</S>
-      <I32 N="ClockSpeed">2095</I32>
+      <I32 N="ClockSpeed">2594</I32>
       <S N="FileName">Creating Property Bags</S>
-      <Db N="Throughput">10127.300163049531</Db>
+      <Db N="Throughput">13900.279395615851</Db>
       <Obj N="BenchmarkInput" RefId="19">
         <TNRef RefId="2" />
         <DCT>
@@ -263,7 +263,7 @@
       <S N="Technique">Static Constructors Only</S>
       <Obj N="Time" RefId="21">
         <TNRef RefId="1" />
-        <TS>PT0.014073S</TS>
+        <TS>PT0.0103236S</TS>
         <MS>
           <S N="FileName">Creating Property Bags</S>
           <S N="GroupName">(2 properties)</S>
@@ -275,22 +275,22 @@
                 <S N="Value">(2 properties)</S>
               </En>
               <En>
-                <S N="Key">ScriptBlock</S>
-                <SBK N="Value">_x000D__x000A_        $o = [PSObject]::new()_x000D__x000A_        $o.psobject.Properties.Add([Management.Automation.PSNoteProperty]::new('a','b'))_x000D__x000A_        $o.psobject.Properties.Add([Management.Automation.PSNoteProperty]::new('c','d'))_x000D__x000A_        $o_x000D__x000A_    </SBK>
-              </En>
-              <En>
                 <S N="Key">FileName</S>
                 <S N="Value">Creating Property Bags</S>
+              </En>
+              <En>
+                <S N="Key">ScriptBlock</S>
+                <SBK N="Value">_x000D__x000A_        $o = [PSObject]::new()_x000D__x000A_        $o.psobject.Properties.Add([Management.Automation.PSNoteProperty]::new('a','b'))_x000D__x000A_        $o.psobject.Properties.Add([Management.Automation.PSNoteProperty]::new('c','d'))_x000D__x000A_        $o_x000D__x000A_    </SBK>
               </En>
             </DCT>
           </Obj>
         </MS>
       </Obj>
-      <Db N="RelativeSpeed">1.4252149519459607</Db>
+      <Db N="RelativeSpeed">1.4350092436857982</Db>
       <S N="GroupName">(2 properties)</S>
-      <I32 N="ClockSpeed">2095</I32>
+      <I32 N="ClockSpeed">2594</I32>
       <S N="FileName">Creating Property Bags</S>
-      <Db N="Throughput">7105.805443046969</Db>
+      <Db N="Throughput">9686.543453833934</Db>
       <Ref N="BenchmarkInput" RefId="19" />
     </MS>
   </Obj>
@@ -300,7 +300,7 @@
       <S N="Technique">New-Object PSObject -Property @{}</S>
       <Obj N="Time" RefId="24">
         <TNRef RefId="1" />
-        <TS>PT0.0351135S</TS>
+        <TS>PT0.017298S</TS>
         <MS>
           <S N="FileName">Creating Property Bags</S>
           <S N="GroupName">(2 properties)</S>
@@ -312,22 +312,22 @@
                 <S N="Value">(2 properties)</S>
               </En>
               <En>
-                <S N="Key">ScriptBlock</S>
-                <SBK N="Value">_x000D__x000A_        New-Object PSObject -Property @{_x000D__x000A_            a = 'b'_x000D__x000A_            c = 'd'_x000D__x000A_        }_x000D__x000A_    </SBK>
-              </En>
-              <En>
                 <S N="Key">FileName</S>
                 <S N="Value">Creating Property Bags</S>
+              </En>
+              <En>
+                <S N="Key">ScriptBlock</S>
+                <SBK N="Value">_x000D__x000A_        New-Object PSObject -Property @{_x000D__x000A_            a = 'b'_x000D__x000A_            c = 'd'_x000D__x000A_        }_x000D__x000A_    </SBK>
               </En>
             </DCT>
           </Obj>
         </MS>
       </Obj>
-      <Db N="RelativeSpeed">3.556049542752398</Db>
+      <Db N="RelativeSpeed">2.40447032985363</Db>
       <S N="GroupName">(2 properties)</S>
-      <I32 N="ClockSpeed">2095</I32>
+      <I32 N="ClockSpeed">2594</I32>
       <S N="FileName">Creating Property Bags</S>
-      <Db N="Throughput">2847.9074999644013</Db>
+      <Db N="Throughput">5781.015146259683</Db>
       <Ref N="BenchmarkInput" RefId="19" />
     </MS>
   </Obj>
@@ -337,7 +337,7 @@
       <S N="Technique">New-Object ; Add-Member</S>
       <Obj N="Time" RefId="27">
         <TNRef RefId="1" />
-        <TS>PT0.0559272S</TS>
+        <TS>PT0.0439331S</TS>
         <MS>
           <S N="FileName">Creating Property Bags</S>
           <S N="GroupName">(2 properties)</S>
@@ -349,22 +349,22 @@
                 <S N="Value">(2 properties)</S>
               </En>
               <En>
-                <S N="Key">ScriptBlock</S>
-                <SBK N="Value">_x000D__x000A_        $o = New-Object PSObject_x000D__x000A_        Add-Member -InputObject $o -MemberType NoteProperty -Name a -Value b  _x000D__x000A_        Add-Member -InputObject $o -MemberType NoteProperty -Name c -Value d  -PassThru_x000D__x000A_    </SBK>
-              </En>
-              <En>
                 <S N="Key">FileName</S>
                 <S N="Value">Creating Property Bags</S>
+              </En>
+              <En>
+                <S N="Key">ScriptBlock</S>
+                <SBK N="Value">_x000D__x000A_        $o = New-Object PSObject_x000D__x000A_        Add-Member -InputObject $o -MemberType NoteProperty -Name a -Value b  _x000D__x000A_        Add-Member -InputObject $o -MemberType NoteProperty -Name c -Value d  -PassThru_x000D__x000A_    </SBK>
               </En>
             </DCT>
           </Obj>
         </MS>
       </Obj>
-      <Db N="RelativeSpeed">5.663915416789038</Db>
+      <Db N="RelativeSpeed">6.106823647155308</Db>
       <S N="GroupName">(2 properties)</S>
-      <I32 N="ClockSpeed">2095</I32>
+      <I32 N="ClockSpeed">2594</I32>
       <S N="FileName">Creating Property Bags</S>
-      <Db N="Throughput">1788.0387360711782</Db>
+      <Db N="Throughput">2276.1881132904346</Db>
       <Ref N="BenchmarkInput" RefId="19" />
     </MS>
   </Obj>
@@ -374,7 +374,7 @@
       <S N="Technique">New-Object | Add-Member</S>
       <Obj N="Time" RefId="30">
         <TNRef RefId="1" />
-        <TS>PT0.1879735S</TS>
+        <TS>PT0.1257341S</TS>
         <MS>
           <S N="FileName">Creating Property Bags</S>
           <S N="GroupName">(2 properties)</S>
@@ -386,22 +386,22 @@
                 <S N="Value">(2 properties)</S>
               </En>
               <En>
-                <S N="Key">ScriptBlock</S>
-                <SBK N="Value"> _x000D__x000A_        New-Object PSObject | _x000D__x000A_            Add-Member NoteProperty a b -PassThru |_x000D__x000A_            Add-Member NoteProperty c d -PassThru_x000D__x000A_    </SBK>
-              </En>
-              <En>
                 <S N="Key">FileName</S>
                 <S N="Value">Creating Property Bags</S>
+              </En>
+              <En>
+                <S N="Key">ScriptBlock</S>
+                <SBK N="Value"> _x000D__x000A_        New-Object PSObject | _x000D__x000A_            Add-Member NoteProperty a b -PassThru |_x000D__x000A_            Add-Member NoteProperty c d -PassThru_x000D__x000A_    </SBK>
               </En>
             </DCT>
           </Obj>
         </MS>
       </Obj>
-      <Db N="RelativeSpeed">19.036640571989913</Db>
+      <Db N="RelativeSpeed">17.47739119556303</Db>
       <S N="GroupName">(2 properties)</S>
-      <I32 N="ClockSpeed">2095</I32>
+      <I32 N="ClockSpeed">2594</I32>
       <S N="FileName">Creating Property Bags</S>
-      <Db N="Throughput">531.9898815524529</Db>
+      <Db N="Throughput">795.3291907286887</Db>
       <Ref N="BenchmarkInput" RefId="19" />
     </MS>
   </Obj>

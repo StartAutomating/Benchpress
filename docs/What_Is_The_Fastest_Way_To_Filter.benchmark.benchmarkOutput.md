@@ -9,12 +9,12 @@ What Is The Fastest Way To Filter
 
 |Technique             |Time           |RelativeSpeed|Throughput|
 |----------------------|---------------|-------------|----------|
-|DotScriptBlockVariable|00:00:00.011252|1x           |8887.07/s |
-|InlineScriptBlock     |00:00:00.012203|1.08x        |8194.71/s |
-|Filter                |00:00:00.012695|1.13x        |7876.74/s |
-|WhereObject           |00:00:00.032794|2.91x        |3049.31/s |
-|DotInline             |00:00:00.040040|3.56x        |2497.45/s |
-|ScriptBlockVariable   |00:00:00.040674|3.61x        |2458.52/s |
+|DotInline             |00:00:00.011662|1x           |8574.42/s |
+|Filter                |00:00:00.012987|1.11x        |7699.95/s |
+|DotScriptBlockVariable|00:00:00.013090|1.12x        |7639.24/s |
+|InlineScriptBlock     |00:00:00.023014|1.97x        |4345.12/s |
+|ScriptBlockVariable   |00:00:00.023146|1.98x        |4320.33/s |
+|WhereObject           |00:00:00.033283|2.85x        |3004.48/s |
 
 
 ### Filtering by Property Values
@@ -22,10 +22,10 @@ What Is The Fastest Way To Filter
 
 |Technique                         |Time           |RelativeSpeed|Throughput|
 |----------------------------------|---------------|-------------|----------|
-|ForEach Loop                      |00:00:00.413511|1x           |24.18/s   |
-|Pipe to ScriptBlock               |00:00:01.155047|2.79x        |8.66/s    |
-|.Where Method                     |00:00:05.375749|13x          |1.86/s    |
-|Where-Object Property (Positional)|00:00:11.703321|28.3x        |0.85/s    |
+|ForEach Loop                      |00:00:00.401229|1x           |24.92/s   |
+|Pipe to ScriptBlock               |00:00:00.933857|2.33x        |10.71/s   |
+|.Where Method                     |00:00:04.423217|11.02x       |2.26/s    |
+|Where-Object Property (Positional)|00:00:09.470464|23.6x        |1.06/s    |
 
 
 ### Filtering Values
@@ -33,13 +33,13 @@ What Is The Fastest Way To Filter
 
 |Technique                       |Time           |RelativeSpeed|Throughput|
 |--------------------------------|---------------|-------------|----------|
-|Operator Filter (Assumed Array) |00:00:00.011740|1x           |851.79/s  |
-|Operator Filter (Explicit Array)|00:00:00.014870|1.27x        |672.49/s  |
-|ForEach Loop                    |00:00:00.015846|1.35x        |631.06/s  |
-|Pipe to ScriptBlock             |00:00:00.115550|9.84x        |86.54/s   |
-|.Where Method                   |00:00:00.553500|47.15x       |18.07/s   |
-|Linq.Enumerable::Where          |00:00:00.795222|67.74x       |12.58/s   |
-|Where-Object Script (Positional)|00:00:01.639655|139.66x      |6.1/s     |
+|Operator Filter (Assumed Array) |00:00:00.011535|1x           |866.9/s   |
+|ForEach Loop                    |00:00:00.014810|1.28x        |675.21/s  |
+|Operator Filter (Explicit Array)|00:00:00.048159|4.17x        |207.64/s  |
+|Pipe to ScriptBlock             |00:00:00.140207|12.15x       |71.32/s   |
+|.Where Method                   |00:00:00.596299|51.69x       |16.77/s   |
+|Linq.Enumerable::Where          |00:00:00.808895|70.12x       |12.36/s   |
+|Where-Object Script (Positional)|00:00:01.726837|149.7x       |5.79/s    |
 
 
 

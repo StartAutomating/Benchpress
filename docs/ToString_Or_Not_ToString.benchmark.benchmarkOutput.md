@@ -9,9 +9,8 @@ ToString Or Not ToString
 
 |Technique|Time           |RelativeSpeed|Throughput|
 |---------|---------------|-------------|----------|
-|Quoted   |00:00:00.005660|1x           |17666.6/s |
-|ToString |00:00:00.032343|5.71x        |3091.77/s |
-
+|Quoted   |00:00:00.004942|1x           |20234.72/s|
+|ToString |00:00:00.026582|5.38x        |3761.85/s |
 
 
 

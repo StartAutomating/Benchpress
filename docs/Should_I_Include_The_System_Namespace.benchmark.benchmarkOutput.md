@@ -1,7 +1,7 @@
 
 Should I Include The System Namespace
 -------------------------------------
-> @2594 Mhz
+> @2095 Mhz
 
 
 ### 
@@ -9,9 +9,8 @@ Should I Include The System Namespace
 
 |Technique              |Time           |RelativeSpeed|Throughput|
 |-----------------------|---------------|-------------|----------|
-|NoSytemNamespace       |00:00:00.004441|1x           |22516.94/s|
-|SystemNamespaceIncluded|00:00:00.005504|1.24x        |18165.96/s|
-
+|NoSytemNamespace       |00:00:00.005323|1x           |18785.69/s|
+|SystemNamespaceIncluded|00:00:00.006259|1.18x        |15974.95/s|
 
 
 

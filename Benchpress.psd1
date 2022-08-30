@@ -1,6 +1,6 @@
 @{
     FormatsToProcess='Benchpress.format.ps1xml'
-    ModuleVersion='1.3.4'
+    ModuleVersion='1.3.5'
     CompanyName='Start-Automating'
     Description='Easy Benchmarking with PowerShell'
     PowerShellVersion='3.0'
@@ -16,6 +16,13 @@
             ProjectURI   = 'https://github.com/StartAutomating/Benchpress'
             LicenseURI   = 'https://github.com/StartAutomating/Benchpress/blob/master/LICENSE'
             ReleaseNotes = @'
+### 1.3.5:
+* New Benchmarks:
+  * Best Way To Accumulate Pipeline Results (Fixes #21)
+  * Comparing Command Lookup (Fixes #18)
+  * Is Using Faster (Fixes #27)  
+---
+
 ### 1.3.4:
 * Show-Benchmark: Fixing run vs load logic (Fixes #24)
 * Updating Action (preferring local bits) (Fixes #25)

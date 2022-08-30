@@ -14,7 +14,7 @@
           <T>System.Object</T>
           <T>Benchmark.Measure</T>
         </TN>
-        <TS>PT0.0062847S</TS>
+        <TS>PT0.0062319S</TS>
         <MS>
           <S N="FileName">What Is The Fastest Way To Concatenate</S>
           <S N="GroupName"></S>
@@ -39,7 +39,7 @@
       <Db N="RelativeSpeed">1</Db>
       <I32 N="ClockSpeed">2095</I32>
       <S N="FileName">What Is The Fastest Way To Concatenate</S>
-      <Db N="Throughput">15911.658472162553</Db>
+      <Db N="Throughput">16046.470578796194</Db>
       <Obj N="BenchmarkInput" RefId="3">
         <TNRef RefId="2" />
         <DCT>
@@ -57,7 +57,7 @@
       <S N="Technique">AddStrings</S>
       <Obj N="Time" RefId="5">
         <TNRef RefId="1" />
-        <TS>PT0.0063504S</TS>
+        <TS>PT0.0064739S</TS>
         <MS>
           <S N="FileName">What Is The Fastest Way To Concatenate</S>
           <S N="GroupName"></S>
@@ -76,10 +76,10 @@
           </Obj>
         </MS>
       </Obj>
-      <Db N="RelativeSpeed">1.0104539596162108</Db>
+      <Db N="RelativeSpeed">1.0388324588006868</Db>
       <I32 N="ClockSpeed">2095</I32>
       <S N="FileName">What Is The Fastest Way To Concatenate</S>
-      <Db N="Throughput">15747.039556563366</Db>
+      <Db N="Throughput">15446.639583558595</Db>
       <Ref N="BenchmarkInput" RefId="3" />
     </MS>
   </Obj>
@@ -89,7 +89,7 @@
       <S N="Technique">StringBuilder</S>
       <Obj N="Time" RefId="8">
         <TNRef RefId="1" />
-        <TS>PT0.0447529S</TS>
+        <TS>PT0.0113109S</TS>
         <MS>
           <S N="FileName">What Is The Fastest Way To Concatenate</S>
           <S N="GroupName"></S>
@@ -108,10 +108,10 @@
           </Obj>
         </MS>
       </Obj>
-      <Db N="RelativeSpeed">7.120928604388435</Db>
+      <Db N="RelativeSpeed">1.8150002406970587</Db>
       <I32 N="ClockSpeed">2095</I32>
       <S N="FileName">What Is The Fastest Way To Concatenate</S>
-      <Db N="Throughput">2234.4920664359183</Db>
+      <Db N="Throughput">8841.029449469095</Db>
       <Ref N="BenchmarkInput" RefId="3" />
     </MS>
   </Obj>

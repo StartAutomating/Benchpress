@@ -9,8 +9,8 @@ Comparing Command Lookup
 
 |Technique        |Time           |RelativeSpeed|Throughput|
 |-----------------|---------------|-------------|----------|
-|$executionContext|00:00:00.015701|1x           |6368.74/s |
-|Get-Command      |00:00:00.021962|1.4x         |4553.13/s |
+|$executionContext|00:00:00.013216|1x           |7566.07/s |
+|Get-Command      |00:00:00.020524|1.55x        |4872.27/s |
 
 
 ### All
@@ -18,8 +18,8 @@ Comparing Command Lookup
 
 |Technique        |Time           |RelativeSpeed|Throughput|
 |-----------------|---------------|-------------|----------|
-|$executionContext|00:00:00.006766|1x           |14778.47/s|
-|Get-Command      |00:00:00.031573|4.67x        |3167.22/s |
+|$executionContext|00:00:00.006875|1x           |14545.24/s|
+|Get-Command      |00:00:00.030078|4.37x        |3324.64/s |
 
 
 ### Applications
@@ -27,8 +27,8 @@ Comparing Command Lookup
 
 |Technique        |Time           |RelativeSpeed|Throughput|
 |-----------------|---------------|-------------|----------|
-|$executionContext|00:00:00.769690|1x           |129.92/s  |
-|Get-Command      |00:00:02.111267|2.74x        |47.36/s   |
+|$executionContext|00:00:00.750635|1x           |133.22/s  |
+|Get-Command      |00:00:02.067931|2.75x        |48.36/s   |
 
 
 ### Cmdlets
@@ -36,8 +36,8 @@ Comparing Command Lookup
 
 |Technique        |Time           |RelativeSpeed|Throughput|
 |-----------------|---------------|-------------|----------|
-|$executionContext|00:00:00.008136|1x           |12290.9/s |
-|Get-Command      |00:00:00.015815|1.94x        |6322.87/s |
+|$executionContext|00:00:00.007512|1x           |13311.68/s|
+|Get-Command      |00:00:00.015209|2.02x        |6575.05/s |
 
 
 ### Function
@@ -45,8 +45,8 @@ Comparing Command Lookup
 
 |Technique        |Time           |RelativeSpeed|Throughput|
 |-----------------|---------------|-------------|----------|
-|$executionContext|00:00:00.007187|1x           |13912.66/s|
-|Get-Command      |00:00:00.015913|2.21x        |6283.93/s |
+|$executionContext|00:00:00.007172|1x           |13942.14/s|
+|Get-Command      |00:00:00.015592|2.17x        |6413.3/s  |
 
 
 ### WildcardMiss
@@ -54,8 +54,8 @@ Comparing Command Lookup
 
 |Technique        |Time           |RelativeSpeed|Throughput|
 |-----------------|---------------|-------------|----------|
-|$executionContext|00:00:01.334456|1x           |74.94/s   |
-|Get-Command      |00:00:04.201810|3.15x        |23.8/s    |
+|$executionContext|00:00:01.307238|1x           |76.5/s    |
+|Get-Command      |00:00:04.344987|3.32x        |23.02/s   |
 
 
 

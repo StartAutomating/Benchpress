@@ -1,0 +1,170 @@
+<Objs Version="1.1.0.1" xmlns="http://schemas.microsoft.com/powershell/2004/04">
+  <Obj RefId="0">
+    <TN RefId="0">
+      <T>Benchmark.Relative.Summary</T>
+      <T>System.Management.Automation.PSCustomObject</T>
+      <T>System.Object</T>
+    </TN>
+    <MS>
+      <S N="Technique">Get-Module -ExpandProperty Name</S>
+      <Obj N="Time" RefId="1">
+        <TN RefId="1">
+          <T>System.TimeSpan</T>
+          <T>System.ValueType</T>
+          <T>System.Object</T>
+          <T>Benchmark.Measure</T>
+        </TN>
+        <TS>PT0.0032067S</TS>
+        <MS>
+          <S N="FileName">What Is The Fastest Way To Get All Loaded Modules</S>
+          <S N="GroupName"></S>
+          <Obj N="BenchmarkInput" RefId="2">
+            <TN RefId="2">
+              <T>System.Collections.Hashtable</T>
+              <T>System.Object</T>
+            </TN>
+            <DCT>
+              <En>
+                <S N="Key">ScriptBlock</S>
+                <SBK N="Value">_x000D__x000A_        $moduleNames = Get-Module | Select-Object -ExpandProperty Name_x000D__x000A_        $moduleNames_x000D__x000A_    </SBK>
+              </En>
+              <En>
+                <S N="Key">RepeatCount</S>
+                <U32 N="Value">10</U32>
+              </En>
+              <En>
+                <S N="Key">FileName</S>
+                <S N="Value">What Is The Fastest Way To Get All Loaded Modules</S>
+              </En>
+            </DCT>
+          </Obj>
+        </MS>
+      </Obj>
+      <Db N="RelativeSpeed">1</Db>
+      <I32 N="ClockSpeed">2095</I32>
+      <S N="FileName">What Is The Fastest Way To Get All Loaded Modules</S>
+      <Db N="Throughput">3118.4707019677553</Db>
+      <Obj N="BenchmarkInput" RefId="3">
+        <TNRef RefId="2" />
+        <DCT>
+          <En>
+            <S N="Key">RepeatCount</S>
+            <U32 N="Value">10</U32>
+          </En>
+          <En>
+            <S N="Key">FileName</S>
+            <S N="Value">What Is The Fastest Way To Get All Loaded Modules</S>
+          </En>
+        </DCT>
+      </Obj>
+    </MS>
+  </Obj>
+  <Obj RefId="4">
+    <TNRef RefId="0" />
+    <MS>
+      <S N="Technique">foreach Get-Module</S>
+      <Obj N="Time" RefId="5">
+        <TNRef RefId="1" />
+        <TS>PT0.004213S</TS>
+        <MS>
+          <S N="FileName">What Is The Fastest Way To Get All Loaded Modules</S>
+          <S N="GroupName"></S>
+          <Obj N="BenchmarkInput" RefId="6">
+            <TNRef RefId="2" />
+            <DCT>
+              <En>
+                <S N="Key">ScriptBlock</S>
+                <SBK N="Value">_x000D__x000A_        $moduleNames = foreach ($_ in Get-Module) {_x000D__x000A_            $_.Name_x000D__x000A_        }_x000D__x000A_        $moduleNames_x000D__x000A_    </SBK>
+              </En>
+              <En>
+                <S N="Key">RepeatCount</S>
+                <U32 N="Value">10</U32>
+              </En>
+              <En>
+                <S N="Key">FileName</S>
+                <S N="Value">What Is The Fastest Way To Get All Loaded Modules</S>
+              </En>
+            </DCT>
+          </Obj>
+        </MS>
+      </Obj>
+      <Db N="RelativeSpeed">1.3138117067390152</Db>
+      <I32 N="ClockSpeed">2095</I32>
+      <S N="FileName">What Is The Fastest Way To Get All Loaded Modules</S>
+      <Db N="Throughput">2373.605506764776</Db>
+      <Ref N="BenchmarkInput" RefId="3" />
+    </MS>
+  </Obj>
+  <Obj RefId="7">
+    <TNRef RefId="0" />
+    <MS>
+      <S N="Technique">ExecutionContextAndArrayList</S>
+      <Obj N="Time" RefId="8">
+        <TNRef RefId="1" />
+        <TS>PT0.0176998S</TS>
+        <MS>
+          <S N="FileName">What Is The Fastest Way To Get All Loaded Modules</S>
+          <S N="GroupName"></S>
+          <Obj N="BenchmarkInput" RefId="9">
+            <TNRef RefId="2" />
+            <DCT>
+              <En>
+                <S N="Key">ScriptBlock</S>
+                <SBK N="Value">_x000D__x000A_            $cmds = $ExecutionContext.InvokeCommand.GetCommands('*', 'Function,Cmdlet,Alias', $true)_x000D__x000A_            $moduleNames = [Collections.ArrayList]::new()_x000D__x000A__x000D__x000A_            foreach ($_ in $cmds) {_x000D__x000A_                if (-not $_.Module.Name) { continue } _x000D__x000A_                if ($moduleNames -notcontains $_.Module.Name) {_x000D__x000A_                    $null = $moduleNames.Add($_.Module.Name)_x000D__x000A_                }_x000D__x000A_            }_x000D__x000A_            $moduleNames_x000D__x000A_    </SBK>
+              </En>
+              <En>
+                <S N="Key">RepeatCount</S>
+                <U32 N="Value">10</U32>
+              </En>
+              <En>
+                <S N="Key">FileName</S>
+                <S N="Value">What Is The Fastest Way To Get All Loaded Modules</S>
+              </En>
+            </DCT>
+          </Obj>
+        </MS>
+      </Obj>
+      <Db N="RelativeSpeed">5.5196307730688865</Db>
+      <I32 N="ClockSpeed">2095</I32>
+      <S N="FileName">What Is The Fastest Way To Get All Loaded Modules</S>
+      <Db N="Throughput">564.978135346162</Db>
+      <Ref N="BenchmarkInput" RefId="3" />
+    </MS>
+  </Obj>
+  <Obj RefId="10">
+    <TNRef RefId="0" />
+    <MS>
+      <S N="Technique">ExecutionContextAndHashtable</S>
+      <Obj N="Time" RefId="11">
+        <TNRef RefId="1" />
+        <TS>PT0.0238426S</TS>
+        <MS>
+          <S N="FileName">What Is The Fastest Way To Get All Loaded Modules</S>
+          <S N="GroupName"></S>
+          <Obj N="BenchmarkInput" RefId="12">
+            <TNRef RefId="2" />
+            <DCT>
+              <En>
+                <S N="Key">ScriptBlock</S>
+                <SBK N="Value">_x000D__x000A_        $cmds = $ExecutionContext.InvokeCommand.GetCommands('*', 'Function,Cmdlet,Alias', $true)_x000D__x000A_        $cmdModules = @{}_x000D__x000A__x000D__x000A_        foreach ($_ in $cmds) {_x000D__x000A_            if (-not $_.Module) { continue } _x000D__x000A_            if (-not $cmdModules[$_.Module.Name]) {_x000D__x000A_                $cmdModules[$_.Module.Name] = $__x000D__x000A_            }_x000D__x000A_        }_x000D__x000A__x000D__x000A_        $cmdModules.Keys_x000D__x000A_    </SBK>
+              </En>
+              <En>
+                <S N="Key">RepeatCount</S>
+                <U32 N="Value">10</U32>
+              </En>
+              <En>
+                <S N="Key">FileName</S>
+                <S N="Value">What Is The Fastest Way To Get All Loaded Modules</S>
+              </En>
+            </DCT>
+          </Obj>
+        </MS>
+      </Obj>
+      <Db N="RelativeSpeed">7.43524495587364</Db>
+      <I32 N="ClockSpeed">2095</I32>
+      <S N="FileName">What Is The Fastest Way To Get All Loaded Modules</S>
+      <Db N="Throughput">419.41734542373734</Db>
+      <Ref N="BenchmarkInput" RefId="3" />
+    </MS>
+  </Obj>
+</Objs>

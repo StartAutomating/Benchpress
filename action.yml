@@ -158,7 +158,7 @@ runs:
         }
         git config --global user.email $UserEmail
         git config --global user.name  $UserName
-        git config pull.rebase true
+        git config pull.rebase false
         
         if (-not $BenchmarkPath) {
             $BenchmarkPath = 

@@ -10,6 +10,10 @@ inputs:
   ModulePath: 
     required: false
     description: The path to the module.
+  OutputPath: 
+    required: false
+    default: "docs"
+    description: The output path for the benchmark files.  By default "docs"
   CommitMessage: 
     required: false
     description: |
@@ -31,15 +35,17 @@ runs:
       id: Benchpress
       shell: pwsh
       env: 
-        CommitMessage: ${{inputs.CommitMessage}}
-        ModulePath: ${{inputs.ModulePath}}
+        UserEmail: ${{inputs.UserEmail}}
         UserName: ${{inputs.UserName}}
         BenchmarkPath: ${{inputs.BenchmarkPath}}
-        UserEmail: ${{inputs.UserEmail}}
+        ModulePath: ${{inputs.ModulePath}}
+        OutputPath: ${{inputs.OutputPath}}
+        CommitMessage: ${{inputs.CommitMessage}}
       run: |
         $Parameters = @{}
         $Parameters.BenchmarkPath = ${env:BenchmarkPath}
         $Parameters.ModulePath = ${env:ModulePath}
+        $Parameters.OutputPath = ${env:OutputPath}
         $Parameters.CommitMessage = ${env:CommitMessage}
         $Parameters.UserEmail = ${env:UserEmail}
         $Parameters.UserName = ${env:UserName}
@@ -60,9 +66,14 @@ runs:
         # If not provided, any benchmark files in your repository will be used
         [string]
         $BenchmarkPath,
+        
         # The path to the module.
         [string]
         $ModulePath,
+        
+        # The output path for the benchmark files.  By default "docs"
+        [string]
+        $OutputPath = "docs",
         
         # If provided, will commit any remaining changes made to the workspace with this commit message.
         # If no commit message is provided, changes will not be committed.
@@ -146,6 +157,7 @@ runs:
         }
         git config --global user.email $UserEmail
         git config --global user.name  $UserName
+        git config pull.rebase true
         
         if (-not $BenchmarkPath) {
             $BenchmarkPath = 
@@ -192,13 +204,21 @@ runs:
         if (-not $benchpressModule) { throw "Benchpress not loaded" }
         $startTime = [DateTime]::Now
         
+        if (-not (Test-Path $OutputPath)) {
+            $createOutputPath = New-Item -ItemType Directory -Path $OutputPath    
+            if (-not $createOutputPath) {
+                throw "Could not create -OutputPath $outputPath"
+            }
+        }
+        
         $benchmarkOutputFiles = $BenchmarkPath | 
             Get-ChildItem -LiteralPath {$_ } -ErrorAction SilentlyContinue |
-            Where-Object Name -Like '*.benchmark.*' |
+            Where-Object Name -Match '\.benchmark.(?>ps1|psd1|json)' |
             Checkpoint-Benchmark -OutputPath {
-                $fileName = $_.Name
-                $fileNameMinusExtension = $fileName.Substring(0, $fileName.IndexOf($_.Extension))
-                $fileNameMinusExtension + '.benchmarkOutput.clixml'
+                $fileInfo = $_
+                $fileName = $fileInfo.Name        
+                $fileNameMinusExtension = $fileName.Substring(0, $fileName.IndexOf($fileInfo.Extension))
+                "$(Join-Path $OutputPath ($fileNameMinusExtension + '.benchmarkOutput.clixml'))"
             }
         
         $filesToCheckin =

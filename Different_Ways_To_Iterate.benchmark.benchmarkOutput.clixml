@@ -1,0 +1,214 @@
+<Objs Version="1.1.0.1" xmlns="http://schemas.microsoft.com/powershell/2004/04">
+  <Obj RefId="0">
+    <TN RefId="0">
+      <T>Benchmark.Relative.Summary</T>
+      <T>System.Management.Automation.PSCustomObject</T>
+      <T>System.Object</T>
+    </TN>
+    <MS>
+      <S N="Technique">Foreach Statement</S>
+      <Obj N="Time" RefId="1">
+        <TN RefId="1">
+          <T>System.TimeSpan</T>
+          <T>System.ValueType</T>
+          <T>System.Object</T>
+          <T>Benchmark.Measure</T>
+        </TN>
+        <TS>PT0.0080083S</TS>
+        <MS>
+          <S N="FileName">Different Ways To Iterate</S>
+          <S N="GroupName"></S>
+          <Obj N="BenchmarkInput" RefId="2">
+            <TN RefId="2">
+              <T>System.Collections.Hashtable</T>
+              <T>System.Object</T>
+            </TN>
+            <DCT>
+              <En>
+                <S N="Key">FileName</S>
+                <S N="Value">Different Ways To Iterate</S>
+              </En>
+              <En>
+                <S N="Key">ScriptBlock</S>
+                <SBK N="Value"> foreach ($n in 1..100) { $n }</SBK>
+              </En>
+            </DCT>
+          </Obj>
+        </MS>
+      </Obj>
+      <Db N="RelativeSpeed">1</Db>
+      <I32 N="ClockSpeed">2594</I32>
+      <S N="FileName">Different Ways To Iterate</S>
+      <Db N="Throughput">12487.04469113295</Db>
+      <Obj N="BenchmarkInput" RefId="3">
+        <TNRef RefId="2" />
+        <DCT>
+          <En>
+            <S N="Key">FileName</S>
+            <S N="Value">Different Ways To Iterate</S>
+          </En>
+        </DCT>
+      </Obj>
+    </MS>
+  </Obj>
+  <Obj RefId="4">
+    <TNRef RefId="0" />
+    <MS>
+      <S N="Technique">For loop</S>
+      <Obj N="Time" RefId="5">
+        <TNRef RefId="1" />
+        <TS>PT0.0082214S</TS>
+        <MS>
+          <S N="FileName">Different Ways To Iterate</S>
+          <S N="GroupName"></S>
+          <Obj N="BenchmarkInput" RefId="6">
+            <TNRef RefId="2" />
+            <DCT>
+              <En>
+                <S N="Key">FileName</S>
+                <S N="Value">Different Ways To Iterate</S>
+              </En>
+              <En>
+                <S N="Key">ScriptBlock</S>
+                <SBK N="Value">for ( $i =1; $i -le 100; $i++) { $i } </SBK>
+              </En>
+            </DCT>
+          </Obj>
+        </MS>
+      </Obj>
+      <Db N="RelativeSpeed">1.026609892236804</Db>
+      <I32 N="ClockSpeed">2594</I32>
+      <S N="FileName">Different Ways To Iterate</S>
+      <Db N="Throughput">12163.378500012162</Db>
+      <Ref N="BenchmarkInput" RefId="3" />
+    </MS>
+  </Obj>
+  <Obj RefId="7">
+    <TNRef RefId="0" />
+    <MS>
+      <S N="Technique">Foreach _</S>
+      <Obj N="Time" RefId="8">
+        <TNRef RefId="1" />
+        <TS>PT0.0125438S</TS>
+        <MS>
+          <S N="FileName">Different Ways To Iterate</S>
+          <S N="GroupName"></S>
+          <Obj N="BenchmarkInput" RefId="9">
+            <TNRef RefId="2" />
+            <DCT>
+              <En>
+                <S N="Key">FileName</S>
+                <S N="Value">Different Ways To Iterate</S>
+              </En>
+              <En>
+                <S N="Key">ScriptBlock</S>
+                <SBK N="Value">foreach ($_ in 1..100) { $_ }</SBK>
+              </En>
+            </DCT>
+          </Obj>
+        </MS>
+      </Obj>
+      <Db N="RelativeSpeed">1.5663499119663349</Db>
+      <I32 N="ClockSpeed">2594</I32>
+      <S N="FileName">Different Ways To Iterate</S>
+      <Db N="Throughput">7972.065881152442</Db>
+      <Ref N="BenchmarkInput" RefId="3" />
+    </MS>
+  </Obj>
+  <Obj RefId="10">
+    <TNRef RefId="0" />
+    <MS>
+      <S N="Technique">Pipe to ScriptBlock</S>
+      <Obj N="Time" RefId="11">
+        <TNRef RefId="1" />
+        <TS>PT0.0186475S</TS>
+        <MS>
+          <S N="FileName">Different Ways To Iterate</S>
+          <S N="GroupName"></S>
+          <Obj N="BenchmarkInput" RefId="12">
+            <TNRef RefId="2" />
+            <DCT>
+              <En>
+                <S N="Key">FileName</S>
+                <S N="Value">Different Ways To Iterate</S>
+              </En>
+              <En>
+                <S N="Key">ScriptBlock</S>
+                <SBK N="Value">1..100 | . { process { $_ }}</SBK>
+              </En>
+            </DCT>
+          </Obj>
+        </MS>
+      </Obj>
+      <Db N="RelativeSpeed">2.328521658779017</Db>
+      <I32 N="ClockSpeed">2594</I32>
+      <S N="FileName">Different Ways To Iterate</S>
+      <Db N="Throughput">5362.6491486794475</Db>
+      <Ref N="BenchmarkInput" RefId="3" />
+    </MS>
+  </Obj>
+  <Obj RefId="13">
+    <TNRef RefId="0" />
+    <MS>
+      <S N="Technique">For _</S>
+      <Obj N="Time" RefId="14">
+        <TNRef RefId="1" />
+        <TS>PT0.0215621S</TS>
+        <MS>
+          <S N="FileName">Different Ways To Iterate</S>
+          <S N="GroupName"></S>
+          <Obj N="BenchmarkInput" RefId="15">
+            <TNRef RefId="2" />
+            <DCT>
+              <En>
+                <S N="Key">FileName</S>
+                <S N="Value">Different Ways To Iterate</S>
+              </En>
+              <En>
+                <S N="Key">ScriptBlock</S>
+                <SBK N="Value">for ( $_ =1; $_ -le 100; $_++) { $_ } </SBK>
+              </En>
+            </DCT>
+          </Obj>
+        </MS>
+      </Obj>
+      <Db N="RelativeSpeed">2.6924690633467776</Db>
+      <I32 N="ClockSpeed">2594</I32>
+      <S N="FileName">Different Ways To Iterate</S>
+      <Db N="Throughput">4637.767193362428</Db>
+      <Ref N="BenchmarkInput" RefId="3" />
+    </MS>
+  </Obj>
+  <Obj RefId="16">
+    <TNRef RefId="0" />
+    <MS>
+      <S N="Technique">Foreach-Object</S>
+      <Obj N="Time" RefId="17">
+        <TNRef RefId="1" />
+        <TS>PT0.0810012S</TS>
+        <MS>
+          <S N="FileName">Different Ways To Iterate</S>
+          <S N="GroupName"></S>
+          <Obj N="BenchmarkInput" RefId="18">
+            <TNRef RefId="2" />
+            <DCT>
+              <En>
+                <S N="Key">FileName</S>
+                <S N="Value">Different Ways To Iterate</S>
+              </En>
+              <En>
+                <S N="Key">ScriptBlock</S>
+                <SBK N="Value">1..100 | ForEach-Object { $_ }</SBK>
+              </En>
+            </DCT>
+          </Obj>
+        </MS>
+      </Obj>
+      <Db N="RelativeSpeed">10.114656044353982</Db>
+      <I32 N="ClockSpeed">2594</I32>
+      <S N="FileName">Different Ways To Iterate</S>
+      <Db N="Throughput">1234.5496116106922</Db>
+      <Ref N="BenchmarkInput" RefId="3" />
+    </MS>
+  </Obj>
+</Objs>

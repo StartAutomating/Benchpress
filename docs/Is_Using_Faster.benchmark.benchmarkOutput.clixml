@@ -14,7 +14,7 @@
           <T>System.Object</T>
           <T>Benchmark.Measure</T>
         </TN>
-        <TS>PT0.0045918S</TS>
+        <TS>PT0.0054458S</TS>
         <MS>
           <S N="FileName">Is Using Faster</S>
           <S N="GroupName"></S>
@@ -37,9 +37,9 @@
         </MS>
       </Obj>
       <Db N="RelativeSpeed">1</Db>
-      <I32 N="ClockSpeed">2594</I32>
+      <I32 N="ClockSpeed">2095</I32>
       <S N="FileName">Is Using Faster</S>
-      <Db N="Throughput">21777.952001393787</Db>
+      <Db N="Throughput">18362.774982555366</Db>
       <Obj N="BenchmarkInput" RefId="3">
         <TNRef RefId="2" />
         <DCT>
@@ -57,7 +57,7 @@
       <S N="Technique">using</S>
       <Obj N="Time" RefId="5">
         <TNRef RefId="1" />
-        <TS>PT0.0050025S</TS>
+        <TS>PT0.0057266S</TS>
         <MS>
           <S N="FileName">Is Using Faster</S>
           <S N="GroupName"></S>
@@ -76,10 +76,10 @@
           </Obj>
         </MS>
       </Obj>
-      <Db N="RelativeSpeed">1.0894420488697243</Db>
-      <I32 N="ClockSpeed">2594</I32>
+      <Db N="RelativeSpeed">1.0515626721510154</Db>
+      <I32 N="ClockSpeed">2095</I32>
       <S N="FileName">Is Using Faster</S>
-      <Db N="Throughput">19990.004997501248</Db>
+      <Db N="Throughput">17462.36859567632</Db>
       <Ref N="BenchmarkInput" RefId="3" />
     </MS>
   </Obj>

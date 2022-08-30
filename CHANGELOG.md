@@ -1,3 +1,10 @@
+### 1.3.5:
+* New Benchmarks:
+  * Best Way To Accumulate Pipeline Results (Fixes #21)
+  * Comparing Command Lookup (Fixes #18)
+  * Is Using Faster (Fixes #27)  
+---
+
 ### 1.3.4:
 * Show-Benchmark: Fixing run vs load logic (Fixes #24)
 * Updating Action (preferring local bits) (Fixes #25)

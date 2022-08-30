@@ -1,7 +1,7 @@
 
 Creating Property Bags
 ----------------------
-> @2594 Mhz
+> @2095 Mhz
 
 
 ### (1 property)
@@ -9,11 +9,11 @@ Creating Property Bags
 
 |Technique                        |Time           |RelativeSpeed  |Throughput|
 |---------------------------------|---------------|---------------|----------|
-|PSCustomObject                   |00:00:00.011874|1x             |8421.27/s |
-|Static Constructors Only         |00:00:00.017110|1.44x          |5844.47/s |
-|New-Object ; Add-Member          |00:00:00.031124|2.62x          |3212.9/s  |
-|New-Object PSObject -Property @{}|00:00:00.043148|3.63x          |2317.58/s |
-|New-Object `                     | Add-Member    |00:00:00.082295|6.93x     |1215.14/s|
+|PSCustomObject                   |00:00:00.008931|1x             |11196.7/s |
+|New-Object PSObject -Property @{}|00:00:00.016638|1.86x          |6010.34/s |
+|Static Constructors Only         |00:00:00.017214|1.93x          |5809.23/s |
+|New-Object ; Add-Member          |00:00:00.033307|3.73x          |3002.34/s |
+|New-Object `                     | Add-Member    |00:00:00.085403|9.56x     |1170.91/s|
 
 
 ### (2 properties)
@@ -21,12 +21,11 @@ Creating Property Bags
 
 |Technique                        |Time           |RelativeSpeed  |Throughput|
 |---------------------------------|---------------|---------------|----------|
-|PSCustomObject                   |00:00:00.007528|1x             |13283.74/s|
-|Static Constructors Only         |00:00:00.011144|1.48x          |8972.71/s |
-|New-Object PSObject -Property @{}|00:00:00.027439|3.64x          |3644.42/s |
-|New-Object ; Add-Member          |00:00:00.042814|5.69x          |2335.68/s |
-|New-Object `                     | Add-Member    |00:00:00.138618|18.41x    |721.4/s|
-
+|PSCustomObject                   |00:00:00.008597|1x             |11631.69/s|
+|Static Constructors Only         |00:00:00.011097|1.29x          |9011.04/s |
+|New-Object PSObject -Property @{}|00:00:00.017748|2.06x          |5634.15/s |
+|New-Object ; Add-Member          |00:00:00.045077|5.24x          |2218.4/s  |
+|New-Object `                     | Add-Member    |00:00:00.148823|17.31x    |671.94/s|
 
 
 

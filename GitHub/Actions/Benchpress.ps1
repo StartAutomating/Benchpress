@@ -7,11 +7,16 @@
 param(
 # The path to the benchmark file.  
 # If not provided, any benchmark files in your repository will be used
-[string]
+[string[]]
 $BenchmarkPath,
+
 # The path to the module.
 [string]
 $ModulePath,
+
+# The output path for the benchmark files.  By default "docs"
+[string]
+$OutputPath = "docs",
 
 # If provided, will commit any remaining changes made to the workspace with this commit message.
 # If no commit message is provided, changes will not be committed.
@@ -95,6 +100,7 @@ if (-not $UserEmail) {
 }
 git config --global user.email $UserEmail
 git config --global user.name  $UserName
+git config pull.rebase true
 
 if (-not $BenchmarkPath) {
     $BenchmarkPath = 
@@ -125,7 +131,7 @@ if ($PSD1Found) {
     throw "Action Path not found"
 }
 
-"::notice title=ModuleLoaded::HelpOut Loaded from Path - $($BenchpressPath)" | Out-Host
+"::notice title=ModuleLoaded::Benchpress Loaded from Path - $($BenchpressPath)" | Out-Host
 
 if (-not $ModulePath) {
     Get-ChildItem -ErrorAction SilentlyContinue -Path $BenchmarkPath -Filter *.psd1
@@ -141,13 +147,26 @@ $benchpressModule = Get-Module Benchpress
 if (-not $benchpressModule) { throw "Benchpress not loaded" }
 $startTime = [DateTime]::Now
 
+if (-not (Test-Path $OutputPath)) {
+    $createOutputPath = New-Item -ItemType Directory -Path $OutputPath    
+    if (-not $createOutputPath) {
+        throw "Could not create -OutputPath $outputPath"
+    }
+}
+
 $benchmarkOutputFiles = $BenchmarkPath | 
     Get-ChildItem -LiteralPath {$_ } -ErrorAction SilentlyContinue |
     Where-Object Name -Like '*.benchmark.*' |
+    Where-Object Name -NotLike '*.benchmarkOutput.*' |
+    ForEach-Object { 
+        "::notice title=FoundBenchmarkFile::$($_.FullName)" | Out-Host
+        $_        
+    } |
     Checkpoint-Benchmark -OutputPath {
-        $fileName = $_.Name
-        $fileNameMinusExtension = $fileName.Substring(0, $fileName.IndexOf($_.Extension))
-        $fileNameMinusExtension + '.benchmarkOutput.clixml'
+        $fileInfo = $_
+        $fileName = $fileInfo.Name        
+        $fileNameMinusExtension = $fileName.Substring(0, $fileName.IndexOf($fileInfo.Extension))
+        "$(Join-Path $OutputPath ($fileNameMinusExtension + '.benchmarkOutput.clixml'))"
     }
 
 $filesToCheckin =

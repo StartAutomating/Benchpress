@@ -1,7 +1,7 @@
 
 Whats In A Quote
 ----------------
-> @2594 Mhz
+> @2095 Mhz
 
 
 ### 
@@ -9,11 +9,10 @@ Whats In A Quote
 
 |Technique       |Time           |RelativeSpeed|Throughput|
 |----------------|---------------|-------------|----------|
-|SingleQuote     |00:00:00.565293|1x           |18114.5/s |
-|SingleHerestring|00:00:00.565755|1x           |18099.68/s|
-|DoubleHerestring|00:00:00.566974|1x           |18060.78/s|
-|DoubleQuote     |00:00:00.588757|1.04x        |17392.56/s|
-
+|DoubleHerestring|00:00:00.488672|1x           |20954.73/s|
+|SingleQuote     |00:00:00.491670|1.01x        |20826.96/s|
+|DoubleQuote     |00:00:00.493253|1.01x        |20760.13/s|
+|SingleHerestring|00:00:00.536259|1.1x         |19095.23/s|
 
 
 

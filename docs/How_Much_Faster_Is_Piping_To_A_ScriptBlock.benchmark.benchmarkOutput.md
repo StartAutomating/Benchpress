@@ -1,7 +1,7 @@
 
 How Much Faster Is Piping To A ScriptBlock
 ------------------------------------------
-> @2594 Mhz
+> @2095 Mhz
 
 
 ### 
@@ -9,11 +9,10 @@ How Much Faster Is Piping To A ScriptBlock
 
 |Technique                       |Time           |RelativeSpeed|Throughput|
 |--------------------------------|---------------|-------------|----------|
-|ScriptBlock                     |00:00:00.161565|1x           |6338.01/s |
-|DotScriptBlock                  |00:00:00.163967|1.01x        |6245.14/s |
-|ScriptBlockWithPipelineParameter|00:00:00.609259|3.77x        |1680.73/s |
-|ForeachObject                   |00:00:00.764650|4.73x        |1339.17/s |
-
+|DotScriptBlock                  |00:00:00.197940|1x           |5173.27/s |
+|ScriptBlock                     |00:00:00.201441|1.02x        |5083.37/s |
+|ScriptBlockWithPipelineParameter|00:00:00.721125|3.64x        |1420/s    |
+|ForeachObject                   |00:00:00.981166|4.96x        |1043.66/s |
 
 
 

@@ -44,6 +44,7 @@ runs:
       run: |
         $Parameters = @{}
         $Parameters.BenchmarkPath = ${env:BenchmarkPath}
+        $Parameters.BenchmarkPath = $parameters.BenchmarkPath -split ';' -replace '^[''"]' -replace  '[''"]$'
         $Parameters.ModulePath = ${env:ModulePath}
         $Parameters.OutputPath = ${env:OutputPath}
         $Parameters.CommitMessage = ${env:CommitMessage}
@@ -64,7 +65,7 @@ runs:
         param(
         # The path to the benchmark file.  
         # If not provided, any benchmark files in your repository will be used
-        [string]
+        [string[]]
         $BenchmarkPath,
         
         # The path to the module.
@@ -188,7 +189,7 @@ runs:
             throw "Action Path not found"
         }
         
-        "::notice title=ModuleLoaded::HelpOut Loaded from Path - $($BenchpressPath)" | Out-Host
+        "::notice title=ModuleLoaded::Benchpress Loaded from Path - $($BenchpressPath)" | Out-Host
         
         if (-not $ModulePath) {
             Get-ChildItem -ErrorAction SilentlyContinue -Path $BenchmarkPath -Filter *.psd1
@@ -213,7 +214,12 @@ runs:
         
         $benchmarkOutputFiles = $BenchmarkPath | 
             Get-ChildItem -LiteralPath {$_ } -ErrorAction SilentlyContinue |
-            Where-Object Name -Match '\.benchmark.(?>ps1|psd1|json)' |
+            Where-Object Name -Like '*.benchmark.*' |
+            Where-Object Name -NotLike '*.benchmarkOutput.*' |
+            ForEach-Object { 
+                "::notice title=FoundBenchmarkFile::$($_.FullName)" | Out-Host
+                $_        
+            } |
             Checkpoint-Benchmark -OutputPath {
                 $fileInfo = $_
                 $fileName = $fileInfo.Name        

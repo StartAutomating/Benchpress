@@ -1,3 +1,8 @@
+### 1.3.4:
+* Show-Benchmark: Fixing run vs load logic (Fixes #24)
+* Updating Action (preferring local bits) (Fixes #25)
+---
+
 ### 1.3.3:
 * Adding Show-Benchmark (Fixes #22)
 * Adding markdown formatting (Fixes #19)

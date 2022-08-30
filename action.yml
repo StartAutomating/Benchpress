@@ -215,6 +215,10 @@ runs:
             Get-ChildItem -LiteralPath {$_ } -ErrorAction SilentlyContinue |
             Where-Object Name -Like '*.benchmark.*' |
             Where-Object Name -NotLike '*.benchmarkOutput.*' |
+            ForEach-Object { 
+                "::notice title=FoundBenchmarkFile::$($_.FullName)" | Out-Host
+                $_        
+            } |
             Checkpoint-Benchmark -OutputPath {
                 $fileInfo = $_
                 $fileName = $fileInfo.Name        

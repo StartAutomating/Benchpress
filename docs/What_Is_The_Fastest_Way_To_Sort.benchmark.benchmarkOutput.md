@@ -9,9 +9,8 @@ What Is The Fastest Way To Sort
 
 |Technique     |Time           |RelativeSpeed|Throughput|
 |--------------|---------------|-------------|----------|
-|ArrayList.Sort|00:00:00.019826|1x           |5043.7/s  |
-|Sort-Object   |00:00:00.096185|4.85x        |1039.66/s |
-
+|ArrayList.Sort|00:00:00.019268|1x           |5189.79/s |
+|Sort-Object   |00:00:00.089494|4.64x        |1117.38/s |
 
 
 

@@ -6,7 +6,7 @@
       <T>System.Object</T>
     </TN>
     <MS>
-      <S N="Technique">ForEach-Object -Parallel</S>
+      <S N="Technique">Runspace</S>
       <Obj N="Time" RefId="1">
         <TN RefId="1">
           <T>System.TimeSpan</T>
@@ -14,7 +14,7 @@
           <T>System.Object</T>
           <T>Benchmark.Measure</T>
         </TN>
-        <TS>PT0.9536639S</TS>
+        <TS>PT0.7593196S</TS>
         <MS>
           <S N="FileName">multithreading</S>
           <S N="GroupName">Multi-Threading</S>
@@ -25,16 +25,16 @@
             </TN>
             <DCT>
               <En>
-                <S N="Key">ScriptBlock</S>
-                <SBK N="Value">_x000A_        $resultParallel = $chunks | ForEach-Object -Parallel {_x000A_            foreach($i in $_.Group) {_x000A_                if($i.FirstValue -le $using:average -and $i.SecondValue % 2) {_x000A_                    $i_x000A_                }_x000A_            }_x000A_        } -ThrottleLimit $threads_x000A_        $hash = @{_x000A_            TestName      = 'Parallel'_x000A_            TestCount     = $resultParallel.Count_x000A_            ExpectedCount = $expectedCount_x000A_        }_x000A_        $thisTest = &amp; $resultObject @hash        _x000A_    </SBK>
-              </En>
-              <En>
                 <S N="Key">RepeatCount</S>
                 <U32 N="Value">3</U32>
               </En>
               <En>
                 <S N="Key">GroupName</S>
                 <S N="Value">Multi-Threading</S>
+              </En>
+              <En>
+                <S N="Key">ScriptBlock</S>
+                <SBK N="Value">_x000A_        $RunspacePool = [runspacefactory]::CreateRunspacePool(1, $threads)_x000A_        $RunspacePool.Open()_x000A_        $runspace = foreach($chunk in $chunks) {_x000A_            $params = @{_x000A_                array = $chunk.Group_x000A_                average = $average_x000A_            }_x000A_            $ps = [powershell]::Create().AddScript($action).AddParameters($params)_x000A_            $ps.RunspacePool = $RunspacePool_x000A__x000A_            @{_x000A_                Instance = $ps_x000A_                Handle   = $ps.BeginInvoke()_x000A_            }_x000A_        }_x000A__x000A_        $resultRunspace = foreach($r in $runspace) {_x000A_            $r.Instance.EndInvoke($r.Handle)_x000A_        }_x000A__x000A_        $RunspacePool.Dispose()_x000A_        $hash = @{_x000A_            TestName      = 'Runspace'_x000A_            TestCount     = $resultRunspace.Count_x000A_            ExpectedCount = $expectedCount_x000A_        }_x000A_        $thisTest = &amp; $resultObject @hash        _x000A_    </SBK>
               </En>
               <En>
                 <S N="Key">FileName</S>
@@ -48,7 +48,7 @@
       <S N="GroupName">Multi-Threading</S>
       <I32 N="ClockSpeed">2594</I32>
       <S N="FileName">multithreading</S>
-      <Db N="Throughput">3.1457623592546597</Db>
+      <Db N="Throughput">3.9509055212060904</Db>
       <Obj N="BenchmarkInput" RefId="3">
         <TNRef RefId="2" />
         <DCT>
@@ -57,12 +57,12 @@
             <U32 N="Value">3</U32>
           </En>
           <En>
-            <S N="Key">GroupName</S>
-            <S N="Value">Multi-Threading</S>
-          </En>
-          <En>
             <S N="Key">FileName</S>
             <S N="Value">multithreading</S>
+          </En>
+          <En>
+            <S N="Key">GroupName</S>
+            <S N="Value">Multi-Threading</S>
           </En>
         </DCT>
       </Obj>
@@ -71,20 +71,16 @@
   <Obj RefId="4">
     <TNRef RefId="0" />
     <MS>
-      <S N="Technique">Runspace</S>
+      <S N="Technique">ForEach-Object -Parallel</S>
       <Obj N="Time" RefId="5">
         <TNRef RefId="1" />
-        <TS>PT0.9990896S</TS>
+        <TS>PT1.0557463S</TS>
         <MS>
           <S N="FileName">multithreading</S>
           <S N="GroupName">Multi-Threading</S>
           <Obj N="BenchmarkInput" RefId="6">
             <TNRef RefId="2" />
             <DCT>
-              <En>
-                <S N="Key">ScriptBlock</S>
-                <SBK N="Value">_x000A_        $RunspacePool = [runspacefactory]::CreateRunspacePool(1, $threads)_x000A_        $RunspacePool.Open()_x000A_        $runspace = foreach($chunk in $chunks) {_x000A_            $params = @{_x000A_                array = $chunk.Group_x000A_                average = $average_x000A_            }_x000A_            $ps = [powershell]::Create().AddScript($action).AddParameters($params)_x000A_            $ps.RunspacePool = $RunspacePool_x000A__x000A_            @{_x000A_                Instance = $ps_x000A_                Handle   = $ps.BeginInvoke()_x000A_            }_x000A_        }_x000A__x000A_        $resultRunspace = foreach($r in $runspace) {_x000A_            $r.Instance.EndInvoke($r.Handle)_x000A_        }_x000A__x000A_        $RunspacePool.Dispose()_x000A_        $hash = @{_x000A_            TestName      = 'Runspace'_x000A_            TestCount     = $resultRunspace.Count_x000A_            ExpectedCount = $expectedCount_x000A_        }_x000A_        $thisTest = &amp; $resultObject @hash        _x000A_    </SBK>
-              </En>
               <En>
                 <S N="Key">RepeatCount</S>
                 <U32 N="Value">3</U32>
@@ -94,6 +90,10 @@
                 <S N="Value">Multi-Threading</S>
               </En>
               <En>
+                <S N="Key">ScriptBlock</S>
+                <SBK N="Value">_x000A_        $resultParallel = $chunks | ForEach-Object -Parallel {_x000A_            foreach($i in $_.Group) {_x000A_                if($i.FirstValue -le $using:average -and $i.SecondValue % 2) {_x000A_                    $i_x000A_                }_x000A_            }_x000A_        } -ThrottleLimit $threads_x000A_        $hash = @{_x000A_            TestName      = 'Parallel'_x000A_            TestCount     = $resultParallel.Count_x000A_            ExpectedCount = $expectedCount_x000A_        }_x000A_        $thisTest = &amp; $resultObject @hash        _x000A_    </SBK>
+              </En>
+              <En>
                 <S N="Key">FileName</S>
                 <S N="Value">multithreading</S>
               </En>
@@ -101,11 +101,11 @@
           </Obj>
         </MS>
       </Obj>
-      <Db N="RelativeSpeed">1.047632819067598</Db>
+      <Db N="RelativeSpeed">1.3903846285543005</Db>
       <S N="GroupName">Multi-Threading</S>
       <I32 N="ClockSpeed">2594</I32>
       <S N="FileName">multithreading</S>
-      <Db N="Throughput">3.0027336887502383</Db>
+      <Db N="Throughput">2.841591772568845</Db>
       <Ref N="BenchmarkInput" RefId="3" />
     </MS>
   </Obj>
@@ -115,17 +115,13 @@
       <S N="Technique">Start-ThreadJob</S>
       <Obj N="Time" RefId="8">
         <TNRef RefId="1" />
-        <TS>PT1.8983091S</TS>
+        <TS>PT2.0277918S</TS>
         <MS>
           <S N="FileName">multithreading</S>
           <S N="GroupName">Multi-Threading</S>
           <Obj N="BenchmarkInput" RefId="9">
             <TNRef RefId="2" />
             <DCT>
-              <En>
-                <S N="Key">ScriptBlock</S>
-                <SBK N="Value">_x000A_        $jobs = foreach($chunk in $chunks) {_x000A_            Start-ThreadJob -ScriptBlock $action -ArgumentList $chunk.Group, $average -ThrottleLimit $threads_x000A_        }_x000A_        $resultThreadJob = Receive-Job $jobs -Wait -AutoRemoveJob_x000A_        $hash = @{_x000A_            TestName      = 'ThreadJob'_x000A_            TestCount     = $resultThreadJob.Count_x000A_            ExpectedCount = $expectedCount_x000A_        }_x000A_        $thisTest = &amp; $resultObject @hash        _x000A_    </SBK>
-              </En>
               <En>
                 <S N="Key">RepeatCount</S>
                 <U32 N="Value">3</U32>
@@ -135,6 +131,10 @@
                 <S N="Value">Multi-Threading</S>
               </En>
               <En>
+                <S N="Key">ScriptBlock</S>
+                <SBK N="Value">_x000A_        $jobs = foreach($chunk in $chunks) {_x000A_            Start-ThreadJob -ScriptBlock $action -ArgumentList $chunk.Group, $average -ThrottleLimit $threads_x000A_        }_x000A_        $resultThreadJob = Receive-Job $jobs -Wait -AutoRemoveJob_x000A_        $hash = @{_x000A_            TestName      = 'ThreadJob'_x000A_            TestCount     = $resultThreadJob.Count_x000A_            ExpectedCount = $expectedCount_x000A_        }_x000A_        $thisTest = &amp; $resultObject @hash        _x000A_    </SBK>
+              </En>
+              <En>
                 <S N="Key">FileName</S>
                 <S N="Value">multithreading</S>
               </En>
@@ -142,11 +142,11 @@
           </Obj>
         </MS>
       </Obj>
-      <Db N="RelativeSpeed">1.9905431043368633</Db>
+      <Db N="RelativeSpeed">2.6705379394921454</Db>
       <S N="GroupName">Multi-Threading</S>
       <I32 N="ClockSpeed">2594</I32>
       <S N="FileName">multithreading</S>
-      <Db N="Throughput">1.5803538001266495</Db>
+      <Db N="Throughput">1.4794418243529734</Db>
       <Ref N="BenchmarkInput" RefId="3" />
     </MS>
   </Obj>
@@ -156,17 +156,13 @@
       <S N="Technique">Start-Job</S>
       <Obj N="Time" RefId="11">
         <TNRef RefId="1" />
-        <TS>PT29.0567225S</TS>
+        <TS>PT29.8046284S</TS>
         <MS>
           <S N="FileName">multithreading</S>
           <S N="GroupName">Multi-Threading</S>
           <Obj N="BenchmarkInput" RefId="12">
             <TNRef RefId="2" />
             <DCT>
-              <En>
-                <S N="Key">ScriptBlock</S>
-                <SBK N="Value">_x000A_        $jobs = foreach($chunk in $chunks) {_x000A_            Start-Job -ScriptBlock $action -ArgumentList $chunk.Group, $average_x000A_        }_x000A_        $resultJob = Receive-Job $jobs -Wait -AutoRemoveJob_x000A_        $hash = @{_x000A_            TestName      = 'Job'_x000A_            TestCount     = $resultJob.Count_x000A_            ExpectedCount = $expectedCount_x000A_        }_x000A_        $thisTest = &amp; $resultObject @hash        _x000A_    </SBK>
-              </En>
               <En>
                 <S N="Key">RepeatCount</S>
                 <U32 N="Value">3</U32>
@@ -176,6 +172,10 @@
                 <S N="Value">Multi-Threading</S>
               </En>
               <En>
+                <S N="Key">ScriptBlock</S>
+                <SBK N="Value">_x000A_        $jobs = foreach($chunk in $chunks) {_x000A_            Start-Job -ScriptBlock $action -ArgumentList $chunk.Group, $average_x000A_        }_x000A_        $resultJob = Receive-Job $jobs -Wait -AutoRemoveJob_x000A_        $hash = @{_x000A_            TestName      = 'Job'_x000A_            TestCount     = $resultJob.Count_x000A_            ExpectedCount = $expectedCount_x000A_        }_x000A_        $thisTest = &amp; $resultObject @hash        _x000A_    </SBK>
+              </En>
+              <En>
                 <S N="Key">FileName</S>
                 <S N="Value">multithreading</S>
               </En>
@@ -183,11 +183,11 @@
           </Obj>
         </MS>
       </Obj>
-      <Db N="RelativeSpeed">30.46851464126932</Db>
+      <Db N="RelativeSpeed">39.25175696768528</Db>
       <S N="GroupName">Multi-Threading</S>
       <I32 N="ClockSpeed">2594</I32>
       <S N="FileName">multithreading</S>
-      <Db N="Throughput">0.10324633137822066</Db>
+      <Db N="Throughput">0.10065550758552655</Db>
       <Ref N="BenchmarkInput" RefId="3" />
     </MS>
   </Obj>

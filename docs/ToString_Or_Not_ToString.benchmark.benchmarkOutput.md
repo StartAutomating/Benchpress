@@ -1,7 +1,7 @@
 
 ToString Or Not ToString
 ------------------------
-> @2095 Mhz
+> @2594 Mhz
 
 
 ### 
@@ -9,8 +9,9 @@ ToString Or Not ToString
 
 |Technique|Time           |RelativeSpeed|Throughput|
 |---------|---------------|-------------|----------|
-|Quoted   |00:00:00.006484|1x           |15422.58/s|
-|ToString |00:00:00.008090|1.25x        |12360.94/s|
+|Quoted   |00:00:00.005660|1x           |17666.6/s |
+|ToString |00:00:00.032343|5.71x        |3091.77/s |
+
 
 
 

@@ -1,7 +1,7 @@
 
 Ways To Hash A File
 -------------------
-> @2095 Mhz
+> @2793 Mhz
 
 
 ### 
@@ -9,8 +9,8 @@ Ways To Hash A File
 
 |Technique  |Time           |RelativeSpeed|Throughput|
 |-----------|---------------|-------------|----------|
-|DotNet     |00:00:00.016693|1x           |5990.5/s  |
-|GetFileHash|00:00:00.063047|3.78x        |1586.11/s |
+|DotNet     |00:00:00.014148|1x           |7067.69/s |
+|GetFileHash|00:00:00.024737|1.75x        |4042.45/s |
 
 
 

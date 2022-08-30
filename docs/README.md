@@ -13,3 +13,4 @@ For instance, here's a quick Benchmark to determine if you should use Foreach st
 Benchmark comes with a number of PowerShell Performance experiments.
 
     Checkpoint-Benchmark -ModuleName Benchpress
+

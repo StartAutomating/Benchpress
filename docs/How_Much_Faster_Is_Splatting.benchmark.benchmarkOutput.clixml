@@ -1,0 +1,227 @@
+<Objs Version="1.1.0.1" xmlns="http://schemas.microsoft.com/powershell/2004/04">
+  <Obj RefId="0">
+    <TN RefId="0">
+      <T>Benchmark.Relative.Summary</T>
+      <T>System.Management.Automation.PSCustomObject</T>
+      <T>System.Object</T>
+    </TN>
+    <MS>
+      <S N="Technique">Splatting</S>
+      <TS N="Time">PT0.1800128S</TS>
+      <Db N="RelativeSpeed">1</Db>
+      <I32 N="ClockSpeed">2594</I32>
+      <S N="FileName">How Much Faster Is Splatting</S>
+      <Obj N="Details" RefId="1">
+        <TN RefId="1">
+          <T>Benchmark.Detail</T>
+          <T>System.Management.Automation.PSCustomObject</T>
+          <T>System.Object</T>
+        </TN>
+        <MS>
+          <TS N="FastestTime">PT0.000164S</TS>
+          <Db N="TotalMilliseconds">180.01289999999972</Db>
+          <TS N="TotalTime">PT0.1800128S</TS>
+          <U32 N="RepeatCount">1024</U32>
+          <TS N="AverageTime">PT0.0001757S</TS>
+          <TS N="SlowestTime">PT0.0020573S</TS>
+          <Obj N="BenchmarkInput" RefId="2">
+            <TN RefId="2">
+              <T>System.Collections.Hashtable</T>
+              <T>System.Object</T>
+            </TN>
+            <DCT>
+              <En>
+                <S N="Key">ScriptBlock</S>
+                <SBK N="Value">_x000D__x000A_        Add-Member @splat _x000D__x000A_    </SBK>
+              </En>
+              <En>
+                <S N="Key">RepeatCount</S>
+                <U32 N="Value">1024</U32>
+              </En>
+              <En>
+                <S N="Key">Detailed</S>
+                <Obj N="Value" RefId="3">
+                  <TN RefId="3">
+                    <T>System.Management.Automation.SwitchParameter</T>
+                    <T>System.ValueType</T>
+                    <T>System.Object</T>
+                  </TN>
+                  <ToString>True</ToString>
+                  <Props>
+                    <B N="IsPresent">true</B>
+                  </Props>
+                </Obj>
+              </En>
+              <En>
+                <S N="Key">FileName</S>
+                <S N="Value">How Much Faster Is Splatting</S>
+              </En>
+            </DCT>
+          </Obj>
+          <S N="FileName">How Much Faster Is Splatting</S>
+          <SBK N="Command">_x000D__x000A_        Add-Member @splat _x000D__x000A_    </SBK>
+          <S N="GroupName"></S>
+        </MS>
+      </Obj>
+      <Db N="Throughput">5688.484374444484</Db>
+      <Obj N="BenchmarkInput" RefId="4">
+        <TNRef RefId="2" />
+        <DCT>
+          <En>
+            <S N="Key">RepeatCount</S>
+            <U32 N="Value">1024</U32>
+          </En>
+          <En>
+            <S N="Key">FileName</S>
+            <S N="Value">How Much Faster Is Splatting</S>
+          </En>
+          <En>
+            <S N="Key">Detailed</S>
+            <Ref N="Value" RefId="3" />
+          </En>
+        </DCT>
+      </Obj>
+    </MS>
+  </Obj>
+  <Obj RefId="5">
+    <TNRef RefId="0" />
+    <MS>
+      <S N="Technique">Named</S>
+      <TS N="Time">PT0.1868026S</TS>
+      <Db N="RelativeSpeed">1.0377184079585413</Db>
+      <I32 N="ClockSpeed">2594</I32>
+      <S N="FileName">How Much Faster Is Splatting</S>
+      <Obj N="Details" RefId="6">
+        <TNRef RefId="1" />
+        <MS>
+          <TS N="FastestTime">PT0.0001704S</TS>
+          <Db N="TotalMilliseconds">186.8026999999998</Db>
+          <TS N="TotalTime">PT0.1868026S</TS>
+          <U32 N="RepeatCount">1024</U32>
+          <TS N="AverageTime">PT0.0001824S</TS>
+          <TS N="SlowestTime">PT0.0027636S</TS>
+          <Obj N="BenchmarkInput" RefId="7">
+            <TNRef RefId="2" />
+            <DCT>
+              <En>
+                <S N="Key">ScriptBlock</S>
+                <SBK N="Value">_x000D__x000A_        Add-Member -InputObject ([PSObject]::new()) -PassThru -MemberType NoteProperty -Name Test -Value 1 _x000D__x000A_    </SBK>
+              </En>
+              <En>
+                <S N="Key">RepeatCount</S>
+                <U32 N="Value">1024</U32>
+              </En>
+              <En>
+                <S N="Key">Detailed</S>
+                <Ref N="Value" RefId="3" />
+              </En>
+              <En>
+                <S N="Key">FileName</S>
+                <S N="Value">How Much Faster Is Splatting</S>
+              </En>
+            </DCT>
+          </Obj>
+          <S N="FileName">How Much Faster Is Splatting</S>
+          <SBK N="Command">_x000D__x000A_        Add-Member -InputObject ([PSObject]::new()) -PassThru -MemberType NoteProperty -Name Test -Value 1 _x000D__x000A_    </SBK>
+          <S N="GroupName"></S>
+        </MS>
+      </Obj>
+      <Db N="Throughput">5481.722417139804</Db>
+      <Ref N="BenchmarkInput" RefId="4" />
+    </MS>
+  </Obj>
+  <Obj RefId="8">
+    <TNRef RefId="0" />
+    <MS>
+      <S N="Technique">Piped</S>
+      <TS N="Time">PT0.1973703S</TS>
+      <Db N="RelativeSpeed">1.096423089678575</Db>
+      <I32 N="ClockSpeed">2594</I32>
+      <S N="FileName">How Much Faster Is Splatting</S>
+      <Obj N="Details" RefId="9">
+        <TNRef RefId="1" />
+        <MS>
+          <TS N="FastestTime">PT0.0001802S</TS>
+          <Db N="TotalMilliseconds">197.37030000000001</Db>
+          <TS N="TotalTime">PT0.1973703S</TS>
+          <U32 N="RepeatCount">1024</U32>
+          <TS N="AverageTime">PT0.0001927S</TS>
+          <TS N="SlowestTime">PT0.0048368S</TS>
+          <Obj N="BenchmarkInput" RefId="10">
+            <TNRef RefId="2" />
+            <DCT>
+              <En>
+                <S N="Key">ScriptBlock</S>
+                <SBK N="Value">_x000D__x000A_        [PSObject]::new() | _x000D__x000A_            Add-Member -MemberType NoteProperty -Name Test -Value 1 -PassThru_x000D__x000A_    </SBK>
+              </En>
+              <En>
+                <S N="Key">RepeatCount</S>
+                <U32 N="Value">1024</U32>
+              </En>
+              <En>
+                <S N="Key">Detailed</S>
+                <Ref N="Value" RefId="3" />
+              </En>
+              <En>
+                <S N="Key">FileName</S>
+                <S N="Value">How Much Faster Is Splatting</S>
+              </En>
+            </DCT>
+          </Obj>
+          <S N="FileName">How Much Faster Is Splatting</S>
+          <SBK N="Command">_x000D__x000A_        [PSObject]::new() | _x000D__x000A_            Add-Member -MemberType NoteProperty -Name Test -Value 1 -PassThru_x000D__x000A_    </SBK>
+          <S N="GroupName"></S>
+        </MS>
+      </Obj>
+      <Db N="Throughput">5188.21727483821</Db>
+      <Ref N="BenchmarkInput" RefId="4" />
+    </MS>
+  </Obj>
+  <Obj RefId="11">
+    <TNRef RefId="0" />
+    <MS>
+      <S N="Technique">Positional</S>
+      <TS N="Time">PT0.6619962S</TS>
+      <Db N="RelativeSpeed">3.6774936685093156</Db>
+      <I32 N="ClockSpeed">2594</I32>
+      <S N="FileName">How Much Faster Is Splatting</S>
+      <Obj N="Details" RefId="12">
+        <TNRef RefId="1" />
+        <MS>
+          <TS N="FastestTime">PT0.0006264S</TS>
+          <Db N="TotalMilliseconds">661.9962999999996</Db>
+          <TS N="TotalTime">PT0.6619962S</TS>
+          <U32 N="RepeatCount">1024</U32>
+          <TS N="AverageTime">PT0.0006464S</TS>
+          <TS N="SlowestTime">PT0.0024477S</TS>
+          <Obj N="BenchmarkInput" RefId="13">
+            <TNRef RefId="2" />
+            <DCT>
+              <En>
+                <S N="Key">ScriptBlock</S>
+                <SBK N="Value">_x000D__x000A_        Add-Member -InputObject ([PSObject]::new()) -PassThru NoteProperty Test 1 _x000D__x000A_    </SBK>
+              </En>
+              <En>
+                <S N="Key">RepeatCount</S>
+                <U32 N="Value">1024</U32>
+              </En>
+              <En>
+                <S N="Key">Detailed</S>
+                <Ref N="Value" RefId="3" />
+              </En>
+              <En>
+                <S N="Key">FileName</S>
+                <S N="Value">How Much Faster Is Splatting</S>
+              </En>
+            </DCT>
+          </Obj>
+          <S N="FileName">How Much Faster Is Splatting</S>
+          <SBK N="Command">_x000D__x000A_        Add-Member -InputObject ([PSObject]::new()) -PassThru NoteProperty Test 1 _x000D__x000A_    </SBK>
+          <S N="GroupName"></S>
+        </MS>
+      </Obj>
+      <Db N="Throughput">1546.8366736848338</Db>
+      <Ref N="BenchmarkInput" RefId="4" />
+    </MS>
+  </Obj>
+</Objs>

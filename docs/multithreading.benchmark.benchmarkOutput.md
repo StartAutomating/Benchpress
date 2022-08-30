@@ -1,7 +1,7 @@
 
 multithreading
 --------------
-> @2095 Mhz
+> @2594 Mhz
 
 
 ### Multi-Threading
@@ -9,10 +9,11 @@ multithreading
 
 |Technique               |Time           |RelativeSpeed|Throughput|
 |------------------------|---------------|-------------|----------|
-|Runspace                |00:00:00.916898|1x           |3.27/s    |
-|ForEach-Object -Parallel|00:00:01.226626|1.34x        |2.45/s    |
-|Start-ThreadJob         |00:00:02.370539|2.59x        |1.27/s    |
-|Start-Job               |00:00:36.479008|39.79x       |0.08/s    |
+|ForEach-Object -Parallel|00:00:01.010594|1x           |2.97/s    |
+|Runspace                |00:00:01.089550|1.08x        |2.75/s    |
+|Start-ThreadJob         |00:00:02.070033|2.05x        |1.45/s    |
+|Start-Job               |00:00:30.475785|30.16x       |0.1/s     |
+
 
 
 

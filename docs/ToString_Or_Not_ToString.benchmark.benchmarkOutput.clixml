@@ -14,7 +14,7 @@
           <T>System.Object</T>
           <T>Benchmark.Measure</T>
         </TN>
-        <TS>PT0.0295744S</TS>
+        <TS>PT0.0064979S</TS>
         <MS>
           <S N="FileName">ToString Or Not ToString</S>
           <S N="GroupName"></S>
@@ -37,9 +37,9 @@
         </MS>
       </Obj>
       <Db N="RelativeSpeed">1</Db>
-      <I32 N="ClockSpeed">2594</I32>
+      <I32 N="ClockSpeed">2095</I32>
       <S N="FileName">ToString Or Not ToString</S>
-      <Db N="Throughput">3381.302748322874</Db>
+      <Db N="Throughput">15389.587405161668</Db>
       <Obj N="BenchmarkInput" RefId="3">
         <TNRef RefId="2" />
         <DCT>
@@ -57,7 +57,7 @@
       <S N="Technique">ToString</S>
       <Obj N="Time" RefId="5">
         <TNRef RefId="1" />
-        <TS>PT0.0330422S</TS>
+        <TS>PT0.091964S</TS>
         <MS>
           <S N="FileName">ToString Or Not ToString</S>
           <S N="GroupName"></S>
@@ -76,10 +76,10 @@
           </Obj>
         </MS>
       </Obj>
-      <Db N="RelativeSpeed">1.1172568167063406</Db>
-      <I32 N="ClockSpeed">2594</I32>
+      <Db N="RelativeSpeed">14.152880161282877</Db>
+      <I32 N="ClockSpeed">2095</I32>
       <S N="FileName">ToString Or Not ToString</S>
-      <Db N="Throughput">3026.4328646397635</Db>
+      <Db N="Throughput">1087.382019050933</Db>
       <Ref N="BenchmarkInput" RefId="3" />
     </MS>
   </Obj>

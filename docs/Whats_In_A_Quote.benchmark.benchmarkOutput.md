@@ -9,10 +9,10 @@ Whats In A Quote
 
 |Technique       |Time           |RelativeSpeed|Throughput|
 |----------------|---------------|-------------|----------|
-|SingleQuote     |00:00:00.496943|1x           |20605.98/s|
-|DoubleHerestring|00:00:00.500025|1.01x        |20478.96/s|
-|SingleHerestring|00:00:00.510191|1.03x        |20070.89/s|
-|DoubleQuote     |00:00:00.512133|1.03x        |19994.8/s |
+|DoubleHerestring|00:00:00.490237|1x           |20887.83/s|
+|SingleQuote     |00:00:00.492529|1x           |20790.62/s|
+|DoubleQuote     |00:00:00.500832|1.02x        |20445.97/s|
+|SingleHerestring|00:00:00.504333|1.03x        |20304.02/s|
 
 
 

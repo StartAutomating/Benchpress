@@ -1,7 +1,6 @@
-
 What Is The Fastest Way To Sort
 -------------------------------
-> @2594 Mhz
+> @2095 Mhz
 
 
 ### 
@@ -9,9 +8,5 @@ What Is The Fastest Way To Sort
 
 |Technique     |Time           |RelativeSpeed|Throughput|
 |--------------|---------------|-------------|----------|
-|ArrayList.Sort|00:00:00.049465|1x           |2021.63/s |
-|Sort-Object   |00:00:00.086856|1.76x        |1151.33/s |
-
-
-
-
+|ArrayList.Sort|00:00:00.060329|1x           |1657.56/s |
+|Sort-Object   |00:00:00.104464|1.73x        |957.26/s  |

@@ -9,8 +9,8 @@ Should I Include The System Namespace
 
 |Technique              |Time           |RelativeSpeed|Throughput|
 |-----------------------|---------------|-------------|----------|
-|SystemNamespaceIncluded|00:00:00.004954|1x           |20185.3/s |
-|NoSytemNamespace       |00:00:00.026979|5.45x        |3706.53/s |
+|NoSytemNamespace       |00:00:00.003985|1x           |25093.47/s|
+|SystemNamespaceIncluded|00:00:00.005054|1.27x        |19785.13/s|
 
 
 

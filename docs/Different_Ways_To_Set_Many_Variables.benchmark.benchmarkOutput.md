@@ -1,7 +1,7 @@
 
 Different Ways To Set Many Variables
 ------------------------------------
-> @2793 Mhz
+> @2594 Mhz
 
 
 ### 
@@ -9,11 +9,11 @@ Different Ways To Set Many Variables
 
 |Technique          |Time           |RelativeSpeed|Throughput|
 |-------------------|---------------|-------------|----------|
-|Multiple Assignment|00:00:00.039732|1x           |25772.35/s|
-|Simple Assignment  |00:00:00.040664|1.02x        |25181.42/s|
-|ExecutionContext   |00:00:00.050496|1.27x        |20278.59/s|
-|SetFromSplat       |00:00:00.057518|1.45x        |17803.03/s|
-|Set-Variable       |00:00:00.355918|8.96x        |2877.07/s |
+|Simple Assignment  |00:00:00.036755|1x           |27860/s   |
+|Multiple Assignment|00:00:00.037402|1.02x        |27377.63/s|
+|ExecutionContext   |00:00:00.048077|1.31x        |21298.94/s|
+|SetFromSplat       |00:00:00.055892|1.52x        |18320.98/s|
+|Set-Variable       |00:00:00.340652|9.27x        |3005.99/s |
 
 
 

@@ -13,6 +13,7 @@
         },
         'RunPipeScript',
         'RunEZOut',
+        'UseBenchpressAction',
         'PublishBenchmarks',
         'RunHelpOut'
     )

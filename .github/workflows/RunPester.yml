@@ -582,6 +582,8 @@ jobs:
         uses: StartAutomating/PipeScript@main
       - name: UseEZOut
         uses: StartAutomating/EZOut@master
+      - name: Use Benchpress Action
+        uses: StartAutomating/Benchpress@master
       - name: PublishBenchmarks
         uses: actions/upload-artifact@v2
         with: 

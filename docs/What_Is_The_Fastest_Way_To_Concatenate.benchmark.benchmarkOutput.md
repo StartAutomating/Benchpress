@@ -1,7 +1,6 @@
-
 What Is The Fastest Way To Concatenate
 --------------------------------------
-> @2594 Mhz
+> @2095 Mhz
 
 
 ### 
@@ -9,10 +8,6 @@ What Is The Fastest Way To Concatenate
 
 |Technique    |Time           |RelativeSpeed|Throughput|
 |-------------|---------------|-------------|----------|
-|AddStrings   |00:00:00.005135|1x           |19473.44/s|
-|JoinStrings  |00:00:00.005996|1.17x        |16677.51/s|
-|StringBuilder|00:00:00.011261|2.19x        |8879.89/s |
-
-
-
-
+|JoinStrings  |00:00:00.005876|1x           |17017.8/s |
+|AddStrings   |00:00:00.006040|1.03x        |16556.29/s|
+|StringBuilder|00:00:00.011053|1.88x        |9047.24/s |

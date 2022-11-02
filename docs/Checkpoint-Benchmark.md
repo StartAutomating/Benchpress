@@ -1,4 +1,3 @@
-
 Checkpoint-Benchmark
 --------------------
 ### Synopsis
@@ -12,7 +11,13 @@ Checkpoints benchmark files, executing them and storing their results.
 ---
 ### Related Links
 * [Measure-Benchmark](Measure-Benchmark.md)
+
+
+
 * [Get-Benchmark](Get-Benchmark.md)
+
+
+
 ---
 ### Parameters
 #### **BenchmarkPath**
@@ -21,9 +26,16 @@ The path to the benchmark file
 
 
 
-|Type            |Requried|Postion|PipelineInput        |
-|----------------|--------|-------|---------------------|
-|```[String[]]```|true    |1      |true (ByPropertyName)|
+> **Type**: ```[String[]]```
+
+> **Required**: true
+
+> **Position**: 1
+
+> **PipelineInput**:true (ByPropertyName)
+
+
+
 ---
 #### **ModuleName**
 
@@ -31,9 +43,16 @@ The name of a module
 
 
 
-|Type          |Requried|Postion|PipelineInput        |
-|--------------|--------|-------|---------------------|
-|```[String]```|true    |named  |true (ByPropertyName)|
+> **Type**: ```[String]```
+
+> **Required**: true
+
+> **Position**: named
+
+> **PipelineInput**:true (ByPropertyName)
+
+
+
 ---
 #### **OutputPath**
 
@@ -42,9 +61,16 @@ If a path to a folder is provided, a file will be created for each output
 
 
 
-|Type          |Requried|Postion|PipelineInput        |
-|--------------|--------|-------|---------------------|
-|```[String]```|false   |named  |true (ByPropertyName)|
+> **Type**: ```[String]```
+
+> **Required**: false
+
+> **Position**: named
+
+> **PipelineInput**:true (ByPropertyName)
+
+
+
 ---
 #### **IncludePSVersion**
 
@@ -53,9 +79,16 @@ If used with -OutputPath set to a folder, will include the PSVersion in the file
 
 
 
-|Type          |Requried|Postion|PipelineInput        |
-|--------------|--------|-------|---------------------|
-|```[Switch]```|false   |named  |true (ByPropertyName)|
+> **Type**: ```[Switch]```
+
+> **Required**: false
+
+> **Position**: named
+
+> **PipelineInput**:true (ByPropertyName)
+
+
+
 ---
 #### **IncludeModuleVersion**
 
@@ -64,9 +97,16 @@ If used with -OutputPath set to a folder, will include the Module version in the
 
 
 
-|Type          |Requried|Postion|PipelineInput        |
-|--------------|--------|-------|---------------------|
-|```[Switch]```|false   |named  |true (ByPropertyName)|
+> **Type**: ```[Switch]```
+
+> **Required**: false
+
+> **Position**: named
+
+> **PipelineInput**:true (ByPropertyName)
+
+
+
 ---
 #### **NoTimestamp**
 
@@ -75,12 +115,21 @@ This is only used is -OutputPath is passed a directory name
 
 
 
-|Type          |Requried|Postion|PipelineInput        |
-|--------------|--------|-------|---------------------|
-|```[Switch]```|false   |named  |true (ByPropertyName)|
+> **Type**: ```[Switch]```
+
+> **Required**: false
+
+> **Position**: named
+
+> **PipelineInput**:true (ByPropertyName)
+
+
+
 ---
 ### Outputs
-System.Management.Automation.PSObject
+* [Management.Automation.PSObject](https://learn.microsoft.com/en-us/dotnet/api/System.Management.Automation.PSObject)
+
+
 
 
 ---
@@ -95,5 +144,3 @@ Checkpoint-Benchmark [-BenchmarkPath] <String[]> [-OutputPath <String>] [-Includ
 Checkpoint-Benchmark -ModuleName <String> [-OutputPath <String>] [-IncludePSVersion] [-IncludeModuleVersion] [-NoTimestamp] [<CommonParameters>]
 ```
 ---
-
-

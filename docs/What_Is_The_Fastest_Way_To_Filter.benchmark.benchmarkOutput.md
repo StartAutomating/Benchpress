@@ -1,7 +1,6 @@
-
 What Is The Fastest Way To Filter
 ---------------------------------
-> @2594 Mhz
+> @2095 Mhz
 
 
 ### Filtering a Pipeline
@@ -9,12 +8,12 @@ What Is The Fastest Way To Filter
 
 |Technique             |Time           |RelativeSpeed|Throughput|
 |----------------------|---------------|-------------|----------|
-|DotInline             |00:00:00.008860|1x           |11286.17/s|
-|InlineScriptBlock     |00:00:00.008890|1x           |11248.21/s|
-|DotScriptBlockVariable|00:00:00.009165|1.03x        |10910.24/s|
-|ScriptBlockVariable   |00:00:00.009605|1.08x        |10410.7/s |
-|Filter                |00:00:00.034916|3.94x        |2864.01/s |
-|WhereObject           |00:00:00.052962|5.98x        |1888.11/s |
+|DotScriptBlockVariable|00:00:00.010099|1x           |9901.48/s |
+|DotInline             |00:00:00.010545|1.04x        |9482.9/s  |
+|ScriptBlockVariable   |00:00:00.011221|1.11x        |8911.39/s |
+|InlineScriptBlock     |00:00:00.012203|1.21x        |8194.44/s |
+|Filter                |00:00:00.012360|1.22x        |8090.29/s |
+|WhereObject           |00:00:00.064718|6.41x        |1545.16/s |
 
 
 ### Filtering by Property Values
@@ -22,10 +21,10 @@ What Is The Fastest Way To Filter
 
 |Technique                         |Time           |RelativeSpeed|Throughput|
 |----------------------------------|---------------|-------------|----------|
-|ForEach Loop                      |00:00:00.309894|1x           |32.27/s   |
-|Pipe to ScriptBlock               |00:00:00.917378|2.96x        |10.9/s    |
-|.Where Method                     |00:00:04.457505|14.38x       |2.24/s    |
-|Where-Object Property (Positional)|00:00:09.648474|31.13x       |1.04/s    |
+|ForEach Loop                      |00:00:00.391919|1x           |25.52/s   |
+|Pipe to ScriptBlock               |00:00:01.035733|2.64x        |9.65/s    |
+|.Where Method                     |00:00:05.389118|13.75x       |1.86/s    |
+|Where-Object Property (Positional)|00:00:11.650979|29.73x       |0.86/s    |
 
 
 ### Filtering Values
@@ -33,14 +32,10 @@ What Is The Fastest Way To Filter
 
 |Technique                       |Time           |RelativeSpeed|Throughput|
 |--------------------------------|---------------|-------------|----------|
-|Operator Filter (Assumed Array) |00:00:00.008127|1x           |1230.47/s |
-|ForEach Loop                    |00:00:00.010647|1.31x        |939.22/s  |
-|Operator Filter (Explicit Array)|00:00:00.039206|4.82x        |255.06/s  |
-|Pipe to ScriptBlock             |00:00:00.108728|13.38x       |91.97/s   |
-|.Where Method                   |00:00:00.512834|63.1x        |19.5/s    |
-|Linq.Enumerable::Where          |00:00:00.790631|97.28x       |12.65/s   |
-|Where-Object Script (Positional)|00:00:01.419354|174.65x      |7.05/s    |
-
-
-
-
+|Operator Filter (Assumed Array) |00:00:00.009826|1x           |1017.71/s |
+|ForEach Loop                    |00:00:00.015425|1.57x        |648.26/s  |
+|Operator Filter (Explicit Array)|00:00:00.053735|5.47x        |186.1/s   |
+|Pipe to ScriptBlock             |00:00:00.112254|11.42x       |89.08/s   |
+|.Where Method                   |00:00:00.611176|62.2x        |16.36/s   |
+|Linq.Enumerable::Where          |00:00:00.810633|82.5x        |12.34/s   |
+|Where-Object Script (Positional)|00:00:01.706726|173.69x      |5.86/s    |

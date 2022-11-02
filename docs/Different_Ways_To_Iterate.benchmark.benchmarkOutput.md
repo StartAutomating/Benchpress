@@ -1,7 +1,6 @@
-
 Different Ways To Iterate
 -------------------------
-> @2594 Mhz
+> @2095 Mhz
 
 
 ### 
@@ -9,13 +8,9 @@ Different Ways To Iterate
 
 |Technique          |Time           |RelativeSpeed|Throughput|
 |-------------------|---------------|-------------|----------|
-|For loop           |00:00:00.006339|1x           |15773.37/s|
-|Foreach Statement  |00:00:00.006357|1x           |15730.44/s|
-|Foreach _          |00:00:00.006995|1.1x         |14294.29/s|
-|For _              |00:00:00.007656|1.21x        |13060.8/s |
-|Pipe to ScriptBlock|00:00:00.017740|2.8x         |5636.92/s |
-|Foreach-Object     |00:00:00.078427|12.37x       |1275.07/s |
-
-
-
-
+|For loop           |00:00:00.007599|1x           |13159.11/s|
+|Foreach _          |00:00:00.008043|1.06x        |12432.4/s |
+|Foreach Statement  |00:00:00.008190|1.08x        |12208.82/s|
+|For _              |00:00:00.009797|1.29x        |10206.69/s|
+|Pipe to ScriptBlock|00:00:00.023826|3.14x        |4196.94/s |
+|Foreach-Object     |00:00:00.088369|11.63x       |1131.61/s |

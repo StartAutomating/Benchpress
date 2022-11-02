@@ -1,7 +1,6 @@
-
 Random Number Generation
 ------------------------
-> @2594 Mhz
+> @2095 Mhz
 
 
 ### (AnyRandomNumber)
@@ -9,9 +8,9 @@ Random Number Generation
 
 |Technique             |Time           |RelativeSpeed|Throughput|
 |----------------------|---------------|-------------|----------|
-|QuickRandom           |00:00:00.004204|1x           |23782.34/s|
-|[Random]::New().Next()|00:00:00.004385|1.04x        |22805.02/s|
-|GetRandom             |00:00:00.009659|2.3x         |10352.93/s|
+|QuickRandom           |00:00:00.004888|1x           |20454.5/s |
+|[Random]::New().Next()|00:00:00.005134|1.05x        |19476.09/s|
+|GetRandom             |00:00:00.010934|2.24x        |9145.45/s |
 
 
 ### (Min and Max)
@@ -19,9 +18,9 @@ Random Number Generation
 
 |Technique             |Time           |RelativeSpeed|Throughput|
 |----------------------|---------------|-------------|----------|
-|[Random]::New().Next()|00:00:00.004449|1x           |22474.44/s|
-|QuickRandom           |00:00:00.006185|1.39x        |16166.58/s|
-|GetRandom             |00:00:00.035177|7.91x        |2842.73/s |
+|[Random]::New().Next()|00:00:00.007697|1x           |12991.4/s |
+|GetRandom             |00:00:00.013017|1.69x        |7681.79/s |
+|QuickRandom           |00:00:00.034144|4.44x        |2928.72/s |
 
 
 ### (Random Byte Buffer)
@@ -29,10 +28,6 @@ Random Number Generation
 
 |Technique             |Time           |RelativeSpeed|Throughput|
 |----------------------|---------------|-------------|----------|
-|[Random]::New().Next()|00:00:00.000949|1x           |10531.86/s|
-|QuickRandom           |00:00:00.002279|2.4x         |4387.7/s  |
-|GetRandom             |00:00:00.703936|741.38x      |14.21/s   |
-
-
-
-
+|QuickRandom           |00:00:00.000924|1x           |10814.32/s|
+|[Random]::New().Next()|00:00:00.002796|3.02x        |3575.77/s |
+|GetRandom             |00:00:00.815838|882.27x      |12.26/s   |

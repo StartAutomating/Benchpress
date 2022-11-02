@@ -9,10 +9,10 @@ multithreading
 
 |Technique               |Time           |RelativeSpeed|Throughput|
 |------------------------|---------------|-------------|----------|
-|Runspace                |00:00:00.888987|1x           |3.37/s    |
-|ForEach-Object -Parallel|00:00:00.927062|1.04x        |3.24/s    |
-|Start-ThreadJob         |00:00:02.167052|2.44x        |1.38/s    |
-|Start-Job               |00:00:29.359727|33.03x       |0.1/s     |
+|ForEach-Object -Parallel|00:00:01.035836|1x           |2.9/s     |
+|Runspace                |00:00:01.518218|1.47x        |1.98/s    |
+|Start-ThreadJob         |00:00:02.014519|1.94x        |1.49/s    |
+|Start-Job               |00:00:32.303302|31.19x       |0.09/s    |
 
 
 

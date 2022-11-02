@@ -53,7 +53,9 @@ function Show-Benchmark {
 
             $benchmarkOutputFile | 
                 Format-Custom @formatCustomParams |
-                Out-String -Width 10kb
+                ForEach-Object {
+                    ($_ |Out-String -Width 10kb).Trim()
+                }
         }
     }
 }

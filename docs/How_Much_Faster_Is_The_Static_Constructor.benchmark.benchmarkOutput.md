@@ -4,32 +4,32 @@ layout: Benchmark
 Data: 
   - Technique: StaticConstructor
     Time: 
-      value: 00:00:00.3269123
+      value: 00:00:00.5020362
       FileName: How Much Faster Is The Static Constructor
       GroupName: 
       BenchmarkInput: System.Collections.Hashtable
     RelativeSpeed: 1
-    ClockSpeed: 2793
+    ClockSpeed: 2095
     FileName: How Much Faster Is The Static Constructor
-    Throughput: 31323.385507367
+    Throughput: 20396.9355197892
     BenchmarkInput: System.Collections.Hashtable
   - Technique: New-Object
     Time: 
-      value: 00:00:01.1355881
+      value: 00:00:01.4596078
       FileName: How Much Faster Is The Static Constructor
       GroupName: 
       BenchmarkInput: System.Collections.Hashtable
-    RelativeSpeed: 3.47367810877719
-    ClockSpeed: 2793
+    RelativeSpeed: 2.90737560359193
+    ClockSpeed: 2095
     FileName: How Much Faster Is The Static Constructor
-    Throughput: 9017.35409168166
+    Throughput: 7015.58322722035
     BenchmarkInput: System.Collections.Hashtable
 FileName: How Much Faster Is The Static Constructor
-ClockSpeed: 2793
+ClockSpeed: 2095
 ---
 How Much Faster Is The Static Constructor
 -----------------------------------------
-> @2793 Mhz
+> @2095 Mhz
 
 
 ### 
@@ -37,5 +37,5 @@ How Much Faster Is The Static Constructor
 
 |Technique        |Time           |RelativeSpeed|Throughput|
 |-----------------|---------------|-------------|----------|
-|StaticConstructor|00:00:00.326912|1x           |31323.39/s|
-|New-Object       |00:00:01.135588|3.47x        |9017.35/s |
+|StaticConstructor|00:00:00.502036|1x           |20396.94/s|
+|New-Object       |00:00:01.459607|2.91x        |7015.58/s |

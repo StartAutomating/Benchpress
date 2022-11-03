@@ -4,154 +4,154 @@ layout: Benchmark
 Data: 
   - Technique: $executionContext
     Time: 
-      value: 00:00:00.7729585
+      value: 00:00:00.6036280
       FileName: Comparing Command Lookup
       GroupName: Applications
       BenchmarkInput: System.Collections.Hashtable
     RelativeSpeed: 1
     GroupName: Applications
-    ClockSpeed: 2095
+    ClockSpeed: 2594
     FileName: Comparing Command Lookup
-    Throughput: 129.373051722699
+    Throughput: 165.664945960095
     BenchmarkInput: System.Collections.Hashtable
   - Technique: Get-Command
     Time: 
-      value: 00:00:01.9554643
+      value: 00:00:01.7009079
       FileName: Comparing Command Lookup
       GroupName: Applications
       BenchmarkInput: System.Collections.Hashtable
-    RelativeSpeed: 2.52984384025792
+    RelativeSpeed: 2.81780815336598
     GroupName: Applications
-    ClockSpeed: 2095
+    ClockSpeed: 2594
     FileName: Comparing Command Lookup
-    Throughput: 51.1387500145106
+    Throughput: 58.7921309554738
     BenchmarkInput: System.Collections.Hashtable
   - Technique: $executionContext
     Time: 
-      value: 00:00:00.0070522
+      value: 00:00:00.0059351
       FileName: Comparing Command Lookup
       GroupName: Cmdlets
       BenchmarkInput: System.Collections.Hashtable
     RelativeSpeed: 1
     GroupName: Cmdlets
-    ClockSpeed: 2095
+    ClockSpeed: 2594
     FileName: Comparing Command Lookup
-    Throughput: 14179.9722072545
+    Throughput: 16848.9157722701
     BenchmarkInput: System.Collections.Hashtable
   - Technique: Get-Command
     Time: 
-      value: 00:00:00.0145670
+      value: 00:00:00.0121373
       FileName: Comparing Command Lookup
       GroupName: Cmdlets
       BenchmarkInput: System.Collections.Hashtable
-    RelativeSpeed: 2.06559655143076
+    RelativeSpeed: 2.04500345402773
     GroupName: Cmdlets
-    ClockSpeed: 2095
+    ClockSpeed: 2594
     FileName: Comparing Command Lookup
-    Throughput: 6864.83146838745
+    Throughput: 8239.0647013751
     BenchmarkInput: System.Collections.Hashtable
   - Technique: $executionContext
     Time: 
-      value: 00:00:00.0069253
+      value: 00:00:00.0057634
       FileName: Comparing Command Lookup
       GroupName: Aliases
       BenchmarkInput: System.Collections.Hashtable
     RelativeSpeed: 1
     GroupName: Aliases
-    ClockSpeed: 2095
+    ClockSpeed: 2594
     FileName: Comparing Command Lookup
-    Throughput: 14439.8076617619
+    Throughput: 17350.8692785509
     BenchmarkInput: System.Collections.Hashtable
   - Technique: Get-Command
     Time: 
-      value: 00:00:00.0219834
+      value: 00:00:00.0182321
       FileName: Comparing Command Lookup
       GroupName: Aliases
       BenchmarkInput: System.Collections.Hashtable
-    RelativeSpeed: 3.17436067751578
+    RelativeSpeed: 3.16342783773467
     GroupName: Aliases
-    ClockSpeed: 2095
+    ClockSpeed: 2594
     FileName: Comparing Command Lookup
-    Throughput: 4548.88688737866
+    Throughput: 5484.83169793935
     BenchmarkInput: System.Collections.Hashtable
   - Technique: $executionContext
     Time: 
-      value: 00:00:00.0068629
+      value: 00:00:00.0055655
       FileName: Comparing Command Lookup
       GroupName: Function
       BenchmarkInput: System.Collections.Hashtable
     RelativeSpeed: 1
     GroupName: Function
-    ClockSpeed: 2095
+    ClockSpeed: 2594
     FileName: Comparing Command Lookup
-    Throughput: 14571.0996808929
+    Throughput: 17967.8375707484
     BenchmarkInput: System.Collections.Hashtable
   - Technique: Get-Command
     Time: 
-      value: 00:00:00.0149249
+      value: 00:00:00.0122698
       FileName: Comparing Command Lookup
       GroupName: Function
       BenchmarkInput: System.Collections.Hashtable
-    RelativeSpeed: 2.17472205627359
+    RelativeSpeed: 2.20461773425568
     GroupName: Function
-    ClockSpeed: 2095
+    ClockSpeed: 2594
     FileName: Comparing Command Lookup
-    Throughput: 6700.21239673298
+    Throughput: 8150.09209604068
     BenchmarkInput: System.Collections.Hashtable
   - Technique: $executionContext
     Time: 
-      value: 00:00:00.0064484
+      value: 00:00:00.0052881
       FileName: Comparing Command Lookup
       GroupName: All
       BenchmarkInput: System.Collections.Hashtable
     RelativeSpeed: 1
     GroupName: All
-    ClockSpeed: 2095
+    ClockSpeed: 2594
     FileName: Comparing Command Lookup
-    Throughput: 15507.7228459773
+    Throughput: 18910.3836916851
     BenchmarkInput: System.Collections.Hashtable
   - Technique: Get-Command
     Time: 
-      value: 00:00:00.0171132
+      value: 00:00:00.0141209
       FileName: Comparing Command Lookup
       GroupName: All
       BenchmarkInput: System.Collections.Hashtable
-    RelativeSpeed: 2.65386762607779
+    RelativeSpeed: 2.67031637071916
     GroupName: All
-    ClockSpeed: 2095
+    ClockSpeed: 2594
     FileName: Comparing Command Lookup
-    Throughput: 5843.44248883902
+    Throughput: 7081.70159125835
     BenchmarkInput: System.Collections.Hashtable
   - Technique: $executionContext
     Time: 
-      value: 00:00:01.2418780
+      value: 00:00:01.0749786
       FileName: Comparing Command Lookup
       GroupName: WildcardMiss
       BenchmarkInput: System.Collections.Hashtable
     RelativeSpeed: 1
     GroupName: WildcardMiss
-    ClockSpeed: 2095
+    ClockSpeed: 2594
     FileName: Comparing Command Lookup
-    Throughput: 80.5232075936606
+    Throughput: 93.0251076626084
     BenchmarkInput: System.Collections.Hashtable
   - Technique: Get-Command
     Time: 
-      value: 00:00:04.3768944
+      value: 00:00:03.5311416
       FileName: Comparing Command Lookup
       GroupName: WildcardMiss
       BenchmarkInput: System.Collections.Hashtable
-    RelativeSpeed: 3.5244157638673
+    RelativeSpeed: 3.28484827511915
     GroupName: WildcardMiss
-    ClockSpeed: 2095
+    ClockSpeed: 2594
     FileName: Comparing Command Lookup
-    Throughput: 22.8472498673946
+    Throughput: 28.3194534028315
     BenchmarkInput: System.Collections.Hashtable
 FileName: Comparing Command Lookup
-ClockSpeed: 2095
+ClockSpeed: 2594
 ---
 Comparing Command Lookup
 ------------------------
-> @2095 Mhz
+> @2594 Mhz
 
 
 ### Aliases
@@ -159,8 +159,8 @@ Comparing Command Lookup
 
 |Technique        |Time           |RelativeSpeed|Throughput|
 |-----------------|---------------|-------------|----------|
-|$executionContext|00:00:00.006925|1x           |14439.81/s|
-|Get-Command      |00:00:00.021983|3.17x        |4548.89/s |
+|$executionContext|00:00:00.005763|1x           |17350.87/s|
+|Get-Command      |00:00:00.018232|3.16x        |5484.83/s |
 
 
 ### All
@@ -168,8 +168,8 @@ Comparing Command Lookup
 
 |Technique        |Time           |RelativeSpeed|Throughput|
 |-----------------|---------------|-------------|----------|
-|$executionContext|00:00:00.006448|1x           |15507.72/s|
-|Get-Command      |00:00:00.017113|2.65x        |5843.44/s |
+|$executionContext|00:00:00.005288|1x           |18910.38/s|
+|Get-Command      |00:00:00.014120|2.67x        |7081.7/s  |
 
 
 ### Applications
@@ -177,8 +177,8 @@ Comparing Command Lookup
 
 |Technique        |Time           |RelativeSpeed|Throughput|
 |-----------------|---------------|-------------|----------|
-|$executionContext|00:00:00.772958|1x           |129.37/s  |
-|Get-Command      |00:00:01.955464|2.53x        |51.14/s   |
+|$executionContext|00:00:00.603628|1x           |165.66/s  |
+|Get-Command      |00:00:01.700907|2.82x        |58.79/s   |
 
 
 ### Cmdlets
@@ -186,8 +186,8 @@ Comparing Command Lookup
 
 |Technique        |Time           |RelativeSpeed|Throughput|
 |-----------------|---------------|-------------|----------|
-|$executionContext|00:00:00.007052|1x           |14179.97/s|
-|Get-Command      |00:00:00.014567|2.07x        |6864.83/s |
+|$executionContext|00:00:00.005935|1x           |16848.92/s|
+|Get-Command      |00:00:00.012137|2.05x        |8239.06/s |
 
 
 ### Function
@@ -195,8 +195,8 @@ Comparing Command Lookup
 
 |Technique        |Time           |RelativeSpeed|Throughput|
 |-----------------|---------------|-------------|----------|
-|$executionContext|00:00:00.006862|1x           |14571.1/s |
-|Get-Command      |00:00:00.014924|2.17x        |6700.21/s |
+|$executionContext|00:00:00.005565|1x           |17967.84/s|
+|Get-Command      |00:00:00.012269|2.2x         |8150.09/s |
 
 
 ### WildcardMiss
@@ -204,5 +204,5 @@ Comparing Command Lookup
 
 |Technique        |Time           |RelativeSpeed|Throughput|
 |-----------------|---------------|-------------|----------|
-|$executionContext|00:00:01.241878|1x           |80.52/s   |
-|Get-Command      |00:00:04.376894|3.52x        |22.85/s   |
+|$executionContext|00:00:01.074978|1x           |93.03/s   |
+|Get-Command      |00:00:03.531141|3.28x        |28.32/s   |

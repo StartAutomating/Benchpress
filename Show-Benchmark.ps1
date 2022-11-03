@@ -18,7 +18,7 @@ function Show-Benchmark {
             (?<IsBenchmarkOutput>\.benchmarkOutput\.clixml)
         )
     ", Options="IgnoreCase,IgnorePatternWhitespace")]
-    [Alias('Fullname')]
+    [Alias('Fullname','FilePath')]
     [string[]]
     $BenchmarkPath,
 
@@ -52,8 +52,9 @@ function Show-Benchmark {
             }
 
             $benchmarkOutputFile | 
-                Format-Custom @formatCustomParams |
-                Out-String -Width 10kb
+                ForEach-Object {
+                    ($_ | Format-Custom @formatCustomParams |Out-String -Width 10kb).Trim()
+                }
         }
     }
 }

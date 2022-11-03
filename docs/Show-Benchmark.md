@@ -1,4 +1,3 @@
-
 Show-Benchmark
 --------------
 ### Synopsis
@@ -26,9 +25,16 @@ The path to a benchmark or benchmark output.
 
 
 
-|Type            |Requried|Postion|PipelineInput        |
-|----------------|--------|-------|---------------------|
-|```[String[]]```|true    |1      |true (ByPropertyName)|
+> **Type**: ```[String[]]```
+
+> **Required**: true
+
+> **Position**: 1
+
+> **PipelineInput**:true (ByPropertyName)
+
+
+
 ---
 #### **View**
 
@@ -37,14 +43,19 @@ This view must be defined in a .format.ps1xml file.
 
 
 
-|Type          |Requried|Postion|PipelineInput|
-|--------------|--------|-------|-------------|
-|```[String]```|false   |2      |false        |
+> **Type**: ```[String]```
+
+> **Required**: false
+
+> **Position**: 2
+
+> **PipelineInput**:false
+
+
+
 ---
 ### Syntax
 ```PowerShell
 Show-Benchmark [-BenchmarkPath] <String[]> [[-View] <String>] [<CommonParameters>]
 ```
 ---
-
-

@@ -1,4 +1,3 @@
-
 Get-Benchmark
 -------------
 ### Synopsis
@@ -12,7 +11,13 @@ Gets benchmark script files and benchmark input files.
 ---
 ### Related Links
 * [Measure-Benchmark](Measure-Benchmark.md)
+
+
+
 * [Checkpoint-Benchmark](Checkpoint-Benchmark.md)
+
+
+
 ---
 ### Examples
 #### EXAMPLE 1
@@ -28,9 +33,16 @@ The path to the benchmark file
 
 
 
-|Type            |Requried|Postion|PipelineInput        |
-|----------------|--------|-------|---------------------|
-|```[String[]]```|true    |1      |true (ByPropertyName)|
+> **Type**: ```[String[]]```
+
+> **Required**: true
+
+> **Position**: 1
+
+> **PipelineInput**:true (ByPropertyName)
+
+
+
 ---
 #### **ModuleName**
 
@@ -38,12 +50,21 @@ The name of a module
 
 
 
-|Type          |Requried|Postion|PipelineInput        |
-|--------------|--------|-------|---------------------|
-|```[String]```|true    |named  |true (ByPropertyName)|
+> **Type**: ```[String]```
+
+> **Required**: true
+
+> **Position**: named
+
+> **PipelineInput**:true (ByPropertyName)
+
+
+
 ---
 ### Outputs
-System.Management.Automation.PSObject
+* [Management.Automation.PSObject](https://learn.microsoft.com/en-us/dotnet/api/System.Management.Automation.PSObject)
+
+
 
 
 ---
@@ -58,5 +79,3 @@ Get-Benchmark [-BenchmarkPath] <String[]> [<CommonParameters>]
 Get-Benchmark -ModuleName <String> [<CommonParameters>]
 ```
 ---
-
-

@@ -4,17 +4,17 @@ layout: Benchmark
 Data: 
   - Technique: Simple Assignment
     Time: 
-      Ticks: 528083
+      Ticks: 499569
       Days: 0
       Hours: 0
-      Milliseconds: 52
+      Milliseconds: 49
       Minutes: 0
       Seconds: 0
-      TotalDays: 6.11207175925926e-07
-      TotalHours: 1.46689722222222e-05
-      TotalMilliseconds: 52.8083
-      TotalMinutes: 0.000880138333333333
-      TotalSeconds: 0.0528083
+      TotalDays: 5.78204861111111e-07
+      TotalHours: 1.38769166666667e-05
+      TotalMilliseconds: 49.9569
+      TotalMinutes: 0.000832615
+      TotalSeconds: 0.0499569
       FileName: Different Ways To Set Many Variables
       GroupName: 
       BenchmarkInput: 
@@ -26,51 +26,80 @@ Data:
         RepeatCount: 1024
         FileName: Different Ways To Set Many Variables
     RelativeSpeed: 1
-    ClockSpeed: 2394
+    ClockSpeed: 2295
     FileName: Different Ways To Set Many Variables
-    Throughput: 19390.8912046023
+    Throughput: 20497.66899067
     BenchmarkInput: 
       FileName: Different Ways To Set Many Variables
       RepeatCount: 1024
   - Technique: Multiple Assignment
     Time: 
-      Ticks: 570386
+      Ticks: 556497
       Days: 0
       Hours: 0
-      Milliseconds: 57
+      Milliseconds: 55
       Minutes: 0
       Seconds: 0
-      TotalDays: 6.60168981481481e-07
-      TotalHours: 1.58440555555556e-05
-      TotalMilliseconds: 57.0386
-      TotalMinutes: 0.000950643333333333
-      TotalSeconds: 0.0570386
+      TotalDays: 6.4409375e-07
+      TotalHours: 1.545825e-05
+      TotalMilliseconds: 55.6497
+      TotalMinutes: 0.000927495
+      TotalSeconds: 0.0556497
       FileName: Different Ways To Set Many Variables
       GroupName: 
       BenchmarkInput: 
         ScriptBlock:                 $a, $c, $e, $h = 'b','d','f','i'
         RepeatCount: 1024
         FileName: Different Ways To Set Many Variables
-    RelativeSpeed: 1.08010672564729
-    ClockSpeed: 2394
+    RelativeSpeed: 1.11395422854501
+    ClockSpeed: 2295
     FileName: Different Ways To Set Many Variables
-    Throughput: 17952.7548011347
+    Throughput: 18400.8179738615
+    BenchmarkInput: 
+      FileName: Different Ways To Set Many Variables
+      RepeatCount: 1024
+  - Technique: SetFromSplat
+    Time: 
+      Ticks: 765461
+      Days: 0
+      Hours: 0
+      Milliseconds: 76
+      Minutes: 0
+      Seconds: 0
+      TotalDays: 8.85950231481481e-07
+      TotalHours: 2.12628055555556e-05
+      TotalMilliseconds: 76.5461
+      TotalMinutes: 0.00127576833333333
+      TotalSeconds: 0.0765461
+      FileName: Different Ways To Set Many Variables
+      GroupName: 
+      BenchmarkInput: 
+        ScriptBlock: |
+                          foreach ($_ in @{a='b';c='d';e='f';h='i'}.GetEnumerator()) {
+                              $ExecutionContext.SessionState.PSVariable.Set($_.Key, $_.Value)        
+                          }
+        RepeatCount: 1024
+        FileName: Different Ways To Set Many Variables
+    RelativeSpeed: 1.53224279328781
+    ClockSpeed: 2295
+    FileName: Different Ways To Set Many Variables
+    Throughput: 13377.5594053779
     BenchmarkInput: 
       FileName: Different Ways To Set Many Variables
       RepeatCount: 1024
   - Technique: ExecutionContext
     Time: 
-      Ticks: 670708
+      Ticks: 923503
       Days: 0
       Hours: 0
-      Milliseconds: 67
+      Milliseconds: 92
       Minutes: 0
       Seconds: 0
-      TotalDays: 7.76282407407407e-07
-      TotalHours: 1.86307777777778e-05
-      TotalMilliseconds: 67.0708
-      TotalMinutes: 0.00111784666666667
-      TotalSeconds: 0.0670708
+      TotalDays: 1.06886921296296e-06
+      TotalHours: 2.56528611111111e-05
+      TotalMilliseconds: 92.3503
+      TotalMinutes: 0.00153917166666667
+      TotalSeconds: 0.0923503
       FileName: Different Ways To Set Many Variables
       GroupName: 
       BenchmarkInput: 
@@ -81,55 +110,26 @@ Data:
                           $ExecutionContext.SessionState.PSVariable.Set('h', 'i')
         RepeatCount: 1024
         FileName: Different Ways To Set Many Variables
-    RelativeSpeed: 1.27008065020082
-    ClockSpeed: 2394
+    RelativeSpeed: 1.84859949276276
+    ClockSpeed: 2295
     FileName: Different Ways To Set Many Variables
-    Throughput: 15267.4487258241
-    BenchmarkInput: 
-      FileName: Different Ways To Set Many Variables
-      RepeatCount: 1024
-  - Technique: SetFromSplat
-    Time: 
-      Ticks: 809675
-      Days: 0
-      Hours: 0
-      Milliseconds: 80
-      Minutes: 0
-      Seconds: 0
-      TotalDays: 9.37123842592593e-07
-      TotalHours: 2.24909722222222e-05
-      TotalMilliseconds: 80.9675
-      TotalMinutes: 0.00134945833333333
-      TotalSeconds: 0.0809675
-      FileName: Different Ways To Set Many Variables
-      GroupName: 
-      BenchmarkInput: 
-        ScriptBlock: |
-                          foreach ($_ in @{a='b';c='d';e='f';h='i'}.GetEnumerator()) {
-                              $ExecutionContext.SessionState.PSVariable.Set($_.Key, $_.Value)        
-                          }
-        RepeatCount: 1024
-        FileName: Different Ways To Set Many Variables
-    RelativeSpeed: 1.53323435899281
-    ClockSpeed: 2394
-    FileName: Different Ways To Set Many Variables
-    Throughput: 12647.0497421805
+    Throughput: 11088.2151980015
     BenchmarkInput: 
       FileName: Different Ways To Set Many Variables
       RepeatCount: 1024
   - Technique: Set-Variable
     Time: 
-      Ticks: 5329656
+      Ticks: 5791696
       Days: 0
       Hours: 0
-      Milliseconds: 532
+      Milliseconds: 579
       Minutes: 0
       Seconds: 0
-      TotalDays: 6.16858333333333e-06
-      TotalHours: 0.000148046
-      TotalMilliseconds: 532.9656
-      TotalMinutes: 0.00888276
-      TotalSeconds: 0.5329656
+      TotalDays: 6.70335185185185e-06
+      TotalHours: 0.000160880444444444
+      TotalMilliseconds: 579.1696
+      TotalMinutes: 0.00965282666666667
+      TotalSeconds: 0.5791696
       FileName: Different Ways To Set Many Variables
       GroupName: 
       BenchmarkInput: 
@@ -140,19 +140,19 @@ Data:
                           Set-Variable h i
         RepeatCount: 1024
         FileName: Different Ways To Set Many Variables
-    RelativeSpeed: 10.0924589505816
-    ClockSpeed: 2394
+    RelativeSpeed: 11.5933854982995
+    ClockSpeed: 2295
     FileName: Different Ways To Set Many Variables
-    Throughput: 1921.32475341748
+    Throughput: 1768.04859923587
     BenchmarkInput: 
       FileName: Different Ways To Set Many Variables
       RepeatCount: 1024
 FileName: Different Ways To Set Many Variables
-ClockSpeed: 2394
+ClockSpeed: 2295
 ---
 Different Ways To Set Many Variables
 ------------------------------------
-> @2394 Mhz
+> @2295 Mhz
 
 
 ### 
@@ -160,8 +160,8 @@ Different Ways To Set Many Variables
 
 |Technique          |Time           |RelativeSpeed|Throughput|
 |-------------------|---------------|-------------|----------|
-|Simple Assignment  |00:00:00.052808|1x           |19390.89/s|
-|Multiple Assignment|00:00:00.057038|1.08x        |17952.75/s|
-|ExecutionContext   |00:00:00.067070|1.27x        |15267.45/s|
-|SetFromSplat       |00:00:00.080967|1.53x        |12647.05/s|
-|Set-Variable       |00:00:00.532965|10.09x       |1921.32/s |
+|Simple Assignment  |00:00:00.049956|1x           |20497.67/s|
+|Multiple Assignment|00:00:00.055649|1.11x        |18400.82/s|
+|SetFromSplat       |00:00:00.076546|1.53x        |13377.56/s|
+|ExecutionContext   |00:00:00.092350|1.85x        |11088.22/s|
+|Set-Variable       |00:00:00.579169|11.59x       |1768.05/s |

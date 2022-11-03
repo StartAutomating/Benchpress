@@ -3,56 +3,56 @@ layout: Benchmark
 
 Data: 
   - Technique: Splatting
-    Time: 00:00:00.2078716
+    Time: 00:00:00.1707158
     RelativeSpeed: 1
-    ClockSpeed: 2095
+    ClockSpeed: 2594
     FileName: How Much Faster Is Splatting
     Details: |
-      @{TotalTime=00:00:00.2078716; AverageTime=00:00:00.0002029; FastestTime=00:00:00.0001754; FileName=How Much Faster Is Splatting; Command=
+      @{GroupName=; BenchmarkInput=System.Collections.Hashtable; Command=
               Add-Member @splat 
-          ; BenchmarkInput=System.Collections.Hashtable; SlowestTime=00:00:00.0085229; RepeatCount=1024; TotalMilliseconds=207.8716; GroupName=}
-    Throughput: 4926.11785352112
+          ; TotalTime=00:00:00.1707158; AverageTime=00:00:00.0001667; SlowestTime=00:00:00.0023759; TotalMilliseconds=170.7158; RepeatCount=1024; FileName=How Much Faster Is Splatting; FastestTime=00:00:00.0001542}
+    Throughput: 5998.27315339295
     BenchmarkInput: System.Collections.Hashtable
   - Technique: Named
-    Time: 00:00:00.2208084
-    RelativeSpeed: 1.0622350527922
-    ClockSpeed: 2095
+    Time: 00:00:00.1797512
+    RelativeSpeed: 1.05292655981462
+    ClockSpeed: 2594
     FileName: How Much Faster Is Splatting
     Details: |
-      @{TotalTime=00:00:00.2208084; AverageTime=00:00:00.0002156; FastestTime=00:00:00.0001824; FileName=How Much Faster Is Splatting; Command=
+      @{GroupName=; BenchmarkInput=System.Collections.Hashtable; Command=
               Add-Member -InputObject ([PSObject]::new()) -PassThru -MemberType NoteProperty -Name Test -Value 1 
-          ; BenchmarkInput=System.Collections.Hashtable; SlowestTime=00:00:00.0106838; RepeatCount=1024; TotalMilliseconds=220.8085; GroupName=}
-    Throughput: 4637.50473260981
+          ; TotalTime=00:00:00.1797512; AverageTime=00:00:00.0001755; SlowestTime=00:00:00.0031036; TotalMilliseconds=179.7512; RepeatCount=1024; FileName=How Much Faster Is Splatting; FastestTime=00:00:00.0001612}
+    Throughput: 5696.76308141476
     BenchmarkInput: System.Collections.Hashtable
   - Technique: Piped
-    Time: 00:00:00.2231187
-    RelativeSpeed: 1.07334912513301
-    ClockSpeed: 2095
+    Time: 00:00:00.1849068
+    RelativeSpeed: 1.08312645929668
+    ClockSpeed: 2594
     FileName: How Much Faster Is Splatting
     Details: |
-      @{TotalTime=00:00:00.2231187; AverageTime=00:00:00.0002178; FastestTime=00:00:00.0001920; FileName=How Much Faster Is Splatting; Command=
+      @{GroupName=; BenchmarkInput=System.Collections.Hashtable; Command=
               [PSObject]::new() | 
                   Add-Member -MemberType NoteProperty -Name Test -Value 1 -PassThru
-          ; BenchmarkInput=System.Collections.Hashtable; SlowestTime=00:00:00.0026455; RepeatCount=1024; TotalMilliseconds=223.1188; GroupName=}
-    Throughput: 4589.485327765
+          ; TotalTime=00:00:00.1849068; AverageTime=00:00:00.0001805; SlowestTime=00:00:00.0022065; TotalMilliseconds=184.9068; RepeatCount=1024; FileName=How Much Faster Is Splatting; FastestTime=00:00:00.0001691}
+    Throughput: 5537.92505197213
     BenchmarkInput: System.Collections.Hashtable
   - Technique: Positional
-    Time: 00:00:00.7806699
-    RelativeSpeed: 3.75553947725422
-    ClockSpeed: 2095
+    Time: 00:00:00.6555176
+    RelativeSpeed: 3.83981857566785
+    ClockSpeed: 2594
     FileName: How Much Faster Is Splatting
     Details: |
-      @{TotalTime=00:00:00.7806699; AverageTime=00:00:00.0007623; FastestTime=00:00:00.0006895; FileName=How Much Faster Is Splatting; Command=
+      @{GroupName=; BenchmarkInput=System.Collections.Hashtable; Command=
               Add-Member -InputObject ([PSObject]::new()) -PassThru NoteProperty Test 1 
-          ; BenchmarkInput=System.Collections.Hashtable; SlowestTime=00:00:00.0071894; RepeatCount=1024; TotalMilliseconds=780.669999999999; GroupName=}
-    Throughput: 1311.69396949978
+          ; TotalTime=00:00:00.6555176; AverageTime=00:00:00.0006401; SlowestTime=00:00:00.0024418; TotalMilliseconds=655.517699999999; RepeatCount=1024; FileName=How Much Faster Is Splatting; FastestTime=00:00:00.0006192}
+    Throughput: 1562.12434265686
     BenchmarkInput: System.Collections.Hashtable
 FileName: How Much Faster Is Splatting
-ClockSpeed: 2095
+ClockSpeed: 2594
 ---
 How Much Faster Is Splatting
 ----------------------------
-> @2095 Mhz
+> @2594 Mhz
 
 
 ### 
@@ -60,7 +60,7 @@ How Much Faster Is Splatting
 
 |Technique |Time           |RelativeSpeed|Throughput|
 |----------|---------------|-------------|----------|
-|Splatting |00:00:00.207871|1x           |4926.12/s |
-|Named     |00:00:00.220808|1.06x        |4637.5/s  |
-|Piped     |00:00:00.223118|1.07x        |4589.49/s |
-|Positional|00:00:00.780669|3.76x        |1311.69/s |
+|Splatting |00:00:00.170715|1x           |5998.27/s |
+|Named     |00:00:00.179751|1.05x        |5696.76/s |
+|Piped     |00:00:00.184906|1.08x        |5537.93/s |
+|Positional|00:00:00.655517|3.84x        |1562.12/s |

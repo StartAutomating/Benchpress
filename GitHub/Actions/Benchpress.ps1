@@ -47,6 +47,14 @@ $($gitHubEvent | ConvertTo-Json -Depth 100)
 ::endgroup::
 "@ | Out-Host
 
+# Check to ensure we are on a branch
+$branchName = git rev-parse --abrev-ref HEAD
+# If we were not, return.
+if (-not $branchName) {
+    "::warning::Not on a branch" | Out-Host
+    return
+}
+
 $anyFilesChanged = $false
 $processScriptOutput = { process { 
     $out = $_
@@ -100,7 +108,6 @@ if (-not $UserEmail) {
 }
 git config --global user.email $UserEmail
 git config --global user.name  $UserName
-git config pull.rebase true
 
 if (-not $BenchmarkPath) {
     $BenchmarkPath = 

@@ -36,11 +36,11 @@ runs:
       shell: pwsh
       env: 
         UserEmail: ${{inputs.UserEmail}}
-        UserName: ${{inputs.UserName}}
-        BenchmarkPath: ${{inputs.BenchmarkPath}}
-        ModulePath: ${{inputs.ModulePath}}
-        OutputPath: ${{inputs.OutputPath}}
         CommitMessage: ${{inputs.CommitMessage}}
+        UserName: ${{inputs.UserName}}
+        OutputPath: ${{inputs.OutputPath}}
+        ModulePath: ${{inputs.ModulePath}}
+        BenchmarkPath: ${{inputs.BenchmarkPath}}
       run: |
         $Parameters = @{}
         $Parameters.BenchmarkPath = ${env:BenchmarkPath}
@@ -105,6 +105,14 @@ runs:
         ::endgroup::
         "@ | Out-Host
         
+        # Check to ensure we are on a branch
+        $branchName = git rev-parse --abrev-ref HEAD
+        # If we were not, return.
+        if (-not $branchName) {
+            "::warning::Not on a branch" | Out-Host
+            return
+        }
+        
         $anyFilesChanged = $false
         $processScriptOutput = { process { 
             $out = $_
@@ -158,7 +166,6 @@ runs:
         }
         git config --global user.email $UserEmail
         git config --global user.name  $UserName
-        git config pull.rebase true
         
         if (-not $BenchmarkPath) {
             $BenchmarkPath = 

@@ -4,17 +4,17 @@ layout: Benchmark
 Data: 
   - Technique: StaticConstructor
     Time: 
-      Ticks: 5356589
+      Ticks: 5522770
       Days: 0
       Hours: 0
-      Milliseconds: 535
+      Milliseconds: 552
       Minutes: 0
       Seconds: 0
-      TotalDays: 6.19975578703704e-06
-      TotalHours: 0.000148794138888889
-      TotalMilliseconds: 535.6589
-      TotalMinutes: 0.00892764833333333
-      TotalSeconds: 0.5356589
+      TotalDays: 6.39209490740741e-06
+      TotalHours: 0.000153410277777778
+      TotalMilliseconds: 552.277
+      TotalMinutes: 0.00920461666666667
+      TotalSeconds: 0.552277
       FileName: How Much Faster Is The Static Constructor
       GroupName: 
       BenchmarkInput: 
@@ -26,25 +26,25 @@ Data:
         RepeatCount: 10240
         FileName: How Much Faster Is The Static Constructor
     RelativeSpeed: 1
-    ClockSpeed: 2394
+    ClockSpeed: 2295
     FileName: How Much Faster Is The Static Constructor
-    Throughput: 19116.6430726718
+    Throughput: 18541.4203379826
     BenchmarkInput: 
       FileName: How Much Faster Is The Static Constructor
       RepeatCount: 10240
   - Technique: New-Object
     Time: 
-      Ticks: 18699659
+      Ticks: 18901963
       Days: 0
       Hours: 0
-      Milliseconds: 869
+      Milliseconds: 890
       Minutes: 0
       Seconds: 1
-      TotalDays: 2.16431238425926e-05
-      TotalHours: 0.000519434972222222
-      TotalMilliseconds: 1869.9659
-      TotalMinutes: 0.0311660983333333
-      TotalSeconds: 1.8699659
+      TotalDays: 2.18772719907407e-05
+      TotalHours: 0.000525054527777778
+      TotalMilliseconds: 1890.1963
+      TotalMinutes: 0.0315032716666667
+      TotalSeconds: 1.8901963
       FileName: How Much Faster Is The Static Constructor
       GroupName: 
       BenchmarkInput: 
@@ -55,19 +55,19 @@ Data:
                       
         RepeatCount: 10240
         FileName: How Much Faster Is The Static Constructor
-    RelativeSpeed: 3.49096393245776
-    ClockSpeed: 2394
+    RelativeSpeed: 3.42255118355463
+    ClockSpeed: 2295
     FileName: How Much Faster Is The Static Constructor
-    Throughput: 5476.03568599834
+    Throughput: 5417.4267508618
     BenchmarkInput: 
       FileName: How Much Faster Is The Static Constructor
       RepeatCount: 10240
 FileName: How Much Faster Is The Static Constructor
-ClockSpeed: 2394
+ClockSpeed: 2295
 ---
 How Much Faster Is The Static Constructor
 -----------------------------------------
-> @2394 Mhz
+> @2295 Mhz
 
 
 ### 
@@ -75,5 +75,5 @@ How Much Faster Is The Static Constructor
 
 |Technique        |Time           |RelativeSpeed|Throughput|
 |-----------------|---------------|-------------|----------|
-|StaticConstructor|00:00:00.535658|1x           |19116.64/s|
-|New-Object       |00:00:01.869965|3.49x        |5476.04/s |
+|StaticConstructor|00:00:00.552277|1x           |18541.42/s|
+|New-Object       |00:00:01.890196|3.42x        |5417.43/s |

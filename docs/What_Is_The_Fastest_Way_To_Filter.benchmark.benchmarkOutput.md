@@ -4,214 +4,214 @@ layout: Benchmark
 Data: 
   - Technique: Operator Filter (Assumed Array)
     Time: 
-      value: 00:00:00.0098222
+      value: 00:00:00.0083578
       FileName: What Is The Fastest Way To Filter
       GroupName: Filtering Values
       BenchmarkInput: System.Collections.Hashtable
     RelativeSpeed: 1
     GroupName: Filtering Values
-    ClockSpeed: 2095
+    ClockSpeed: 2594
     FileName: What Is The Fastest Way To Filter
-    Throughput: 1018.10185090917
+    Throughput: 1196.48711383378
     BenchmarkInput: System.Collections.Hashtable
   - Technique: ForEach Loop
     Time: 
-      value: 00:00:00.0143090
+      value: 00:00:00.0120503
       FileName: What Is The Fastest Way To Filter
       GroupName: Filtering Values
       BenchmarkInput: System.Collections.Hashtable
-    RelativeSpeed: 1.45680193846592
+    RelativeSpeed: 1.44180286678312
     GroupName: Filtering Values
-    ClockSpeed: 2095
+    ClockSpeed: 2594
     FileName: What Is The Fastest Way To Filter
-    Throughput: 698.86085680341
+    Throughput: 829.854858385268
     BenchmarkInput: System.Collections.Hashtable
   - Technique: Operator Filter (Explicit Array)
     Time: 
-      value: 00:00:00.0154926
+      value: 00:00:00.0122571
       FileName: What Is The Fastest Way To Filter
       GroupName: Filtering Values
       BenchmarkInput: System.Collections.Hashtable
-    RelativeSpeed: 1.57730447353953
+    RelativeSpeed: 1.46654622029721
     GroupName: Filtering Values
-    ClockSpeed: 2095
+    ClockSpeed: 2594
     FileName: What Is The Fastest Way To Filter
-    Throughput: 645.469449930935
+    Throughput: 815.85366848602
     BenchmarkInput: System.Collections.Hashtable
   - Technique: Pipe to ScriptBlock
     Time: 
-      value: 00:00:00.1287154
+      value: 00:00:00.0860326
       FileName: What Is The Fastest Way To Filter
       GroupName: Filtering Values
       BenchmarkInput: System.Collections.Hashtable
-    RelativeSpeed: 13.1045386980514
+    RelativeSpeed: 10.2936897269616
     GroupName: Filtering Values
-    ClockSpeed: 2095
+    ClockSpeed: 2594
     FileName: What Is The Fastest Way To Filter
-    Throughput: 77.6907813672645
+    Throughput: 116.235008589767
     BenchmarkInput: System.Collections.Hashtable
   - Technique: .Where Method
     Time: 
-      value: 00:00:00.6289631
+      value: 00:00:00.5079896
       FileName: What Is The Fastest Way To Filter
       GroupName: Filtering Values
       BenchmarkInput: System.Collections.Hashtable
-    RelativeSpeed: 64.0348496263566
+    RelativeSpeed: 60.7803010361578
     GroupName: Filtering Values
-    ClockSpeed: 2095
+    ClockSpeed: 2594
     FileName: What Is The Fastest Way To Filter
-    Throughput: 15.899183910789
+    Throughput: 19.6854423791353
     BenchmarkInput: System.Collections.Hashtable
   - Technique: Linq.Enumerable::Where
     Time: 
-      value: 00:00:00.8127222
+      value: 00:00:00.6957746
       FileName: What Is The Fastest Way To Filter
       GroupName: Filtering Values
       BenchmarkInput: System.Collections.Hashtable
-    RelativeSpeed: 82.7433976094969
+    RelativeSpeed: 83.2485343032856
     GroupName: Filtering Values
-    ClockSpeed: 2095
+    ClockSpeed: 2594
     FileName: What Is The Fastest Way To Filter
-    Throughput: 12.3043273581059
+    Throughput: 14.3724706248259
     BenchmarkInput: System.Collections.Hashtable
   - Technique: Where-Object Script (Positional)
     Time: 
-      value: 00:00:01.7120555
+      value: 00:00:01.4590840
       FileName: What Is The Fastest Way To Filter
       GroupName: Filtering Values
       BenchmarkInput: System.Collections.Hashtable
-    RelativeSpeed: 174.304687340922
+    RelativeSpeed: 174.577520400105
     GroupName: Filtering Values
-    ClockSpeed: 2095
+    ClockSpeed: 2594
     FileName: What Is The Fastest Way To Filter
-    Throughput: 5.84093214267879
+    Throughput: 6.853615007772
     BenchmarkInput: System.Collections.Hashtable
   - Technique: ForEach Loop
     Time: 
-      value: 00:00:00.4337330
+      value: 00:00:00.3433175
       FileName: What Is The Fastest Way To Filter
       GroupName: Filtering by Property Values
       BenchmarkInput: System.Collections.Hashtable
     RelativeSpeed: 1
     GroupName: Filtering by Property Values
-    ClockSpeed: 2095
+    ClockSpeed: 2594
     FileName: What Is The Fastest Way To Filter
-    Throughput: 23.0556586655846
+    Throughput: 29.12755685335
     BenchmarkInput: System.Collections.Hashtable
   - Technique: Pipe to ScriptBlock
     Time: 
-      value: 00:00:01.0110025
+      value: 00:00:00.9084843
       FileName: What Is The Fastest Way To Filter
       GroupName: Filtering by Property Values
       BenchmarkInput: System.Collections.Hashtable
-    RelativeSpeed: 2.33093285500527
+    RelativeSpeed: 2.64619280986259
     GroupName: Filtering by Property Values
-    ClockSpeed: 2095
+    ClockSpeed: 2594
     FileName: What Is The Fastest Way To Filter
-    Throughput: 9.89117237593379
+    Throughput: 11.0073448710121
     BenchmarkInput: System.Collections.Hashtable
   - Technique: .Where Method
     Time: 
-      value: 00:00:05.3698553
+      value: 00:00:04.5388562
       FileName: What Is The Fastest Way To Filter
       GroupName: Filtering by Property Values
       BenchmarkInput: System.Collections.Hashtable
-    RelativeSpeed: 12.380555088038
+    RelativeSpeed: 13.220579201468
     GroupName: Filtering by Property Values
-    ClockSpeed: 2095
+    ClockSpeed: 2594
     FileName: What Is The Fastest Way To Filter
-    Throughput: 1.86224757303982
+    Throughput: 2.20319824188305
     BenchmarkInput: System.Collections.Hashtable
   - Technique: Where-Object Property (Positional)
     Time: 
-      value: 00:00:12.0266296
+      value: 00:00:09.9598765
       FileName: What Is The Fastest Way To Filter
       GroupName: Filtering by Property Values
       BenchmarkInput: System.Collections.Hashtable
-    RelativeSpeed: 27.7281866955016
+    RelativeSpeed: 29.0106869006095
     GroupName: Filtering by Property Values
-    ClockSpeed: 2095
+    ClockSpeed: 2594
     FileName: What Is The Fastest Way To Filter
-    Throughput: 0.831488150262813
+    Throughput: 1.00402851380738
     BenchmarkInput: System.Collections.Hashtable
   - Technique: DotInline
     Time: 
-      value: 00:00:00.0107634
+      value: 00:00:00.0088586
       FileName: What Is The Fastest Way To Filter
       GroupName: Filtering a Pipeline
       BenchmarkInput: System.Collections.Hashtable
     RelativeSpeed: 1
     GroupName: Filtering a Pipeline
-    ClockSpeed: 2095
+    ClockSpeed: 2594
     FileName: What Is The Fastest Way To Filter
-    Throughput: 9290.74456026906
-    BenchmarkInput: System.Collections.Hashtable
-  - Technique: ScriptBlockVariable
-    Time: 
-      value: 00:00:00.0108017
-      FileName: What Is The Fastest Way To Filter
-      GroupName: Filtering a Pipeline
-      BenchmarkInput: System.Collections.Hashtable
-    RelativeSpeed: 1.00355835516658
-    GroupName: Filtering a Pipeline
-    ClockSpeed: 2095
-    FileName: What Is The Fastest Way To Filter
-    Throughput: 9257.80201264616
-    BenchmarkInput: System.Collections.Hashtable
-  - Technique: InlineScriptBlock
-    Time: 
-      value: 00:00:00.0108022
-      FileName: What Is The Fastest Way To Filter
-      GroupName: Filtering a Pipeline
-      BenchmarkInput: System.Collections.Hashtable
-    RelativeSpeed: 1.00360480888938
-    GroupName: Filtering a Pipeline
-    ClockSpeed: 2095
-    FileName: What Is The Fastest Way To Filter
-    Throughput: 9257.37349799115
+    Throughput: 11288.4654460073
     BenchmarkInput: System.Collections.Hashtable
   - Technique: DotScriptBlockVariable
     Time: 
-      value: 00:00:00.0115405
+      value: 00:00:00.0089930
       FileName: What Is The Fastest Way To Filter
       GroupName: Filtering a Pipeline
       BenchmarkInput: System.Collections.Hashtable
-    RelativeSpeed: 1.07219837597785
+    RelativeSpeed: 1.01517169755943
     GroupName: Filtering a Pipeline
-    ClockSpeed: 2095
+    ClockSpeed: 2594
     FileName: What Is The Fastest Way To Filter
-    Throughput: 8665.13582600407
+    Throughput: 11119.759813188
     BenchmarkInput: System.Collections.Hashtable
-  - Technique: Filter
+  - Technique: InlineScriptBlock
     Time: 
-      value: 00:00:00.0122785
+      value: 00:00:00.0093590
       FileName: What Is The Fastest Way To Filter
       GroupName: Filtering a Pipeline
       BenchmarkInput: System.Collections.Hashtable
-    RelativeSpeed: 1.14076407083264
+    RelativeSpeed: 1.05648748109182
     GroupName: Filtering a Pipeline
-    ClockSpeed: 2095
+    ClockSpeed: 2594
     FileName: What Is The Fastest Way To Filter
-    Throughput: 8144.31730260211
+    Throughput: 10684.9022331446
     BenchmarkInput: System.Collections.Hashtable
   - Technique: WhereObject
     Time: 
-      value: 00:00:00.0630497
+      value: 00:00:00.0272094
       FileName: What Is The Fastest Way To Filter
       GroupName: Filtering a Pipeline
       BenchmarkInput: System.Collections.Hashtable
-    RelativeSpeed: 5.85778657301596
+    RelativeSpeed: 3.0715237170659
     GroupName: Filtering a Pipeline
-    ClockSpeed: 2095
+    ClockSpeed: 2594
     FileName: What Is The Fastest Way To Filter
-    Throughput: 1586.05036978764
+    Throughput: 3675.2004821863
+    BenchmarkInput: System.Collections.Hashtable
+  - Technique: ScriptBlockVariable
+    Time: 
+      value: 00:00:00.0336149
+      FileName: What Is The Fastest Way To Filter
+      GroupName: Filtering a Pipeline
+      BenchmarkInput: System.Collections.Hashtable
+    RelativeSpeed: 3.7946063712099
+    GroupName: Filtering a Pipeline
+    ClockSpeed: 2594
+    FileName: What Is The Fastest Way To Filter
+    Throughput: 2974.87126244612
+    BenchmarkInput: System.Collections.Hashtable
+  - Technique: Filter
+    Time: 
+      value: 00:00:00.0344468
+      FileName: What Is The Fastest Way To Filter
+      GroupName: Filtering a Pipeline
+      BenchmarkInput: System.Collections.Hashtable
+    RelativeSpeed: 3.88851511525523
+    GroupName: Filtering a Pipeline
+    ClockSpeed: 2594
+    FileName: What Is The Fastest Way To Filter
+    Throughput: 2903.02727684429
     BenchmarkInput: System.Collections.Hashtable
 FileName: What Is The Fastest Way To Filter
-ClockSpeed: 2095
+ClockSpeed: 2594
 ---
 What Is The Fastest Way To Filter
 ---------------------------------
-> @2095 Mhz
+> @2594 Mhz
 
 
 ### Filtering a Pipeline
@@ -219,12 +219,12 @@ What Is The Fastest Way To Filter
 
 |Technique             |Time           |RelativeSpeed|Throughput|
 |----------------------|---------------|-------------|----------|
-|DotInline             |00:00:00.010763|1x           |9290.74/s |
-|ScriptBlockVariable   |00:00:00.010801|1x           |9257.8/s  |
-|InlineScriptBlock     |00:00:00.010802|1x           |9257.37/s |
-|DotScriptBlockVariable|00:00:00.011540|1.07x        |8665.14/s |
-|Filter                |00:00:00.012278|1.14x        |8144.32/s |
-|WhereObject           |00:00:00.063049|5.86x        |1586.05/s |
+|DotInline             |00:00:00.008858|1x           |11288.47/s|
+|DotScriptBlockVariable|00:00:00.008993|1.02x        |11119.76/s|
+|InlineScriptBlock     |00:00:00.009359|1.06x        |10684.9/s |
+|WhereObject           |00:00:00.027209|3.07x        |3675.2/s  |
+|ScriptBlockVariable   |00:00:00.033614|3.79x        |2974.87/s |
+|Filter                |00:00:00.034446|3.89x        |2903.03/s |
 
 
 ### Filtering by Property Values
@@ -232,10 +232,10 @@ What Is The Fastest Way To Filter
 
 |Technique                         |Time           |RelativeSpeed|Throughput|
 |----------------------------------|---------------|-------------|----------|
-|ForEach Loop                      |00:00:00.433733|1x           |23.06/s   |
-|Pipe to ScriptBlock               |00:00:01.011002|2.33x        |9.89/s    |
-|.Where Method                     |00:00:05.369855|12.38x       |1.86/s    |
-|Where-Object Property (Positional)|00:00:12.026629|27.73x       |0.83/s    |
+|ForEach Loop                      |00:00:00.343317|1x           |29.13/s   |
+|Pipe to ScriptBlock               |00:00:00.908484|2.65x        |11.01/s   |
+|.Where Method                     |00:00:04.538856|13.22x       |2.2/s     |
+|Where-Object Property (Positional)|00:00:09.959876|29.01x       |1/s       |
 
 
 ### Filtering Values
@@ -243,10 +243,10 @@ What Is The Fastest Way To Filter
 
 |Technique                       |Time           |RelativeSpeed|Throughput|
 |--------------------------------|---------------|-------------|----------|
-|Operator Filter (Assumed Array) |00:00:00.009822|1x           |1018.1/s  |
-|ForEach Loop                    |00:00:00.014309|1.46x        |698.86/s  |
-|Operator Filter (Explicit Array)|00:00:00.015492|1.58x        |645.47/s  |
-|Pipe to ScriptBlock             |00:00:00.128715|13.1x        |77.69/s   |
-|.Where Method                   |00:00:00.628963|64.03x       |15.9/s    |
-|Linq.Enumerable::Where          |00:00:00.812722|82.74x       |12.3/s    |
-|Where-Object Script (Positional)|00:00:01.712055|174.3x       |5.84/s    |
+|Operator Filter (Assumed Array) |00:00:00.008357|1x           |1196.49/s |
+|ForEach Loop                    |00:00:00.012050|1.44x        |829.85/s  |
+|Operator Filter (Explicit Array)|00:00:00.012257|1.47x        |815.85/s  |
+|Pipe to ScriptBlock             |00:00:00.086032|10.29x       |116.24/s  |
+|.Where Method                   |00:00:00.507989|60.78x       |19.69/s   |
+|Linq.Enumerable::Where          |00:00:00.695774|83.25x       |14.37/s   |
+|Where-Object Script (Positional)|00:00:01.459084|174.58x      |6.85/s    |

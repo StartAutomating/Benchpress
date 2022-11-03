@@ -4,54 +4,54 @@ layout: Benchmark
 Data: 
   - Technique: ScriptBlock
     Time: 
-      value: 00:00:00.1636301
+      value: 00:00:00.1300640
       FileName: How Much Faster Is Piping To A ScriptBlock
       GroupName: 
       BenchmarkInput: System.Collections.Hashtable
     RelativeSpeed: 1
-    ClockSpeed: 2095
+    ClockSpeed: 2594
     FileName: How Much Faster Is Piping To A ScriptBlock
-    Throughput: 6258.01732077411
+    Throughput: 7873.04711526633
     BenchmarkInput: System.Collections.Hashtable
   - Technique: DotScriptBlock
     Time: 
-      value: 00:00:00.1834972
+      value: 00:00:00.1451226
       FileName: How Much Faster Is Piping To A ScriptBlock
       GroupName: 
       BenchmarkInput: System.Collections.Hashtable
-    RelativeSpeed: 1.12141470304058
-    ClockSpeed: 2095
+    RelativeSpeed: 1.11577838602534
+    ClockSpeed: 2594
     FileName: How Much Faster Is Piping To A ScriptBlock
-    Throughput: 5580.46662292395
+    Throughput: 7056.10290885086
     BenchmarkInput: System.Collections.Hashtable
   - Technique: ScriptBlockWithPipelineParameter
     Time: 
-      value: 00:00:00.7382259
+      value: 00:00:00.6018182
       FileName: How Much Faster Is Piping To A ScriptBlock
       GroupName: 
       BenchmarkInput: System.Collections.Hashtable
-    RelativeSpeed: 4.51155319223052
-    ClockSpeed: 2095
+    RelativeSpeed: 4.62709281584451
+    ClockSpeed: 2594
     FileName: How Much Faster Is Piping To A ScriptBlock
-    Throughput: 1387.10928456994
+    Throughput: 1701.51052261298
     BenchmarkInput: System.Collections.Hashtable
   - Technique: ForeachObject
     Time: 
-      value: 00:00:00.9520325
+      value: 00:00:00.7557867
       FileName: How Much Faster Is Piping To A ScriptBlock
       GroupName: 
       BenchmarkInput: System.Collections.Hashtable
-    RelativeSpeed: 5.81819909662098
-    ClockSpeed: 2095
+    RelativeSpeed: 5.81088310370279
+    ClockSpeed: 2594
     FileName: How Much Faster Is Piping To A ScriptBlock
-    Throughput: 1075.59353278381
+    Throughput: 1354.87962410558
     BenchmarkInput: System.Collections.Hashtable
 FileName: How Much Faster Is Piping To A ScriptBlock
-ClockSpeed: 2095
+ClockSpeed: 2594
 ---
 How Much Faster Is Piping To A ScriptBlock
 ------------------------------------------
-> @2095 Mhz
+> @2594 Mhz
 
 
 ### 
@@ -59,7 +59,7 @@ How Much Faster Is Piping To A ScriptBlock
 
 |Technique                       |Time           |RelativeSpeed|Throughput|
 |--------------------------------|---------------|-------------|----------|
-|ScriptBlock                     |00:00:00.163630|1x           |6258.02/s |
-|DotScriptBlock                  |00:00:00.183497|1.12x        |5580.47/s |
-|ScriptBlockWithPipelineParameter|00:00:00.738225|4.51x        |1387.11/s |
-|ForeachObject                   |00:00:00.952032|5.82x        |1075.59/s |
+|ScriptBlock                     |00:00:00.130064|1x           |7873.05/s |
+|DotScriptBlock                  |00:00:00.145122|1.12x        |7056.1/s  |
+|ScriptBlockWithPipelineParameter|00:00:00.601818|4.63x        |1701.51/s |
+|ForeachObject                   |00:00:00.755786|5.81x        |1354.88/s |

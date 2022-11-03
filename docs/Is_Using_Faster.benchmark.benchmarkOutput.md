@@ -4,32 +4,32 @@ layout: Benchmark
 Data: 
   - Technique: using
     Time: 
-      value: 00:00:00.0041846
+      value: 00:00:00.0055821
       FileName: Is Using Faster
       GroupName: 
       BenchmarkInput: System.Collections.Hashtable
     RelativeSpeed: 1
-    ClockSpeed: 2793
+    ClockSpeed: 2095
     FileName: Is Using Faster
-    Throughput: 23897.1466806863
+    Throughput: 17914.4049730388
     BenchmarkInput: System.Collections.Hashtable
   - Technique: not using
     Time: 
-      value: 00:00:00.0042218
+      value: 00:00:00.0087451
       FileName: Is Using Faster
       GroupName: 
       BenchmarkInput: System.Collections.Hashtable
-    RelativeSpeed: 1.00888973856522
-    ClockSpeed: 2793
+    RelativeSpeed: 1.56663262929722
+    ClockSpeed: 2095
     FileName: Is Using Faster
-    Throughput: 23686.5791842342
+    Throughput: 11434.9750145796
     BenchmarkInput: System.Collections.Hashtable
 FileName: Is Using Faster
-ClockSpeed: 2793
+ClockSpeed: 2095
 ---
 Is Using Faster
 ---------------
-> @2793 Mhz
+> @2095 Mhz
 
 
 ### 
@@ -37,5 +37,5 @@ Is Using Faster
 
 |Technique|Time           |RelativeSpeed|Throughput|
 |---------|---------------|-------------|----------|
-|using    |00:00:00.004184|1x           |23897.15/s|
-|not using|00:00:00.004221|1.01x        |23686.58/s|
+|using    |00:00:00.005582|1x           |17914.4/s |
+|not using|00:00:00.008745|1.57x        |11434.98/s|

@@ -4,32 +4,32 @@ layout: Benchmark
 Data: 
   - Technique: Quoted
     Time: 
-      value: 00:00:00.0048106
+      value: 00:00:00.0063206
       FileName: ToString Or Not ToString
       GroupName: 
       BenchmarkInput: System.Collections.Hashtable
     RelativeSpeed: 1
-    ClockSpeed: 2793
+    ClockSpeed: 2095
     FileName: ToString Or Not ToString
-    Throughput: 20787.4277636885
+    Throughput: 15821.2827896086
     BenchmarkInput: System.Collections.Hashtable
   - Technique: ToString
     Time: 
-      value: 00:00:00.0052519
+      value: 00:00:00.0068862
       FileName: ToString Or Not ToString
       GroupName: 
       BenchmarkInput: System.Collections.Hashtable
-    RelativeSpeed: 1.09173491872116
-    ClockSpeed: 2793
+    RelativeSpeed: 1.08948517545803
+    ClockSpeed: 2095
     FileName: ToString Or Not ToString
-    Throughput: 19040.7281174432
+    Throughput: 14521.7972176237
     BenchmarkInput: System.Collections.Hashtable
 FileName: ToString Or Not ToString
-ClockSpeed: 2793
+ClockSpeed: 2095
 ---
 ToString Or Not ToString
 ------------------------
-> @2793 Mhz
+> @2095 Mhz
 
 
 ### 
@@ -37,5 +37,5 @@ ToString Or Not ToString
 
 |Technique|Time           |RelativeSpeed|Throughput|
 |---------|---------------|-------------|----------|
-|Quoted   |00:00:00.004810|1x           |20787.43/s|
-|ToString |00:00:00.005251|1.09x        |19040.73/s|
+|Quoted   |00:00:00.006320|1x           |15821.28/s|
+|ToString |00:00:00.006886|1.09x        |14521.8/s |

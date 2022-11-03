@@ -2,56 +2,56 @@
 layout: Benchmark
 
 Data: 
-  - Technique: SingleQuote
+  - Technique: DoubleQuote
     Time: 
-      value: 00:00:00.4164597
+      value: 00:00:00.5984241
       FileName: Whats In A Quote
       GroupName: 
       BenchmarkInput: System.Collections.Hashtable
     RelativeSpeed: 1
-    ClockSpeed: 2793
+    ClockSpeed: 2095
     FileName: Whats In A Quote
-    Throughput: 24588.2134573886
+    Throughput: 17111.6103111489
     BenchmarkInput: System.Collections.Hashtable
-  - Technique: SingleHerestring
+  - Technique: SingleQuote
     Time: 
-      value: 00:00:00.4311609
+      value: 00:00:00.6017350
       FileName: Whats In A Quote
       GroupName: 
       BenchmarkInput: System.Collections.Hashtable
-    RelativeSpeed: 1.03530041442185
-    ClockSpeed: 2793
+    RelativeSpeed: 1.00553269829875
+    ClockSpeed: 2095
     FileName: Whats In A Quote
-    Throughput: 23749.8344585513
-    BenchmarkInput: System.Collections.Hashtable
-  - Technique: DoubleQuote
-    Time: 
-      value: 00:00:00.4332741
-      FileName: Whats In A Quote
-      GroupName: 
-      BenchmarkInput: System.Collections.Hashtable
-    RelativeSpeed: 1.0403746148787
-    ClockSpeed: 2793
-    FileName: Whats In A Quote
-    Throughput: 23633.9998167442
+    Throughput: 17017.4578510474
     BenchmarkInput: System.Collections.Hashtable
   - Technique: DoubleHerestring
     Time: 
-      value: 00:00:00.4538409
+      value: 00:00:00.6194996
       FileName: Whats In A Quote
       GroupName: 
       BenchmarkInput: System.Collections.Hashtable
-    RelativeSpeed: 1.08975946532161
-    ClockSpeed: 2793
+    RelativeSpeed: 1.03521833428834
+    ClockSpeed: 2095
     FileName: Whats In A Quote
-    Throughput: 22562.9730595017
+    Throughput: 16529.4699141049
+    BenchmarkInput: System.Collections.Hashtable
+  - Technique: SingleHerestring
+    Time: 
+      value: 00:00:00.6274815
+      FileName: Whats In A Quote
+      GroupName: 
+      BenchmarkInput: System.Collections.Hashtable
+    RelativeSpeed: 1.04855653373586
+    ClockSpeed: 2095
+    FileName: Whats In A Quote
+    Throughput: 16319.2062236098
     BenchmarkInput: System.Collections.Hashtable
 FileName: Whats In A Quote
-ClockSpeed: 2793
+ClockSpeed: 2095
 ---
 Whats In A Quote
 ----------------
-> @2793 Mhz
+> @2095 Mhz
 
 
 ### 
@@ -59,7 +59,7 @@ Whats In A Quote
 
 |Technique       |Time           |RelativeSpeed|Throughput|
 |----------------|---------------|-------------|----------|
-|SingleQuote     |00:00:00.416459|1x           |24588.21/s|
-|SingleHerestring|00:00:00.431160|1.04x        |23749.83/s|
-|DoubleQuote     |00:00:00.433274|1.04x        |23634/s   |
-|DoubleHerestring|00:00:00.453840|1.09x        |22562.97/s|
+|DoubleQuote     |00:00:00.598424|1x           |17111.61/s|
+|SingleQuote     |00:00:00.601735|1.01x        |17017.46/s|
+|DoubleHerestring|00:00:00.619499|1.04x        |16529.47/s|
+|SingleHerestring|00:00:00.627481|1.05x        |16319.21/s|

@@ -4,32 +4,32 @@ layout: Benchmark
 Data: 
   - Technique: ArrayList.Sort
     Time: 
-      value: 00:00:00.0193302
+      value: 00:00:00.0230623
       FileName: What Is The Fastest Way To Sort
       GroupName: 
       BenchmarkInput: System.Collections.Hashtable
     RelativeSpeed: 1
-    ClockSpeed: 2793
+    ClockSpeed: 2095
     FileName: What Is The Fastest Way To Sort
-    Throughput: 5173.25221673858
+    Throughput: 4336.08096330375
     BenchmarkInput: System.Collections.Hashtable
   - Technique: Sort-Object
     Time: 
-      value: 00:00:00.0867182
+      value: 00:00:00.1060777
       FileName: What Is The Fastest Way To Sort
       GroupName: 
       BenchmarkInput: System.Collections.Hashtable
-    RelativeSpeed: 4.48615120381579
-    ClockSpeed: 2793
+    RelativeSpeed: 4.59961495601046
+    ClockSpeed: 2095
     FileName: What Is The Fastest Way To Sort
-    Throughput: 1153.16046689161
+    Throughput: 942.705205712417
     BenchmarkInput: System.Collections.Hashtable
 FileName: What Is The Fastest Way To Sort
-ClockSpeed: 2793
+ClockSpeed: 2095
 ---
 What Is The Fastest Way To Sort
 -------------------------------
-> @2793 Mhz
+> @2095 Mhz
 
 
 ### 
@@ -37,5 +37,5 @@ What Is The Fastest Way To Sort
 
 |Technique     |Time           |RelativeSpeed|Throughput|
 |--------------|---------------|-------------|----------|
-|ArrayList.Sort|00:00:00.019330|1x           |5173.25/s |
-|Sort-Object   |00:00:00.086718|4.49x        |1153.16/s |
+|ArrayList.Sort|00:00:00.023062|1x           |4336.08/s |
+|Sort-Object   |00:00:00.106077|4.6x         |942.71/s  |

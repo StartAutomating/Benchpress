@@ -2,56 +2,56 @@
 layout: Benchmark
 
 Data: 
-  - Technique: DoubleQuote
+  - Technique: SingleHerestring
     Time: 
-      value: 00:00:00.5984241
+      value: 00:00:00.4880472
       FileName: Whats In A Quote
       GroupName: 
       BenchmarkInput: System.Collections.Hashtable
     RelativeSpeed: 1
-    ClockSpeed: 2095
+    ClockSpeed: 2594
     FileName: Whats In A Quote
-    Throughput: 17111.6103111489
+    Throughput: 20981.5771917142
     BenchmarkInput: System.Collections.Hashtable
   - Technique: SingleQuote
     Time: 
-      value: 00:00:00.6017350
+      value: 00:00:00.4889205
       FileName: Whats In A Quote
       GroupName: 
       BenchmarkInput: System.Collections.Hashtable
-    RelativeSpeed: 1.00553269829875
-    ClockSpeed: 2095
+    RelativeSpeed: 1.00178937610952
+    ClockSpeed: 2594
     FileName: Whats In A Quote
-    Throughput: 17017.4578510474
+    Throughput: 20944.100318968
     BenchmarkInput: System.Collections.Hashtable
   - Technique: DoubleHerestring
     Time: 
-      value: 00:00:00.6194996
+      value: 00:00:00.4960068
       FileName: Whats In A Quote
       GroupName: 
       BenchmarkInput: System.Collections.Hashtable
-    RelativeSpeed: 1.03521833428834
-    ClockSpeed: 2095
+    RelativeSpeed: 1.01630907830226
+    ClockSpeed: 2594
     FileName: Whats In A Quote
-    Throughput: 16529.4699141049
+    Throughput: 20644.8782557013
     BenchmarkInput: System.Collections.Hashtable
-  - Technique: SingleHerestring
+  - Technique: DoubleQuote
     Time: 
-      value: 00:00:00.6274815
+      value: 00:00:00.5020868
       FileName: Whats In A Quote
       GroupName: 
       BenchmarkInput: System.Collections.Hashtable
-    RelativeSpeed: 1.04855653373586
-    ClockSpeed: 2095
+    RelativeSpeed: 1.02876688975984
+    ClockSpeed: 2594
     FileName: Whats In A Quote
-    Throughput: 16319.2062236098
+    Throughput: 20394.8799291278
     BenchmarkInput: System.Collections.Hashtable
 FileName: Whats In A Quote
-ClockSpeed: 2095
+ClockSpeed: 2594
 ---
 Whats In A Quote
 ----------------
-> @2095 Mhz
+> @2594 Mhz
 
 
 ### 
@@ -59,7 +59,7 @@ Whats In A Quote
 
 |Technique       |Time           |RelativeSpeed|Throughput|
 |----------------|---------------|-------------|----------|
-|DoubleQuote     |00:00:00.598424|1x           |17111.61/s|
-|SingleQuote     |00:00:00.601735|1.01x        |17017.46/s|
-|DoubleHerestring|00:00:00.619499|1.04x        |16529.47/s|
-|SingleHerestring|00:00:00.627481|1.05x        |16319.21/s|
+|SingleHerestring|00:00:00.488047|1x           |20981.58/s|
+|SingleQuote     |00:00:00.488920|1x           |20944.1/s |
+|DoubleHerestring|00:00:00.496006|1.02x        |20644.88/s|
+|DoubleQuote     |00:00:00.502086|1.03x        |20394.88/s|

@@ -4,26 +4,58 @@ layout: Benchmark
 Data: 
   - Technique: Quoted
     Time: 
-      value: 00:00:00.0048686
+      Ticks: 51122
+      Days: 0
+      Hours: 0
+      Milliseconds: 5
+      Minutes: 0
+      Seconds: 0
+      TotalDays: 5.91689814814815e-08
+      TotalHours: 1.42005555555556e-06
+      TotalMilliseconds: 5.1122
+      TotalMinutes: 8.52033333333333e-05
+      TotalSeconds: 0.0051122
       FileName: ToString Or Not ToString
       GroupName: 
-      BenchmarkInput: System.Collections.Hashtable
+      BenchmarkInput: 
+        ScriptBlock: |
+          
+                  "$pwd"
+              
+        FileName: ToString Or Not ToString
     RelativeSpeed: 1
     ClockSpeed: 2594
     FileName: ToString Or Not ToString
-    Throughput: 20539.7855646387
-    BenchmarkInput: System.Collections.Hashtable
+    Throughput: 19561.050037166
+    BenchmarkInput: 
+      FileName: ToString Or Not ToString
   - Technique: ToString
     Time: 
-      value: 00:00:00.0056061
+      Ticks: 54943
+      Days: 0
+      Hours: 0
+      Milliseconds: 5
+      Minutes: 0
+      Seconds: 0
+      TotalDays: 6.35914351851852e-08
+      TotalHours: 1.52619444444444e-06
+      TotalMilliseconds: 5.4943
+      TotalMinutes: 9.15716666666667e-05
+      TotalSeconds: 0.0054943
       FileName: ToString Or Not ToString
       GroupName: 
-      BenchmarkInput: System.Collections.Hashtable
-    RelativeSpeed: 1.15148091853921
+      BenchmarkInput: 
+        ScriptBlock: |
+          
+                  $PWD.ToString()
+              
+        FileName: ToString Or Not ToString
+    RelativeSpeed: 1.07474277219201
     ClockSpeed: 2594
     FileName: ToString Or Not ToString
-    Throughput: 17837.7124917501
-    BenchmarkInput: System.Collections.Hashtable
+    Throughput: 18200.6807054584
+    BenchmarkInput: 
+      FileName: ToString Or Not ToString
 FileName: ToString Or Not ToString
 ClockSpeed: 2594
 ---
@@ -37,5 +69,5 @@ ToString Or Not ToString
 
 |Technique|Time           |RelativeSpeed|Throughput|
 |---------|---------------|-------------|----------|
-|Quoted   |00:00:00.004868|1x           |20539.79/s|
-|ToString |00:00:00.005606|1.15x        |17837.71/s|
+|Quoted   |00:00:00.005112|1x           |19561.05/s|
+|ToString |00:00:00.005494|1.07x        |18200.68/s|

@@ -2,34 +2,34 @@
 layout: Benchmark
 
 Data: 
-  - Technique: SystemNamespaceIncluded
+  - Technique: NoSytemNamespace
     Time: 
-      value: 00:00:00.0037903
+      value: 00:00:00.0048321
       FileName: Should I Include The System Namespace
       GroupName: 
       BenchmarkInput: System.Collections.Hashtable
     RelativeSpeed: 1
-    ClockSpeed: 2793
+    ClockSpeed: 2095
     FileName: Should I Include The System Namespace
-    Throughput: 26383.135899533
+    Throughput: 20694.9359491732
     BenchmarkInput: System.Collections.Hashtable
-  - Technique: NoSytemNamespace
+  - Technique: SystemNamespaceIncluded
     Time: 
-      value: 00:00:00.0047812
+      value: 00:00:00.0062853
       FileName: Should I Include The System Namespace
       GroupName: 
       BenchmarkInput: System.Collections.Hashtable
-    RelativeSpeed: 1.26143049362847
-    ClockSpeed: 2793
+    RelativeSpeed: 1.30073880921339
+    ClockSpeed: 2095
     FileName: Should I Include The System Namespace
-    Throughput: 20915.2514013218
+    Throughput: 15910.1395319237
     BenchmarkInput: System.Collections.Hashtable
 FileName: Should I Include The System Namespace
-ClockSpeed: 2793
+ClockSpeed: 2095
 ---
 Should I Include The System Namespace
 -------------------------------------
-> @2793 Mhz
+> @2095 Mhz
 
 
 ### 
@@ -37,5 +37,5 @@ Should I Include The System Namespace
 
 |Technique              |Time           |RelativeSpeed|Throughput|
 |-----------------------|---------------|-------------|----------|
-|SystemNamespaceIncluded|00:00:00.003790|1x           |26383.14/s|
-|NoSytemNamespace       |00:00:00.004781|1.26x        |20915.25/s|
+|NoSytemNamespace       |00:00:00.004832|1x           |20694.94/s|
+|SystemNamespaceIncluded|00:00:00.006285|1.3x         |15910.14/s|

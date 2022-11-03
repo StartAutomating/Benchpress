@@ -4,118 +4,118 @@ layout: Benchmark
 Data: 
   - Technique: QuickRandom
     Time: 
-      value: 00:00:00.0039120
+      value: 00:00:00.0050226
       FileName: Random Number Generation
       GroupName: (AnyRandomNumber)
       BenchmarkInput: System.Collections.Hashtable
     RelativeSpeed: 1
     GroupName: (AnyRandomNumber)
-    ClockSpeed: 2793
+    ClockSpeed: 2095
     FileName: Random Number Generation
-    Throughput: 25562.3721881391
+    Throughput: 19910.0067694023
     BenchmarkInput: System.Collections.Hashtable
   - Technique: [Random]::New().Next()
     Time: 
-      value: 00:00:00.0040268
+      value: 00:00:00.0052213
       FileName: Random Number Generation
       GroupName: (AnyRandomNumber)
       BenchmarkInput: System.Collections.Hashtable
-    RelativeSpeed: 1.02934560327198
+    RelativeSpeed: 1.0395611834508
     GroupName: (AnyRandomNumber)
-    ClockSpeed: 2793
+    ClockSpeed: 2095
     FileName: Random Number Generation
-    Throughput: 24833.6147809675
+    Throughput: 19152.3183881409
     BenchmarkInput: System.Collections.Hashtable
   - Technique: GetRandom
     Time: 
-      value: 00:00:00.0091654
+      value: 00:00:00.0406163
       FileName: Random Number Generation
       GroupName: (AnyRandomNumber)
       BenchmarkInput: System.Collections.Hashtable
-    RelativeSpeed: 2.3428936605317
+    RelativeSpeed: 8.08670807948075
     GroupName: (AnyRandomNumber)
-    ClockSpeed: 2793
+    ClockSpeed: 2095
     FileName: Random Number Generation
-    Throughput: 10910.5985554368
+    Throughput: 2462.06572238239
     BenchmarkInput: System.Collections.Hashtable
   - Technique: [Random]::New().Next()
     Time: 
-      value: 00:00:00.0041102
+      value: 00:00:00.0052993
       FileName: Random Number Generation
       GroupName: (Min and Max)
       BenchmarkInput: System.Collections.Hashtable
     RelativeSpeed: 1
     GroupName: (Min and Max)
-    ClockSpeed: 2793
+    ClockSpeed: 2095
     FileName: Random Number Generation
-    Throughput: 24329.7163155078
-    BenchmarkInput: System.Collections.Hashtable
-  - Technique: GetRandom
-    Time: 
-      value: 00:00:00.0105887
-      FileName: Random Number Generation
-      GroupName: (Min and Max)
-      BenchmarkInput: System.Collections.Hashtable
-    RelativeSpeed: 2.57620067150017
-    GroupName: (Min and Max)
-    ClockSpeed: 2793
-    FileName: Random Number Generation
-    Throughput: 9444.02995646302
+    Throughput: 18870.4168475082
     BenchmarkInput: System.Collections.Hashtable
   - Technique: QuickRandom
     Time: 
-      value: 00:00:00.0377134
+      value: 00:00:00.0075797
       FileName: Random Number Generation
       GroupName: (Min and Max)
       BenchmarkInput: System.Collections.Hashtable
-    RelativeSpeed: 9.1755632329327
+    RelativeSpeed: 1.43032098579058
     GroupName: (Min and Max)
-    ClockSpeed: 2793
+    ClockSpeed: 2095
     FileName: Random Number Generation
-    Throughput: 2651.57742340919
+    Throughput: 13193.134292914
+    BenchmarkInput: System.Collections.Hashtable
+  - Technique: GetRandom
+    Time: 
+      value: 00:00:00.0129662
+      FileName: Random Number Generation
+      GroupName: (Min and Max)
+      BenchmarkInput: System.Collections.Hashtable
+    RelativeSpeed: 2.4467759892816
+    GroupName: (Min and Max)
+    ClockSpeed: 2095
+    FileName: Random Number Generation
+    Throughput: 7712.35982786013
     BenchmarkInput: System.Collections.Hashtable
   - Technique: [Random]::New().Next()
     Time: 
-      value: 00:00:00.0007860
+      value: 00:00:00.0009790
       FileName: Random Number Generation
       GroupName: (Random Byte Buffer)
       BenchmarkInput: System.Collections.Hashtable
     RelativeSpeed: 1
     GroupName: (Random Byte Buffer)
-    ClockSpeed: 2793
+    ClockSpeed: 2095
     FileName: Random Number Generation
-    Throughput: 12722.6463104326
+    Throughput: 10214.5045965271
     BenchmarkInput: System.Collections.Hashtable
   - Technique: QuickRandom
     Time: 
-      value: 00:00:00.0024473
+      value: 00:00:00.0029358
       FileName: Random Number Generation
       GroupName: (Random Byte Buffer)
       BenchmarkInput: System.Collections.Hashtable
-    RelativeSpeed: 3.11361323155216
+    RelativeSpeed: 2.99877425944842
     GroupName: (Random Byte Buffer)
-    ClockSpeed: 2793
+    ClockSpeed: 2095
     FileName: Random Number Generation
-    Throughput: 4086.13574142933
+    Throughput: 3406.22658219225
     BenchmarkInput: System.Collections.Hashtable
   - Technique: GetRandom
     Time: 
-      value: 00:00:00.6035190
+      value: 00:00:00.8385732
       FileName: Random Number Generation
       GroupName: (Random Byte Buffer)
       BenchmarkInput: System.Collections.Hashtable
-    RelativeSpeed: 767.835877862595
+    RelativeSpeed: 856.560980592441
     GroupName: (Random Byte Buffer)
-    ClockSpeed: 2793
+    ClockSpeed: 2095
     FileName: Random Number Generation
-    Throughput: 16.5694866275958
+    Throughput: 11.9250173986004
     BenchmarkInput: System.Collections.Hashtable
 FileName: Random Number Generation
-ClockSpeed: 2793
+ClockSpeed: 2095
 ---
 Random Number Generation
 ------------------------
-> @2793 Mhz
+> @2095 Mhz
 
 
 ### (AnyRandomNumber)
@@ -123,9 +123,9 @@ Random Number Generation
 
 |Technique             |Time           |RelativeSpeed|Throughput|
 |----------------------|---------------|-------------|----------|
-|QuickRandom           |00:00:00.003912|1x           |25562.37/s|
-|[Random]::New().Next()|00:00:00.004026|1.03x        |24833.61/s|
-|GetRandom             |00:00:00.009165|2.34x        |10910.6/s |
+|QuickRandom           |00:00:00.005022|1x           |19910.01/s|
+|[Random]::New().Next()|00:00:00.005221|1.04x        |19152.32/s|
+|GetRandom             |00:00:00.040616|8.09x        |2462.07/s |
 
 
 ### (Min and Max)
@@ -133,9 +133,9 @@ Random Number Generation
 
 |Technique             |Time           |RelativeSpeed|Throughput|
 |----------------------|---------------|-------------|----------|
-|[Random]::New().Next()|00:00:00.004110|1x           |24329.72/s|
-|GetRandom             |00:00:00.010588|2.58x        |9444.03/s |
-|QuickRandom           |00:00:00.037713|9.18x        |2651.58/s |
+|[Random]::New().Next()|00:00:00.005299|1x           |18870.42/s|
+|QuickRandom           |00:00:00.007579|1.43x        |13193.13/s|
+|GetRandom             |00:00:00.012966|2.45x        |7712.36/s |
 
 
 ### (Random Byte Buffer)
@@ -143,6 +143,6 @@ Random Number Generation
 
 |Technique             |Time           |RelativeSpeed|Throughput|
 |----------------------|---------------|-------------|----------|
-|[Random]::New().Next()|00:00:00.000786|1x           |12722.65/s|
-|QuickRandom           |00:00:00.002447|3.11x        |4086.14/s |
-|GetRandom             |00:00:00.603519|767.84x      |16.57/s   |
+|[Random]::New().Next()|00:00:00.000979|1x           |10214.5/s |
+|QuickRandom           |00:00:00.002935|3x           |3406.23/s |
+|GetRandom             |00:00:00.838573|856.56x      |11.93/s   |

@@ -4,17 +4,17 @@ layout: Benchmark
 Data: 
   - Technique: Quoted
     Time: 
-      Ticks: 51122
+      Ticks: 75299
       Days: 0
       Hours: 0
-      Milliseconds: 5
+      Milliseconds: 7
       Minutes: 0
       Seconds: 0
-      TotalDays: 5.91689814814815e-08
-      TotalHours: 1.42005555555556e-06
-      TotalMilliseconds: 5.1122
-      TotalMinutes: 8.52033333333333e-05
-      TotalSeconds: 0.0051122
+      TotalDays: 8.71516203703704e-08
+      TotalHours: 2.09163888888889e-06
+      TotalMilliseconds: 7.5299
+      TotalMinutes: 0.000125498333333333
+      TotalSeconds: 0.0075299
       FileName: ToString Or Not ToString
       GroupName: 
       BenchmarkInput: 
@@ -24,24 +24,24 @@ Data:
               
         FileName: ToString Or Not ToString
     RelativeSpeed: 1
-    ClockSpeed: 2594
+    ClockSpeed: 2394
     FileName: ToString Or Not ToString
-    Throughput: 19561.050037166
+    Throughput: 13280.3888497855
     BenchmarkInput: 
       FileName: ToString Or Not ToString
   - Technique: ToString
     Time: 
-      Ticks: 54943
+      Ticks: 84161
       Days: 0
       Hours: 0
-      Milliseconds: 5
+      Milliseconds: 8
       Minutes: 0
       Seconds: 0
-      TotalDays: 6.35914351851852e-08
-      TotalHours: 1.52619444444444e-06
-      TotalMilliseconds: 5.4943
-      TotalMinutes: 9.15716666666667e-05
-      TotalSeconds: 0.0054943
+      TotalDays: 9.74085648148148e-08
+      TotalHours: 2.33780555555556e-06
+      TotalMilliseconds: 8.4161
+      TotalMinutes: 0.000140268333333333
+      TotalSeconds: 0.0084161
       FileName: ToString Or Not ToString
       GroupName: 
       BenchmarkInput: 
@@ -50,18 +50,18 @@ Data:
                   $PWD.ToString()
               
         FileName: ToString Or Not ToString
-    RelativeSpeed: 1.07474277219201
-    ClockSpeed: 2594
+    RelativeSpeed: 1.1176908059868
+    ClockSpeed: 2394
     FileName: ToString Or Not ToString
-    Throughput: 18200.6807054584
+    Throughput: 11881.9880942479
     BenchmarkInput: 
       FileName: ToString Or Not ToString
 FileName: ToString Or Not ToString
-ClockSpeed: 2594
+ClockSpeed: 2394
 ---
 ToString Or Not ToString
 ------------------------
-> @2594 Mhz
+> @2394 Mhz
 
 
 ### 
@@ -69,5 +69,5 @@ ToString Or Not ToString
 
 |Technique|Time           |RelativeSpeed|Throughput|
 |---------|---------------|-------------|----------|
-|Quoted   |00:00:00.005112|1x           |19561.05/s|
-|ToString |00:00:00.005494|1.07x        |18200.68/s|
+|Quoted   |00:00:00.007529|1x           |13280.39/s|
+|ToString |00:00:00.008416|1.12x        |11881.99/s|

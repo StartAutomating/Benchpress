@@ -2,56 +2,56 @@
 layout: Benchmark
 
 Data: 
-  - Technique: Array
+  - Technique: Arraylist
     Time: 
-      value: 00:00:00.0156115
+      value: 00:00:00.0185847
       FileName: Best Way To Accumulate Pipeline Results
       GroupName: 
       BenchmarkInput: System.Collections.Hashtable
     RelativeSpeed: 1
-    ClockSpeed: 2793
+    ClockSpeed: 2095
     FileName: Best Way To Accumulate Pipeline Results
-    Throughput: 6405.53438170579
+    Throughput: 5380.77020344692
     BenchmarkInput: System.Collections.Hashtable
   - Technique: Queue
     Time: 
-      value: 00:00:00.0159480
+      value: 00:00:00.0261185
       FileName: Best Way To Accumulate Pipeline Results
       GroupName: 
       BenchmarkInput: System.Collections.Hashtable
-    RelativeSpeed: 1.02155462319444
-    ClockSpeed: 2793
+    RelativeSpeed: 1.40537646558728
+    ClockSpeed: 2095
     FileName: Best Way To Accumulate Pipeline Results
-    Throughput: 6270.37873087534
+    Throughput: 3828.70379233111
+    BenchmarkInput: System.Collections.Hashtable
+  - Technique: Array
+    Time: 
+      value: 00:00:00.0405484
+      FileName: Best Way To Accumulate Pipeline Results
+      GroupName: 
+      BenchmarkInput: System.Collections.Hashtable
+    RelativeSpeed: 2.18181622517447
+    ClockSpeed: 2095
+    FileName: Best Way To Accumulate Pipeline Results
+    Throughput: 2466.18855491215
     BenchmarkInput: System.Collections.Hashtable
   - Technique: Tee-Object
     Time: 
-      value: 00:00:00.0366924
+      value: 00:00:00.0538606
       FileName: Best Way To Accumulate Pipeline Results
       GroupName: 
       BenchmarkInput: System.Collections.Hashtable
-    RelativeSpeed: 2.35034429747302
-    ClockSpeed: 2793
+    RelativeSpeed: 2.89811511619773
+    ClockSpeed: 2095
     FileName: Best Way To Accumulate Pipeline Results
-    Throughput: 2725.36002005865
-    BenchmarkInput: System.Collections.Hashtable
-  - Technique: Arraylist
-    Time: 
-      value: 00:00:00.0428787
-      FileName: Best Way To Accumulate Pipeline Results
-      GroupName: 
-      BenchmarkInput: System.Collections.Hashtable
-    RelativeSpeed: 2.74660987092848
-    ClockSpeed: 2793
-    FileName: Best Way To Accumulate Pipeline Results
-    Throughput: 2332.1602567242
+    Throughput: 1856.64474588103
     BenchmarkInput: System.Collections.Hashtable
 FileName: Best Way To Accumulate Pipeline Results
-ClockSpeed: 2793
+ClockSpeed: 2095
 ---
 Best Way To Accumulate Pipeline Results
 ---------------------------------------
-> @2793 Mhz
+> @2095 Mhz
 
 
 ### 
@@ -59,7 +59,7 @@ Best Way To Accumulate Pipeline Results
 
 |Technique |Time           |RelativeSpeed|Throughput|
 |----------|---------------|-------------|----------|
-|Array     |00:00:00.015611|1x           |6405.53/s |
-|Queue     |00:00:00.015948|1.02x        |6270.38/s |
-|Tee-Object|00:00:00.036692|2.35x        |2725.36/s |
-|Arraylist |00:00:00.042878|2.75x        |2332.16/s |
+|Arraylist |00:00:00.018584|1x           |5380.77/s |
+|Queue     |00:00:00.026118|1.41x        |3828.7/s  |
+|Array     |00:00:00.040548|2.18x        |2466.19/s |
+|Tee-Object|00:00:00.053860|2.9x         |1856.64/s |

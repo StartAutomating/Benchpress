@@ -2,60 +2,60 @@
 layout: Benchmark
 
 Data: 
-  - Technique: Runspace
+  - Technique: ForEach-Object -Parallel
     Time: 
-      value: 00:00:01.0112342
+      value: 00:00:00.9673689
       FileName: multithreading
       GroupName: Multi-Threading
       BenchmarkInput: System.Collections.Hashtable
     RelativeSpeed: 1
     GroupName: Multi-Threading
-    ClockSpeed: 2095
+    ClockSpeed: 2594
     FileName: multithreading
-    Throughput: 2.96667181549042
+    Throughput: 3.1011954177977
     BenchmarkInput: System.Collections.Hashtable
-  - Technique: ForEach-Object -Parallel
+  - Technique: Runspace
     Time: 
-      value: 00:00:01.2653937
+      value: 00:00:01.0314670
       FileName: multithreading
       GroupName: Multi-Threading
       BenchmarkInput: System.Collections.Hashtable
-    RelativeSpeed: 1.25133594176305
+    RelativeSpeed: 1.06626024466985
     GroupName: Multi-Threading
-    ClockSpeed: 2095
+    ClockSpeed: 2594
     FileName: multithreading
-    Throughput: 2.37080364790816
+    Throughput: 2.9084788946229
     BenchmarkInput: System.Collections.Hashtable
   - Technique: Start-ThreadJob
     Time: 
-      value: 00:00:02.1797070
+      value: 00:00:01.9677871
       FileName: multithreading
       GroupName: Multi-Threading
       BenchmarkInput: System.Collections.Hashtable
-    RelativeSpeed: 2.15549177430906
+    RelativeSpeed: 2.03416411257381
     GroupName: Multi-Threading
-    ClockSpeed: 2095
+    ClockSpeed: 2594
     FileName: multithreading
-    Throughput: 1.37633177303188
+    Throughput: 1.52455517164433
     BenchmarkInput: System.Collections.Hashtable
   - Technique: Start-Job
     Time: 
-      value: 00:00:37.2174274
+      value: 00:00:29.5073941
       FileName: multithreading
       GroupName: Multi-Threading
       BenchmarkInput: System.Collections.Hashtable
-    RelativeSpeed: 36.8039643042136
+    RelativeSpeed: 30.5027317913569
     GroupName: Multi-Threading
-    ClockSpeed: 2095
+    ClockSpeed: 2594
     FileName: multithreading
-    Throughput: 0.0806073984576376
+    Throughput: 0.101669432069571
     BenchmarkInput: System.Collections.Hashtable
 FileName: multithreading
-ClockSpeed: 2095
+ClockSpeed: 2594
 ---
 multithreading
 --------------
-> @2095 Mhz
+> @2594 Mhz
 
 
 ### Multi-Threading
@@ -63,7 +63,7 @@ multithreading
 
 |Technique               |Time           |RelativeSpeed|Throughput|
 |------------------------|---------------|-------------|----------|
-|Runspace                |00:00:01.011234|1x           |2.97/s    |
-|ForEach-Object -Parallel|00:00:01.265393|1.25x        |2.37/s    |
-|Start-ThreadJob         |00:00:02.179707|2.16x        |1.38/s    |
-|Start-Job               |00:00:37.217427|36.8x        |0.08/s    |
+|ForEach-Object -Parallel|00:00:00.967368|1x           |3.1/s     |
+|Runspace                |00:00:01.031467|1.07x        |2.91/s    |
+|Start-ThreadJob         |00:00:01.967787|2.03x        |1.52/s    |
+|Start-Job               |00:00:29.507394|30.5x        |0.1/s     |

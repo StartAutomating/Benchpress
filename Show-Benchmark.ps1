@@ -18,7 +18,7 @@ function Show-Benchmark {
             (?<IsBenchmarkOutput>\.benchmarkOutput\.clixml)
         )
     ", Options="IgnoreCase,IgnorePatternWhitespace")]
-    [Alias('Fullname')]
+    [Alias('Fullname','FilePath')]
     [string[]]
     $BenchmarkPath,
 

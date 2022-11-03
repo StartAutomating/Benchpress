@@ -4,32 +4,32 @@ layout: Benchmark
 Data: 
   - Technique: DotNet
     Time: 
-      value: 00:00:00.0144360
+      value: 00:00:00.0168430
       FileName: Ways To Hash A File
       GroupName: 
       BenchmarkInput: System.Collections.Hashtable
     RelativeSpeed: 1
-    ClockSpeed: 2793
+    ClockSpeed: 2095
     FileName: Ways To Hash A File
-    Throughput: 6927.12662787476
+    Throughput: 5937.18458706881
     BenchmarkInput: System.Collections.Hashtable
   - Technique: GetFileHash
     Time: 
-      value: 00:00:00.0476467
+      value: 00:00:00.0301680
       FileName: Ways To Hash A File
       GroupName: 
       BenchmarkInput: System.Collections.Hashtable
-    RelativeSpeed: 3.3005472430036
-    ClockSpeed: 2793
+    RelativeSpeed: 1.79112984622692
+    ClockSpeed: 2095
     FileName: Ways To Hash A File
-    Throughput: 2098.78123773525
+    Throughput: 3314.77061787324
     BenchmarkInput: System.Collections.Hashtable
 FileName: Ways To Hash A File
-ClockSpeed: 2793
+ClockSpeed: 2095
 ---
 Ways To Hash A File
 -------------------
-> @2793 Mhz
+> @2095 Mhz
 
 
 ### 
@@ -37,5 +37,5 @@ Ways To Hash A File
 
 |Technique  |Time           |RelativeSpeed|Throughput|
 |-----------|---------------|-------------|----------|
-|DotNet     |00:00:00.014436|1x           |6927.13/s |
-|GetFileHash|00:00:00.047646|3.3x         |2098.78/s |
+|DotNet     |00:00:00.016843|1x           |5937.18/s |
+|GetFileHash|00:00:00.030168|1.79x        |3314.77/s |

@@ -2,45 +2,45 @@
 layout: Benchmark
 
 Data: 
-  - Technique: AddStrings
+  - Technique: JoinStrings
     Time: 
-      value: 00:00:00.0048494
+      value: 00:00:00.0060146
       FileName: What Is The Fastest Way To Concatenate
       GroupName: 
       BenchmarkInput: System.Collections.Hashtable
     RelativeSpeed: 1
-    ClockSpeed: 2793
+    ClockSpeed: 2095
     FileName: What Is The Fastest Way To Concatenate
-    Throughput: 20621.1077659092
+    Throughput: 16626.2095567453
     BenchmarkInput: System.Collections.Hashtable
-  - Technique: JoinStrings
+  - Technique: AddStrings
     Time: 
-      value: 00:00:00.0052009
+      value: 00:00:00.0065790
       FileName: What Is The Fastest Way To Concatenate
       GroupName: 
       BenchmarkInput: System.Collections.Hashtable
-    RelativeSpeed: 1.07248319379717
-    ClockSpeed: 2793
+    RelativeSpeed: 1.09383832673827
+    ClockSpeed: 2095
     FileName: What Is The Fastest Way To Concatenate
-    Throughput: 19227.4414043723
+    Throughput: 15199.8784009728
     BenchmarkInput: System.Collections.Hashtable
   - Technique: StringBuilder
     Time: 
-      value: 00:00:00.0089949
+      value: 00:00:00.0441488
       FileName: What Is The Fastest Way To Concatenate
       GroupName: 
       BenchmarkInput: System.Collections.Hashtable
-    RelativeSpeed: 1.85484802243577
-    ClockSpeed: 2793
+    RelativeSpeed: 7.34027200478835
+    ClockSpeed: 2095
     FileName: What Is The Fastest Way To Concatenate
-    Throughput: 11117.4109773316
+    Throughput: 2265.0672271953
     BenchmarkInput: System.Collections.Hashtable
 FileName: What Is The Fastest Way To Concatenate
-ClockSpeed: 2793
+ClockSpeed: 2095
 ---
 What Is The Fastest Way To Concatenate
 --------------------------------------
-> @2793 Mhz
+> @2095 Mhz
 
 
 ### 
@@ -48,6 +48,6 @@ What Is The Fastest Way To Concatenate
 
 |Technique    |Time           |RelativeSpeed|Throughput|
 |-------------|---------------|-------------|----------|
-|AddStrings   |00:00:00.004849|1x           |20621.11/s|
-|JoinStrings  |00:00:00.005200|1.07x        |19227.44/s|
-|StringBuilder|00:00:00.008994|1.85x        |11117.41/s|
+|JoinStrings  |00:00:00.006014|1x           |16626.21/s|
+|AddStrings   |00:00:00.006579|1.09x        |15199.88/s|
+|StringBuilder|00:00:00.044148|7.34x        |2265.07/s |

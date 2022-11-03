@@ -2,129 +2,129 @@
 layout: Benchmark
 
 Data: 
-  - Technique: SingleQuote
+  - Technique: SingleHerestring
     Time: 
-      Ticks: 5046470
+      Ticks: 5746843
       Days: 0
       Hours: 0
-      Milliseconds: 504
+      Milliseconds: 574
       Minutes: 0
       Seconds: 0
-      TotalDays: 5.84082175925926e-06
-      TotalHours: 0.000140179722222222
-      TotalMilliseconds: 504.647
-      TotalMinutes: 0.00841078333333333
-      TotalSeconds: 0.504647
+      TotalDays: 6.65143865740741e-06
+      TotalHours: 0.000159634527777778
+      TotalMilliseconds: 574.6843
+      TotalMinutes: 0.00957807166666667
+      TotalSeconds: 0.5746843
       FileName: Whats In A Quote
       GroupName: 
       BenchmarkInput: 
-        FileName: Whats In A Quote
         ScriptBlock: |
-          
-                  'that which we call a single quotation'
-              
+          @'
+          that which we call a singly quoted herestring
+          '@
         RepeatCount: 10240
+        FileName: Whats In A Quote
     RelativeSpeed: 1
-    ClockSpeed: 2594
+    ClockSpeed: 2394
     FileName: Whats In A Quote
-    Throughput: 20291.4116204
+    Throughput: 17818.4787717361
     BenchmarkInput: 
+      FileName: Whats In A Quote
       RepeatCount: 10240
-      FileName: Whats In A Quote
-  - Technique: DoubleQuote
-    Time: 
-      Ticks: 5082605
-      Days: 0
-      Hours: 0
-      Milliseconds: 508
-      Minutes: 0
-      Seconds: 0
-      TotalDays: 5.88264467592593e-06
-      TotalHours: 0.000141183472222222
-      TotalMilliseconds: 508.2605
-      TotalMinutes: 0.00847100833333333
-      TotalSeconds: 0.5082605
-      FileName: Whats In A Quote
-      GroupName: 
-      BenchmarkInput: 
-        FileName: Whats In A Quote
-        ScriptBlock: |
-          
-                  "that which we call a double quotation"
-              
-        RepeatCount: 10240
-    RelativeSpeed: 1.00716045077054
-    ClockSpeed: 2594
-    FileName: Whats In A Quote
-    Throughput: 20147.1489521613
-    BenchmarkInput: 
-      RepeatCount: 10240
-      FileName: Whats In A Quote
   - Technique: DoubleHerestring
     Time: 
-      Ticks: 5241892
+      Ticks: 5832242
       Days: 0
       Hours: 0
-      Milliseconds: 524
+      Milliseconds: 583
       Minutes: 0
       Seconds: 0
-      TotalDays: 6.06700462962963e-06
-      TotalHours: 0.000145608111111111
-      TotalMilliseconds: 524.1892
-      TotalMinutes: 0.00873648666666667
-      TotalSeconds: 0.5241892
+      TotalDays: 6.75028009259259e-06
+      TotalHours: 0.000162006722222222
+      TotalMilliseconds: 583.2242
+      TotalMinutes: 0.00972040333333333
+      TotalSeconds: 0.5832242
       FileName: Whats In A Quote
       GroupName: 
       BenchmarkInput: 
-        FileName: Whats In A Quote
         ScriptBlock: |
           @"
           that which we call a doubly quoted herestring
           "@
               
         RepeatCount: 10240
-    RelativeSpeed: 1.03872449454767
-    ClockSpeed: 2594
+        FileName: Whats In A Quote
+    RelativeSpeed: 1.01486015887332
+    ClockSpeed: 2394
     FileName: Whats In A Quote
-    Throughput: 19534.9312805376
+    Throughput: 17557.570484901
     BenchmarkInput: 
-      RepeatCount: 10240
       FileName: Whats In A Quote
-  - Technique: SingleHerestring
+      RepeatCount: 10240
+  - Technique: DoubleQuote
     Time: 
-      Ticks: 5334592
+      Ticks: 6078456
       Days: 0
       Hours: 0
-      Milliseconds: 533
+      Milliseconds: 607
       Minutes: 0
       Seconds: 0
-      TotalDays: 6.1742962962963e-06
-      TotalHours: 0.000148183111111111
-      TotalMilliseconds: 533.4592
-      TotalMinutes: 0.00889098666666667
-      TotalSeconds: 0.5334592
+      TotalDays: 7.03525e-06
+      TotalHours: 0.000168846
+      TotalMilliseconds: 607.8456
+      TotalMinutes: 0.01013076
+      TotalSeconds: 0.6078456
       FileName: Whats In A Quote
       GroupName: 
       BenchmarkInput: 
-        FileName: Whats In A Quote
         ScriptBlock: |
-          @'
-          that which we call a singly quoted herestring
-          '@
+          
+                  "that which we call a double quotation"
+              
         RepeatCount: 10240
-    RelativeSpeed: 1.057093770497
-    ClockSpeed: 2594
+        FileName: Whats In A Quote
+    RelativeSpeed: 1.0577035078216
+    ClockSpeed: 2394
     FileName: Whats In A Quote
-    Throughput: 19195.4698691109
+    Throughput: 16846.383357879
     BenchmarkInput: 
-      RepeatCount: 10240
       FileName: Whats In A Quote
+      RepeatCount: 10240
+  - Technique: SingleQuote
+    Time: 
+      Ticks: 6120250
+      Days: 0
+      Hours: 0
+      Milliseconds: 612
+      Minutes: 0
+      Seconds: 0
+      TotalDays: 7.08362268518519e-06
+      TotalHours: 0.000170006944444444
+      TotalMilliseconds: 612.025
+      TotalMinutes: 0.0102004166666667
+      TotalSeconds: 0.612025
+      FileName: Whats In A Quote
+      GroupName: 
+      BenchmarkInput: 
+        ScriptBlock: |
+          
+                  'that which we call a single quotation'
+              
+        RepeatCount: 10240
+        FileName: Whats In A Quote
+    RelativeSpeed: 1.06497602248748
+    ClockSpeed: 2394
+    FileName: Whats In A Quote
+    Throughput: 16731.3426739104
+    BenchmarkInput: 
+      FileName: Whats In A Quote
+      RepeatCount: 10240
 FileName: Whats In A Quote
-ClockSpeed: 2594
+ClockSpeed: 2394
 ---
 Whats In A Quote
 ----------------
-> @2594 Mhz
+> @2394 Mhz
 
 
 ### 
@@ -132,7 +132,7 @@ Whats In A Quote
 
 |Technique       |Time           |RelativeSpeed|Throughput|
 |----------------|---------------|-------------|----------|
-|SingleQuote     |00:00:00.504647|1x           |20291.41/s|
-|DoubleQuote     |00:00:00.508260|1.01x        |20147.15/s|
-|DoubleHerestring|00:00:00.524189|1.04x        |19534.93/s|
-|SingleHerestring|00:00:00.533459|1.06x        |19195.47/s|
+|SingleHerestring|00:00:00.574684|1x           |17818.48/s|
+|DoubleHerestring|00:00:00.583224|1.01x        |17557.57/s|
+|DoubleQuote     |00:00:00.607845|1.06x        |16846.38/s|
+|SingleQuote     |00:00:00.612025|1.06x        |16731.34/s|

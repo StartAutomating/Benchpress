@@ -4,17 +4,17 @@ layout: Benchmark
 Data: 
   - Technique: not using
     Time: 
-      Ticks: 48494
+      Ticks: 41893
       Days: 0
       Hours: 0
       Milliseconds: 4
       Minutes: 0
       Seconds: 0
-      TotalDays: 5.61273148148148e-08
-      TotalHours: 1.34705555555556e-06
-      TotalMilliseconds: 4.8494
-      TotalMinutes: 8.08233333333333e-05
-      TotalSeconds: 0.0048494
+      TotalDays: 4.84872685185185e-08
+      TotalHours: 1.16369444444444e-06
+      TotalMilliseconds: 4.1893
+      TotalMinutes: 6.98216666666667e-05
+      TotalSeconds: 0.0041893
       FileName: Is Using Faster
       GroupName: 
       BenchmarkInput: 
@@ -24,24 +24,24 @@ Data:
           
         FileName: Is Using Faster
     RelativeSpeed: 1
-    ClockSpeed: 2095
+    ClockSpeed: 2793
     FileName: Is Using Faster
-    Throughput: 20621.1077659092
+    Throughput: 23870.3363330389
     BenchmarkInput: 
       FileName: Is Using Faster
   - Technique: using
     Time: 
-      Ticks: 51267
+      Ticks: 43150
       Days: 0
       Hours: 0
-      Milliseconds: 5
+      Milliseconds: 4
       Minutes: 0
       Seconds: 0
-      TotalDays: 5.93368055555556e-08
-      TotalHours: 1.42408333333333e-06
-      TotalMilliseconds: 5.1267
-      TotalMinutes: 8.5445e-05
-      TotalSeconds: 0.0051267
+      TotalDays: 4.99421296296296e-08
+      TotalHours: 1.19861111111111e-06
+      TotalMilliseconds: 4.315
+      TotalMinutes: 7.19166666666667e-05
+      TotalSeconds: 0.004315
       FileName: Is Using Faster
       GroupName: 
       BenchmarkInput: 
@@ -49,18 +49,18 @@ Data:
           using namespace System.Management.Automation.Language
           $scriptBlockAst -is [StringConstantExpressionAst]
         FileName: Is Using Faster
-    RelativeSpeed: 1.05718233183487
-    ClockSpeed: 2095
+    RelativeSpeed: 1.03000501277063
+    ClockSpeed: 2793
     FileName: Is Using Faster
-    Throughput: 19505.724930267
+    Throughput: 23174.9710312862
     BenchmarkInput: 
       FileName: Is Using Faster
 FileName: Is Using Faster
-ClockSpeed: 2095
+ClockSpeed: 2793
 ---
 Is Using Faster
 ---------------
-> @2095 Mhz
+> @2793 Mhz
 
 
 ### 
@@ -68,5 +68,5 @@ Is Using Faster
 
 |Technique|Time           |RelativeSpeed|Throughput|
 |---------|---------------|-------------|----------|
-|not using|00:00:00.004849|1x           |20621.11/s|
-|using    |00:00:00.005126|1.06x        |19505.72/s|
+|not using|00:00:00.004189|1x           |23870.34/s|
+|using    |00:00:00.004315|1.03x        |23174.97/s|

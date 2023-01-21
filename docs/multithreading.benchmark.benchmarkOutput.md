@@ -4,20 +4,22 @@ layout: Benchmark
 Data: 
   - Technique: Runspace
     Time: 
-      Ticks: 8587227
+      Ticks: 8310541
       Days: 0
       Hours: 0
-      Milliseconds: 858
+      Milliseconds: 831
       Minutes: 0
       Seconds: 0
-      TotalDays: 9.93892013888889e-06
-      TotalHours: 0.000238534083333333
-      TotalMilliseconds: 858.7227
-      TotalMinutes: 0.014312045
-      TotalSeconds: 0.8587227
+      TotalDays: 9.61868171296296e-06
+      TotalHours: 0.000230848361111111
+      TotalMilliseconds: 831.0541
+      TotalMinutes: 0.0138509016666667
+      TotalSeconds: 0.8310541
       FileName: multithreading
       GroupName: Multi-Threading
       BenchmarkInput: 
+        GroupName: Multi-Threading
+        RepeatCount: 3
         ScriptBlock: |
           
                   $RunspacePool = [runspacefactory]::CreateRunspacePool(1, $threads)
@@ -49,33 +51,33 @@ Data:
                   $thisTest = & $resultObject @hash        
               
         FileName: multithreading
-        RepeatCount: 3
-        GroupName: Multi-Threading
     RelativeSpeed: 1
     GroupName: Multi-Threading
-    ClockSpeed: 2295
+    ClockSpeed: 2095
     FileName: multithreading
-    Throughput: 3.49356084333161
+    Throughput: 3.60987329224415
     BenchmarkInput: 
       GroupName: Multi-Threading
       RepeatCount: 3
       FileName: multithreading
   - Technique: ForEach-Object -Parallel
     Time: 
-      Ticks: 11705888
+      Ticks: 11421200
       Days: 0
       Hours: 0
-      Milliseconds: 170
+      Milliseconds: 142
       Minutes: 0
       Seconds: 1
-      TotalDays: 1.35484814814815e-05
-      TotalHours: 0.000325163555555556
-      TotalMilliseconds: 1170.5888
-      TotalMinutes: 0.0195098133333333
-      TotalSeconds: 1.1705888
+      TotalDays: 1.32189814814815e-05
+      TotalHours: 0.000317255555555556
+      TotalMilliseconds: 1142.12
+      TotalMinutes: 0.0190353333333333
+      TotalSeconds: 1.14212
       FileName: multithreading
       GroupName: Multi-Threading
       BenchmarkInput: 
+        GroupName: Multi-Threading
+        RepeatCount: 3
         ScriptBlock: |
           
                   $resultParallel = $chunks | ForEach-Object -Parallel {
@@ -93,33 +95,33 @@ Data:
                   $thisTest = & $resultObject @hash        
               
         FileName: multithreading
-        RepeatCount: 3
-        GroupName: Multi-Threading
-    RelativeSpeed: 1.36317439844085
+    RelativeSpeed: 1.3743028281793
     GroupName: Multi-Threading
-    ClockSpeed: 2295
+    ClockSpeed: 2095
     FileName: multithreading
-    Throughput: 2.56281283401994
+    Throughput: 2.62669421777046
     BenchmarkInput: 
       GroupName: Multi-Threading
       RepeatCount: 3
       FileName: multithreading
   - Technique: Start-ThreadJob
     Time: 
-      Ticks: 23284679
+      Ticks: 23280864
       Days: 0
       Hours: 0
       Milliseconds: 328
       Minutes: 0
       Seconds: 2
-      TotalDays: 2.69498599537037e-05
-      TotalHours: 0.000646796638888889
-      TotalMilliseconds: 2328.4679
-      TotalMinutes: 0.0388077983333333
-      TotalSeconds: 2.3284679
+      TotalDays: 2.69454444444444e-05
+      TotalHours: 0.000646690666666667
+      TotalMilliseconds: 2328.0864
+      TotalMinutes: 0.03880144
+      TotalSeconds: 2.3280864
       FileName: multithreading
       GroupName: Multi-Threading
       BenchmarkInput: 
+        GroupName: Multi-Threading
+        RepeatCount: 3
         ScriptBlock: |
           
                   $jobs = foreach($chunk in $chunks) {
@@ -134,33 +136,33 @@ Data:
                   $thisTest = & $resultObject @hash        
               
         FileName: multithreading
-        RepeatCount: 3
-        GroupName: Multi-Threading
-    RelativeSpeed: 2.71154809346486
+    RelativeSpeed: 2.80136563913228
     GroupName: Multi-Threading
-    ClockSpeed: 2295
+    ClockSpeed: 2095
     FileName: multithreading
-    Throughput: 1.28840084074167
+    Throughput: 1.28861196904032
     BenchmarkInput: 
       GroupName: Multi-Threading
       RepeatCount: 3
       FileName: multithreading
   - Technique: Start-Job
     Time: 
-      Ticks: 381742469
+      Ticks: 343294892
       Days: 0
       Hours: 0
-      Milliseconds: 174
+      Milliseconds: 329
       Minutes: 0
-      Seconds: 38
-      TotalDays: 0.000441831561342593
-      TotalHours: 0.0106039574722222
-      TotalMilliseconds: 38174.2469
-      TotalMinutes: 0.636237448333333
-      TotalSeconds: 38.1742469
+      Seconds: 34
+      TotalDays: 0.000397332050925926
+      TotalHours: 0.00953596922222222
+      TotalMilliseconds: 34329.4892
+      TotalMinutes: 0.572158153333333
+      TotalSeconds: 34.3294892
       FileName: multithreading
       GroupName: Multi-Threading
       BenchmarkInput: 
+        GroupName: Multi-Threading
+        RepeatCount: 3
         ScriptBlock: |
           
                   $jobs = foreach($chunk in $chunks) {
@@ -175,23 +177,21 @@ Data:
                   $thisTest = & $resultObject @hash        
               
         FileName: multithreading
-        RepeatCount: 3
-        GroupName: Multi-Threading
-    RelativeSpeed: 44.4546847311711
+    RelativeSpeed: 41.3083687331547
     GroupName: Multi-Threading
-    ClockSpeed: 2295
+    ClockSpeed: 2095
     FileName: multithreading
-    Throughput: 0.0785870120203995
+    Throughput: 0.0873884252259716
     BenchmarkInput: 
       GroupName: Multi-Threading
       RepeatCount: 3
       FileName: multithreading
 FileName: multithreading
-ClockSpeed: 2295
+ClockSpeed: 2095
 ---
 multithreading
 --------------
-> @2295 Mhz
+> @2095 Mhz
 
 
 ### Multi-Threading
@@ -199,7 +199,7 @@ multithreading
 
 |Technique               |Time           |RelativeSpeed|Throughput|
 |------------------------|---------------|-------------|----------|
-|Runspace                |00:00:00.858722|1x           |3.49/s    |
-|ForEach-Object -Parallel|00:00:01.170588|1.36x        |2.56/s    |
-|Start-ThreadJob         |00:00:02.328467|2.71x        |1.29/s    |
-|Start-Job               |00:00:38.174246|44.45x       |0.08/s    |
+|Runspace                |00:00:00.831054|1x           |3.61/s    |
+|ForEach-Object -Parallel|00:00:01.142120|1.37x        |2.63/s    |
+|Start-ThreadJob         |00:00:02.328086|2.8x         |1.29/s    |
+|Start-Job               |00:00:34.329489|41.31x       |0.09/s    |

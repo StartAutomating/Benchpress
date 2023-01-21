@@ -4,55 +4,55 @@ layout: Benchmark
 Data: 
   - Technique: ArrayList.Sort
     Time: 
-      Ticks: 183104
+      Ticks: 178316
       Days: 0
       Hours: 0
-      Milliseconds: 18
+      Milliseconds: 17
       Minutes: 0
       Seconds: 0
-      TotalDays: 2.11925925925926e-07
-      TotalHours: 5.08622222222222e-06
-      TotalMilliseconds: 18.3104
-      TotalMinutes: 0.000305173333333333
-      TotalSeconds: 0.0183104
+      TotalDays: 2.06384259259259e-07
+      TotalHours: 4.95322222222222e-06
+      TotalMilliseconds: 17.8316
+      TotalMinutes: 0.000297193333333333
+      TotalSeconds: 0.0178316
       FileName: What Is The Fastest Way To Sort
       GroupName: 
       BenchmarkInput: 
+        FileName: What Is The Fastest Way To Sort
         ScriptBlock: |
            
                   $al = [collections.arraylist]::new($arr) 
                   $al.Sort()
                   $al
               
-        FileName: What Is The Fastest Way To Sort
     RelativeSpeed: 1
     ClockSpeed: 2793
     FileName: What Is The Fastest Way To Sort
-    Throughput: 5461.37714085984
+    Throughput: 5608.02171426008
     BenchmarkInput: 
       FileName: What Is The Fastest Way To Sort
   - Technique: Sort-Object
     Time: 
-      Ticks: 545600
+      Ticks: 848829
       Days: 0
       Hours: 0
-      Milliseconds: 54
+      Milliseconds: 84
       Minutes: 0
       Seconds: 0
-      TotalDays: 6.31481481481481e-07
-      TotalHours: 1.51555555555556e-05
-      TotalMilliseconds: 54.56
-      TotalMinutes: 0.000909333333333333
-      TotalSeconds: 0.05456
+      TotalDays: 9.82440972222222e-07
+      TotalHours: 2.35785833333333e-05
+      TotalMilliseconds: 84.8829
+      TotalMinutes: 0.001414715
+      TotalSeconds: 0.0848829
       FileName: What Is The Fastest Way To Sort
       GroupName: 
       BenchmarkInput: 
-        ScriptBlock: $arr | Sort-Object
         FileName: What Is The Fastest Way To Sort
-    RelativeSpeed: 2.97972736805313
+        ScriptBlock: $arr | Sort-Object
+    RelativeSpeed: 4.76025146369367
     ClockSpeed: 2793
     FileName: What Is The Fastest Way To Sort
-    Throughput: 1832.84457478006
+    Throughput: 1178.09358539824
     BenchmarkInput: 
       FileName: What Is The Fastest Way To Sort
 FileName: What Is The Fastest Way To Sort
@@ -68,5 +68,5 @@ What Is The Fastest Way To Sort
 
 |Technique     |Time           |RelativeSpeed|Throughput|
 |--------------|---------------|-------------|----------|
-|ArrayList.Sort|00:00:00.018310|1x           |5461.38/s |
-|Sort-Object   |00:00:00.054560|2.98x        |1832.84/s |
+|ArrayList.Sort|00:00:00.017831|1x           |5608.02/s |
+|Sort-Object   |00:00:00.084882|4.76x        |1178.09/s |

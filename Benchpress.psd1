@@ -1,6 +1,6 @@
 @{
     FormatsToProcess='Benchpress.format.ps1xml'
-    ModuleVersion='1.3.6'
+    ModuleVersion='1.3.7'
     CompanyName='Start-Automating'
     Description='Easy Benchmarking with PowerShell'
     PowerShellVersion='3.0'
@@ -16,6 +16,14 @@
             ProjectURI   = 'https://github.com/StartAutomating/Benchpress'
             LicenseURI   = 'https://github.com/StartAutomating/Benchpress/blob/master/LICENSE'
             ReleaseNotes = @'
+### 1.3.7:
+
+* New Benchmarks:
+  * What is the Fastest Way to Read a File (Fixes #37)
+  * Which Random Is Faster (Fixes #38)
+
+---
+
 ### 1.3.6:
 * New Benchmarks:
     * Checking if a File Exists (Fixes #29)

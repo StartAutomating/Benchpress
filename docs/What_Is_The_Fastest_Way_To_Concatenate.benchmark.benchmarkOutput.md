@@ -2,46 +2,19 @@
 layout: Benchmark
 
 Data: 
-  - Technique: AddStrings
-    Time: 
-      Ticks: 71899
-      Days: 0
-      Hours: 0
-      Milliseconds: 7
-      Minutes: 0
-      Seconds: 0
-      TotalDays: 8.32164351851852e-08
-      TotalHours: 1.99719444444444e-06
-      TotalMilliseconds: 7.1899
-      TotalMinutes: 0.000119831666666667
-      TotalSeconds: 0.0071899
-      FileName: What Is The Fastest Way To Concatenate
-      GroupName: 
-      BenchmarkInput: 
-        FileName: What Is The Fastest Way To Concatenate
-        ScriptBlock: |
-          
-                      'words ' + 'in ' + 'a ' + 'sentance.'
-                  
-    RelativeSpeed: 1
-    ClockSpeed: 2295
-    FileName: What Is The Fastest Way To Concatenate
-    Throughput: 13908.3992823266
-    BenchmarkInput: 
-      FileName: What Is The Fastest Way To Concatenate
   - Technique: JoinStrings
     Time: 
-      Ticks: 75269
+      Ticks: 47945
       Days: 0
       Hours: 0
-      Milliseconds: 7
+      Milliseconds: 4
       Minutes: 0
       Seconds: 0
-      TotalDays: 8.71168981481482e-08
-      TotalHours: 2.09080555555556e-06
-      TotalMilliseconds: 7.5269
-      TotalMinutes: 0.000125448333333333
-      TotalSeconds: 0.0075269
+      TotalDays: 5.54918981481481e-08
+      TotalHours: 1.33180555555556e-06
+      TotalMilliseconds: 4.7945
+      TotalMinutes: 7.99083333333333e-05
+      TotalSeconds: 0.0047945
       FileName: What Is The Fastest Way To Concatenate
       GroupName: 
       BenchmarkInput: 
@@ -50,25 +23,52 @@ Data:
           
                       'words', 'in', 'a', 'sentance.' -join ' '
                   
-    RelativeSpeed: 1.04687130558144
-    ClockSpeed: 2295
+    RelativeSpeed: 1
+    ClockSpeed: 2793
     FileName: What Is The Fastest Way To Concatenate
-    Throughput: 13285.6820204865
+    Throughput: 20857.2322452811
+    BenchmarkInput: 
+      FileName: What Is The Fastest Way To Concatenate
+  - Technique: AddStrings
+    Time: 
+      Ticks: 48420
+      Days: 0
+      Hours: 0
+      Milliseconds: 4
+      Minutes: 0
+      Seconds: 0
+      TotalDays: 5.60416666666667e-08
+      TotalHours: 1.345e-06
+      TotalMilliseconds: 4.842
+      TotalMinutes: 8.07e-05
+      TotalSeconds: 0.004842
+      FileName: What Is The Fastest Way To Concatenate
+      GroupName: 
+      BenchmarkInput: 
+        FileName: What Is The Fastest Way To Concatenate
+        ScriptBlock: |
+          
+                      'words ' + 'in ' + 'a ' + 'sentance.'
+                  
+    RelativeSpeed: 1.00990718531651
+    ClockSpeed: 2793
+    FileName: What Is The Fastest Way To Concatenate
+    Throughput: 20652.6228831062
     BenchmarkInput: 
       FileName: What Is The Fastest Way To Concatenate
   - Technique: StringBuilder
     Time: 
-      Ticks: 139457
+      Ticks: 87544
       Days: 0
       Hours: 0
-      Milliseconds: 13
+      Milliseconds: 8
       Minutes: 0
       Seconds: 0
-      TotalDays: 1.61408564814815e-07
-      TotalHours: 3.87380555555556e-06
-      TotalMilliseconds: 13.9457
-      TotalMinutes: 0.000232428333333333
-      TotalSeconds: 0.0139457
+      TotalDays: 1.01324074074074e-07
+      TotalHours: 2.43177777777778e-06
+      TotalMilliseconds: 8.7544
+      TotalMinutes: 0.000145906666666667
+      TotalSeconds: 0.0087544
       FileName: What Is The Fastest Way To Concatenate
       GroupName: 
       BenchmarkInput: 
@@ -82,18 +82,18 @@ Data:
                       $_ = $sb.Append('sentance.')
                       $sb.ToString()
                   
-    RelativeSpeed: 1.93962363871542
-    ClockSpeed: 2295
+    RelativeSpeed: 1.82592553968088
+    ClockSpeed: 2793
     FileName: What Is The Fastest Way To Concatenate
-    Throughput: 7170.66909513327
+    Throughput: 11422.8273782327
     BenchmarkInput: 
       FileName: What Is The Fastest Way To Concatenate
 FileName: What Is The Fastest Way To Concatenate
-ClockSpeed: 2295
+ClockSpeed: 2793
 ---
 What Is The Fastest Way To Concatenate
 --------------------------------------
-> @2295 Mhz
+> @2793 Mhz
 
 
 ### 
@@ -101,6 +101,6 @@ What Is The Fastest Way To Concatenate
 
 |Technique    |Time           |RelativeSpeed|Throughput|
 |-------------|---------------|-------------|----------|
-|AddStrings   |00:00:00.007189|1x           |13908.4/s |
-|JoinStrings  |00:00:00.007526|1.05x        |13285.68/s|
-|StringBuilder|00:00:00.013945|1.94x        |7170.67/s |
+|JoinStrings  |00:00:00.004794|1x           |20857.23/s|
+|AddStrings   |00:00:00.004842|1.01x        |20652.62/s|
+|StringBuilder|00:00:00.008754|1.83x        |11422.83/s|

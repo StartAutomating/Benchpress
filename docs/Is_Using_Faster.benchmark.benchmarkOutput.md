@@ -2,45 +2,19 @@
 layout: Benchmark
 
 Data: 
-  - Technique: using
-    Time: 
-      Ticks: 66682
-      Days: 0
-      Hours: 0
-      Milliseconds: 6
-      Minutes: 0
-      Seconds: 0
-      TotalDays: 7.71782407407407e-08
-      TotalHours: 1.85227777777778e-06
-      TotalMilliseconds: 6.6682
-      TotalMinutes: 0.000111136666666667
-      TotalSeconds: 0.0066682
-      FileName: Is Using Faster
-      GroupName: 
-      BenchmarkInput: 
-        FileName: Is Using Faster
-        ScriptBlock: |
-          using namespace System.Management.Automation.Language
-          $scriptBlockAst -is [StringConstantExpressionAst]
-    RelativeSpeed: 1
-    ClockSpeed: 2295
-    FileName: Is Using Faster
-    Throughput: 14996.5507933175
-    BenchmarkInput: 
-      FileName: Is Using Faster
   - Technique: not using
     Time: 
-      Ticks: 68131
+      Ticks: 40567
       Days: 0
       Hours: 0
-      Milliseconds: 6
+      Milliseconds: 4
       Minutes: 0
       Seconds: 0
-      TotalDays: 7.88553240740741e-08
-      TotalHours: 1.89252777777778e-06
-      TotalMilliseconds: 6.8131
-      TotalMinutes: 0.000113551666666667
-      TotalSeconds: 0.0068131
+      TotalDays: 4.69525462962963e-08
+      TotalHours: 1.12686111111111e-06
+      TotalMilliseconds: 4.0567
+      TotalMinutes: 6.76116666666667e-05
+      TotalSeconds: 0.0040567
       FileName: Is Using Faster
       GroupName: 
       BenchmarkInput: 
@@ -49,18 +23,44 @@ Data:
           
               $scriptBlockAst -is [Management.Automation.Language.StringConstantExpressionAst]
           
-    RelativeSpeed: 1.02173000209952
-    ClockSpeed: 2295
+    RelativeSpeed: 1
+    ClockSpeed: 2793
     FileName: Is Using Faster
-    Throughput: 14677.6063759522
+    Throughput: 24650.5780560554
+    BenchmarkInput: 
+      FileName: Is Using Faster
+  - Technique: using
+    Time: 
+      Ticks: 42015
+      Days: 0
+      Hours: 0
+      Milliseconds: 4
+      Minutes: 0
+      Seconds: 0
+      TotalDays: 4.86284722222222e-08
+      TotalHours: 1.16708333333333e-06
+      TotalMilliseconds: 4.2015
+      TotalMinutes: 7.0025e-05
+      TotalSeconds: 0.0042015
+      FileName: Is Using Faster
+      GroupName: 
+      BenchmarkInput: 
+        FileName: Is Using Faster
+        ScriptBlock: |
+          using namespace System.Management.Automation.Language
+          $scriptBlockAst -is [StringConstantExpressionAst]
+    RelativeSpeed: 1.03569403702517
+    ClockSpeed: 2793
+    FileName: Is Using Faster
+    Throughput: 23801.0234440081
     BenchmarkInput: 
       FileName: Is Using Faster
 FileName: Is Using Faster
-ClockSpeed: 2295
+ClockSpeed: 2793
 ---
 Is Using Faster
 ---------------
-> @2295 Mhz
+> @2793 Mhz
 
 
 ### 
@@ -68,5 +68,5 @@ Is Using Faster
 
 |Technique|Time           |RelativeSpeed|Throughput|
 |---------|---------------|-------------|----------|
-|using    |00:00:00.006668|1x           |14996.55/s|
-|not using|00:00:00.006813|1.02x        |14677.61/s|
+|not using|00:00:00.004056|1x           |24650.58/s|
+|using    |00:00:00.004201|1.04x        |23801.02/s|

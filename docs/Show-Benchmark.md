@@ -25,13 +25,12 @@ The path to a benchmark or benchmark output.
 
 
 
-> **Type**: ```[String[]]```
 
-> **Required**: true
 
-> **Position**: 1
 
-> **PipelineInput**:true (ByPropertyName)
+|Type        |Required|Position|PipelineInput        |
+|------------|--------|--------|---------------------|
+|`[String[]]`|true    |1       |true (ByPropertyName)|
 
 
 
@@ -43,13 +42,12 @@ This view must be defined in a .format.ps1xml file.
 
 
 
-> **Type**: ```[String]```
 
-> **Required**: false
 
-> **Position**: 2
 
-> **PipelineInput**:false
+|Type      |Required|Position|PipelineInput|
+|----------|--------|--------|-------------|
+|`[String]`|false   |2       |false        |
 
 
 

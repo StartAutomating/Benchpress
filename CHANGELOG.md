@@ -1,3 +1,11 @@
+### 1.3.7:
+
+* New Benchmarks:
+  * What is the Fastest Way to Read a File (Fixes #37)
+  * Which Random Is Faster (Fixes #38)
+
+---
+
 ### 1.3.6:
 * New Benchmarks:
     * Checking if a File Exists (Fixes #29)

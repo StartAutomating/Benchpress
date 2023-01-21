@@ -35,6 +35,7 @@ Benchmark comes with a number of PowerShell Performance experiments.
 |[What Is The Fastest Way To Concatenate (source)](https://github.com/StartAutomating/Benchpress/tree/master/PowerShellPerformance/What_Is_The_Fastest_Way_To_Concatenate.benchmark.json)                     |[What Is The Fastest Way To Concatenate (results)](What_Is_The_Fastest_Way_To_Concatenate.benchmark.benchmarkOutput.md)                      |
 |[What Is The Fastest Way To Filter (source)](https://github.com/StartAutomating/Benchpress/tree/master/PowerShellPerformance/What_Is_The_Fastest_Way_To_Filter.benchmark.ps1)                                |[What Is The Fastest Way To Filter (results)](What_Is_The_Fastest_Way_To_Filter.benchmark.benchmarkOutput.md)                                |
 |[What Is The Fastest Way To Get All Loaded Modules (source)](https://github.com/StartAutomating/Benchpress/tree/master/PowerShellPerformance/What_Is_The_Fastest_Way_To_Get_All_Loaded_Modules.benchmark.ps1)|[What Is The Fastest Way To Get All Loaded Modules (results)](What_Is_The_Fastest_Way_To_Get_All_Loaded_Modules.benchmark.benchmarkOutput.md)|
+|[What Is The Fastest Way To Read A File (source)](https://github.com/StartAutomating/Benchpress/tree/master/PowerShellPerformance/What_Is_The_Fastest_Way_To_Read_A_File.benchmark.ps1)                      |[What Is The Fastest Way To Read A File (results)](What_Is_The_Fastest_Way_To_Read_A_File.benchmark.benchmarkOutput.md)                      |
 |[What Is The Fastest Way To Sort (source)](https://github.com/StartAutomating/Benchpress/tree/master/PowerShellPerformance/What_Is_The_Fastest_Way_To_Sort.benchmark.ps1)                                    |[What Is The Fastest Way To Sort (results)](What_Is_The_Fastest_Way_To_Sort.benchmark.benchmarkOutput.md)                                    |
 |[What Is The Quickest Way To Compare Types (source)](https://github.com/StartAutomating/Benchpress/tree/master/PowerShellPerformance/What_Is_The_Quickest_Way_To_Compare_Types.benchmark.ps1)                |[What Is The Quickest Way To Compare Types (results)](What_Is_The_Quickest_Way_To_Compare_Types.benchmark.benchmarkOutput.md)                |
 |[Whats In A Quote (source)](https://github.com/StartAutomating/Benchpress/tree/master/PowerShellPerformance/Whats_In_A_Quote.benchmark.ps1)                                                                  |[Whats In A Quote (results)](Whats_In_A_Quote.benchmark.benchmarkOutput.md)                                                                  |
@@ -46,7 +47,5 @@ You can run all these built-in benchmarks by running.
 ~~~PowerShell
 Checkpoint-Benchmark -ModuleName Benchpress
 ~~~
-
-
 
 

@@ -4,17 +4,17 @@ layout: Benchmark
 Data: 
   - Technique: DotNet
     Time: 
-      Ticks: 140600
+      Ticks: 129571
       Days: 0
       Hours: 0
-      Milliseconds: 14
+      Milliseconds: 12
       Minutes: 0
       Seconds: 0
-      TotalDays: 1.62731481481481e-07
-      TotalHours: 3.90555555555556e-06
-      TotalMilliseconds: 14.06
-      TotalMinutes: 0.000234333333333333
-      TotalSeconds: 0.01406
+      TotalDays: 1.49966435185185e-07
+      TotalHours: 3.59919444444444e-06
+      TotalMilliseconds: 12.9571
+      TotalMinutes: 0.000215951666666667
+      TotalSeconds: 0.0129571
       FileName: Ways To Hash A File
       GroupName: 
       BenchmarkInput: 
@@ -27,23 +27,23 @@ Data:
     RelativeSpeed: 1
     ClockSpeed: 2793
     FileName: Ways To Hash A File
-    Throughput: 7112.37553342816
+    Throughput: 7717.77635427681
     BenchmarkInput: 
       RepeatCount: 100
       FileName: Ways To Hash A File
   - Technique: GetFileHash
     Time: 
-      Ticks: 240469
+      Ticks: 486983
       Days: 0
       Hours: 0
-      Milliseconds: 24
+      Milliseconds: 48
       Minutes: 0
       Seconds: 0
-      TotalDays: 2.78320601851852e-07
-      TotalHours: 6.67969444444444e-06
-      TotalMilliseconds: 24.0469
-      TotalMinutes: 0.000400781666666667
-      TotalSeconds: 0.0240469
+      TotalDays: 5.63637731481481e-07
+      TotalHours: 1.35273055555556e-05
+      TotalMilliseconds: 48.6983
+      TotalMinutes: 0.000811638333333333
+      TotalSeconds: 0.0486983
       FileName: Ways To Hash A File
       GroupName: 
       BenchmarkInput: 
@@ -53,10 +53,10 @@ Data:
               
         RepeatCount: 100
         FileName: Ways To Hash A File
-    RelativeSpeed: 1.71030583214794
+    RelativeSpeed: 3.75842588233478
     ClockSpeed: 2793
     FileName: Ways To Hash A File
-    Throughput: 4158.54018605309
+    Throughput: 2053.45977169634
     BenchmarkInput: 
       RepeatCount: 100
       FileName: Ways To Hash A File
@@ -73,5 +73,5 @@ Ways To Hash A File
 
 |Technique  |Time           |RelativeSpeed|Throughput|
 |-----------|---------------|-------------|----------|
-|DotNet     |00:00:00.014060|1x           |7112.38/s |
-|GetFileHash|00:00:00.024046|1.71x        |4158.54/s |
+|DotNet     |00:00:00.012957|1x           |7717.78/s |
+|GetFileHash|00:00:00.048698|3.76x        |2053.46/s |

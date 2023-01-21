@@ -4,200 +4,201 @@ layout: Benchmark
 Data: 
   - Technique: QuickRandom
     Time: 
-      Ticks: 41250
+      Ticks: 82188
       Days: 0
       Hours: 0
-      Milliseconds: 4
+      Milliseconds: 8
       Minutes: 0
       Seconds: 0
-      TotalDays: 4.77430555555556e-08
-      TotalHours: 1.14583333333333e-06
-      TotalMilliseconds: 4.125
-      TotalMinutes: 6.875e-05
-      TotalSeconds: 0.004125
+      TotalDays: 9.5125e-08
+      TotalHours: 2.283e-06
+      TotalMilliseconds: 8.2188
+      TotalMinutes: 0.00013698
+      TotalSeconds: 0.0082188
       FileName: Random Number Generation
       GroupName: (AnyRandomNumber)
       BenchmarkInput: 
+        GroupName: (AnyRandomNumber)
         ScriptBlock: |
           
                   $global:QuickRandom.Next()        
               
         FileName: Random Number Generation
-        GroupName: (AnyRandomNumber)
     RelativeSpeed: 1
     GroupName: (AnyRandomNumber)
     ClockSpeed: 2793
     FileName: Random Number Generation
-    Throughput: 24242.4242424242
+    Throughput: 12167.2263590792
     BenchmarkInput: 
       GroupName: (AnyRandomNumber)
       FileName: Random Number Generation
   - Technique: [Random]::New().Next()
     Time: 
-      Ticks: 42869
+      Ticks: 113942
       Days: 0
       Hours: 0
-      Milliseconds: 4
+      Milliseconds: 11
       Minutes: 0
       Seconds: 0
-      TotalDays: 4.96168981481481e-08
-      TotalHours: 1.19080555555556e-06
-      TotalMilliseconds: 4.2869
-      TotalMinutes: 7.14483333333333e-05
-      TotalSeconds: 0.0042869
+      TotalDays: 1.31877314814815e-07
+      TotalHours: 3.16505555555556e-06
+      TotalMilliseconds: 11.3942
+      TotalMinutes: 0.000189903333333333
+      TotalSeconds: 0.0113942
       FileName: Random Number Generation
       GroupName: (AnyRandomNumber)
       BenchmarkInput: 
+        GroupName: (AnyRandomNumber)
         ScriptBlock: |
           
                   [Random]::new().Next()
               
         FileName: Random Number Generation
-        GroupName: (AnyRandomNumber)
-    RelativeSpeed: 1.03924848484848
+    RelativeSpeed: 1.3863581058062
     GroupName: (AnyRandomNumber)
     ClockSpeed: 2793
     FileName: Random Number Generation
-    Throughput: 23326.8795633208
+    Throughput: 8776.39500798652
     BenchmarkInput: 
       GroupName: (AnyRandomNumber)
       FileName: Random Number Generation
   - Technique: GetRandom
     Time: 
-      Ticks: 93044
+      Ticks: 255376
       Days: 0
       Hours: 0
-      Milliseconds: 9
+      Milliseconds: 25
       Minutes: 0
       Seconds: 0
-      TotalDays: 1.07689814814815e-07
-      TotalHours: 2.58455555555556e-06
-      TotalMilliseconds: 9.3044
-      TotalMinutes: 0.000155073333333333
-      TotalSeconds: 0.0093044
+      TotalDays: 2.95574074074074e-07
+      TotalHours: 7.09377777777778e-06
+      TotalMilliseconds: 25.5376
+      TotalMinutes: 0.000425626666666667
+      TotalSeconds: 0.0255376
       FileName: Random Number Generation
       GroupName: (AnyRandomNumber)
       BenchmarkInput: 
+        GroupName: (AnyRandomNumber)
         ScriptBlock: |
           
                   Get-Random
               
         FileName: Random Number Generation
-        GroupName: (AnyRandomNumber)
-    RelativeSpeed: 2.25561212121212
+    RelativeSpeed: 3.10721759867621
     GroupName: (AnyRandomNumber)
     ClockSpeed: 2793
     FileName: Random Number Generation
-    Throughput: 10747.6032844676
+    Throughput: 3915.7947497024
     BenchmarkInput: 
       GroupName: (AnyRandomNumber)
       FileName: Random Number Generation
   - Technique: [Random]::New().Next()
     Time: 
-      Ticks: 42520
+      Ticks: 84091
       Days: 0
       Hours: 0
-      Milliseconds: 4
+      Milliseconds: 8
       Minutes: 0
       Seconds: 0
-      TotalDays: 4.9212962962963e-08
-      TotalHours: 1.18111111111111e-06
-      TotalMilliseconds: 4.252
-      TotalMinutes: 7.08666666666667e-05
-      TotalSeconds: 0.004252
+      TotalDays: 9.73275462962963e-08
+      TotalHours: 2.33586111111111e-06
+      TotalMilliseconds: 8.4091
+      TotalMinutes: 0.000140151666666667
+      TotalSeconds: 0.0084091
       FileName: Random Number Generation
       GroupName: (Min and Max)
       BenchmarkInput: 
+        GroupName: (Min and Max)
         ScriptBlock: |
           
                   [Random]::new().Next(10,100)
               
         FileName: Random Number Generation
-        GroupName: (Min and Max)
     RelativeSpeed: 1
     GroupName: (Min and Max)
     ClockSpeed: 2793
     FileName: Random Number Generation
-    Throughput: 23518.3443085607
+    Throughput: 11891.8790358064
     BenchmarkInput: 
       GroupName: (Min and Max)
       FileName: Random Number Generation
   - Technique: QuickRandom
     Time: 
-      Ticks: 61336
-      Days: 0
-      Hours: 0
-      Milliseconds: 6
-      Minutes: 0
-      Seconds: 0
-      TotalDays: 7.09907407407407e-08
-      TotalHours: 1.70377777777778e-06
-      TotalMilliseconds: 6.1336
-      TotalMinutes: 0.000102226666666667
-      TotalSeconds: 0.0061336
-      FileName: Random Number Generation
-      GroupName: (Min and Max)
-      BenchmarkInput: 
-        ScriptBlock: |
-          
-                  $global:QuickRandom.Next(10,100)        
-              
-        FileName: Random Number Generation
-        GroupName: (Min and Max)
-    RelativeSpeed: 1.44252116650988
-    GroupName: (Min and Max)
-    ClockSpeed: 2793
-    FileName: Random Number Generation
-    Throughput: 16303.6389722186
-    BenchmarkInput: 
-      GroupName: (Min and Max)
-      FileName: Random Number Generation
-  - Technique: GetRandom
-    Time: 
-      Ticks: 108900
+      Ticks: 106328
       Days: 0
       Hours: 0
       Milliseconds: 10
       Minutes: 0
       Seconds: 0
-      TotalDays: 1.26041666666667e-07
-      TotalHours: 3.025e-06
-      TotalMilliseconds: 10.89
-      TotalMinutes: 0.0001815
-      TotalSeconds: 0.01089
+      TotalDays: 1.23064814814815e-07
+      TotalHours: 2.95355555555556e-06
+      TotalMilliseconds: 10.6328
+      TotalMinutes: 0.000177213333333333
+      TotalSeconds: 0.0106328
       FileName: Random Number Generation
       GroupName: (Min and Max)
       BenchmarkInput: 
+        GroupName: (Min and Max)
+        ScriptBlock: |
+          
+                  $global:QuickRandom.Next(10,100)        
+              
+        FileName: Random Number Generation
+    RelativeSpeed: 1.26443971411923
+    GroupName: (Min and Max)
+    ClockSpeed: 2793
+    FileName: Random Number Generation
+    Throughput: 9404.86043187119
+    BenchmarkInput: 
+      GroupName: (Min and Max)
+      FileName: Random Number Generation
+  - Technique: GetRandom
+    Time: 
+      Ticks: 458941
+      Days: 0
+      Hours: 0
+      Milliseconds: 45
+      Minutes: 0
+      Seconds: 0
+      TotalDays: 5.31181712962963e-07
+      TotalHours: 1.27483611111111e-05
+      TotalMilliseconds: 45.8941
+      TotalMinutes: 0.000764901666666667
+      TotalSeconds: 0.0458941
+      FileName: Random Number Generation
+      GroupName: (Min and Max)
+      BenchmarkInput: 
+        GroupName: (Min and Max)
         ScriptBlock: |
           
                   Get-Random -Minimum 10 -Maximum 100 
               
         FileName: Random Number Generation
-        GroupName: (Min and Max)
-    RelativeSpeed: 2.56114769520226
+    RelativeSpeed: 5.45767085657205
     GroupName: (Min and Max)
     ClockSpeed: 2793
     FileName: Random Number Generation
-    Throughput: 9182.73645546373
+    Throughput: 2178.92931771186
     BenchmarkInput: 
       GroupName: (Min and Max)
       FileName: Random Number Generation
   - Technique: [Random]::New().Next()
     Time: 
-      Ticks: 8615
+      Ticks: 7834
       Days: 0
       Hours: 0
       Milliseconds: 0
       Minutes: 0
       Seconds: 0
-      TotalDays: 9.97106481481481e-09
-      TotalHours: 2.39305555555556e-07
-      TotalMilliseconds: 0.8615
-      TotalMinutes: 1.43583333333333e-05
-      TotalSeconds: 0.0008615
+      TotalDays: 9.06712962962963e-09
+      TotalHours: 2.17611111111111e-07
+      TotalMilliseconds: 0.7834
+      TotalMinutes: 1.30566666666667e-05
+      TotalSeconds: 0.0007834
       FileName: Random Number Generation
       GroupName: (Random Byte Buffer)
       BenchmarkInput: 
+        GroupName: (Random Byte Buffer)
         ScriptBlock: |
           
                   $buff = [byte[]]::new(1kb)
@@ -206,32 +207,32 @@ Data:
               
         RepeatCount: 10
         FileName: Random Number Generation
-        GroupName: (Random Byte Buffer)
     RelativeSpeed: 1
     GroupName: (Random Byte Buffer)
     ClockSpeed: 2793
     FileName: Random Number Generation
-    Throughput: 11607.6610562972
+    Throughput: 12764.8710748021
     BenchmarkInput: 
+      GroupName: (Random Byte Buffer)
       RepeatCount: 10
       FileName: Random Number Generation
-      GroupName: (Random Byte Buffer)
   - Technique: QuickRandom
     Time: 
-      Ticks: 21301
+      Ticks: 23450
       Days: 0
       Hours: 0
       Milliseconds: 2
       Minutes: 0
       Seconds: 0
-      TotalDays: 2.46539351851852e-08
-      TotalHours: 5.91694444444444e-07
-      TotalMilliseconds: 2.1301
-      TotalMinutes: 3.55016666666667e-05
-      TotalSeconds: 0.0021301
+      TotalDays: 2.71412037037037e-08
+      TotalHours: 6.51388888888889e-07
+      TotalMilliseconds: 2.345
+      TotalMinutes: 3.90833333333333e-05
+      TotalSeconds: 0.002345
       FileName: Random Number Generation
       GroupName: (Random Byte Buffer)
       BenchmarkInput: 
+        GroupName: (Random Byte Buffer)
         ScriptBlock: |
           
                   $buff = [byte[]]::new(1kb)
@@ -240,48 +241,47 @@ Data:
               
         RepeatCount: 10
         FileName: Random Number Generation
-        GroupName: (Random Byte Buffer)
-    RelativeSpeed: 2.47254788160186
+    RelativeSpeed: 2.9933622670411
     GroupName: (Random Byte Buffer)
     ClockSpeed: 2793
     FileName: Random Number Generation
-    Throughput: 4694.61527627811
+    Throughput: 4264.39232409382
     BenchmarkInput: 
+      GroupName: (Random Byte Buffer)
       RepeatCount: 10
       FileName: Random Number Generation
-      GroupName: (Random Byte Buffer)
   - Technique: GetRandom
     Time: 
-      Ticks: 6273051
+      Ticks: 6387765
       Days: 0
       Hours: 0
-      Milliseconds: 627
+      Milliseconds: 638
       Minutes: 0
       Seconds: 0
-      TotalDays: 7.26047569444444e-06
-      TotalHours: 0.000174251416666667
-      TotalMilliseconds: 627.3051
-      TotalMinutes: 0.010455085
-      TotalSeconds: 0.6273051
+      TotalDays: 7.39324652777778e-06
+      TotalHours: 0.000177437916666667
+      TotalMilliseconds: 638.7765
+      TotalMinutes: 0.010646275
+      TotalSeconds: 0.6387765
       FileName: Random Number Generation
       GroupName: (Random Byte Buffer)
       BenchmarkInput: 
+        GroupName: (Random Byte Buffer)
         ScriptBlock: |
           
                   $buff = @(foreach ($n in 1..1kb) { Get-Random -Minimum 0 -Maximum 255}) -as [byte[]]        
               
         RepeatCount: 10
         FileName: Random Number Generation
-        GroupName: (Random Byte Buffer)
-    RelativeSpeed: 728.154497968659
+    RelativeSpeed: 815.389966811335
     GroupName: (Random Byte Buffer)
     ClockSpeed: 2793
     FileName: Random Number Generation
-    Throughput: 15.941206280644
+    Throughput: 15.6549278190416
     BenchmarkInput: 
+      GroupName: (Random Byte Buffer)
       RepeatCount: 10
       FileName: Random Number Generation
-      GroupName: (Random Byte Buffer)
 FileName: Random Number Generation
 ClockSpeed: 2793
 ---
@@ -295,9 +295,9 @@ Random Number Generation
 
 |Technique             |Time           |RelativeSpeed|Throughput|
 |----------------------|---------------|-------------|----------|
-|QuickRandom           |00:00:00.004125|1x           |24242.42/s|
-|[Random]::New().Next()|00:00:00.004286|1.04x        |23326.88/s|
-|GetRandom             |00:00:00.009304|2.26x        |10747.6/s |
+|QuickRandom           |00:00:00.008218|1x           |12167.23/s|
+|[Random]::New().Next()|00:00:00.011394|1.39x        |8776.4/s  |
+|GetRandom             |00:00:00.025537|3.11x        |3915.79/s |
 
 
 ### (Min and Max)
@@ -305,9 +305,9 @@ Random Number Generation
 
 |Technique             |Time           |RelativeSpeed|Throughput|
 |----------------------|---------------|-------------|----------|
-|[Random]::New().Next()|00:00:00.004252|1x           |23518.34/s|
-|QuickRandom           |00:00:00.006133|1.44x        |16303.64/s|
-|GetRandom             |00:00:00.010890|2.56x        |9182.74/s |
+|[Random]::New().Next()|00:00:00.008409|1x           |11891.88/s|
+|QuickRandom           |00:00:00.010632|1.26x        |9404.86/s |
+|GetRandom             |00:00:00.045894|5.46x        |2178.93/s |
 
 
 ### (Random Byte Buffer)
@@ -315,6 +315,6 @@ Random Number Generation
 
 |Technique             |Time           |RelativeSpeed|Throughput|
 |----------------------|---------------|-------------|----------|
-|[Random]::New().Next()|00:00:00.000861|1x           |11607.66/s|
-|QuickRandom           |00:00:00.002130|2.47x        |4694.62/s |
-|GetRandom             |00:00:00.627305|728.15x      |15.94/s   |
+|[Random]::New().Next()|00:00:00.000783|1x           |12764.87/s|
+|QuickRandom           |00:00:00.002345|2.99x        |4264.39/s |
+|GetRandom             |00:00:00.638776|815.39x      |15.65/s   |

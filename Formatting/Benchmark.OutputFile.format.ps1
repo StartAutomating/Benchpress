@@ -7,9 +7,6 @@ Write-FormatView -TypeName Benchmark.OutputFile -Action {
     "title: $($outputFileInfo.FileName)"    
     $outputFileInfo | ConvertTo-Json -Depth 10 | ConvertFrom-Json | Format-YAML
     "---"
-    Format-Markdown -Heading $outputFileInfo.FileName -HeadingSize 2
-
-    Format-Markdown -InputObject "@$($outputFileInfo.ClockSpeed) Mhz" -BlockQuote
 
     [Environment]::Newline
 

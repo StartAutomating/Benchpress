@@ -5,17 +5,17 @@ title: ToString Or Not ToString
 Data: 
   - Technique: Quoted
     Time: 
-      Ticks: 67749
+      Ticks: 74998
       Days: 0
       Hours: 0
-      Milliseconds: 6
+      Milliseconds: 7
       Minutes: 0
       Seconds: 0
-      TotalDays: 7.84131944444444e-08
-      TotalHours: 1.88191666666667e-06
-      TotalMilliseconds: 6.7749
-      TotalMinutes: 0.000112915
-      TotalSeconds: 0.0067749
+      TotalDays: 8.68032407407407e-08
+      TotalHours: 2.08327777777778e-06
+      TotalMilliseconds: 7.4998
+      TotalMinutes: 0.000124996666666667
+      TotalSeconds: 0.0074998
       FileName: ToString Or Not ToString
       GroupName: 
       BenchmarkInput: 
@@ -28,22 +28,22 @@ Data:
     ClockSpeed: 2295
     FileName: ToString Or Not ToString
     RepeatCount: 100
-    Throughput: 14760.365466649
+    Throughput: 13333.6888983706
     BenchmarkInput: 
       FileName: ToString Or Not ToString
   - Technique: ToString
     Time: 
-      Ticks: 77725
+      Ticks: 81602
       Days: 0
       Hours: 0
-      Milliseconds: 7
+      Milliseconds: 8
       Minutes: 0
       Seconds: 0
-      TotalDays: 8.99594907407407e-08
-      TotalHours: 2.15902777777778e-06
-      TotalMilliseconds: 7.7725
-      TotalMinutes: 0.000129541666666667
-      TotalSeconds: 0.0077725
+      TotalDays: 9.44467592592593e-08
+      TotalHours: 2.26672222222222e-06
+      TotalMilliseconds: 8.1602
+      TotalMinutes: 0.000136003333333333
+      TotalSeconds: 0.0081602
       FileName: ToString Or Not ToString
       GroupName: 
       BenchmarkInput: 
@@ -52,11 +52,11 @@ Data:
           
                   $PWD.ToString()
               
-    RelativeSpeed: 1.14724940589529
+    RelativeSpeed: 1.08805568148484
     ClockSpeed: 2295
     FileName: ToString Or Not ToString
     RepeatCount: 100
-    Throughput: 12865.8732711483
+    Throughput: 12254.6016029019
     BenchmarkInput: 
       FileName: ToString Or Not ToString
 FileName: ToString Or Not ToString
@@ -68,5 +68,5 @@ ClockSpeed: 2295
 
 |Technique|RepeatCount|Time           |RelativeSpeed|Throughput|
 |---------|-----------|---------------|-------------|----------|
-|Quoted   |100        |00:00:00.006774|1x           |14760.37/s|
-|ToString |100        |00:00:00.007772|1.15x        |12865.87/s|
+|Quoted   |100        |00:00:00.007499|1x           |13333.69/s|
+|ToString |100        |00:00:00.008160|1.09x        |12254.6/s |

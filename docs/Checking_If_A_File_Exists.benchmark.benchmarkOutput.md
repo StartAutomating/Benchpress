@@ -5,190 +5,187 @@ title: Checking If A File Exists
 Data: 
   - Technique: [IO.File]::Exists
     Time: 
-      Ticks: 101464
+      Ticks: 71794
       Days: 0
       Hours: 0
-      Milliseconds: 10
+      Milliseconds: 7
       Minutes: 0
       Seconds: 0
-      TotalDays: 1.17435185185185e-07
-      TotalHours: 2.81844444444444e-06
-      TotalMilliseconds: 10.1464
-      TotalMinutes: 0.000169106666666667
-      TotalSeconds: 0.0101464
+      TotalDays: 8.30949074074074e-08
+      TotalHours: 1.99427777777778e-06
+      TotalMilliseconds: 7.1794
+      TotalMinutes: 0.000119656666666667
+      TotalSeconds: 0.0071794
       FileName: Checking If A File Exists
       GroupName: (Found Path)
       BenchmarkInput: 
+        GroupName: (Found Path)
         ScriptBlock: |
           
                   [IO.File]::Exists($fileToCheck) # only works with full paths
               
-        GroupName: (Found Path)
         FileName: Checking If A File Exists
     RelativeSpeed: 1
     GroupName: (Found Path)
-    ClockSpeed: 2295
+    ClockSpeed: 2594
     FileName: Checking If A File Exists
-    Throughput: 9855.71237089017
+    Throughput: 13928.7405632783
     BenchmarkInput: 
       GroupName: (Found Path)
       FileName: Checking If A File Exists
   - Technique: Get Resolved Path
     Time: 
-      Ticks: 167587
+      Ticks: 113488
       Days: 0
       Hours: 0
-      Milliseconds: 16
+      Milliseconds: 11
       Minutes: 0
       Seconds: 0
-      TotalDays: 1.93966435185185e-07
-      TotalHours: 4.65519444444444e-06
-      TotalMilliseconds: 16.7587
-      TotalMinutes: 0.000279311666666667
-      TotalSeconds: 0.0167587
+      TotalDays: 1.31351851851852e-07
+      TotalHours: 3.15244444444444e-06
+      TotalMilliseconds: 11.3488
+      TotalMinutes: 0.000189146666666667
+      TotalSeconds: 0.0113488
       FileName: Checking If A File Exists
       GroupName: (Found Path)
       BenchmarkInput: 
+        GroupName: (Found Path)
         ScriptBlock: |
           
                   try{$ExecutionContext.SessionState.Path.GetResolvedPSPathFromPSPath($fileToCheck)} catch {}
               
-        GroupName: (Found Path)
         FileName: Checking If A File Exists
-    RelativeSpeed: 1.65168926910037
+    RelativeSpeed: 1.58074490904532
     GroupName: (Found Path)
-    ClockSpeed: 2295
+    ClockSpeed: 2594
     FileName: Checking If A File Exists
-    Throughput: 5967.04995017513
+    Throughput: 8811.5043000141
     BenchmarkInput: 
       GroupName: (Found Path)
       FileName: Checking If A File Exists
   - Technique: Test-Path
     Time: 
-      Ticks: 357292
+      Ticks: 241888
       Days: 0
       Hours: 0
-      Milliseconds: 35
+      Milliseconds: 24
       Minutes: 0
       Seconds: 0
-      TotalDays: 4.13532407407407e-07
-      TotalHours: 9.92477777777778e-06
-      TotalMilliseconds: 35.7292
-      TotalMinutes: 0.000595486666666667
-      TotalSeconds: 0.0357292
+      TotalDays: 2.79962962962963e-07
+      TotalHours: 6.71911111111111e-06
+      TotalMilliseconds: 24.1888
+      TotalMinutes: 0.000403146666666667
+      TotalSeconds: 0.0241888
       FileName: Checking If A File Exists
       GroupName: (Found Path)
       BenchmarkInput: 
+        GroupName: (Found Path)
         ScriptBlock: |
           
                   Test-path $fileToCheck
               
-        GroupName: (Found Path)
         FileName: Checking If A File Exists
-    RelativeSpeed: 3.52136718442009
+    RelativeSpeed: 3.36919519737025
     GroupName: (Found Path)
-    ClockSpeed: 2295
+    ClockSpeed: 2594
     FileName: Checking If A File Exists
-    Throughput: 2798.8312080875
+    Throughput: 4134.14472813864
     BenchmarkInput: 
       GroupName: (Found Path)
       FileName: Checking If A File Exists
   - Technique: [IO.File]::Exists
     Time: 
-      Ticks: 159838
+      Ticks: 60929
       Days: 0
       Hours: 0
-      Milliseconds: 15
+      Milliseconds: 6
       Minutes: 0
       Seconds: 0
-      TotalDays: 1.84997685185185e-07
-      TotalHours: 4.43994444444444e-06
-      TotalMilliseconds: 15.9838
-      TotalMinutes: 0.000266396666666667
-      TotalSeconds: 0.0159838
+      TotalDays: 7.05196759259259e-08
+      TotalHours: 1.69247222222222e-06
+      TotalMilliseconds: 6.0929
+      TotalMinutes: 0.000101548333333333
+      TotalSeconds: 0.0060929
       FileName: Checking If A File Exists
       GroupName: (Missing Path)
       BenchmarkInput: 
+        GroupName: (Missing Path)
         ScriptBlock: |
           
                   [IO.File]::Exists($badFile)    # only works with full paths
               
-        GroupName: (Missing Path)
         FileName: Checking If A File Exists
     RelativeSpeed: 1
     GroupName: (Missing Path)
-    ClockSpeed: 2295
+    ClockSpeed: 2594
     FileName: Checking If A File Exists
-    Throughput: 6256.33453872045
+    Throughput: 16412.5457499713
     BenchmarkInput: 
       GroupName: (Missing Path)
       FileName: Checking If A File Exists
   - Technique: Test-Path
     Time: 
-      Ticks: 341268
+      Ticks: 261343
       Days: 0
       Hours: 0
-      Milliseconds: 34
+      Milliseconds: 26
       Minutes: 0
       Seconds: 0
-      TotalDays: 3.94986111111111e-07
-      TotalHours: 9.47966666666667e-06
-      TotalMilliseconds: 34.1268
-      TotalMinutes: 0.00056878
-      TotalSeconds: 0.0341268
+      TotalDays: 3.02480324074074e-07
+      TotalHours: 7.25952777777778e-06
+      TotalMilliseconds: 26.1343
+      TotalMinutes: 0.000435571666666667
+      TotalSeconds: 0.0261343
       FileName: Checking If A File Exists
       GroupName: (Missing Path)
       BenchmarkInput: 
+        GroupName: (Missing Path)
         ScriptBlock: |
           
                   Test-path $badFile
               
-        GroupName: (Missing Path)
         FileName: Checking If A File Exists
-    RelativeSpeed: 2.13508677536005
+    RelativeSpeed: 4.28930394393474
     GroupName: (Missing Path)
-    ClockSpeed: 2295
+    ClockSpeed: 2594
     FileName: Checking If A File Exists
-    Throughput: 2930.24836785166
+    Throughput: 3826.38907489391
     BenchmarkInput: 
       GroupName: (Missing Path)
       FileName: Checking If A File Exists
   - Technique: Get Resolved Path
     Time: 
-      Ticks: 614043
+      Ticks: 465799
       Days: 0
       Hours: 0
-      Milliseconds: 61
+      Milliseconds: 46
       Minutes: 0
       Seconds: 0
-      TotalDays: 7.10697916666667e-07
-      TotalHours: 1.705675e-05
-      TotalMilliseconds: 61.4043
-      TotalMinutes: 0.001023405
-      TotalSeconds: 0.0614043
+      TotalDays: 5.39119212962963e-07
+      TotalHours: 1.29388611111111e-05
+      TotalMilliseconds: 46.5799
+      TotalMinutes: 0.000776331666666667
+      TotalSeconds: 0.0465799
       FileName: Checking If A File Exists
       GroupName: (Missing Path)
       BenchmarkInput: 
+        GroupName: (Missing Path)
         ScriptBlock: |
           
                   try {$ExecutionContext.SessionState.Path.GetResolvedPSPathFromPSPath($badFile)} catch {}
               
-        GroupName: (Missing Path)
         FileName: Checking If A File Exists
-    RelativeSpeed: 3.84165842915952
+    RelativeSpeed: 7.64494739779087
     GroupName: (Missing Path)
-    ClockSpeed: 2295
+    ClockSpeed: 2594
     FileName: Checking If A File Exists
-    Throughput: 1628.55044353571
+    Throughput: 2146.84874806515
     BenchmarkInput: 
       GroupName: (Missing Path)
       FileName: Checking If A File Exists
 FileName: Checking If A File Exists
-ClockSpeed: 2295
+ClockSpeed: 2594
 ---
-Checking If A File Exists
--------------------------
-> @2295 Mhz
 
 
 ### (Found Path)
@@ -196,9 +193,9 @@ Checking If A File Exists
 
 |Technique        |Time           |RelativeSpeed|Throughput|
 |-----------------|---------------|-------------|----------|
-|[IO.File]::Exists|00:00:00.010146|1x           |9855.71/s |
-|Get Resolved Path|00:00:00.016758|1.65x        |5967.05/s |
-|Test-Path        |00:00:00.035729|3.52x        |2798.83/s |
+|[IO.File]::Exists|00:00:00.007179|1x           |13928.74/s|
+|Get Resolved Path|00:00:00.011348|1.58x        |8811.5/s  |
+|Test-Path        |00:00:00.024188|3.37x        |4134.14/s |
 
 
 ### (Missing Path)
@@ -206,6 +203,6 @@ Checking If A File Exists
 
 |Technique        |Time           |RelativeSpeed|Throughput|
 |-----------------|---------------|-------------|----------|
-|[IO.File]::Exists|00:00:00.015983|1x           |6256.33/s |
-|Test-Path        |00:00:00.034126|2.14x        |2930.25/s |
-|Get Resolved Path|00:00:00.061404|3.84x        |1628.55/s |
+|[IO.File]::Exists|00:00:00.006092|1x           |16412.55/s|
+|Test-Path        |00:00:00.026134|4.29x        |3826.39/s |
+|Get Resolved Path|00:00:00.046579|7.64x        |2146.85/s |

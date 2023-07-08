@@ -5,17 +5,17 @@ title: Is Using Faster
 Data: 
   - Technique: not using
     Time: 
-      Ticks: 40921
+      Ticks: 40627
       Days: 0
       Hours: 0
       Milliseconds: 4
       Minutes: 0
       Seconds: 0
-      TotalDays: 4.73622685185185e-08
-      TotalHours: 1.13669444444444e-06
-      TotalMilliseconds: 4.0921
-      TotalMinutes: 6.82016666666667e-05
-      TotalSeconds: 0.0040921
+      TotalDays: 4.70219907407407e-08
+      TotalHours: 1.12852777777778e-06
+      TotalMilliseconds: 4.0627
+      TotalMinutes: 6.77116666666667e-05
+      TotalSeconds: 0.0040627
       FileName: Is Using Faster
       GroupName: 
       BenchmarkInput: 
@@ -25,24 +25,24 @@ Data:
           
         FileName: Is Using Faster
     RelativeSpeed: 1
-    ClockSpeed: 2594
+    ClockSpeed: 2793
     FileName: Is Using Faster
-    Throughput: 24437.3304660199
+    Throughput: 24614.1728407217
     BenchmarkInput: 
       FileName: Is Using Faster
   - Technique: using
     Time: 
-      Ticks: 45184
+      Ticks: 43018
       Days: 0
       Hours: 0
       Milliseconds: 4
       Minutes: 0
       Seconds: 0
-      TotalDays: 5.22962962962963e-08
-      TotalHours: 1.25511111111111e-06
-      TotalMilliseconds: 4.5184
-      TotalMinutes: 7.53066666666667e-05
-      TotalSeconds: 0.0045184
+      TotalDays: 4.97893518518518e-08
+      TotalHours: 1.19494444444444e-06
+      TotalMilliseconds: 4.3018
+      TotalMinutes: 7.16966666666667e-05
+      TotalSeconds: 0.0043018
       FileName: Is Using Faster
       GroupName: 
       BenchmarkInput: 
@@ -50,14 +50,14 @@ Data:
           using namespace System.Management.Automation.Language
           $scriptBlockAst -is [StringConstantExpressionAst]
         FileName: Is Using Faster
-    RelativeSpeed: 1.10417633977664
-    ClockSpeed: 2594
+    RelativeSpeed: 1.05885248726217
+    ClockSpeed: 2793
     FileName: Is Using Faster
-    Throughput: 22131.7280453258
+    Throughput: 23246.0830350086
     BenchmarkInput: 
       FileName: Is Using Faster
 FileName: Is Using Faster
-ClockSpeed: 2594
+ClockSpeed: 2793
 ---
 
 
@@ -66,5 +66,5 @@ ClockSpeed: 2594
 
 |Technique|Time           |RelativeSpeed|Throughput|
 |---------|---------------|-------------|----------|
-|not using|00:00:00.004092|1x           |24437.33/s|
-|using    |00:00:00.004518|1.1x         |22131.73/s|
+|not using|00:00:00.004062|1x           |24614.17/s|
+|using    |00:00:00.004301|1.06x        |23246.08/s|

@@ -5,75 +5,74 @@ title: How Much Faster Is The Static Constructor
 Data: 
   - Technique: StaticConstructor
     Time: 
-      Ticks: 3344803
+      Ticks: 4120344
       Days: 0
       Hours: 0
-      Milliseconds: 334
+      Milliseconds: 412
       Minutes: 0
       Seconds: 0
-      TotalDays: 3.87129976851852e-06
-      TotalHours: 9.29111944444444e-05
-      TotalMilliseconds: 334.4803
-      TotalMinutes: 0.00557467166666667
-      TotalSeconds: 0.3344803
+      TotalDays: 4.76891666666667e-06
+      TotalHours: 0.000114454
+      TotalMilliseconds: 412.0344
+      TotalMinutes: 0.00686724
+      TotalSeconds: 0.4120344
       FileName: How Much Faster Is The Static Constructor
       GroupName: 
       BenchmarkInput: 
+        RepeatCount: 10240
+        FileName: How Much Faster Is The Static Constructor
         ScriptBlock: |
           
                           $b = [byte[]]::new(1kb)
                           $b = $null
                       
-        FileName: How Much Faster Is The Static Constructor
-        RepeatCount: 10240
     RelativeSpeed: 1
-    ClockSpeed: 2594
+    ClockSpeed: 2095
     FileName: How Much Faster Is The Static Constructor
     RepeatCount: 10240
-    Throughput: 30614.6580232079
+    Throughput: 24852.2938861415
     BenchmarkInput: 
-      FileName: How Much Faster Is The Static Constructor
       RepeatCount: 10240
+      FileName: How Much Faster Is The Static Constructor
   - Technique: New-Object
     Time: 
-      Ticks: 11443608
+      Ticks: 13716829
       Days: 0
       Hours: 0
-      Milliseconds: 144
+      Milliseconds: 371
       Minutes: 0
       Seconds: 1
-      TotalDays: 1.32449166666667e-05
-      TotalHours: 0.000317878
-      TotalMilliseconds: 1144.3608
-      TotalMinutes: 0.01907268
-      TotalSeconds: 1.1443608
+      TotalDays: 1.58759594907407e-05
+      TotalHours: 0.000381023027777778
+      TotalMilliseconds: 1371.6829
+      TotalMinutes: 0.0228613816666667
+      TotalSeconds: 1.3716829
       FileName: How Much Faster Is The Static Constructor
       GroupName: 
       BenchmarkInput: 
+        RepeatCount: 10240
+        FileName: How Much Faster Is The Static Constructor
         ScriptBlock: |
           
                           $b = New-Object Byte[] 1kb
                           $b = $null
                       
-        FileName: How Much Faster Is The Static Constructor
-        RepeatCount: 10240
-    RelativeSpeed: 3.42131001437155
-    ClockSpeed: 2594
+    RelativeSpeed: 3.32904946771435
+    ClockSpeed: 2095
     FileName: How Much Faster Is The Static Constructor
     RepeatCount: 10240
-    Throughput: 8948.22681797559
+    Throughput: 7465.28224562689
     BenchmarkInput: 
-      FileName: How Much Faster Is The Static Constructor
       RepeatCount: 10240
+      FileName: How Much Faster Is The Static Constructor
 FileName: How Much Faster Is The Static Constructor
-ClockSpeed: 2594
+ClockSpeed: 2095
 ---
 
 
-### 
 
 
-|Technique        |Time           |RelativeSpeed|Throughput|
-|-----------------|---------------|-------------|----------|
-|StaticConstructor|00:00:00.334480|1x           |30614.66/s|
-|New-Object       |00:00:01.144360|3.42x        |8948.23/s |
+|Technique        |RepeatCount|Time           |RelativeSpeed|Throughput|
+|-----------------|-----------|---------------|-------------|----------|
+|StaticConstructor|10240      |00:00:00.412034|1x           |24852.29/s|
+|New-Object       |10240      |00:00:01.371682|3.33x        |7465.28/s |

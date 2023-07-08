@@ -5,17 +5,17 @@ title: ToString Or Not ToString
 Data: 
   - Technique: Quoted
     Time: 
-      Ticks: 49367
+      Ticks: 62568
       Days: 0
       Hours: 0
-      Milliseconds: 4
+      Milliseconds: 6
       Minutes: 0
       Seconds: 0
-      TotalDays: 5.71377314814815e-08
-      TotalHours: 1.37130555555556e-06
-      TotalMilliseconds: 4.9367
-      TotalMinutes: 8.22783333333333e-05
-      TotalSeconds: 0.0049367
+      TotalDays: 7.24166666666667e-08
+      TotalHours: 1.738e-06
+      TotalMilliseconds: 6.2568
+      TotalMinutes: 0.00010428
+      TotalSeconds: 0.0062568
       FileName: ToString Or Not ToString
       GroupName: 
       BenchmarkInput: 
@@ -25,25 +25,25 @@ Data:
                   "$pwd"
               
     RelativeSpeed: 1
-    ClockSpeed: 2594
+    ClockSpeed: 2095
     FileName: ToString Or Not ToString
     RepeatCount: 100
-    Throughput: 20256.446614135
+    Throughput: 15982.6109193198
     BenchmarkInput: 
       FileName: ToString Or Not ToString
   - Technique: ToString
     Time: 
-      Ticks: 56673
+      Ticks: 67688
       Days: 0
       Hours: 0
-      Milliseconds: 5
+      Milliseconds: 6
       Minutes: 0
       Seconds: 0
-      TotalDays: 6.559375e-08
-      TotalHours: 1.57425e-06
-      TotalMilliseconds: 5.6673
-      TotalMinutes: 9.4455e-05
-      TotalSeconds: 0.0056673
+      TotalDays: 7.83425925925926e-08
+      TotalHours: 1.88022222222222e-06
+      TotalMilliseconds: 6.7688
+      TotalMinutes: 0.000112813333333333
+      TotalSeconds: 0.0067688
       FileName: ToString Or Not ToString
       GroupName: 
       BenchmarkInput: 
@@ -52,22 +52,21 @@ Data:
           
                   $PWD.ToString()
               
-    RelativeSpeed: 1.14799359896287
-    ClockSpeed: 2594
+    RelativeSpeed: 1.08183096790692
+    ClockSpeed: 2095
     FileName: ToString Or Not ToString
     RepeatCount: 100
-    Throughput: 17645.0867256013
+    Throughput: 14773.6674151991
     BenchmarkInput: 
       FileName: ToString Or Not ToString
 FileName: ToString Or Not ToString
-ClockSpeed: 2594
+ClockSpeed: 2095
 ---
 
 
-### 
 
 
-|Technique|Time           |RelativeSpeed|Throughput|
-|---------|---------------|-------------|----------|
-|Quoted   |00:00:00.004936|1x           |20256.45/s|
-|ToString |00:00:00.005667|1.15x        |17645.09/s|
+|Technique|RepeatCount|Time           |RelativeSpeed|Throughput|
+|---------|-----------|---------------|-------------|----------|
+|Quoted   |100        |00:00:00.006256|1x           |15982.61/s|
+|ToString |100        |00:00:00.006768|1.08x        |14773.67/s|

@@ -5,144 +5,144 @@ title: What Is The Fastest Way To Read A File
 Data: 
   - Technique: [IO.File]::ReadAllText
     Time: 
-      Ticks: 72667
+      Ticks: 73627
       Days: 0
       Hours: 0
       Milliseconds: 7
       Minutes: 0
       Seconds: 0
-      TotalDays: 8.41053240740741e-08
-      TotalHours: 2.01852777777778e-06
-      TotalMilliseconds: 7.2667
-      TotalMinutes: 0.000121111666666667
-      TotalSeconds: 0.0072667
+      TotalDays: 8.52164351851852e-08
+      TotalHours: 2.04519444444444e-06
+      TotalMilliseconds: 7.3627
+      TotalMinutes: 0.000122711666666667
+      TotalSeconds: 0.0073627
       FileName: What Is The Fastest Way To Read A File
       GroupName: 
       BenchmarkInput: 
-        FileName: What Is The Fastest Way To Read A File
         ScriptBlock: |
           
                   [IO.File]::ReadAllText($filePath)
               
+        FileName: What Is The Fastest Way To Read A File
     RelativeSpeed: 1
     ClockSpeed: 2095
     FileName: What Is The Fastest Way To Read A File
     RepeatCount: 100
-    Throughput: 13761.4047641983
+    Throughput: 13581.9740041018
+    BenchmarkInput: 
+      FileName: What Is The Fastest Way To Read A File
+  - Technique: [IO.File]::ReadAllBytes
+    Time: 
+      Ticks: 153376
+      Days: 0
+      Hours: 0
+      Milliseconds: 15
+      Minutes: 0
+      Seconds: 0
+      TotalDays: 1.77518518518519e-07
+      TotalHours: 4.26044444444444e-06
+      TotalMilliseconds: 15.3376
+      TotalMinutes: 0.000255626666666667
+      TotalSeconds: 0.0153376
+      FileName: What Is The Fastest Way To Read A File
+      GroupName: 
+      BenchmarkInput: 
+        ScriptBlock: |
+          
+                  [IO.File]::ReadAllBytes($filePath)
+              
+        FileName: What Is The Fastest Way To Read A File
+    RelativeSpeed: 2.08314884485311
+    ClockSpeed: 2095
+    FileName: What Is The Fastest Way To Read A File
+    RepeatCount: 100
+    Throughput: 6519.92489046526
     BenchmarkInput: 
       FileName: What Is The Fastest Way To Read A File
   - Technique: [IO.StreamReader].ReadToEnd
     Time: 
-      Ticks: 124226
+      Ticks: 504692
       Days: 0
       Hours: 0
-      Milliseconds: 12
+      Milliseconds: 50
       Minutes: 0
       Seconds: 0
-      TotalDays: 1.43780092592593e-07
-      TotalHours: 3.45072222222222e-06
-      TotalMilliseconds: 12.4226
-      TotalMinutes: 0.000207043333333333
-      TotalSeconds: 0.0124226
+      TotalDays: 5.84134259259259e-07
+      TotalHours: 1.40192222222222e-05
+      TotalMilliseconds: 50.4692
+      TotalMinutes: 0.000841153333333333
+      TotalSeconds: 0.0504692
       FileName: What Is The Fastest Way To Read A File
       GroupName: 
       BenchmarkInput: 
-        FileName: What Is The Fastest Way To Read A File
         ScriptBlock: |
           
                   $stream = [IO.File]::OpenRead($filePath)
                   [IO.StreamReader]::new($stream).ReadToEnd()
                   $stream.Close()
               
-    RelativeSpeed: 1.7095242682373
-    ClockSpeed: 2095
-    FileName: What Is The Fastest Way To Read A File
-    RepeatCount: 100
-    Throughput: 8049.84463799849
-    BenchmarkInput: 
-      FileName: What Is The Fastest Way To Read A File
-  - Technique: [IO.File]::ReadAllBytes
-    Time: 
-      Ticks: 150962
-      Days: 0
-      Hours: 0
-      Milliseconds: 15
-      Minutes: 0
-      Seconds: 0
-      TotalDays: 1.74724537037037e-07
-      TotalHours: 4.19338888888889e-06
-      TotalMilliseconds: 15.0962
-      TotalMinutes: 0.000251603333333333
-      TotalSeconds: 0.0150962
-      FileName: What Is The Fastest Way To Read A File
-      GroupName: 
-      BenchmarkInput: 
         FileName: What Is The Fastest Way To Read A File
-        ScriptBlock: |
-          
-                  [IO.File]::ReadAllBytes($filePath)
-              
-    RelativeSpeed: 2.07744918601291
+    RelativeSpeed: 6.85471362407812
     ClockSpeed: 2095
     FileName: What Is The Fastest Way To Read A File
     RepeatCount: 100
-    Throughput: 6624.18356937507
+    Throughput: 1981.40648157688
     BenchmarkInput: 
       FileName: What Is The Fastest Way To Read A File
   - Technique: Get-Content -Raw
     Time: 
-      Ticks: 774178
+      Ticks: 699809
       Days: 0
       Hours: 0
-      Milliseconds: 77
+      Milliseconds: 69
       Minutes: 0
       Seconds: 0
-      TotalDays: 8.96039351851852e-07
-      TotalHours: 2.15049444444444e-05
-      TotalMilliseconds: 77.4178
-      TotalMinutes: 0.00129029666666667
-      TotalSeconds: 0.0774178
+      TotalDays: 8.0996412037037e-07
+      TotalHours: 1.94391388888889e-05
+      TotalMilliseconds: 69.9809
+      TotalMinutes: 0.00116634833333333
+      TotalSeconds: 0.0699809
       FileName: What Is The Fastest Way To Read A File
       GroupName: 
       BenchmarkInput: 
-        FileName: What Is The Fastest Way To Read A File
         ScriptBlock: |
           
                   Get-Content -Path $filePath -Raw
               
-    RelativeSpeed: 10.6537768175375
+        FileName: What Is The Fastest Way To Read A File
+    RelativeSpeed: 9.50478764583645
     ClockSpeed: 2095
     FileName: What Is The Fastest Way To Read A File
     RepeatCount: 100
-    Throughput: 1291.69260815988
+    Throughput: 1428.96133087743
     BenchmarkInput: 
       FileName: What Is The Fastest Way To Read A File
   - Technique: Get-Content
     Time: 
-      Ticks: 892643
+      Ticks: 904485
       Days: 0
       Hours: 0
-      Milliseconds: 89
+      Milliseconds: 90
       Minutes: 0
       Seconds: 0
-      TotalDays: 1.03315162037037e-06
-      TotalHours: 2.47956388888889e-05
-      TotalMilliseconds: 89.2643
-      TotalMinutes: 0.00148773833333333
-      TotalSeconds: 0.0892643
+      TotalDays: 1.04685763888889e-06
+      TotalHours: 2.51245833333333e-05
+      TotalMilliseconds: 90.4485
+      TotalMinutes: 0.001507475
+      TotalSeconds: 0.0904485
       FileName: What Is The Fastest Way To Read A File
       GroupName: 
       BenchmarkInput: 
-        FileName: What Is The Fastest Way To Read A File
         ScriptBlock: |
           
                   Get-Content -Path $filePath
               
-    RelativeSpeed: 12.2840216329283
+        FileName: What Is The Fastest Way To Read A File
+    RelativeSpeed: 12.2846917571
     ClockSpeed: 2095
     FileName: What Is The Fastest Way To Read A File
     RepeatCount: 100
-    Throughput: 1120.26868524147
+    Throughput: 1105.60153015252
     BenchmarkInput: 
       FileName: What Is The Fastest Way To Read A File
 FileName: What Is The Fastest Way To Read A File
@@ -154,8 +154,8 @@ ClockSpeed: 2095
 
 |Technique                  |RepeatCount|Time           |RelativeSpeed|Throughput|
 |---------------------------|-----------|---------------|-------------|----------|
-|[IO.File]::ReadAllText     |100        |00:00:00.007266|1x           |13761.4/s |
-|[IO.StreamReader].ReadToEnd|100        |00:00:00.012422|1.71x        |8049.84/s |
-|[IO.File]::ReadAllBytes    |100        |00:00:00.015096|2.08x        |6624.18/s |
-|Get-Content -Raw           |100        |00:00:00.077417|10.65x       |1291.69/s |
-|Get-Content                |100        |00:00:00.089264|12.28x       |1120.27/s |
+|[IO.File]::ReadAllText     |100        |00:00:00.007362|1x           |13581.97/s|
+|[IO.File]::ReadAllBytes    |100        |00:00:00.015337|2.08x        |6519.92/s |
+|[IO.StreamReader].ReadToEnd|100        |00:00:00.050469|6.85x        |1981.41/s |
+|Get-Content -Raw           |100        |00:00:00.069980|9.5x         |1428.96/s |
+|Get-Content                |100        |00:00:00.090448|12.28x       |1105.6/s  |

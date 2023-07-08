@@ -3,46 +3,19 @@ layout: Benchmark
 title: ToString Or Not ToString
 
 Data: 
-  - Technique: ToString
-    Time: 
-      Ticks: 63720
-      Days: 0
-      Hours: 0
-      Milliseconds: 6
-      Minutes: 0
-      Seconds: 0
-      TotalDays: 7.375e-08
-      TotalHours: 1.77e-06
-      TotalMilliseconds: 6.372
-      TotalMinutes: 0.0001062
-      TotalSeconds: 0.006372
-      FileName: ToString Or Not ToString
-      GroupName: 
-      BenchmarkInput: 
-        ScriptBlock: |
-          
-                  $PWD.ToString()
-              
-        FileName: ToString Or Not ToString
-    RelativeSpeed: 1
-    ClockSpeed: 2793
-    FileName: ToString Or Not ToString
-    Throughput: 15693.6597614564
-    BenchmarkInput: 
-      FileName: ToString Or Not ToString
   - Technique: Quoted
     Time: 
-      Ticks: 284399
+      Ticks: 75151
       Days: 0
       Hours: 0
-      Milliseconds: 28
+      Milliseconds: 7
       Minutes: 0
       Seconds: 0
-      TotalDays: 3.29165509259259e-07
-      TotalHours: 7.89997222222222e-06
-      TotalMilliseconds: 28.4399
-      TotalMinutes: 0.000473998333333333
-      TotalSeconds: 0.0284399
+      TotalDays: 8.69803240740741e-08
+      TotalHours: 2.08752777777778e-06
+      TotalMilliseconds: 7.5151
+      TotalMinutes: 0.000125251666666667
+      TotalSeconds: 0.0075151
       FileName: ToString Or Not ToString
       GroupName: 
       BenchmarkInput: 
@@ -51,14 +24,41 @@ Data:
                   "$pwd"
               
         FileName: ToString Or Not ToString
-    RelativeSpeed: 4.46326114249843
-    ClockSpeed: 2793
+    RelativeSpeed: 1
+    ClockSpeed: 2397
     FileName: ToString Or Not ToString
-    Throughput: 3516.18676577625
+    Throughput: 13306.5428271081
+    BenchmarkInput: 
+      FileName: ToString Or Not ToString
+  - Technique: ToString
+    Time: 
+      Ticks: 82474
+      Days: 0
+      Hours: 0
+      Milliseconds: 8
+      Minutes: 0
+      Seconds: 0
+      TotalDays: 9.54560185185185e-08
+      TotalHours: 2.29094444444444e-06
+      TotalMilliseconds: 8.2474
+      TotalMinutes: 0.000137456666666667
+      TotalSeconds: 0.0082474
+      FileName: ToString Or Not ToString
+      GroupName: 
+      BenchmarkInput: 
+        ScriptBlock: |
+          
+                  $PWD.ToString()
+              
+        FileName: ToString Or Not ToString
+    RelativeSpeed: 1.09744381312291
+    ClockSpeed: 2397
+    FileName: ToString Or Not ToString
+    Throughput: 12125.0333438417
     BenchmarkInput: 
       FileName: ToString Or Not ToString
 FileName: ToString Or Not ToString
-ClockSpeed: 2793
+ClockSpeed: 2397
 ---
 
 
@@ -67,5 +67,5 @@ ClockSpeed: 2793
 
 |Technique|Time           |RelativeSpeed|Throughput|
 |---------|---------------|-------------|----------|
-|ToString |00:00:00.006372|1x           |15693.66/s|
-|Quoted   |00:00:00.028439|4.46x        |3516.19/s |
+|Quoted   |00:00:00.007515|1x           |13306.54/s|
+|ToString |00:00:00.008247|1.1x         |12125.03/s|

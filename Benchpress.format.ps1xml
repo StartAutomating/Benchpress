@@ -107,6 +107,7 @@
     $outputLines = @(
     "---"
     "layout: Benchmark"
+    "title: $($outputFileInfo.FileName)"    
     $outputFileInfo | ConvertTo-Json -Depth 10 | ConvertFrom-Json | &amp; ${Benchpress_Format-YAML}
     "---"
     &amp; ${Benchpress_Format-Markdown} -Heading $outputFileInfo.FileName -HeadingSize 2

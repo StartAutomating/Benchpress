@@ -3,114 +3,24 @@ layout: Benchmark
 title: How Much Faster Is Splatting
 
 Data: 
-  - Technique: Splatting
-    Time: 
-      Ticks: 1546334
-      Days: 0
-      Hours: 0
-      Milliseconds: 154
-      Minutes: 0
-      Seconds: 0
-      TotalDays: 1.78973842592593e-06
-      TotalHours: 4.29537222222222e-05
-      TotalMilliseconds: 154.6334
-      TotalMinutes: 0.00257722333333333
-      TotalSeconds: 0.1546334
-    RelativeSpeed: 1
-    ClockSpeed: 2095
-    FileName: How Much Faster Is Splatting
-    Details: 
-      BenchmarkInput: 
-        FileName: How Much Faster Is Splatting
-        ScriptBlock: |
-          
-                  Add-Member @splat 
-              
-        Detailed: 
-          IsPresent: true
-        RepeatCount: 1024
-      TotalMilliseconds: 154.6335
-      AverageTime: 
-        Ticks: 1510
-        Days: 0
-        Hours: 0
-        Milliseconds: 0
-        Minutes: 0
-        Seconds: 0
-        TotalDays: 1.74768518518519e-09
-        TotalHours: 4.19444444444444e-08
-        TotalMilliseconds: 0.151
-        TotalMinutes: 2.51666666666667e-06
-        TotalSeconds: 0.000151
-      GroupName: 
-      Command: |
-        
-                Add-Member @splat 
-            
-      FileName: How Much Faster Is Splatting
-      FastestTime: 
-        Ticks: 1231
-        Days: 0
-        Hours: 0
-        Milliseconds: 0
-        Minutes: 0
-        Seconds: 0
-        TotalDays: 1.42476851851852e-09
-        TotalHours: 3.41944444444444e-08
-        TotalMilliseconds: 0.1231
-        TotalMinutes: 2.05166666666667e-06
-        TotalSeconds: 0.0001231
-      TotalTime: 
-        Ticks: 1546334
-        Days: 0
-        Hours: 0
-        Milliseconds: 154
-        Minutes: 0
-        Seconds: 0
-        TotalDays: 1.78973842592593e-06
-        TotalHours: 4.29537222222222e-05
-        TotalMilliseconds: 154.6334
-        TotalMinutes: 0.00257722333333333
-        TotalSeconds: 0.1546334
-      RepeatCount: 1024
-      SlowestTime: 
-        Ticks: 18360
-        Days: 0
-        Hours: 0
-        Milliseconds: 1
-        Minutes: 0
-        Seconds: 0
-        TotalDays: 2.125e-08
-        TotalHours: 5.1e-07
-        TotalMilliseconds: 1.836
-        TotalMinutes: 3.06e-05
-        TotalSeconds: 0.001836
-    RepeatCount: 1024
-    Throughput: 6622.11398055013
-    BenchmarkInput: 
-      FileName: How Much Faster Is Splatting
-      Detailed: 
-        IsPresent: true
-      RepeatCount: 1024
   - Technique: Named
     Time: 
-      Ticks: 1628897
+      Ticks: 2547635
       Days: 0
       Hours: 0
-      Milliseconds: 162
+      Milliseconds: 254
       Minutes: 0
       Seconds: 0
-      TotalDays: 1.8852974537037e-06
-      TotalHours: 4.52471388888889e-05
-      TotalMilliseconds: 162.8897
-      TotalMinutes: 0.00271482833333333
-      TotalSeconds: 0.1628897
-    RelativeSpeed: 1.05339205282167
-    ClockSpeed: 2095
+      TotalDays: 2.94865162037037e-06
+      TotalHours: 7.07676388888889e-05
+      TotalMilliseconds: 254.7635
+      TotalMinutes: 0.00424605833333333
+      TotalSeconds: 0.2547635
+    RelativeSpeed: 1
+    ClockSpeed: 2295
     FileName: How Much Faster Is Splatting
     Details: 
       BenchmarkInput: 
-        FileName: How Much Faster Is Splatting
         ScriptBlock: |
           
                   Add-Member -InputObject ([PSObject]::new()) -PassThru -MemberType NoteProperty -Name Test -Value 1 
@@ -118,88 +28,177 @@ Data:
         Detailed: 
           IsPresent: true
         RepeatCount: 1024
-      TotalMilliseconds: 162.8897
-      AverageTime: 
-        Ticks: 1590
+        FileName: How Much Faster Is Splatting
+      FastestTime: 
+        Ticks: 1964
         Days: 0
         Hours: 0
         Milliseconds: 0
         Minutes: 0
         Seconds: 0
-        TotalDays: 1.84027777777778e-09
-        TotalHours: 4.41666666666667e-08
-        TotalMilliseconds: 0.159
-        TotalMinutes: 2.65e-06
-        TotalSeconds: 0.000159
-      GroupName: 
+        TotalDays: 2.27314814814815e-09
+        TotalHours: 5.45555555555556e-08
+        TotalMilliseconds: 0.1964
+        TotalMinutes: 3.27333333333333e-06
+        TotalSeconds: 0.0001964
       Command: |
         
                 Add-Member -InputObject ([PSObject]::new()) -PassThru -MemberType NoteProperty -Name Test -Value 1 
             
-      FileName: How Much Faster Is Splatting
-      FastestTime: 
-        Ticks: 1295
+      AverageTime: 
+        Ticks: 2487
         Days: 0
         Hours: 0
         Milliseconds: 0
         Minutes: 0
         Seconds: 0
-        TotalDays: 1.49884259259259e-09
-        TotalHours: 3.59722222222222e-08
-        TotalMilliseconds: 0.1295
-        TotalMinutes: 2.15833333333333e-06
-        TotalSeconds: 0.0001295
+        TotalDays: 2.87847222222222e-09
+        TotalHours: 6.90833333333333e-08
+        TotalMilliseconds: 0.2487
+        TotalMinutes: 4.145e-06
+        TotalSeconds: 0.0002487
+      GroupName: 
+      FileName: How Much Faster Is Splatting
       TotalTime: 
-        Ticks: 1628897
+        Ticks: 2547635
         Days: 0
         Hours: 0
-        Milliseconds: 162
+        Milliseconds: 254
         Minutes: 0
         Seconds: 0
-        TotalDays: 1.8852974537037e-06
-        TotalHours: 4.52471388888889e-05
-        TotalMilliseconds: 162.8897
-        TotalMinutes: 0.00271482833333333
-        TotalSeconds: 0.1628897
+        TotalDays: 2.94865162037037e-06
+        TotalHours: 7.07676388888889e-05
+        TotalMilliseconds: 254.7635
+        TotalMinutes: 0.00424605833333333
+        TotalSeconds: 0.2547635
       RepeatCount: 1024
       SlowestTime: 
-        Ticks: 26194
+        Ticks: 36703
+        Days: 0
+        Hours: 0
+        Milliseconds: 3
+        Minutes: 0
+        Seconds: 0
+        TotalDays: 4.24803240740741e-08
+        TotalHours: 1.01952777777778e-06
+        TotalMilliseconds: 3.6703
+        TotalMinutes: 6.11716666666667e-05
+        TotalSeconds: 0.0036703
+      TotalMilliseconds: 254.7636
+    RepeatCount: 1024
+    Throughput: 4019.41408404265
+    BenchmarkInput: 
+      Detailed: 
+        IsPresent: true
+      RepeatCount: 1024
+      FileName: How Much Faster Is Splatting
+  - Technique: Splatting
+    Time: 
+      Ticks: 2550083
+      Days: 0
+      Hours: 0
+      Milliseconds: 255
+      Minutes: 0
+      Seconds: 0
+      TotalDays: 2.9514849537037e-06
+      TotalHours: 7.08356388888889e-05
+      TotalMilliseconds: 255.0083
+      TotalMinutes: 0.00425013833333333
+      TotalSeconds: 0.2550083
+    RelativeSpeed: 1.00096049828155
+    ClockSpeed: 2295
+    FileName: How Much Faster Is Splatting
+    Details: 
+      BenchmarkInput: 
+        ScriptBlock: |
+          
+                  Add-Member @splat 
+              
+        Detailed: 
+          IsPresent: true
+        RepeatCount: 1024
+        FileName: How Much Faster Is Splatting
+      FastestTime: 
+        Ticks: 1965
+        Days: 0
+        Hours: 0
+        Milliseconds: 0
+        Minutes: 0
+        Seconds: 0
+        TotalDays: 2.27430555555556e-09
+        TotalHours: 5.45833333333333e-08
+        TotalMilliseconds: 0.1965
+        TotalMinutes: 3.275e-06
+        TotalSeconds: 0.0001965
+      Command: |
+        
+                Add-Member @splat 
+            
+      AverageTime: 
+        Ticks: 2490
+        Days: 0
+        Hours: 0
+        Milliseconds: 0
+        Minutes: 0
+        Seconds: 0
+        TotalDays: 2.88194444444444e-09
+        TotalHours: 6.91666666666667e-08
+        TotalMilliseconds: 0.249
+        TotalMinutes: 4.15e-06
+        TotalSeconds: 0.000249
+      GroupName: 
+      FileName: How Much Faster Is Splatting
+      TotalTime: 
+        Ticks: 2550083
+        Days: 0
+        Hours: 0
+        Milliseconds: 255
+        Minutes: 0
+        Seconds: 0
+        TotalDays: 2.9514849537037e-06
+        TotalHours: 7.08356388888889e-05
+        TotalMilliseconds: 255.0083
+        TotalMinutes: 0.00425013833333333
+        TotalSeconds: 0.2550083
+      RepeatCount: 1024
+      SlowestTime: 
+        Ticks: 20412
         Days: 0
         Hours: 0
         Milliseconds: 2
         Minutes: 0
         Seconds: 0
-        TotalDays: 3.03171296296296e-08
-        TotalHours: 7.27611111111111e-07
-        TotalMilliseconds: 2.6194
-        TotalMinutes: 4.36566666666667e-05
-        TotalSeconds: 0.0026194
+        TotalDays: 2.3625e-08
+        TotalHours: 5.67e-07
+        TotalMilliseconds: 2.0412
+        TotalMinutes: 3.402e-05
+        TotalSeconds: 0.0020412
+      TotalMilliseconds: 255.0083
     RepeatCount: 1024
-    Throughput: 6286.46255717826
+    Throughput: 4015.55557211275
     BenchmarkInput: 
-      FileName: How Much Faster Is Splatting
       Detailed: 
         IsPresent: true
       RepeatCount: 1024
+      FileName: How Much Faster Is Splatting
   - Technique: Piped
     Time: 
-      Ticks: 1723569
+      Ticks: 2632288
       Days: 0
       Hours: 0
-      Milliseconds: 172
+      Milliseconds: 263
       Minutes: 0
       Seconds: 0
-      TotalDays: 1.99487152777778e-06
-      TotalHours: 4.78769166666667e-05
-      TotalMilliseconds: 172.3569
-      TotalMinutes: 0.002872615
-      TotalSeconds: 0.1723569
-    RelativeSpeed: 1.11461617308022
-    ClockSpeed: 2095
+      TotalDays: 3.04662962962963e-06
+      TotalHours: 7.31191111111111e-05
+      TotalMilliseconds: 263.2288
+      TotalMinutes: 0.00438714666666667
+      TotalSeconds: 0.2632288
+    RelativeSpeed: 1.03322766674674
+    ClockSpeed: 2295
     FileName: How Much Faster Is Splatting
     Details: 
       BenchmarkInput: 
-        FileName: How Much Faster Is Splatting
         ScriptBlock: |
           
                   [PSObject]::new() | 
@@ -208,89 +207,89 @@ Data:
         Detailed: 
           IsPresent: true
         RepeatCount: 1024
-      TotalMilliseconds: 172.357
-      AverageTime: 
-        Ticks: 1683
+        FileName: How Much Faster Is Splatting
+      FastestTime: 
+        Ticks: 2017
         Days: 0
         Hours: 0
         Milliseconds: 0
         Minutes: 0
         Seconds: 0
-        TotalDays: 1.94791666666667e-09
-        TotalHours: 4.675e-08
-        TotalMilliseconds: 0.1683
-        TotalMinutes: 2.805e-06
-        TotalSeconds: 0.0001683
-      GroupName: 
+        TotalDays: 2.33449074074074e-09
+        TotalHours: 5.60277777777778e-08
+        TotalMilliseconds: 0.2017
+        TotalMinutes: 3.36166666666667e-06
+        TotalSeconds: 0.0002017
       Command: |
         
                 [PSObject]::new() | 
                     Add-Member -MemberType NoteProperty -Name Test -Value 1 -PassThru
             
-      FileName: How Much Faster Is Splatting
-      FastestTime: 
-        Ticks: 1366
+      AverageTime: 
+        Ticks: 2570
         Days: 0
         Hours: 0
         Milliseconds: 0
         Minutes: 0
         Seconds: 0
-        TotalDays: 1.58101851851852e-09
-        TotalHours: 3.79444444444444e-08
-        TotalMilliseconds: 0.1366
-        TotalMinutes: 2.27666666666667e-06
-        TotalSeconds: 0.0001366
+        TotalDays: 2.97453703703704e-09
+        TotalHours: 7.13888888888889e-08
+        TotalMilliseconds: 0.257
+        TotalMinutes: 4.28333333333333e-06
+        TotalSeconds: 0.000257
+      GroupName: 
+      FileName: How Much Faster Is Splatting
       TotalTime: 
-        Ticks: 1723569
+        Ticks: 2632288
         Days: 0
         Hours: 0
-        Milliseconds: 172
+        Milliseconds: 263
         Minutes: 0
         Seconds: 0
-        TotalDays: 1.99487152777778e-06
-        TotalHours: 4.78769166666667e-05
-        TotalMilliseconds: 172.3569
-        TotalMinutes: 0.002872615
-        TotalSeconds: 0.1723569
+        TotalDays: 3.04662962962963e-06
+        TotalHours: 7.31191111111111e-05
+        TotalMilliseconds: 263.2288
+        TotalMinutes: 0.00438714666666667
+        TotalSeconds: 0.2632288
       RepeatCount: 1024
       SlowestTime: 
-        Ticks: 22785
+        Ticks: 22868
         Days: 0
         Hours: 0
         Milliseconds: 2
         Minutes: 0
         Seconds: 0
-        TotalDays: 2.63715277777778e-08
-        TotalHours: 6.32916666666667e-07
-        TotalMilliseconds: 2.2785
-        TotalMinutes: 3.7975e-05
-        TotalSeconds: 0.0022785
+        TotalDays: 2.64675925925926e-08
+        TotalHours: 6.35222222222222e-07
+        TotalMilliseconds: 2.2868
+        TotalMinutes: 3.81133333333333e-05
+        TotalSeconds: 0.0022868
+      TotalMilliseconds: 263.2288
     RepeatCount: 1024
-    Throughput: 5941.16046412995
+    Throughput: 3890.15183748891
     BenchmarkInput: 
-      FileName: How Much Faster Is Splatting
       Detailed: 
         IsPresent: true
       RepeatCount: 1024
+      FileName: How Much Faster Is Splatting
   - Technique: Positional
     Time: 
-      Ticks: 5932280
+      Ticks: 8861462
       Days: 0
       Hours: 0
-      Milliseconds: 593
+      Milliseconds: 886
       Minutes: 0
       Seconds: 0
-      TotalDays: 6.86606481481482e-06
-      TotalHours: 0.000164785555555556
-      TotalMilliseconds: 593.228
-      TotalMinutes: 0.00988713333333333
-      TotalSeconds: 0.593228
-    RelativeSpeed: 3.83634852732429
-    ClockSpeed: 2095
+      TotalDays: 1.02563217592593e-05
+      TotalHours: 0.000246151722222222
+      TotalMilliseconds: 886.1462
+      TotalMinutes: 0.0147691033333333
+      TotalSeconds: 0.8861462
+    RelativeSpeed: 3.47830773312986
+    ClockSpeed: 2295
     FileName: How Much Faster Is Splatting
     Details: 
       BenchmarkInput: 
-        FileName: How Much Faster Is Splatting
         ScriptBlock: |
           
                   Add-Member -InputObject ([PSObject]::new()) -PassThru NoteProperty Test 1 
@@ -298,71 +297,72 @@ Data:
         Detailed: 
           IsPresent: true
         RepeatCount: 1024
-      TotalMilliseconds: 593.228
-      AverageTime: 
-        Ticks: 5793
+        FileName: How Much Faster Is Splatting
+      FastestTime: 
+        Ticks: 6861
         Days: 0
         Hours: 0
         Milliseconds: 0
         Minutes: 0
         Seconds: 0
-        TotalDays: 6.70486111111111e-09
-        TotalHours: 1.60916666666667e-07
-        TotalMilliseconds: 0.5793
-        TotalMinutes: 9.655e-06
-        TotalSeconds: 0.0005793
-      GroupName: 
+        TotalDays: 7.94097222222222e-09
+        TotalHours: 1.90583333333333e-07
+        TotalMilliseconds: 0.6861
+        TotalMinutes: 1.1435e-05
+        TotalSeconds: 0.0006861
       Command: |
         
                 Add-Member -InputObject ([PSObject]::new()) -PassThru NoteProperty Test 1 
             
-      FileName: How Much Faster Is Splatting
-      FastestTime: 
-        Ticks: 5060
+      AverageTime: 
+        Ticks: 8653
         Days: 0
         Hours: 0
         Milliseconds: 0
         Minutes: 0
         Seconds: 0
-        TotalDays: 5.85648148148148e-09
-        TotalHours: 1.40555555555556e-07
-        TotalMilliseconds: 0.506
-        TotalMinutes: 8.43333333333333e-06
-        TotalSeconds: 0.000506
+        TotalDays: 1.00150462962963e-08
+        TotalHours: 2.40361111111111e-07
+        TotalMilliseconds: 0.8653
+        TotalMinutes: 1.44216666666667e-05
+        TotalSeconds: 0.0008653
+      GroupName: 
+      FileName: How Much Faster Is Splatting
       TotalTime: 
-        Ticks: 5932280
+        Ticks: 8861462
         Days: 0
         Hours: 0
-        Milliseconds: 593
+        Milliseconds: 886
         Minutes: 0
         Seconds: 0
-        TotalDays: 6.86606481481482e-06
-        TotalHours: 0.000164785555555556
-        TotalMilliseconds: 593.228
-        TotalMinutes: 0.00988713333333333
-        TotalSeconds: 0.593228
+        TotalDays: 1.02563217592593e-05
+        TotalHours: 0.000246151722222222
+        TotalMilliseconds: 886.1462
+        TotalMinutes: 0.0147691033333333
+        TotalSeconds: 0.8861462
       RepeatCount: 1024
       SlowestTime: 
-        Ticks: 22081
+        Ticks: 55164
         Days: 0
         Hours: 0
-        Milliseconds: 2
+        Milliseconds: 5
         Minutes: 0
         Seconds: 0
-        TotalDays: 2.5556712962963e-08
-        TotalHours: 6.13361111111111e-07
-        TotalMilliseconds: 2.2081
-        TotalMinutes: 3.68016666666667e-05
-        TotalSeconds: 0.0022081
+        TotalDays: 6.38472222222222e-08
+        TotalHours: 1.53233333333333e-06
+        TotalMilliseconds: 5.5164
+        TotalMinutes: 9.194e-05
+        TotalSeconds: 0.0055164
+      TotalMilliseconds: 886.146200000001
     RepeatCount: 1024
-    Throughput: 1726.14913658829
+    Throughput: 1155.5655263206
     BenchmarkInput: 
-      FileName: How Much Faster Is Splatting
       Detailed: 
         IsPresent: true
       RepeatCount: 1024
+      FileName: How Much Faster Is Splatting
 FileName: How Much Faster Is Splatting
-ClockSpeed: 2095
+ClockSpeed: 2295
 ---
 
 
@@ -370,7 +370,7 @@ ClockSpeed: 2095
 
 |Technique |RepeatCount|Time           |RelativeSpeed|Throughput|
 |----------|-----------|---------------|-------------|----------|
-|Splatting |1024       |00:00:00.154633|1x           |6622.11/s |
-|Named     |1024       |00:00:00.162889|1.05x        |6286.46/s |
-|Piped     |1024       |00:00:00.172356|1.11x        |5941.16/s |
-|Positional|1024       |00:00:00.593228|3.84x        |1726.15/s |
+|Named     |1024       |00:00:00.254763|1x           |4019.41/s |
+|Splatting |1024       |00:00:00.255008|1x           |4015.56/s |
+|Piped     |1024       |00:00:00.263228|1.03x        |3890.15/s |
+|Positional|1024       |00:00:00.886146|3.48x        |1155.57/s |

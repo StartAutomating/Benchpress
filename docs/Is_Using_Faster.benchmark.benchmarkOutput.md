@@ -5,17 +5,17 @@ title: Is Using Faster
 Data: 
   - Technique: not using
     Time: 
-      Ticks: 51761
+      Ticks: 77694
       Days: 0
       Hours: 0
-      Milliseconds: 5
+      Milliseconds: 7
       Minutes: 0
       Seconds: 0
-      TotalDays: 5.99085648148148e-08
-      TotalHours: 1.43780555555556e-06
-      TotalMilliseconds: 5.1761
-      TotalMinutes: 8.62683333333333e-05
-      TotalSeconds: 0.0051761
+      TotalDays: 8.99236111111111e-08
+      TotalHours: 2.15816666666667e-06
+      TotalMilliseconds: 7.7694
+      TotalMinutes: 0.00012949
+      TotalSeconds: 0.0077694
       FileName: Is Using Faster
       GroupName: 
       BenchmarkInput: 
@@ -28,22 +28,22 @@ Data:
     ClockSpeed: 2295
     FileName: Is Using Faster
     RepeatCount: 100
-    Throughput: 19319.5649233979
+    Throughput: 12871.0067701496
     BenchmarkInput: 
       FileName: Is Using Faster
   - Technique: using
     Time: 
-      Ticks: 57181
+      Ticks: 80200
       Days: 0
       Hours: 0
-      Milliseconds: 5
+      Milliseconds: 8
       Minutes: 0
       Seconds: 0
-      TotalDays: 6.6181712962963e-08
-      TotalHours: 1.58836111111111e-06
-      TotalMilliseconds: 5.7181
-      TotalMinutes: 9.53016666666667e-05
-      TotalSeconds: 0.0057181
+      TotalDays: 9.28240740740741e-08
+      TotalHours: 2.22777777777778e-06
+      TotalMilliseconds: 8.02
+      TotalMinutes: 0.000133666666666667
+      TotalSeconds: 0.00802
       FileName: Is Using Faster
       GroupName: 
       BenchmarkInput: 
@@ -51,11 +51,11 @@ Data:
         ScriptBlock: |
           using namespace System.Management.Automation.Language
           $scriptBlockAst -is [StringConstantExpressionAst]
-    RelativeSpeed: 1.10471204188482
+    RelativeSpeed: 1.03225474296599
     ClockSpeed: 2295
     FileName: Is Using Faster
     RepeatCount: 100
-    Throughput: 17488.3265420332
+    Throughput: 12468.8279301746
     BenchmarkInput: 
       FileName: Is Using Faster
 FileName: Is Using Faster
@@ -67,5 +67,5 @@ ClockSpeed: 2295
 
 |Technique|RepeatCount|Time           |RelativeSpeed|Throughput|
 |---------|-----------|---------------|-------------|----------|
-|not using|100        |00:00:00.005176|1x           |19319.56/s|
-|using    |100        |00:00:00.005718|1.1x         |17488.33/s|
+|not using|100        |00:00:00.007769|1x           |12871.01/s|
+|using    |100        |00:00:00.008020|1.03x        |12468.83/s|

@@ -5,20 +5,21 @@ title: multithreading
 Data: 
   - Technique: Runspace
     Time: 
-      Ticks: 8934651
+      Ticks: 7658631
       Days: 0
       Hours: 0
-      Milliseconds: 893
+      Milliseconds: 765
       Minutes: 0
       Seconds: 0
-      TotalDays: 1.034103125e-05
-      TotalHours: 0.00024818475
-      TotalMilliseconds: 893.4651
-      TotalMinutes: 0.014891085
-      TotalSeconds: 0.8934651
+      TotalDays: 8.86415625e-06
+      TotalHours: 0.00021273975
+      TotalMilliseconds: 765.8631
+      TotalMinutes: 0.012764385
+      TotalSeconds: 0.7658631
       FileName: multithreading
       GroupName: Multi-Threading
       BenchmarkInput: 
+        GroupName: Multi-Threading
         RepeatCount: 3
         FileName: multithreading
         ScriptBlock: |
@@ -51,33 +52,33 @@ Data:
                   }
                   $thisTest = & $resultObject @hash        
               
-        GroupName: Multi-Threading
     RelativeSpeed: 1
     GroupName: Multi-Threading
     ClockSpeed: 2594
     FileName: multithreading
     RepeatCount: 3
-    Throughput: 3.35771369245424
+    Throughput: 3.91714916151464
     BenchmarkInput: 
+      GroupName: Multi-Threading
       RepeatCount: 3
       FileName: multithreading
-      GroupName: Multi-Threading
   - Technique: ForEach-Object -Parallel
     Time: 
-      Ticks: 9492320
+      Ticks: 9747153
       Days: 0
       Hours: 0
-      Milliseconds: 949
+      Milliseconds: 974
       Minutes: 0
       Seconds: 0
-      TotalDays: 1.09864814814815e-05
-      TotalHours: 0.000263675555555556
-      TotalMilliseconds: 949.232
-      TotalMinutes: 0.0158205333333333
-      TotalSeconds: 0.949232
+      TotalDays: 1.12814270833333e-05
+      TotalHours: 0.00027075425
+      TotalMilliseconds: 974.7153
+      TotalMinutes: 0.016245255
+      TotalSeconds: 0.9747153
       FileName: multithreading
       GroupName: Multi-Threading
       BenchmarkInput: 
+        GroupName: Multi-Threading
         RepeatCount: 3
         FileName: multithreading
         ScriptBlock: |
@@ -96,33 +97,33 @@ Data:
                   }
                   $thisTest = & $resultObject @hash        
               
-        GroupName: Multi-Threading
-    RelativeSpeed: 1.06241642790524
+    RelativeSpeed: 1.27270174003683
     GroupName: Multi-Threading
     ClockSpeed: 2594
     FileName: multithreading
     RepeatCount: 3
-    Throughput: 3.1604497109242
+    Throughput: 3.07782180088894
     BenchmarkInput: 
+      GroupName: Multi-Threading
       RepeatCount: 3
       FileName: multithreading
-      GroupName: Multi-Threading
   - Technique: Start-ThreadJob
     Time: 
-      Ticks: 18982391
+      Ticks: 20673375
       Days: 0
       Hours: 0
-      Milliseconds: 898
+      Milliseconds: 67
       Minutes: 0
-      Seconds: 1
-      TotalDays: 2.19703599537037e-05
-      TotalHours: 0.000527288638888889
-      TotalMilliseconds: 1898.2391
-      TotalMinutes: 0.0316373183333333
-      TotalSeconds: 1.8982391
+      Seconds: 2
+      TotalDays: 2.39275173611111e-05
+      TotalHours: 0.000574260416666667
+      TotalMilliseconds: 2067.3375
+      TotalMinutes: 0.034455625
+      TotalSeconds: 2.0673375
       FileName: multithreading
       GroupName: Multi-Threading
       BenchmarkInput: 
+        GroupName: Multi-Threading
         RepeatCount: 3
         FileName: multithreading
         ScriptBlock: |
@@ -138,33 +139,33 @@ Data:
                   }
                   $thisTest = & $resultObject @hash        
               
-        GroupName: Multi-Threading
-    RelativeSpeed: 2.12458113920734
+    RelativeSpeed: 2.69935645156425
     GroupName: Multi-Threading
     ClockSpeed: 2594
     FileName: multithreading
     RepeatCount: 3
-    Throughput: 1.58041207769875
+    Throughput: 1.4511418672568
     BenchmarkInput: 
+      GroupName: Multi-Threading
       RepeatCount: 3
       FileName: multithreading
-      GroupName: Multi-Threading
   - Technique: Start-Job
     Time: 
-      Ticks: 290923456
+      Ticks: 299543460
       Days: 0
       Hours: 0
-      Milliseconds: 92
+      Milliseconds: 954
       Minutes: 0
       Seconds: 29
-      TotalDays: 0.000336716962962963
-      TotalHours: 0.00808120711111111
-      TotalMilliseconds: 29092.3456
-      TotalMinutes: 0.484872426666667
-      TotalSeconds: 29.0923456
+      TotalDays: 0.000346693819444444
+      TotalHours: 0.00832065166666667
+      TotalMilliseconds: 29954.346
+      TotalMinutes: 0.4992391
+      TotalSeconds: 29.954346
       FileName: multithreading
       GroupName: Multi-Threading
       BenchmarkInput: 
+        GroupName: Multi-Threading
         RepeatCount: 3
         FileName: multithreading
         ScriptBlock: |
@@ -180,17 +181,16 @@ Data:
                   }
                   $thisTest = & $resultObject @hash        
               
-        GroupName: Multi-Threading
-    RelativeSpeed: 32.5612557222437
+    RelativeSpeed: 39.1118804392064
     GroupName: Multi-Threading
     ClockSpeed: 2594
     FileName: multithreading
     RepeatCount: 3
-    Throughput: 0.103119907938946
+    Throughput: 0.100152411940491
     BenchmarkInput: 
+      GroupName: Multi-Threading
       RepeatCount: 3
       FileName: multithreading
-      GroupName: Multi-Threading
 FileName: multithreading
 ClockSpeed: 2594
 ---
@@ -201,7 +201,7 @@ ClockSpeed: 2594
 
 |Technique               |RepeatCount|Time           |RelativeSpeed|Throughput|
 |------------------------|-----------|---------------|-------------|----------|
-|Runspace                |3          |00:00:00.893465|1x           |3.36/s    |
-|ForEach-Object -Parallel|3          |00:00:00.949232|1.06x        |3.16/s    |
-|Start-ThreadJob         |3          |00:00:01.898239|2.12x        |1.58/s    |
-|Start-Job               |3          |00:00:29.092345|32.56x       |0.1/s     |
+|Runspace                |3          |00:00:00.765863|1x           |3.92/s    |
+|ForEach-Object -Parallel|3          |00:00:00.974715|1.27x        |3.08/s    |
+|Start-ThreadJob         |3          |00:00:02.067337|2.7x         |1.45/s    |
+|Start-Job               |3          |00:00:29.954346|39.11x       |0.1/s     |

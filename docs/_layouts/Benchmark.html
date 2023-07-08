@@ -17,7 +17,9 @@ layout: default
             <h2>{{current_group_name}}</h2>
         {% endif %}
     {% endif %}
-    <h3>{{benchmarkData.Technique}}</h3>
+    <h3>
+        {{benchmarkData.Technique}} ({{benchmarkData.RepeatCount}}x{% if page.ClockSpeed %} @ {{page.ClockSpeed}} Mhz {% endif %})
+    </h3>
 {% endfor %}
 
 {{ content }}

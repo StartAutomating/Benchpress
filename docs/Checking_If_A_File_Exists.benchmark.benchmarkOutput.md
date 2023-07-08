@@ -5,17 +5,17 @@ title: Checking If A File Exists
 Data: 
   - Technique: [IO.File]::Exists
     Time: 
-      Ticks: 67973
+      Ticks: 101464
       Days: 0
       Hours: 0
-      Milliseconds: 6
+      Milliseconds: 10
       Minutes: 0
       Seconds: 0
-      TotalDays: 7.86724537037037e-08
-      TotalHours: 1.88813888888889e-06
-      TotalMilliseconds: 6.7973
-      TotalMinutes: 0.000113288333333333
-      TotalSeconds: 0.0067973
+      TotalDays: 1.17435185185185e-07
+      TotalHours: 2.81844444444444e-06
+      TotalMilliseconds: 10.1464
+      TotalMinutes: 0.000169106666666667
+      TotalSeconds: 0.0101464
       FileName: Checking If A File Exists
       GroupName: (Found Path)
       BenchmarkInput: 
@@ -27,25 +27,25 @@ Data:
         FileName: Checking If A File Exists
     RelativeSpeed: 1
     GroupName: (Found Path)
-    ClockSpeed: 2793
+    ClockSpeed: 2295
     FileName: Checking If A File Exists
-    Throughput: 14711.7237726744
+    Throughput: 9855.71237089017
     BenchmarkInput: 
       GroupName: (Found Path)
       FileName: Checking If A File Exists
   - Technique: Get Resolved Path
     Time: 
-      Ticks: 112938
+      Ticks: 167587
       Days: 0
       Hours: 0
-      Milliseconds: 11
+      Milliseconds: 16
       Minutes: 0
       Seconds: 0
-      TotalDays: 1.30715277777778e-07
-      TotalHours: 3.13716666666667e-06
-      TotalMilliseconds: 11.2938
-      TotalMinutes: 0.00018823
-      TotalSeconds: 0.0112938
+      TotalDays: 1.93966435185185e-07
+      TotalHours: 4.65519444444444e-06
+      TotalMilliseconds: 16.7587
+      TotalMinutes: 0.000279311666666667
+      TotalSeconds: 0.0167587
       FileName: Checking If A File Exists
       GroupName: (Found Path)
       BenchmarkInput: 
@@ -55,27 +55,27 @@ Data:
               
         GroupName: (Found Path)
         FileName: Checking If A File Exists
-    RelativeSpeed: 1.66151265943831
+    RelativeSpeed: 1.65168926910037
     GroupName: (Found Path)
-    ClockSpeed: 2793
+    ClockSpeed: 2295
     FileName: Checking If A File Exists
-    Throughput: 8854.41569710815
+    Throughput: 5967.04995017513
     BenchmarkInput: 
       GroupName: (Found Path)
       FileName: Checking If A File Exists
   - Technique: Test-Path
     Time: 
-      Ticks: 235305
+      Ticks: 357292
       Days: 0
       Hours: 0
-      Milliseconds: 23
+      Milliseconds: 35
       Minutes: 0
       Seconds: 0
-      TotalDays: 2.7234375e-07
-      TotalHours: 6.53625e-06
-      TotalMilliseconds: 23.5305
-      TotalMinutes: 0.000392175
-      TotalSeconds: 0.0235305
+      TotalDays: 4.13532407407407e-07
+      TotalHours: 9.92477777777778e-06
+      TotalMilliseconds: 35.7292
+      TotalMinutes: 0.000595486666666667
+      TotalSeconds: 0.0357292
       FileName: Checking If A File Exists
       GroupName: (Found Path)
       BenchmarkInput: 
@@ -85,27 +85,27 @@ Data:
               
         GroupName: (Found Path)
         FileName: Checking If A File Exists
-    RelativeSpeed: 3.46174216232916
+    RelativeSpeed: 3.52136718442009
     GroupName: (Found Path)
-    ClockSpeed: 2793
+    ClockSpeed: 2295
     FileName: Checking If A File Exists
-    Throughput: 4249.8034465906
+    Throughput: 2798.8312080875
     BenchmarkInput: 
       GroupName: (Found Path)
       FileName: Checking If A File Exists
   - Technique: [IO.File]::Exists
     Time: 
-      Ticks: 55693
+      Ticks: 159838
       Days: 0
       Hours: 0
-      Milliseconds: 5
+      Milliseconds: 15
       Minutes: 0
       Seconds: 0
-      TotalDays: 6.44594907407407e-08
-      TotalHours: 1.54702777777778e-06
-      TotalMilliseconds: 5.5693
-      TotalMinutes: 9.28216666666667e-05
-      TotalSeconds: 0.0055693
+      TotalDays: 1.84997685185185e-07
+      TotalHours: 4.43994444444444e-06
+      TotalMilliseconds: 15.9838
+      TotalMinutes: 0.000266396666666667
+      TotalSeconds: 0.0159838
       FileName: Checking If A File Exists
       GroupName: (Missing Path)
       BenchmarkInput: 
@@ -117,25 +117,25 @@ Data:
         FileName: Checking If A File Exists
     RelativeSpeed: 1
     GroupName: (Missing Path)
-    ClockSpeed: 2793
+    ClockSpeed: 2295
     FileName: Checking If A File Exists
-    Throughput: 17955.5779002747
+    Throughput: 6256.33453872045
     BenchmarkInput: 
       GroupName: (Missing Path)
       FileName: Checking If A File Exists
   - Technique: Test-Path
     Time: 
-      Ticks: 231309
+      Ticks: 341268
       Days: 0
       Hours: 0
-      Milliseconds: 23
+      Milliseconds: 34
       Minutes: 0
       Seconds: 0
-      TotalDays: 2.6771875e-07
-      TotalHours: 6.42525e-06
-      TotalMilliseconds: 23.1309
-      TotalMinutes: 0.000385515
-      TotalSeconds: 0.0231309
+      TotalDays: 3.94986111111111e-07
+      TotalHours: 9.47966666666667e-06
+      TotalMilliseconds: 34.1268
+      TotalMinutes: 0.00056878
+      TotalSeconds: 0.0341268
       FileName: Checking If A File Exists
       GroupName: (Missing Path)
       BenchmarkInput: 
@@ -145,27 +145,27 @@ Data:
               
         GroupName: (Missing Path)
         FileName: Checking If A File Exists
-    RelativeSpeed: 4.15328676853465
+    RelativeSpeed: 2.13508677536005
     GroupName: (Missing Path)
-    ClockSpeed: 2793
+    ClockSpeed: 2295
     FileName: Checking If A File Exists
-    Throughput: 4323.22131866897
+    Throughput: 2930.24836785166
     BenchmarkInput: 
       GroupName: (Missing Path)
       FileName: Checking If A File Exists
   - Technique: Get Resolved Path
     Time: 
-      Ticks: 432967
+      Ticks: 614043
       Days: 0
       Hours: 0
-      Milliseconds: 43
+      Milliseconds: 61
       Minutes: 0
       Seconds: 0
-      TotalDays: 5.01119212962963e-07
-      TotalHours: 1.20268611111111e-05
-      TotalMilliseconds: 43.2967
-      TotalMinutes: 0.000721611666666667
-      TotalSeconds: 0.0432967
+      TotalDays: 7.10697916666667e-07
+      TotalHours: 1.705675e-05
+      TotalMilliseconds: 61.4043
+      TotalMinutes: 0.001023405
+      TotalSeconds: 0.0614043
       FileName: Checking If A File Exists
       GroupName: (Missing Path)
       BenchmarkInput: 
@@ -175,20 +175,20 @@ Data:
               
         GroupName: (Missing Path)
         FileName: Checking If A File Exists
-    RelativeSpeed: 7.77417269674824
+    RelativeSpeed: 3.84165842915952
     GroupName: (Missing Path)
-    ClockSpeed: 2793
+    ClockSpeed: 2295
     FileName: Checking If A File Exists
-    Throughput: 2309.64484591204
+    Throughput: 1628.55044353571
     BenchmarkInput: 
       GroupName: (Missing Path)
       FileName: Checking If A File Exists
 FileName: Checking If A File Exists
-ClockSpeed: 2793
+ClockSpeed: 2295
 ---
 Checking If A File Exists
 -------------------------
-> @2793 Mhz
+> @2295 Mhz
 
 
 ### (Found Path)
@@ -196,9 +196,9 @@ Checking If A File Exists
 
 |Technique        |Time           |RelativeSpeed|Throughput|
 |-----------------|---------------|-------------|----------|
-|[IO.File]::Exists|00:00:00.006797|1x           |14711.72/s|
-|Get Resolved Path|00:00:00.011293|1.66x        |8854.42/s |
-|Test-Path        |00:00:00.023530|3.46x        |4249.8/s  |
+|[IO.File]::Exists|00:00:00.010146|1x           |9855.71/s |
+|Get Resolved Path|00:00:00.016758|1.65x        |5967.05/s |
+|Test-Path        |00:00:00.035729|3.52x        |2798.83/s |
 
 
 ### (Missing Path)
@@ -206,6 +206,6 @@ Checking If A File Exists
 
 |Technique        |Time           |RelativeSpeed|Throughput|
 |-----------------|---------------|-------------|----------|
-|[IO.File]::Exists|00:00:00.005569|1x           |17955.58/s|
-|Test-Path        |00:00:00.023130|4.15x        |4323.22/s |
-|Get Resolved Path|00:00:00.043296|7.77x        |2309.64/s |
+|[IO.File]::Exists|00:00:00.015983|1x           |6256.33/s |
+|Test-Path        |00:00:00.034126|2.14x        |2930.25/s |
+|Get Resolved Path|00:00:00.061404|3.84x        |1628.55/s |

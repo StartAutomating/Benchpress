@@ -5,17 +5,17 @@ title: Best Way To Accumulate Pipeline Results
 Data: 
   - Technique: Queue
     Time: 
-      Ticks: 164887
+      Ticks: 166980
       Days: 0
       Hours: 0
       Milliseconds: 16
       Minutes: 0
       Seconds: 0
-      TotalDays: 1.90841435185185e-07
-      TotalHours: 4.58019444444444e-06
-      TotalMilliseconds: 16.4887
-      TotalMinutes: 0.000274811666666667
-      TotalSeconds: 0.0164887
+      TotalDays: 1.93263888888889e-07
+      TotalHours: 4.63833333333333e-06
+      TotalMilliseconds: 16.698
+      TotalMinutes: 0.0002783
+      TotalSeconds: 0.016698
       FileName: Best Way To Accumulate Pipeline Results
       GroupName: 
       BenchmarkInput: 
@@ -26,52 +26,24 @@ Data:
               
         FileName: Best Way To Accumulate Pipeline Results
     RelativeSpeed: 1
-    ClockSpeed: 2594
+    ClockSpeed: 2793
     FileName: Best Way To Accumulate Pipeline Results
-    Throughput: 6064.75950196195
-    BenchmarkInput: 
-      FileName: Best Way To Accumulate Pipeline Results
-  - Technique: Arraylist
-    Time: 
-      Ticks: 168319
-      Days: 0
-      Hours: 0
-      Milliseconds: 16
-      Minutes: 0
-      Seconds: 0
-      TotalDays: 1.94813657407407e-07
-      TotalHours: 4.67552777777778e-06
-      TotalMilliseconds: 16.8319
-      TotalMinutes: 0.000280531666666667
-      TotalSeconds: 0.0168319
-      FileName: Best Way To Accumulate Pipeline Results
-      GroupName: 
-      BenchmarkInput: 
-        ScriptBlock: |
-          
-                  $arrlist = [Collections.ArrayList]::new()
-                  & { 1..3 } | & { process { $null = $arrlist.Add($_); $_ } }
-              
-        FileName: Best Way To Accumulate Pipeline Results
-    RelativeSpeed: 1.02081425461073
-    ClockSpeed: 2594
-    FileName: Best Way To Accumulate Pipeline Results
-    Throughput: 5941.09993524201
+    Throughput: 5988.74116660678
     BenchmarkInput: 
       FileName: Best Way To Accumulate Pipeline Results
   - Technique: Array
     Time: 
-      Ticks: 168568
+      Ticks: 190607
       Days: 0
       Hours: 0
-      Milliseconds: 16
+      Milliseconds: 19
       Minutes: 0
       Seconds: 0
-      TotalDays: 1.95101851851852e-07
-      TotalHours: 4.68244444444444e-06
-      TotalMilliseconds: 16.8568
-      TotalMinutes: 0.000280946666666667
-      TotalSeconds: 0.0168568
+      TotalDays: 2.20609953703704e-07
+      TotalHours: 5.29463888888889e-06
+      TotalMilliseconds: 19.0607
+      TotalMinutes: 0.000317678333333333
+      TotalSeconds: 0.0190607
       FileName: Best Way To Accumulate Pipeline Results
       GroupName: 
       BenchmarkInput: 
@@ -81,25 +53,25 @@ Data:
                   & { 1..3 } | & { process { $outArray += $_; $_ } }
               
         FileName: Best Way To Accumulate Pipeline Results
-    RelativeSpeed: 1.02232437972672
-    ClockSpeed: 2594
+    RelativeSpeed: 1.14149598754342
+    ClockSpeed: 2793
     FileName: Best Way To Accumulate Pipeline Results
-    Throughput: 5932.32404726876
+    Throughput: 5246.39703683495
     BenchmarkInput: 
       FileName: Best Way To Accumulate Pipeline Results
   - Technique: Tee-Object
     Time: 
-      Ticks: 445717
+      Ticks: 364588
       Days: 0
       Hours: 0
-      Milliseconds: 44
+      Milliseconds: 36
       Minutes: 0
       Seconds: 0
-      TotalDays: 5.15876157407407e-07
-      TotalHours: 1.23810277777778e-05
-      TotalMilliseconds: 44.5717
-      TotalMinutes: 0.000742861666666667
-      TotalSeconds: 0.0445717
+      TotalDays: 4.21976851851852e-07
+      TotalHours: 1.01274444444444e-05
+      TotalMilliseconds: 36.4588
+      TotalMinutes: 0.000607646666666667
+      TotalSeconds: 0.0364588
       FileName: Best Way To Accumulate Pipeline Results
       GroupName: 
       BenchmarkInput: 
@@ -108,14 +80,42 @@ Data:
                   & { 1..3 } | Tee-Object -Variable n 
               
         FileName: Best Way To Accumulate Pipeline Results
-    RelativeSpeed: 2.70316641093597
-    ClockSpeed: 2594
+    RelativeSpeed: 2.18342316445083
+    ClockSpeed: 2793
     FileName: Best Way To Accumulate Pipeline Results
-    Throughput: 2243.57608078669
+    Throughput: 2742.8220347351
+    BenchmarkInput: 
+      FileName: Best Way To Accumulate Pipeline Results
+  - Technique: Arraylist
+    Time: 
+      Ticks: 450590
+      Days: 0
+      Hours: 0
+      Milliseconds: 45
+      Minutes: 0
+      Seconds: 0
+      TotalDays: 5.21516203703704e-07
+      TotalHours: 1.25163888888889e-05
+      TotalMilliseconds: 45.059
+      TotalMinutes: 0.000750983333333333
+      TotalSeconds: 0.045059
+      FileName: Best Way To Accumulate Pipeline Results
+      GroupName: 
+      BenchmarkInput: 
+        ScriptBlock: |
+          
+                  $arrlist = [Collections.ArrayList]::new()
+                  & { 1..3 } | & { process { $null = $arrlist.Add($_); $_ } }
+              
+        FileName: Best Way To Accumulate Pipeline Results
+    RelativeSpeed: 2.69846688226135
+    ClockSpeed: 2793
+    FileName: Best Way To Accumulate Pipeline Results
+    Throughput: 2219.31245700082
     BenchmarkInput: 
       FileName: Best Way To Accumulate Pipeline Results
 FileName: Best Way To Accumulate Pipeline Results
-ClockSpeed: 2594
+ClockSpeed: 2793
 ---
 
 
@@ -124,7 +124,7 @@ ClockSpeed: 2594
 
 |Technique |Time           |RelativeSpeed|Throughput|
 |----------|---------------|-------------|----------|
-|Queue     |00:00:00.016488|1x           |6064.76/s |
-|Arraylist |00:00:00.016831|1.02x        |5941.1/s  |
-|Array     |00:00:00.016856|1.02x        |5932.32/s |
-|Tee-Object|00:00:00.044571|2.7x         |2243.58/s |
+|Queue     |00:00:00.016698|1x           |5988.74/s |
+|Array     |00:00:00.019060|1.14x        |5246.4/s  |
+|Tee-Object|00:00:00.036458|2.18x        |2742.82/s |
+|Arraylist |00:00:00.045059|2.7x         |2219.31/s |

@@ -15,7 +15,7 @@ layout: default
         {% if benchmarkData.GroupName != current_group_name %}
             {% assign current_group_name = benchmarkData.GroupName %}
             <h2>{{current_group_name}}</h2>
-        {% end if %}
+        {% endif %}
     {% endif %}
     <h3>{{benchmarkData.Technique}}</h3>
 {% endfor %}

@@ -6,4 +6,4 @@ bench -Technique @{
     'NoSytemNamespace' = {
         [IO.Path]
     }
-} 
+} -RepeatCount 1kb

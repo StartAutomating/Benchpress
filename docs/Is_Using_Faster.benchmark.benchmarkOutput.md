@@ -1,20 +1,21 @@
 ---
 layout: Benchmark
+title: Is Using Faster
 
 Data: 
   - Technique: not using
     Time: 
-      Ticks: 40567
+      Ticks: 47319
       Days: 0
       Hours: 0
       Milliseconds: 4
       Minutes: 0
       Seconds: 0
-      TotalDays: 4.69525462962963e-08
-      TotalHours: 1.12686111111111e-06
-      TotalMilliseconds: 4.0567
-      TotalMinutes: 6.76116666666667e-05
-      TotalSeconds: 0.0040567
+      TotalDays: 5.47673611111111e-08
+      TotalHours: 1.31441666666667e-06
+      TotalMilliseconds: 4.7319
+      TotalMinutes: 7.8865e-05
+      TotalSeconds: 0.0047319
       FileName: Is Using Faster
       GroupName: 
       BenchmarkInput: 
@@ -24,24 +25,25 @@ Data:
               $scriptBlockAst -is [Management.Automation.Language.StringConstantExpressionAst]
           
     RelativeSpeed: 1
-    ClockSpeed: 2793
+    ClockSpeed: 2095
     FileName: Is Using Faster
-    Throughput: 24650.5780560554
+    RepeatCount: 100
+    Throughput: 21133.160041421
     BenchmarkInput: 
       FileName: Is Using Faster
   - Technique: using
     Time: 
-      Ticks: 42015
+      Ticks: 53379
       Days: 0
       Hours: 0
-      Milliseconds: 4
+      Milliseconds: 5
       Minutes: 0
       Seconds: 0
-      TotalDays: 4.86284722222222e-08
-      TotalHours: 1.16708333333333e-06
-      TotalMilliseconds: 4.2015
-      TotalMinutes: 7.0025e-05
-      TotalSeconds: 0.0042015
+      TotalDays: 6.178125e-08
+      TotalHours: 1.48275e-06
+      TotalMilliseconds: 5.3379
+      TotalMinutes: 8.8965e-05
+      TotalSeconds: 0.0053379
       FileName: Is Using Faster
       GroupName: 
       BenchmarkInput: 
@@ -49,24 +51,21 @@ Data:
         ScriptBlock: |
           using namespace System.Management.Automation.Language
           $scriptBlockAst -is [StringConstantExpressionAst]
-    RelativeSpeed: 1.03569403702517
-    ClockSpeed: 2793
+    RelativeSpeed: 1.12806694985101
+    ClockSpeed: 2095
     FileName: Is Using Faster
-    Throughput: 23801.0234440081
+    RepeatCount: 100
+    Throughput: 18733.9590475655
     BenchmarkInput: 
       FileName: Is Using Faster
 FileName: Is Using Faster
-ClockSpeed: 2793
+ClockSpeed: 2095
 ---
-Is Using Faster
----------------
-> @2793 Mhz
 
 
-### 
 
 
-|Technique|Time           |RelativeSpeed|Throughput|
-|---------|---------------|-------------|----------|
-|not using|00:00:00.004056|1x           |24650.58/s|
-|using    |00:00:00.004201|1.04x        |23801.02/s|
+|Technique|RepeatCount|Time           |RelativeSpeed|Throughput|
+|---------|-----------|---------------|-------------|----------|
+|not using|100        |00:00:00.004731|1x           |21133.16/s|
+|using    |100        |00:00:00.005337|1.13x        |18733.96/s|

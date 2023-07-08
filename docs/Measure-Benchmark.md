@@ -1,14 +1,26 @@
 Measure-Benchmark
 -----------------
+
+
+
+
 ### Synopsis
 Measures a performance benchmark
 
+
+
 ---
+
+
 ### Description
 
 Measures the timing of a performance benchmark, or compares the timing of multiple techniques.
 
+
+
 ---
+
+
 ### Related Links
 * [Get-Benchmark](Get-Benchmark.md)
 
@@ -18,7 +30,11 @@ Measures the timing of a performance benchmark, or compares the timing of multip
 
 
 
+
+
 ---
+
+
 ### Examples
 #### EXAMPLE 1
 ```PowerShell
@@ -40,7 +56,11 @@ Measure-Benchmark -Technique @{
 } -GroupName "Fastest Way to Enumerate Processes"
 ```
 
+
+
 ---
+
+
 ### Parameters
 #### **Command**
 
@@ -51,13 +71,12 @@ A command to run.  This can be the name of a command, or the text content of a s
 
 
 
-|Type      |Required|Position|PipelineInput        |
-|----------|--------|--------|---------------------|
-|`[String]`|true    |1       |true (ByPropertyName)|
+|Type      |Required|Position|PipelineInput        |Aliases |
+|----------|--------|--------|---------------------|--------|
+|`[String]`|true    |1       |true (ByPropertyName)|Fullname|
 
 
 
----
 #### **ScriptBlock**
 
 A script block to execute.
@@ -73,7 +92,6 @@ A script block to execute.
 
 
 
----
 #### **Parameter**
 
 A hashtable of parameters.  These can be passed to either a command or a script block.
@@ -83,13 +101,12 @@ A hashtable of parameters.  These can be passed to either a command or a script 
 
 
 
-|Type           |Required|Position|PipelineInput        |
-|---------------|--------|--------|---------------------|
-|`[IDictionary]`|false   |named   |true (ByPropertyName)|
+|Type           |Required|Position|PipelineInput        |Aliases   |
+|---------------|--------|--------|---------------------|----------|
+|`[IDictionary]`|false   |named   |true (ByPropertyName)|Parameters|
 
 
 
----
 #### **ArgumentList**
 
 A list of positional arguments.
@@ -105,7 +122,6 @@ A list of positional arguments.
 
 
 
----
 #### **Technique**
 
 A hashtable of techniques to compare
@@ -115,13 +131,12 @@ A hashtable of techniques to compare
 
 
 
-|Type           |Required|Position|PipelineInput        |
-|---------------|--------|--------|---------------------|
-|`[IDictionary]`|true    |1       |true (ByPropertyName)|
+|Type           |Required|Position|PipelineInput        |Aliases   |
+|---------------|--------|--------|---------------------|----------|
+|`[IDictionary]`|true    |1       |true (ByPropertyName)|Techniques|
 
 
 
----
 #### **RepeatCount**
 
 The number of times to repeat the benchmark.
@@ -131,13 +146,12 @@ The number of times to repeat the benchmark.
 
 
 
-|Type      |Required|Position|PipelineInput        |
-|----------|--------|--------|---------------------|
-|`[UInt32]`|false   |2       |true (ByPropertyName)|
+|Type      |Required|Position|PipelineInput        |Aliases                                            |
+|----------|--------|--------|---------------------|---------------------------------------------------|
+|`[UInt32]`|false   |2       |true (ByPropertyName)|Reps<br/>Repetitions<br/>RepetitionCount<br/>Repeat|
 
 
 
----
 #### **Detailed**
 
 If set, will provide detailed output, containing average runtimes, minimums, and maximums.
@@ -153,7 +167,6 @@ If set, will provide detailed output, containing average runtimes, minimums, and
 
 
 
----
 #### **FileName**
 
 The name of the file that contains the benchmark (excluding the extension).
@@ -170,7 +183,6 @@ This is used for reporting, and will be automatically populated by Get-Benchmark
 
 
 
----
 #### **GroupName**
 
 The name of a logical group.  This is used for reporting.
@@ -186,7 +198,6 @@ The name of a logical group.  This is used for reporting.
 
 
 
----
 #### **AsJob**
 
 If set, will launch as a job.
@@ -202,14 +213,22 @@ If set, will launch as a job.
 
 
 
+
+
 ---
+
+
 ### Outputs
 * [Management.Automation.PSObject](https://learn.microsoft.com/en-us/dotnet/api/System.Management.Automation.PSObject)
 
 
 
 
+
+
 ---
+
+
 ### Syntax
 ```PowerShell
 Measure-Benchmark [-Technique] <IDictionary> [[-RepeatCount] <UInt32>] [-Detailed] [[-FileName] <String>] [-GroupName <String>] [-AsJob] [<CommonParameters>]
@@ -220,4 +239,3 @@ Measure-Benchmark [-Command] <String> [-Parameter <IDictionary>] [-ArgumentList 
 ```PowerShell
 Measure-Benchmark [-ScriptBlock] <ScriptBlock> [-Parameter <IDictionary>] [-ArgumentList <PSObject[]>] [[-RepeatCount] <UInt32>] [-Detailed] [[-FileName] <String>] [-GroupName <String>] [-AsJob] [<CommonParameters>]
 ```
----

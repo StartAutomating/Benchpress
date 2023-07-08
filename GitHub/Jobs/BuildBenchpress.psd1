@@ -12,9 +12,26 @@
             id = 'PSSVG'
         },
         'RunPipeScript',
-        'RunEZOut',
-        'UseBenchpressAction',
+        'RunEZOut',        
+        @{
+            name = 'Use Benchpress (from master)'
+            if   = '${{github.ref_name == ''master''}}'
+            uses = 'StartAutomating/Benchpress@master'
+            id = 'BenchpressMaster'
+        },
+        @{
+            name = 'Use Benchpress (on branch)'
+            if   = '${{github.ref_name != ''main'' && github.ref_name != ''master''}}'
+            uses = './'
+            id = 'BenchpressBranch'
+        },                
         'PublishBenchmarks',
-        'RunHelpOut'
+        'RunHelpOut',
+        @{
+            name = 'GitLogger'
+            uses = 'GitLogging/GitLoggerAction@main'
+            id = 'GitLogger'
+        }
+
     )
 }

@@ -582,8 +582,14 @@ jobs:
         uses: StartAutomating/PipeScript@main
       - name: UseEZOut
         uses: StartAutomating/EZOut@master
-      - name: Use Benchpress Action
+      - name: Use Benchpress (from master)
+        if: ${{github.ref_name == 'master'}}
         uses: StartAutomating/Benchpress@master
+        id: BenchpressMaster
+      - name: Use Benchpress (on branch)
+        if: ${{github.ref_name != 'main' && github.ref_name != 'master'}}
+        uses: ./
+        id: BenchpressBranch
       - name: PublishBenchmarks
         uses: actions/upload-artifact@v2
         with: 
@@ -592,4 +598,7 @@ jobs:
         if: ${{always()}}
       - name: UseHelpOut
         uses: StartAutomating/HelpOut@master
+      - name: GitLogger
+        uses: GitLogging/GitLoggerAction@main
+        id: GitLogger
 

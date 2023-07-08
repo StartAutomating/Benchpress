@@ -1,584 +1,599 @@
 ---
 layout: Benchmark
+title: What Is The Fastest Way To Filter
 
 Data: 
   - Technique: Operator Filter (Assumed Array)
     Time: 
-      Ticks: 83055
+      Ticks: 102022
       Days: 0
       Hours: 0
-      Milliseconds: 8
+      Milliseconds: 10
       Minutes: 0
       Seconds: 0
-      TotalDays: 9.61284722222222e-08
-      TotalHours: 2.30708333333333e-06
-      TotalMilliseconds: 8.3055
-      TotalMinutes: 0.000138425
-      TotalSeconds: 0.0083055
+      TotalDays: 1.18081018518519e-07
+      TotalHours: 2.83394444444444e-06
+      TotalMilliseconds: 10.2022
+      TotalMinutes: 0.000170036666666667
+      TotalSeconds: 0.0102022
       FileName: What Is The Fastest Way To Filter
       GroupName: Filtering Values
       BenchmarkInput: 
-        GroupName: Filtering Values
+        RepeatCount: 10
+        FileName: What Is The Fastest Way To Filter
         ScriptBlock: |
           
                   # VERY DANGEROUS if $valueList isn't already typed as an array, it will
                   # return $true/$false instead of acting as a filter on single objects
                   $valueList -gt 1000
               
-        RepeatCount: 10
-        FileName: What Is The Fastest Way To Filter
+        GroupName: Filtering Values
     RelativeSpeed: 1
     GroupName: Filtering Values
-    ClockSpeed: 2793
+    ClockSpeed: 2095
     FileName: What Is The Fastest Way To Filter
-    Throughput: 1204.02143158148
+    RepeatCount: 10
+    Throughput: 980.180745329439
     BenchmarkInput: 
-      GroupName: Filtering Values
       RepeatCount: 10
       FileName: What Is The Fastest Way To Filter
-  - Technique: ForEach Loop
-    Time: 
-      Ticks: 100965
-      Days: 0
-      Hours: 0
-      Milliseconds: 10
-      Minutes: 0
-      Seconds: 0
-      TotalDays: 1.16857638888889e-07
-      TotalHours: 2.80458333333333e-06
-      TotalMilliseconds: 10.0965
-      TotalMinutes: 0.000168275
-      TotalSeconds: 0.0100965
-      FileName: What Is The Fastest Way To Filter
       GroupName: Filtering Values
-      BenchmarkInput: 
-        GroupName: Filtering Values
-        ScriptBlock: |
-          
-                  foreach ($v in $valueList) { if ($v -gt 1000) { $v } }
-              
-        RepeatCount: 10
-        FileName: What Is The Fastest Way To Filter
-    RelativeSpeed: 1.21564023839624
-    GroupName: Filtering Values
-    ClockSpeed: 2793
-    FileName: What Is The Fastest Way To Filter
-    Throughput: 990.442232456792
-    BenchmarkInput: 
-      GroupName: Filtering Values
-      RepeatCount: 10
-      FileName: What Is The Fastest Way To Filter
   - Technique: Operator Filter (Explicit Array)
     Time: 
-      Ticks: 108308
+      Ticks: 153346
       Days: 0
       Hours: 0
-      Milliseconds: 10
+      Milliseconds: 15
       Minutes: 0
       Seconds: 0
-      TotalDays: 1.25356481481481e-07
-      TotalHours: 3.00855555555556e-06
-      TotalMilliseconds: 10.8308
-      TotalMinutes: 0.000180513333333333
-      TotalSeconds: 0.0108308
+      TotalDays: 1.77483796296296e-07
+      TotalHours: 4.25961111111111e-06
+      TotalMilliseconds: 15.3346
+      TotalMinutes: 0.000255576666666667
+      TotalSeconds: 0.0153346
       FileName: What Is The Fastest Way To Filter
       GroupName: Filtering Values
       BenchmarkInput: 
-        GroupName: Filtering Values
+        RepeatCount: 10
+        FileName: What Is The Fastest Way To Filter
         ScriptBlock: |
           
                   # Safe for arrays or single values
                   @($valueList) -gt 1000
               
-        RepeatCount: 10
-        FileName: What Is The Fastest Way To Filter
-    RelativeSpeed: 1.30405153211727
+        GroupName: Filtering Values
+    RelativeSpeed: 1.50306796573288
     GroupName: Filtering Values
-    ClockSpeed: 2793
+    ClockSpeed: 2095
     FileName: What Is The Fastest Way To Filter
-    Throughput: 923.292831554456
+    RepeatCount: 10
+    Throughput: 652.120042257379
     BenchmarkInput: 
-      GroupName: Filtering Values
       RepeatCount: 10
       FileName: What Is The Fastest Way To Filter
-  - Technique: Pipe to ScriptBlock
+      GroupName: Filtering Values
+  - Technique: ForEach Loop
     Time: 
-      Ticks: 1029807
+      Ticks: 156906
       Days: 0
       Hours: 0
-      Milliseconds: 102
+      Milliseconds: 15
       Minutes: 0
       Seconds: 0
-      TotalDays: 1.19190625e-06
-      TotalHours: 2.860575e-05
-      TotalMilliseconds: 102.9807
-      TotalMinutes: 0.001716345
-      TotalSeconds: 0.1029807
+      TotalDays: 1.81604166666667e-07
+      TotalHours: 4.3585e-06
+      TotalMilliseconds: 15.6906
+      TotalMinutes: 0.00026151
+      TotalSeconds: 0.0156906
       FileName: What Is The Fastest Way To Filter
       GroupName: Filtering Values
       BenchmarkInput: 
+        RepeatCount: 10
+        FileName: What Is The Fastest Way To Filter
+        ScriptBlock: |
+          
+                  foreach ($v in $valueList) { if ($v -gt 1000) { $v } }
+              
         GroupName: Filtering Values
+    RelativeSpeed: 1.53796240026661
+    GroupName: Filtering Values
+    ClockSpeed: 2095
+    FileName: What Is The Fastest Way To Filter
+    RepeatCount: 10
+    Throughput: 637.324257835902
+    BenchmarkInput: 
+      RepeatCount: 10
+      FileName: What Is The Fastest Way To Filter
+      GroupName: Filtering Values
+  - Technique: Pipe to ScriptBlock
+    Time: 
+      Ticks: 1212164
+      Days: 0
+      Hours: 0
+      Milliseconds: 121
+      Minutes: 0
+      Seconds: 0
+      TotalDays: 1.40296759259259e-06
+      TotalHours: 3.36712222222222e-05
+      TotalMilliseconds: 121.2164
+      TotalMinutes: 0.00202027333333333
+      TotalSeconds: 0.1212164
+      FileName: What Is The Fastest Way To Filter
+      GroupName: Filtering Values
+      BenchmarkInput: 
+        RepeatCount: 10
+        FileName: What Is The Fastest Way To Filter
         ScriptBlock: |
           
                   $valueList | & { process { if ($_ -gt 1000) { $_ } } }
               
-        RepeatCount: 10
-        FileName: What Is The Fastest Way To Filter
-    RelativeSpeed: 12.3990969839263
+        GroupName: Filtering Values
+    RelativeSpeed: 11.8813981298151
     GroupName: Filtering Values
-    ClockSpeed: 2793
+    ClockSpeed: 2095
     FileName: What Is The Fastest Way To Filter
-    Throughput: 97.105574151273
+    RepeatCount: 10
+    Throughput: 82.4970878527988
     BenchmarkInput: 
-      GroupName: Filtering Values
       RepeatCount: 10
       FileName: What Is The Fastest Way To Filter
+      GroupName: Filtering Values
   - Technique: .Where Method
     Time: 
-      Ticks: 4840463
+      Ticks: 5954954
       Days: 0
       Hours: 0
-      Milliseconds: 484
+      Milliseconds: 595
       Minutes: 0
       Seconds: 0
-      TotalDays: 5.60238773148148e-06
-      TotalHours: 0.000134457305555556
-      TotalMilliseconds: 484.0463
-      TotalMinutes: 0.00806743833333333
-      TotalSeconds: 0.4840463
+      TotalDays: 6.89230787037037e-06
+      TotalHours: 0.000165415388888889
+      TotalMilliseconds: 595.4954
+      TotalMinutes: 0.00992492333333333
+      TotalSeconds: 0.5954954
       FileName: What Is The Fastest Way To Filter
       GroupName: Filtering Values
       BenchmarkInput: 
-        GroupName: Filtering Values
+        RepeatCount: 10
+        FileName: What Is The Fastest Way To Filter
         ScriptBlock: |
           
                   $valueList.Where({$_ -gt 1000})
               
-        RepeatCount: 10
-        FileName: What Is The Fastest Way To Filter
-    RelativeSpeed: 58.2802119077719
+        GroupName: Filtering Values
+    RelativeSpeed: 58.3693125012252
     GroupName: Filtering Values
-    ClockSpeed: 2793
+    ClockSpeed: 2095
     FileName: What Is The Fastest Way To Filter
-    Throughput: 20.6591807436603
+    RepeatCount: 10
+    Throughput: 16.7927409682762
     BenchmarkInput: 
-      GroupName: Filtering Values
       RepeatCount: 10
       FileName: What Is The Fastest Way To Filter
+      GroupName: Filtering Values
   - Technique: Linq.Enumerable::Where
     Time: 
-      Ticks: 6470398
+      Ticks: 8155476
       Days: 0
       Hours: 0
-      Milliseconds: 647
+      Milliseconds: 815
       Minutes: 0
       Seconds: 0
-      TotalDays: 7.48888657407407e-06
-      TotalHours: 0.000179733277777778
-      TotalMilliseconds: 647.0398
-      TotalMinutes: 0.0107839966666667
-      TotalSeconds: 0.6470398
+      TotalDays: 9.43920833333333e-06
+      TotalHours: 0.000226541
+      TotalMilliseconds: 815.5476
+      TotalMinutes: 0.01359246
+      TotalSeconds: 0.8155476
       FileName: What Is The Fastest Way To Filter
       GroupName: Filtering Values
       BenchmarkInput: 
-        GroupName: Filtering Values
+        RepeatCount: 10
+        FileName: What Is The Fastest Way To Filter
         ScriptBlock: |
           
                   [System.Linq.Enumerable]::Where($valueList, $linqWhere)
               
-        RepeatCount: 10
-        FileName: What Is The Fastest Way To Filter
-    RelativeSpeed: 77.9049786286196
+        GroupName: Filtering Values
+    RelativeSpeed: 79.9384054419635
     GroupName: Filtering Values
-    ClockSpeed: 2793
+    ClockSpeed: 2095
     FileName: What Is The Fastest Way To Filter
-    Throughput: 15.4549998315405
+    RepeatCount: 10
+    Throughput: 12.2616999915149
     BenchmarkInput: 
-      GroupName: Filtering Values
       RepeatCount: 10
       FileName: What Is The Fastest Way To Filter
+      GroupName: Filtering Values
   - Technique: Where-Object Script (Positional)
     Time: 
-      Ticks: 12982529
+      Ticks: 16928510
       Days: 0
       Hours: 0
-      Milliseconds: 298
+      Milliseconds: 692
       Minutes: 0
       Seconds: 1
-      TotalDays: 1.50260752314815e-05
-      TotalHours: 0.000360625805555556
-      TotalMilliseconds: 1298.2529
-      TotalMinutes: 0.0216375483333333
-      TotalSeconds: 1.2982529
+      TotalDays: 1.95931828703704e-05
+      TotalHours: 0.000470236388888889
+      TotalMilliseconds: 1692.851
+      TotalMinutes: 0.0282141833333333
+      TotalSeconds: 1.692851
       FileName: What Is The Fastest Way To Filter
       GroupName: Filtering Values
       BenchmarkInput: 
-        GroupName: Filtering Values
+        RepeatCount: 10
+        FileName: What Is The Fastest Way To Filter
         ScriptBlock: |
           
                   $valueList | Where-Object $whereGt1000
               
-        RepeatCount: 10
-        FileName: What Is The Fastest Way To Filter
-    RelativeSpeed: 156.312431521281
+        GroupName: Filtering Values
+    RelativeSpeed: 165.929995491169
     GroupName: Filtering Values
-    ClockSpeed: 2793
+    ClockSpeed: 2095
     FileName: What Is The Fastest Way To Filter
-    Throughput: 7.70265947412865
+    RepeatCount: 10
+    Throughput: 5.90719443116967
     BenchmarkInput: 
-      GroupName: Filtering Values
       RepeatCount: 10
       FileName: What Is The Fastest Way To Filter
+      GroupName: Filtering Values
   - Technique: ForEach Loop
     Time: 
-      Ticks: 3262973
+      Ticks: 3327830
       Days: 0
       Hours: 0
-      Milliseconds: 326
+      Milliseconds: 332
       Minutes: 0
       Seconds: 0
-      TotalDays: 3.77658912037037e-06
-      TotalHours: 9.06381388888889e-05
-      TotalMilliseconds: 326.2973
-      TotalMinutes: 0.00543828833333333
-      TotalSeconds: 0.3262973
+      TotalDays: 3.85165509259259e-06
+      TotalHours: 9.24397222222222e-05
+      TotalMilliseconds: 332.783
+      TotalMinutes: 0.00554638333333333
+      TotalSeconds: 0.332783
       FileName: What Is The Fastest Way To Filter
       GroupName: Filtering by Property Values
       BenchmarkInput: 
-        GroupName: Filtering by Property Values
+        RepeatCount: 10
+        FileName: What Is The Fastest Way To Filter
         ScriptBlock: |
           
                   foreach ($o in $objectList) { if ($o.Value -gt 1000) { $o } }
               
-        RepeatCount: 10
-        FileName: What Is The Fastest Way To Filter
+        GroupName: Filtering by Property Values
     RelativeSpeed: 1
     GroupName: Filtering by Property Values
-    ClockSpeed: 2793
+    ClockSpeed: 2095
     FileName: What Is The Fastest Way To Filter
-    Throughput: 30.6468977830954
+    RepeatCount: 10
+    Throughput: 30.0496119092622
     BenchmarkInput: 
-      GroupName: Filtering by Property Values
       RepeatCount: 10
       FileName: What Is The Fastest Way To Filter
+      GroupName: Filtering by Property Values
   - Technique: Pipe to ScriptBlock
     Time: 
-      Ticks: 9397848
+      Ticks: 10142019
       Days: 0
       Hours: 0
-      Milliseconds: 939
+      Milliseconds: 14
       Minutes: 0
-      Seconds: 0
-      TotalDays: 1.08771388888889e-05
-      TotalHours: 0.000261051333333333
-      TotalMilliseconds: 939.7848
-      TotalMinutes: 0.01566308
-      TotalSeconds: 0.9397848
+      Seconds: 1
+      TotalDays: 1.17384479166667e-05
+      TotalHours: 0.00028172275
+      TotalMilliseconds: 1014.2019
+      TotalMinutes: 0.016903365
+      TotalSeconds: 1.0142019
       FileName: What Is The Fastest Way To Filter
       GroupName: Filtering by Property Values
       BenchmarkInput: 
-        GroupName: Filtering by Property Values
+        RepeatCount: 10
+        FileName: What Is The Fastest Way To Filter
         ScriptBlock: |
           
                   $objectList | & { process { if ($_.Value -gt 1000) { $_ } } }
               
-        RepeatCount: 10
-        FileName: What Is The Fastest Way To Filter
-    RelativeSpeed: 2.88014887037067
+        GroupName: Filtering by Property Values
+    RelativeSpeed: 3.04763734926363
     GroupName: Filtering by Property Values
-    ClockSpeed: 2793
+    ClockSpeed: 2095
     FileName: What Is The Fastest Way To Filter
-    Throughput: 10.6407339212126
+    RepeatCount: 10
+    Throughput: 9.85996969636914
     BenchmarkInput: 
-      GroupName: Filtering by Property Values
       RepeatCount: 10
       FileName: What Is The Fastest Way To Filter
+      GroupName: Filtering by Property Values
   - Technique: .Where Method
     Time: 
-      Ticks: 41004343
+      Ticks: 54656834
       Days: 0
       Hours: 0
-      Milliseconds: 100
+      Milliseconds: 465
       Minutes: 0
-      Seconds: 4
-      TotalDays: 4.74587303240741e-05
-      TotalHours: 0.00113900952777778
-      TotalMilliseconds: 4100.4343
-      TotalMinutes: 0.0683405716666667
-      TotalSeconds: 4.1004343
+      Seconds: 5
+      TotalDays: 6.3260224537037e-05
+      TotalHours: 0.00151824538888889
+      TotalMilliseconds: 5465.6834
+      TotalMinutes: 0.0910947233333333
+      TotalSeconds: 5.4656834
       FileName: What Is The Fastest Way To Filter
       GroupName: Filtering by Property Values
       BenchmarkInput: 
-        GroupName: Filtering by Property Values
+        RepeatCount: 10
+        FileName: What Is The Fastest Way To Filter
         ScriptBlock: |
           
                   $objectList.Where({$_.Value -gt 1000})
               
-        RepeatCount: 10
-        FileName: What Is The Fastest Way To Filter
-    RelativeSpeed: 12.5665590858398
+        GroupName: Filtering by Property Values
+    RelativeSpeed: 16.4241664988897
     GroupName: Filtering by Property Values
-    ClockSpeed: 2793
+    ClockSpeed: 2095
     FileName: What Is The Fastest Way To Filter
-    Throughput: 2.43876605948789
+    RepeatCount: 10
+    Throughput: 1.82959737477659
     BenchmarkInput: 
-      GroupName: Filtering by Property Values
       RepeatCount: 10
       FileName: What Is The Fastest Way To Filter
+      GroupName: Filtering by Property Values
   - Technique: Where-Object Property (Positional)
     Time: 
-      Ticks: 87917566
+      Ticks: 113175169
       Days: 0
       Hours: 0
-      Milliseconds: 791
+      Milliseconds: 317
       Minutes: 0
-      Seconds: 8
-      TotalDays: 0.00010175644212963
-      TotalHours: 0.00244215461111111
-      TotalMilliseconds: 8791.7566
-      TotalMinutes: 0.146529276666667
-      TotalSeconds: 8.7917566
+      Seconds: 11
+      TotalDays: 0.000130989778935185
+      TotalHours: 0.00314375469444444
+      TotalMilliseconds: 11317.5169
+      TotalMinutes: 0.188625281666667
+      TotalSeconds: 11.3175169
       FileName: What Is The Fastest Way To Filter
       GroupName: Filtering by Property Values
       BenchmarkInput: 
-        GroupName: Filtering by Property Values
+        RepeatCount: 10
+        FileName: What Is The Fastest Way To Filter
         ScriptBlock: |
           
                   $objectList | Where-Object Value -GT 1000
               
-        RepeatCount: 10
-        FileName: What Is The Fastest Way To Filter
-    RelativeSpeed: 26.9440065854054
+        GroupName: Filtering by Property Values
+    RelativeSpeed: 34.0086990621516
     GroupName: Filtering by Property Values
-    ClockSpeed: 2793
+    ClockSpeed: 2095
     FileName: What Is The Fastest Way To Filter
-    Throughput: 1.1374291230947
+    RepeatCount: 10
+    Throughput: 0.883586045274649
     BenchmarkInput: 
-      GroupName: Filtering by Property Values
       RepeatCount: 10
       FileName: What Is The Fastest Way To Filter
-  - Technique: InlineScriptBlock
-    Time: 
-      Ticks: 85813
-      Days: 0
-      Hours: 0
-      Milliseconds: 8
-      Minutes: 0
-      Seconds: 0
-      TotalDays: 9.93206018518519e-08
-      TotalHours: 2.38369444444444e-06
-      TotalMilliseconds: 8.5813
-      TotalMinutes: 0.000143021666666667
-      TotalSeconds: 0.0085813
-      FileName: What Is The Fastest Way To Filter
-      GroupName: Filtering a Pipeline
-      BenchmarkInput: 
-        GroupName: Filtering a Pipeline
-        ScriptBlock: |
-          
-                  1..10 | & { process { if ($_ % 2) { $_ }  } }
-              
-        FileName: What Is The Fastest Way To Filter
-    RelativeSpeed: 1
-    GroupName: Filtering a Pipeline
-    ClockSpeed: 2793
-    FileName: What Is The Fastest Way To Filter
-    Throughput: 11653.2460116766
-    BenchmarkInput: 
-      GroupName: Filtering a Pipeline
-      FileName: What Is The Fastest Way To Filter
+      GroupName: Filtering by Property Values
   - Technique: ScriptBlockVariable
     Time: 
-      Ticks: 88650
+      Ticks: 103352
       Days: 0
       Hours: 0
-      Milliseconds: 8
+      Milliseconds: 10
       Minutes: 0
       Seconds: 0
-      TotalDays: 1.02604166666667e-07
-      TotalHours: 2.4625e-06
-      TotalMilliseconds: 8.865
-      TotalMinutes: 0.00014775
-      TotalSeconds: 0.008865
+      TotalDays: 1.1962037037037e-07
+      TotalHours: 2.87088888888889e-06
+      TotalMilliseconds: 10.3352
+      TotalMinutes: 0.000172253333333333
+      TotalSeconds: 0.0103352
       FileName: What Is The Fastest Way To Filter
       GroupName: Filtering a Pipeline
       BenchmarkInput: 
-        GroupName: Filtering a Pipeline
+        FileName: What Is The Fastest Way To Filter
         ScriptBlock: |
            
                   1..10 | 
                       & $IsOdd 
               
-        FileName: What Is The Fastest Way To Filter
-    RelativeSpeed: 1.03306025893513
+        GroupName: Filtering a Pipeline
+    RelativeSpeed: 1
     GroupName: Filtering a Pipeline
-    ClockSpeed: 2793
+    ClockSpeed: 2095
     FileName: What Is The Fastest Way To Filter
-    Throughput: 11280.3158488438
+    RepeatCount: 100
+    Throughput: 9675.67149160152
     BenchmarkInput: 
       GroupName: Filtering a Pipeline
       FileName: What Is The Fastest Way To Filter
   - Technique: DotScriptBlockVariable
     Time: 
-      Ticks: 89483
+      Ticks: 104738
       Days: 0
       Hours: 0
-      Milliseconds: 8
+      Milliseconds: 10
       Minutes: 0
       Seconds: 0
-      TotalDays: 1.03568287037037e-07
-      TotalHours: 2.48563888888889e-06
-      TotalMilliseconds: 8.9483
-      TotalMinutes: 0.000149138333333333
-      TotalSeconds: 0.0089483
+      TotalDays: 1.21224537037037e-07
+      TotalHours: 2.90938888888889e-06
+      TotalMilliseconds: 10.4738
+      TotalMinutes: 0.000174563333333333
+      TotalSeconds: 0.0104738
       FileName: What Is The Fastest Way To Filter
       GroupName: Filtering a Pipeline
       BenchmarkInput: 
-        GroupName: Filtering a Pipeline
+        FileName: What Is The Fastest Way To Filter
         ScriptBlock: |
           
                   1..10 | . $IsOdd
               
-        FileName: What Is The Fastest Way To Filter
-    RelativeSpeed: 1.04276741286285
+        GroupName: Filtering a Pipeline
+    RelativeSpeed: 1.01341048068736
     GroupName: Filtering a Pipeline
-    ClockSpeed: 2793
+    ClockSpeed: 2095
     FileName: What Is The Fastest Way To Filter
-    Throughput: 11175.307041561
+    RepeatCount: 100
+    Throughput: 9547.63314174416
+    BenchmarkInput: 
+      GroupName: Filtering a Pipeline
+      FileName: What Is The Fastest Way To Filter
+  - Technique: InlineScriptBlock
+    Time: 
+      Ticks: 108498
+      Days: 0
+      Hours: 0
+      Milliseconds: 10
+      Minutes: 0
+      Seconds: 0
+      TotalDays: 1.25576388888889e-07
+      TotalHours: 3.01383333333333e-06
+      TotalMilliseconds: 10.8498
+      TotalMinutes: 0.00018083
+      TotalSeconds: 0.0108498
+      FileName: What Is The Fastest Way To Filter
+      GroupName: Filtering a Pipeline
+      BenchmarkInput: 
+        FileName: What Is The Fastest Way To Filter
+        ScriptBlock: |
+          
+                  1..10 | & { process { if ($_ % 2) { $_ }  } }
+              
+        GroupName: Filtering a Pipeline
+    RelativeSpeed: 1.04979100549578
+    GroupName: Filtering a Pipeline
+    ClockSpeed: 2095
+    FileName: What Is The Fastest Way To Filter
+    RepeatCount: 100
+    Throughput: 9216.7597559402
     BenchmarkInput: 
       GroupName: Filtering a Pipeline
       FileName: What Is The Fastest Way To Filter
   - Technique: Filter
     Time: 
-      Ticks: 97138
+      Ticks: 112732
       Days: 0
       Hours: 0
-      Milliseconds: 9
+      Milliseconds: 11
       Minutes: 0
       Seconds: 0
-      TotalDays: 1.12428240740741e-07
-      TotalHours: 2.69827777777778e-06
-      TotalMilliseconds: 9.7138
-      TotalMinutes: 0.000161896666666667
-      TotalSeconds: 0.0097138
+      TotalDays: 1.30476851851852e-07
+      TotalHours: 3.13144444444444e-06
+      TotalMilliseconds: 11.2732
+      TotalMinutes: 0.000187886666666667
+      TotalSeconds: 0.0112732
       FileName: What Is The Fastest Way To Filter
       GroupName: Filtering a Pipeline
       BenchmarkInput: 
-        GroupName: Filtering a Pipeline
+        FileName: What Is The Fastest Way To Filter
         ScriptBlock: |
           
                   1..10 | isOdd        
               
-        FileName: What Is The Fastest Way To Filter
-    RelativeSpeed: 1.13197301108224
+        GroupName: Filtering a Pipeline
+    RelativeSpeed: 1.09075779859122
     GroupName: Filtering a Pipeline
-    ClockSpeed: 2793
+    ClockSpeed: 2095
     FileName: What Is The Fastest Way To Filter
-    Throughput: 10294.6323786778
+    RepeatCount: 100
+    Throughput: 8870.59574921052
     BenchmarkInput: 
       GroupName: Filtering a Pipeline
       FileName: What Is The Fastest Way To Filter
   - Technique: DotInline
     Time: 
-      Ticks: 319641
+      Ticks: 390719
       Days: 0
       Hours: 0
-      Milliseconds: 31
+      Milliseconds: 39
       Minutes: 0
       Seconds: 0
-      TotalDays: 3.69954861111111e-07
-      TotalHours: 8.87891666666667e-06
-      TotalMilliseconds: 31.9641
-      TotalMinutes: 0.000532735
-      TotalSeconds: 0.0319641
+      TotalDays: 4.52221064814815e-07
+      TotalHours: 1.08533055555556e-05
+      TotalMilliseconds: 39.0719
+      TotalMinutes: 0.000651198333333333
+      TotalSeconds: 0.0390719
       FileName: What Is The Fastest Way To Filter
       GroupName: Filtering a Pipeline
       BenchmarkInput: 
-        GroupName: Filtering a Pipeline
+        FileName: What Is The Fastest Way To Filter
         ScriptBlock: |
           
                   1..10 | . { process { if ($_ % 2) { $_ }  } }
               
-        FileName: What Is The Fastest Way To Filter
-    RelativeSpeed: 3.7248552084183
+        GroupName: Filtering a Pipeline
+    RelativeSpeed: 3.78046868952705
     GroupName: Filtering a Pipeline
-    ClockSpeed: 2793
+    ClockSpeed: 2095
     FileName: What Is The Fastest Way To Filter
-    Throughput: 3128.50979692843
+    RepeatCount: 100
+    Throughput: 2559.38410980782
     BenchmarkInput: 
       GroupName: Filtering a Pipeline
       FileName: What Is The Fastest Way To Filter
   - Technique: WhereObject
     Time: 
-      Ticks: 498227
+      Ticks: 589552
       Days: 0
       Hours: 0
-      Milliseconds: 49
+      Milliseconds: 58
       Minutes: 0
       Seconds: 0
-      TotalDays: 5.7665162037037e-07
-      TotalHours: 1.38396388888889e-05
-      TotalMilliseconds: 49.8227
-      TotalMinutes: 0.000830378333333333
-      TotalSeconds: 0.0498227
+      TotalDays: 6.82351851851852e-07
+      TotalHours: 1.63764444444444e-05
+      TotalMilliseconds: 58.9552
+      TotalMinutes: 0.000982586666666667
+      TotalSeconds: 0.0589552
       FileName: What Is The Fastest Way To Filter
       GroupName: Filtering a Pipeline
       BenchmarkInput: 
-        GroupName: Filtering a Pipeline
+        FileName: What Is The Fastest Way To Filter
         ScriptBlock: |
           
                   1..10 | ? $IsOdd
               
-        FileName: What Is The Fastest Way To Filter
-    RelativeSpeed: 5.80596180065957
+        GroupName: Filtering a Pipeline
+    RelativeSpeed: 5.70431147921666
     GroupName: Filtering a Pipeline
-    ClockSpeed: 2793
+    ClockSpeed: 2095
     FileName: What Is The Fastest Way To Filter
-    Throughput: 2007.11723772497
+    RepeatCount: 100
+    Throughput: 1696.20321871523
     BenchmarkInput: 
       GroupName: Filtering a Pipeline
       FileName: What Is The Fastest Way To Filter
 FileName: What Is The Fastest Way To Filter
-ClockSpeed: 2793
+ClockSpeed: 2095
 ---
-What Is The Fastest Way To Filter
----------------------------------
-> @2793 Mhz
 
 
 ### Filtering a Pipeline
 
 
-|Technique             |Time           |RelativeSpeed|Throughput|
-|----------------------|---------------|-------------|----------|
-|InlineScriptBlock     |00:00:00.008581|1x           |11653.25/s|
-|ScriptBlockVariable   |00:00:00.008865|1.03x        |11280.32/s|
-|DotScriptBlockVariable|00:00:00.008948|1.04x        |11175.31/s|
-|Filter                |00:00:00.009713|1.13x        |10294.63/s|
-|DotInline             |00:00:00.031964|3.72x        |3128.51/s |
-|WhereObject           |00:00:00.049822|5.81x        |2007.12/s |
+|Technique             |RepeatCount|Time           |RelativeSpeed|Throughput|
+|----------------------|-----------|---------------|-------------|----------|
+|ScriptBlockVariable   |100        |00:00:00.010335|1x           |9675.67/s |
+|DotScriptBlockVariable|100        |00:00:00.010473|1.01x        |9547.63/s |
+|InlineScriptBlock     |100        |00:00:00.010849|1.05x        |9216.76/s |
+|Filter                |100        |00:00:00.011273|1.09x        |8870.6/s  |
+|DotInline             |100        |00:00:00.039071|3.78x        |2559.38/s |
+|WhereObject           |100        |00:00:00.058955|5.7x         |1696.2/s  |
 
 
 ### Filtering by Property Values
 
 
-|Technique                         |Time           |RelativeSpeed|Throughput|
-|----------------------------------|---------------|-------------|----------|
-|ForEach Loop                      |00:00:00.326297|1x           |30.65/s   |
-|Pipe to ScriptBlock               |00:00:00.939784|2.88x        |10.64/s   |
-|.Where Method                     |00:00:04.100434|12.57x       |2.44/s    |
-|Where-Object Property (Positional)|00:00:08.791756|26.94x       |1.14/s    |
+|Technique                         |RepeatCount|Time           |RelativeSpeed|Throughput|
+|----------------------------------|-----------|---------------|-------------|----------|
+|ForEach Loop                      |10         |00:00:00.332783|1x           |30.05/s   |
+|Pipe to ScriptBlock               |10         |00:00:01.014201|3.05x        |9.86/s    |
+|.Where Method                     |10         |00:00:05.465683|16.42x       |1.83/s    |
+|Where-Object Property (Positional)|10         |00:00:11.317516|34.01x       |0.88/s    |
 
 
 ### Filtering Values
 
 
-|Technique                       |Time           |RelativeSpeed|Throughput|
-|--------------------------------|---------------|-------------|----------|
-|Operator Filter (Assumed Array) |00:00:00.008305|1x           |1204.02/s |
-|ForEach Loop                    |00:00:00.010096|1.22x        |990.44/s  |
-|Operator Filter (Explicit Array)|00:00:00.010830|1.3x         |923.29/s  |
-|Pipe to ScriptBlock             |00:00:00.102980|12.4x        |97.11/s   |
-|.Where Method                   |00:00:00.484046|58.28x       |20.66/s   |
-|Linq.Enumerable::Where          |00:00:00.647039|77.9x        |15.45/s   |
-|Where-Object Script (Positional)|00:00:01.298252|156.31x      |7.7/s     |
+|Technique                       |RepeatCount|Time           |RelativeSpeed|Throughput|
+|--------------------------------|-----------|---------------|-------------|----------|
+|Operator Filter (Assumed Array) |10         |00:00:00.010202|1x           |980.18/s  |
+|Operator Filter (Explicit Array)|10         |00:00:00.015334|1.5x         |652.12/s  |
+|ForEach Loop                    |10         |00:00:00.015690|1.54x        |637.32/s  |
+|Pipe to ScriptBlock             |10         |00:00:00.121216|11.88x       |82.5/s    |
+|.Where Method                   |10         |00:00:00.595495|58.37x       |16.79/s   |
+|Linq.Enumerable::Where          |10         |00:00:00.815547|79.94x       |12.26/s   |
+|Where-Object Script (Positional)|10         |00:00:01.692851|165.93x      |5.91/s    |

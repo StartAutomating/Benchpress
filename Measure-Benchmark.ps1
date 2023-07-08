@@ -275,6 +275,7 @@ $($myself.Name) @splat")) -ArgumentList $_splat
                 if ($Detailed) {
                     $ReportItem["Details"] = $kv.Value
                 }
+                $reportItem["RepeatCount"] = $RepeatCount
                 $reportItem["Throughput"] = $repeatCount / $reportItem["Time"].TotalSeconds
                 $reportItem["BenchmarkInput"] = $_splat
                 $ReportItem["PSTypeName"] = "Benchmark.Relative.Summary"

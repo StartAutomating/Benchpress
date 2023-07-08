@@ -13,7 +13,7 @@ $techniques = @{
     }
 }
 
-if ($PSVersionTable.Platform -and $PSVersionTable.Platform -ne 'Windows') {
+if ($PSVersionTable.Platform -and $PSVersionTable.Platform -notlike 'Win*') {
     $techniques.Remove('CertUtil')
 }
 

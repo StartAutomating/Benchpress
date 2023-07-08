@@ -107,26 +107,27 @@
     $outputLines = @(
     "---"
     "layout: Benchmark"
+    "title: $($outputFileInfo.FileName)"    
     $outputFileInfo | ConvertTo-Json -Depth 10 | ConvertFrom-Json | &amp; ${Benchpress_Format-YAML}
     "---"
-    &amp; ${Benchpress_Format-Markdown} -Heading $outputFileInfo.FileName -HeadingSize 2
-
-    &amp; ${Benchpress_Format-Markdown} -InputObject "@$($outputFileInfo.ClockSpeed) Mhz" -BlockQuote
 
     [Environment]::Newline
 
     foreach ($group in $outputFileInfo.Data | Group-Object GroupName) {
-        &amp; ${Benchpress_Format-Markdown} -Heading $group.Name -HeadingSize 3
+        if ($group.Name) {
+            &amp; ${Benchpress_Format-Markdown} -Heading $group.Name -HeadingSize 3
+        }        
         
         [Environment]::Newline
 
         $group.Group |            
-            Select-Object Technique, @{
+            Select-Object Technique, RepeatCount, @{
                 Name='Time'
                 Expression = {
                     $_.Time.ToString().Substring(0,15)
                 }
-            }, @{
+            }, 
+            @{
                 Name = 'RelativeSpeed'
                 Expression = {
                     [Math]::Round($_.RelativeSpeed, 2).ToString() + 'x'

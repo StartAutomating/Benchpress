@@ -1,3 +1,17 @@
+### 1.3.8:
+
+* Supporting Sponsorship (#51) (please show your support)
+* New Benchmark : Hashtable vs Ordered (#42)
+* Updating README (mentioning gallery) (#41)
+* Upping RepeatCount for Namespace tests (#44)
+* Updating Wasy to Hash a File (#45)
+* Measure-Benchmark now includes .RepeatCount (#48)
+* Improving Benchmark Output (#47 #48 #49 #50)
+
+Thanks @NLZ @robinmalik !
+
+---
+
 ### 1.3.7:
 
 * New Benchmarks:
@@ -51,5 +65,3 @@ Fixing #10 (crossplatform / core issues with CPU data).   Thanks @mklement0!
 ### 1.3:
 Now including .ClockSpeed in results (fixes #7)
 Formatting deserialized results (fixes #8)
-
-

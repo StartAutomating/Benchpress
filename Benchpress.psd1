@@ -1,6 +1,6 @@
 @{
     FormatsToProcess='Benchpress.format.ps1xml'
-    ModuleVersion='1.3.7'
+    ModuleVersion='1.3.8'
     CompanyName='Start-Automating'
     Description='Easy Benchmarking with PowerShell'
     PowerShellVersion='3.0'
@@ -16,6 +16,20 @@
             ProjectURI   = 'https://github.com/StartAutomating/Benchpress'
             LicenseURI   = 'https://github.com/StartAutomating/Benchpress/blob/master/LICENSE'
             ReleaseNotes = @'
+### 1.3.8:
+
+* Supporting Sponsorship (#51) (please show your support)
+* New Benchmark : Hashtable vs Ordered (#42)
+* Updating README (mentioning gallery) (#41)
+* Upping RepeatCount for Namespace tests (#44)
+* Updating Wasy to Hash a File (#45)
+* Measure-Benchmark now includes .RepeatCount (#48)
+* Improving Benchmark Output (#47 #48 #49 #50)
+
+Thanks @NLZ @robinmalik !
+
+---
+
 ### 1.3.7:
 
 * New Benchmarks:

@@ -5,62 +5,62 @@ title: ToString Or Not ToString
 Data: 
   - Technique: Quoted
     Time: 
-      Ticks: 49466
+      Ticks: 80377
       Days: 0
       Hours: 0
-      Milliseconds: 4
+      Milliseconds: 8
       Minutes: 0
       Seconds: 0
-      TotalDays: 5.72523148148148e-08
-      TotalHours: 1.37405555555556e-06
-      TotalMilliseconds: 4.9466
-      TotalMinutes: 8.24433333333333e-05
-      TotalSeconds: 0.0049466
+      TotalDays: 9.30289351851852e-08
+      TotalHours: 2.23269444444444e-06
+      TotalMilliseconds: 8.0377
+      TotalMinutes: 0.000133961666666667
+      TotalSeconds: 0.0080377
       FileName: ToString Or Not ToString
       GroupName: 
       BenchmarkInput: 
-        FileName: ToString Or Not ToString
         ScriptBlock: |
           
                   "$pwd"
               
+        FileName: ToString Or Not ToString
     RelativeSpeed: 1
-    ClockSpeed: 2594
+    ClockSpeed: 2295
     FileName: ToString Or Not ToString
     RepeatCount: 100
-    Throughput: 20215.9058747422
+    Throughput: 12441.3700436692
     BenchmarkInput: 
       FileName: ToString Or Not ToString
   - Technique: ToString
     Time: 
-      Ticks: 57902
+      Ticks: 84416
       Days: 0
       Hours: 0
-      Milliseconds: 5
+      Milliseconds: 8
       Minutes: 0
       Seconds: 0
-      TotalDays: 6.70162037037037e-08
-      TotalHours: 1.60838888888889e-06
-      TotalMilliseconds: 5.7902
-      TotalMinutes: 9.65033333333333e-05
-      TotalSeconds: 0.0057902
+      TotalDays: 9.77037037037037e-08
+      TotalHours: 2.34488888888889e-06
+      TotalMilliseconds: 8.4416
+      TotalMinutes: 0.000140693333333333
+      TotalSeconds: 0.0084416
       FileName: ToString Or Not ToString
       GroupName: 
       BenchmarkInput: 
-        FileName: ToString Or Not ToString
         ScriptBlock: |
           
                   $PWD.ToString()
               
-    RelativeSpeed: 1.17054138195933
-    ClockSpeed: 2594
+        FileName: ToString Or Not ToString
+    RelativeSpeed: 1.05025069360638
+    ClockSpeed: 2295
     FileName: ToString Or Not ToString
     RepeatCount: 100
-    Throughput: 17270.5606023972
+    Throughput: 11846.0955269143
     BenchmarkInput: 
       FileName: ToString Or Not ToString
 FileName: ToString Or Not ToString
-ClockSpeed: 2594
+ClockSpeed: 2295
 ---
 
 
@@ -68,5 +68,5 @@ ClockSpeed: 2594
 
 |Technique|RepeatCount|Time           |RelativeSpeed|Throughput|
 |---------|-----------|---------------|-------------|----------|
-|Quoted   |100        |00:00:00.004946|1x           |20215.91/s|
-|ToString |100        |00:00:00.005790|1.17x        |17270.56/s|
+|Quoted   |100        |00:00:00.008037|1x           |12441.37/s|
+|ToString |100        |00:00:00.008441|1.05x        |11846.1/s |

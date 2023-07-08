@@ -4,6 +4,7 @@ Write-FormatView -TypeName Benchmark.OutputFile -Action {
     $outputLines = @(
     "---"
     "layout: Benchmark"
+    "title: $($outputFileInfo.FileName)"    
     $outputFileInfo | ConvertTo-Json -Depth 10 | ConvertFrom-Json | Format-YAML
     "---"
     Format-Markdown -Heading $outputFileInfo.FileName -HeadingSize 2

@@ -5,68 +5,68 @@ title: Ways To Hash A File
 Data: 
   - Technique: DotNet
     Time: 
-      Ticks: 125696
+      Ticks: 277584
       Days: 0
       Hours: 0
-      Milliseconds: 12
+      Milliseconds: 27
       Minutes: 0
       Seconds: 0
-      TotalDays: 1.45481481481481e-07
-      TotalHours: 3.49155555555556e-06
-      TotalMilliseconds: 12.5696
-      TotalMinutes: 0.000209493333333333
-      TotalSeconds: 0.0125696
+      TotalDays: 3.21277777777778e-07
+      TotalHours: 7.71066666666667e-06
+      TotalMilliseconds: 27.7584
+      TotalMinutes: 0.00046264
+      TotalSeconds: 0.0277584
       FileName: Ways To Hash A File
       GroupName: 
       BenchmarkInput: 
-        RepeatCount: 100
         ScriptBlock: |
            
                   [BitConverter]::ToString([Security.Cryptography.SHA1]::Create().ComputeHash([IO.File]::ReadAllBytes("$myScript"))).Replace('-','').ToLower()
               
+        RepeatCount: 100
         FileName: Ways To Hash A File
     RelativeSpeed: 1
-    ClockSpeed: 2793
+    ClockSpeed: 2295
     FileName: Ways To Hash A File
-    Throughput: 7955.70264765784
+    Throughput: 3602.51311314773
     BenchmarkInput: 
       FileName: Ways To Hash A File
       RepeatCount: 100
   - Technique: GetFileHash
     Time: 
-      Ticks: 259171
+      Ticks: 379498
       Days: 0
       Hours: 0
-      Milliseconds: 25
+      Milliseconds: 37
       Minutes: 0
       Seconds: 0
-      TotalDays: 2.99966435185185e-07
-      TotalHours: 7.19919444444444e-06
-      TotalMilliseconds: 25.9171
-      TotalMinutes: 0.000431951666666667
-      TotalSeconds: 0.0259171
+      TotalDays: 4.39233796296296e-07
+      TotalHours: 1.05416111111111e-05
+      TotalMilliseconds: 37.9498
+      TotalMinutes: 0.000632496666666667
+      TotalSeconds: 0.0379498
       FileName: Ways To Hash A File
       GroupName: 
       BenchmarkInput: 
-        RepeatCount: 100
         ScriptBlock: |
           
                   @(Get-FileHash "$myScript" -Algorithm SHA1).Hash
               
+        RepeatCount: 100
         FileName: Ways To Hash A File
-    RelativeSpeed: 2.06188741089613
-    ClockSpeed: 2793
+    RelativeSpeed: 1.36714652141334
+    ClockSpeed: 2295
     FileName: Ways To Hash A File
-    Throughput: 3858.45638593824
+    Throughput: 2635.06000031621
     BenchmarkInput: 
       FileName: Ways To Hash A File
       RepeatCount: 100
 FileName: Ways To Hash A File
-ClockSpeed: 2793
+ClockSpeed: 2295
 ---
 Ways To Hash A File
 -------------------
-> @2793 Mhz
+> @2295 Mhz
 
 
 ### 
@@ -74,5 +74,5 @@ Ways To Hash A File
 
 |Technique  |Time           |RelativeSpeed|Throughput|
 |-----------|---------------|-------------|----------|
-|DotNet     |00:00:00.012569|1x           |7955.7/s  |
-|GetFileHash|00:00:00.025917|2.06x        |3858.46/s |
+|DotNet     |00:00:00.027758|1x           |3602.51/s |
+|GetFileHash|00:00:00.037949|1.37x        |2635.06/s |

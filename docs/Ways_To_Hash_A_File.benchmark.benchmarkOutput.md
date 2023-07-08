@@ -5,64 +5,64 @@ title: Ways To Hash A File
 Data: 
   - Technique: DotNet
     Time: 
-      Ticks: 144174
+      Ticks: 210127
       Days: 0
       Hours: 0
-      Milliseconds: 14
+      Milliseconds: 21
       Minutes: 0
       Seconds: 0
-      TotalDays: 1.66868055555556e-07
-      TotalHours: 4.00483333333333e-06
-      TotalMilliseconds: 14.4174
-      TotalMinutes: 0.00024029
-      TotalSeconds: 0.0144174
+      TotalDays: 2.43202546296296e-07
+      TotalHours: 5.83686111111111e-06
+      TotalMilliseconds: 21.0127
+      TotalMinutes: 0.000350211666666667
+      TotalSeconds: 0.0210127
       FileName: Ways To Hash A File
       GroupName: 
       BenchmarkInput: 
-        RepeatCount: 100
-        FileName: Ways To Hash A File
         ScriptBlock: |
            
                   [BitConverter]::ToString([Security.Cryptography.SHA1]::Create().ComputeHash([IO.File]::ReadAllBytes("$myScript"))).Replace('-','').ToLower()
               
+        RepeatCount: 100
+        FileName: Ways To Hash A File
     RelativeSpeed: 1
-    ClockSpeed: 2793
+    ClockSpeed: 2397
     FileName: Ways To Hash A File
-    Throughput: 6936.06336787493
+    Throughput: 4759.02668386262
     BenchmarkInput: 
-      RepeatCount: 100
       FileName: Ways To Hash A File
+      RepeatCount: 100
   - Technique: GetFileHash
     Time: 
-      Ticks: 246702
+      Ticks: 623286
       Days: 0
       Hours: 0
-      Milliseconds: 24
+      Milliseconds: 62
       Minutes: 0
       Seconds: 0
-      TotalDays: 2.85534722222222e-07
-      TotalHours: 6.85283333333333e-06
-      TotalMilliseconds: 24.6702
-      TotalMinutes: 0.00041117
-      TotalSeconds: 0.0246702
+      TotalDays: 7.21395833333333e-07
+      TotalHours: 1.73135e-05
+      TotalMilliseconds: 62.3286
+      TotalMinutes: 0.00103881
+      TotalSeconds: 0.0623286
       FileName: Ways To Hash A File
       GroupName: 
       BenchmarkInput: 
-        RepeatCount: 100
-        FileName: Ways To Hash A File
         ScriptBlock: |
           
                   @(Get-FileHash "$myScript" -Algorithm SHA1).Hash
               
-    RelativeSpeed: 1.71114070498148
-    ClockSpeed: 2793
+        RepeatCount: 100
+        FileName: Ways To Hash A File
+    RelativeSpeed: 2.966234705678
+    ClockSpeed: 2397
     FileName: Ways To Hash A File
-    Throughput: 4053.47342137478
+    Throughput: 1604.39990630305
     BenchmarkInput: 
-      RepeatCount: 100
       FileName: Ways To Hash A File
+      RepeatCount: 100
 FileName: Ways To Hash A File
-ClockSpeed: 2793
+ClockSpeed: 2397
 ---
 
 
@@ -71,5 +71,5 @@ ClockSpeed: 2793
 
 |Technique  |Time           |RelativeSpeed|Throughput|
 |-----------|---------------|-------------|----------|
-|DotNet     |00:00:00.014417|1x           |6936.06/s |
-|GetFileHash|00:00:00.024670|1.71x        |4053.47/s |
+|DotNet     |00:00:00.021012|1x           |4759.03/s |
+|GetFileHash|00:00:00.062328|2.97x        |1604.4/s  |

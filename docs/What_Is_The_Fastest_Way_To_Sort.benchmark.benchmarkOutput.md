@@ -5,61 +5,61 @@ title: What Is The Fastest Way To Sort
 Data: 
   - Technique: ArrayList.Sort
     Time: 
-      Ticks: 507748
+      Ticks: 211140
       Days: 0
       Hours: 0
-      Milliseconds: 50
+      Milliseconds: 21
       Minutes: 0
       Seconds: 0
-      TotalDays: 5.87671296296296e-07
-      TotalHours: 1.41041111111111e-05
-      TotalMilliseconds: 50.7748
-      TotalMinutes: 0.000846246666666667
-      TotalSeconds: 0.0507748
+      TotalDays: 2.44375e-07
+      TotalHours: 5.865e-06
+      TotalMilliseconds: 21.114
+      TotalMinutes: 0.0003519
+      TotalSeconds: 0.021114
       FileName: What Is The Fastest Way To Sort
       GroupName: 
       BenchmarkInput: 
+        FileName: What Is The Fastest Way To Sort
         ScriptBlock: |
            
                   $al = [collections.arraylist]::new($arr) 
                   $al.Sort()
                   $al
               
-        FileName: What Is The Fastest Way To Sort
     RelativeSpeed: 1
-    ClockSpeed: 2594
+    ClockSpeed: 2095
     FileName: What Is The Fastest Way To Sort
     RepeatCount: 100
-    Throughput: 1969.48092360777
+    Throughput: 4736.19399450601
     BenchmarkInput: 
       FileName: What Is The Fastest Way To Sort
   - Technique: Sort-Object
     Time: 
-      Ticks: 571962
+      Ticks: 830860
       Days: 0
       Hours: 0
-      Milliseconds: 57
+      Milliseconds: 83
       Minutes: 0
       Seconds: 0
-      TotalDays: 6.61993055555556e-07
-      TotalHours: 1.58878333333333e-05
-      TotalMilliseconds: 57.1962
-      TotalMinutes: 0.00095327
-      TotalSeconds: 0.0571962
+      TotalDays: 9.61643518518519e-07
+      TotalHours: 2.30794444444444e-05
+      TotalMilliseconds: 83.086
+      TotalMinutes: 0.00138476666666667
+      TotalSeconds: 0.083086
       FileName: What Is The Fastest Way To Sort
       GroupName: 
       BenchmarkInput: 
-        ScriptBlock: $arr | Sort-Object
         FileName: What Is The Fastest Way To Sort
-    RelativeSpeed: 1.12646824802855
-    ClockSpeed: 2594
+        ScriptBlock: $arr | Sort-Object
+    RelativeSpeed: 3.93511414227527
+    ClockSpeed: 2095
     FileName: What Is The Fastest Way To Sort
     RepeatCount: 100
-    Throughput: 1748.36789856669
+    Throughput: 1203.57220229642
     BenchmarkInput: 
       FileName: What Is The Fastest Way To Sort
 FileName: What Is The Fastest Way To Sort
-ClockSpeed: 2594
+ClockSpeed: 2095
 ---
 
 
@@ -67,5 +67,5 @@ ClockSpeed: 2594
 
 |Technique     |RepeatCount|Time           |RelativeSpeed|Throughput|
 |--------------|-----------|---------------|-------------|----------|
-|ArrayList.Sort|100        |00:00:00.050774|1x           |1969.48/s |
-|Sort-Object   |100        |00:00:00.057196|1.13x        |1748.37/s |
+|ArrayList.Sort|100        |00:00:00.021114|1x           |4736.19/s |
+|Sort-Object   |100        |00:00:00.083086|3.94x        |1203.57/s |

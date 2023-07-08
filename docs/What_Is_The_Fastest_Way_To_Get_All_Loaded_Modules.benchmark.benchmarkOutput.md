@@ -5,17 +5,17 @@ title: What Is The Fastest Way To Get All Loaded Modules
 Data: 
   - Technique: Get-Module -ExpandProperty Name
     Time: 
-      Ticks: 36683
+      Ticks: 25278
       Days: 0
       Hours: 0
-      Milliseconds: 3
+      Milliseconds: 2
       Minutes: 0
       Seconds: 0
-      TotalDays: 4.24571759259259e-08
-      TotalHours: 1.01897222222222e-06
-      TotalMilliseconds: 3.6683
-      TotalMinutes: 6.11383333333333e-05
-      TotalSeconds: 0.0036683
+      TotalDays: 2.92569444444444e-08
+      TotalHours: 7.02166666666667e-07
+      TotalMilliseconds: 2.5278
+      TotalMinutes: 4.213e-05
+      TotalSeconds: 0.0025278
       FileName: What Is The Fastest Way To Get All Loaded Modules
       GroupName: 
       BenchmarkInput: 
@@ -27,26 +27,26 @@ Data:
               
         RepeatCount: 10
     RelativeSpeed: 1
-    ClockSpeed: 2295
+    ClockSpeed: 2594
     FileName: What Is The Fastest Way To Get All Loaded Modules
     RepeatCount: 10
-    Throughput: 2726.05839217076
+    Throughput: 3956.00917794129
     BenchmarkInput: 
       FileName: What Is The Fastest Way To Get All Loaded Modules
       RepeatCount: 10
   - Technique: foreach Get-Module
     Time: 
-      Ticks: 46338
+      Ticks: 33968
       Days: 0
       Hours: 0
-      Milliseconds: 4
+      Milliseconds: 3
       Minutes: 0
       Seconds: 0
-      TotalDays: 5.36319444444444e-08
-      TotalHours: 1.28716666666667e-06
-      TotalMilliseconds: 4.6338
-      TotalMinutes: 7.723e-05
-      TotalSeconds: 0.0046338
+      TotalDays: 3.93148148148148e-08
+      TotalHours: 9.43555555555556e-07
+      TotalMilliseconds: 3.3968
+      TotalMinutes: 5.66133333333333e-05
+      TotalSeconds: 0.0033968
       FileName: What Is The Fastest Way To Get All Loaded Modules
       GroupName: 
       BenchmarkInput: 
@@ -59,27 +59,27 @@ Data:
                   $moduleNames
               
         RepeatCount: 10
-    RelativeSpeed: 1.26320093776409
-    ClockSpeed: 2295
+    RelativeSpeed: 1.3437771975631
+    ClockSpeed: 2594
     FileName: What Is The Fastest Way To Get All Loaded Modules
     RepeatCount: 10
-    Throughput: 2158.05602313436
+    Throughput: 2943.94724446538
     BenchmarkInput: 
       FileName: What Is The Fastest Way To Get All Loaded Modules
       RepeatCount: 10
   - Technique: ExecutionContextAndHashtable
     Time: 
-      Ticks: 99296
+      Ticks: 73775
       Days: 0
       Hours: 0
-      Milliseconds: 9
+      Milliseconds: 7
       Minutes: 0
       Seconds: 0
-      TotalDays: 1.14925925925926e-07
-      TotalHours: 2.75822222222222e-06
-      TotalMilliseconds: 9.9296
-      TotalMinutes: 0.000165493333333333
-      TotalSeconds: 0.0099296
+      TotalDays: 8.53877314814815e-08
+      TotalHours: 2.04930555555556e-06
+      TotalMilliseconds: 7.3775
+      TotalMinutes: 0.000122958333333333
+      TotalSeconds: 0.0073775
       FileName: What Is The Fastest Way To Get All Loaded Modules
       GroupName: 
       BenchmarkInput: 
@@ -99,27 +99,27 @@ Data:
                   $cmdModules.Keys
               
         RepeatCount: 10
-    RelativeSpeed: 2.70686694108988
-    ClockSpeed: 2295
+    RelativeSpeed: 2.91854577102619
+    ClockSpeed: 2594
     FileName: What Is The Fastest Way To Get All Loaded Modules
     RepeatCount: 10
-    Throughput: 1007.08991298743
+    Throughput: 1355.47272111149
     BenchmarkInput: 
       FileName: What Is The Fastest Way To Get All Loaded Modules
       RepeatCount: 10
   - Technique: ExecutionContextAndArrayList
     Time: 
-      Ticks: 150383
+      Ticks: 114289
       Days: 0
       Hours: 0
-      Milliseconds: 15
+      Milliseconds: 11
       Minutes: 0
       Seconds: 0
-      TotalDays: 1.74054398148148e-07
-      TotalHours: 4.17730555555556e-06
-      TotalMilliseconds: 15.0383
-      TotalMinutes: 0.000250638333333333
-      TotalSeconds: 0.0150383
+      TotalDays: 1.32278935185185e-07
+      TotalHours: 3.17469444444444e-06
+      TotalMilliseconds: 11.4289
+      TotalMinutes: 0.000190481666666667
+      TotalSeconds: 0.0114289
       FileName: What Is The Fastest Way To Get All Loaded Modules
       GroupName: 
       BenchmarkInput: 
@@ -138,16 +138,16 @@ Data:
                       $moduleNames
               
         RepeatCount: 10
-    RelativeSpeed: 4.09952839189815
-    ClockSpeed: 2295
+    RelativeSpeed: 4.52128332937732
+    ClockSpeed: 2594
     FileName: What Is The Fastest Way To Get All Loaded Modules
     RepeatCount: 10
-    Throughput: 664.968779715792
+    Throughput: 874.974844473221
     BenchmarkInput: 
       FileName: What Is The Fastest Way To Get All Loaded Modules
       RepeatCount: 10
 FileName: What Is The Fastest Way To Get All Loaded Modules
-ClockSpeed: 2295
+ClockSpeed: 2594
 ---
 
 
@@ -155,7 +155,7 @@ ClockSpeed: 2295
 
 |Technique                      |RepeatCount|Time           |RelativeSpeed|Throughput|
 |-------------------------------|-----------|---------------|-------------|----------|
-|Get-Module -ExpandProperty Name|10         |00:00:00.003668|1x           |2726.06/s |
-|foreach Get-Module             |10         |00:00:00.004633|1.26x        |2158.06/s |
-|ExecutionContextAndHashtable   |10         |00:00:00.009929|2.71x        |1007.09/s |
-|ExecutionContextAndArrayList   |10         |00:00:00.015038|4.1x         |664.97/s  |
+|Get-Module -ExpandProperty Name|10         |00:00:00.002527|1x           |3956.01/s |
+|foreach Get-Module             |10         |00:00:00.003396|1.34x        |2943.95/s |
+|ExecutionContextAndHashtable   |10         |00:00:00.007377|2.92x        |1355.47/s |
+|ExecutionContextAndArrayList   |10         |00:00:00.011428|4.52x        |874.97/s  |

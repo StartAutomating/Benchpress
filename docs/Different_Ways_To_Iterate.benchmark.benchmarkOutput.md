@@ -5,17 +5,17 @@ title: Different Ways To Iterate
 Data: 
   - Technique: Foreach Statement
     Time: 
-      Ticks: 62791
+      Ticks: 66828
       Days: 0
       Hours: 0
       Milliseconds: 6
       Minutes: 0
       Seconds: 0
-      TotalDays: 7.26747685185185e-08
-      TotalHours: 1.74419444444444e-06
-      TotalMilliseconds: 6.2791
-      TotalMinutes: 0.000104651666666667
-      TotalSeconds: 0.0062791
+      TotalDays: 7.73472222222222e-08
+      TotalHours: 1.85633333333333e-06
+      TotalMilliseconds: 6.6828
+      TotalMinutes: 0.00011138
+      TotalSeconds: 0.0066828
       FileName: Different Ways To Iterate
       GroupName: 
       BenchmarkInput: 
@@ -25,132 +25,132 @@ Data:
     ClockSpeed: 2594
     FileName: Different Ways To Iterate
     RepeatCount: 100
-    Throughput: 15925.849245911
-    BenchmarkInput: 
-      FileName: Different Ways To Iterate
-  - Technique: Foreach _
-    Time: 
-      Ticks: 65676
-      Days: 0
-      Hours: 0
-      Milliseconds: 6
-      Minutes: 0
-      Seconds: 0
-      TotalDays: 7.60138888888889e-08
-      TotalHours: 1.82433333333333e-06
-      TotalMilliseconds: 6.5676
-      TotalMinutes: 0.00010946
-      TotalSeconds: 0.0065676
-      FileName: Different Ways To Iterate
-      GroupName: 
-      BenchmarkInput: 
-        ScriptBlock: foreach ($_ in 1..100) { $_ }
-        FileName: Different Ways To Iterate
-    RelativeSpeed: 1.04594607507445
-    ClockSpeed: 2594
-    FileName: Different Ways To Iterate
-    RepeatCount: 100
-    Throughput: 15226.2622571411
+    Throughput: 14963.7876339259
     BenchmarkInput: 
       FileName: Different Ways To Iterate
   - Technique: For loop
     Time: 
-      Ticks: 75814
+      Ticks: 71439
       Days: 0
       Hours: 0
       Milliseconds: 7
       Minutes: 0
       Seconds: 0
-      TotalDays: 8.77476851851852e-08
-      TotalHours: 2.10594444444444e-06
-      TotalMilliseconds: 7.5814
-      TotalMinutes: 0.000126356666666667
-      TotalSeconds: 0.0075814
+      TotalDays: 8.26840277777778e-08
+      TotalHours: 1.98441666666667e-06
+      TotalMilliseconds: 7.1439
+      TotalMinutes: 0.000119065
+      TotalSeconds: 0.0071439
       FileName: Different Ways To Iterate
       GroupName: 
       BenchmarkInput: 
         ScriptBlock: for ( $i =1; $i -le 100; $i++) { $i } 
         FileName: Different Ways To Iterate
-    RelativeSpeed: 1.2074023347295
+    RelativeSpeed: 1.06899802478003
     ClockSpeed: 2594
     FileName: Different Ways To Iterate
     RepeatCount: 100
-    Throughput: 13190.1759569473
+    Throughput: 13997.9562983804
     BenchmarkInput: 
       FileName: Different Ways To Iterate
   - Technique: For _
     Time: 
-      Ticks: 94107
+      Ticks: 73322
       Days: 0
       Hours: 0
-      Milliseconds: 9
+      Milliseconds: 7
       Minutes: 0
       Seconds: 0
-      TotalDays: 1.08920138888889e-07
-      TotalHours: 2.61408333333333e-06
-      TotalMilliseconds: 9.4107
-      TotalMinutes: 0.000156845
-      TotalSeconds: 0.0094107
+      TotalDays: 8.48634259259259e-08
+      TotalHours: 2.03672222222222e-06
+      TotalMilliseconds: 7.3322
+      TotalMinutes: 0.000122203333333333
+      TotalSeconds: 0.0073322
       FileName: Different Ways To Iterate
       GroupName: 
       BenchmarkInput: 
         ScriptBlock: for ( $_ =1; $_ -le 100; $_++) { $_ } 
         FileName: Different Ways To Iterate
-    RelativeSpeed: 1.49873389498495
+    RelativeSpeed: 1.09717483689471
     ClockSpeed: 2594
     FileName: Different Ways To Iterate
     RepeatCount: 100
-    Throughput: 10626.2020891113
+    Throughput: 13638.4714001255
+    BenchmarkInput: 
+      FileName: Different Ways To Iterate
+  - Technique: Foreach _
+    Time: 
+      Ticks: 100792
+      Days: 0
+      Hours: 0
+      Milliseconds: 10
+      Minutes: 0
+      Seconds: 0
+      TotalDays: 1.16657407407407e-07
+      TotalHours: 2.79977777777778e-06
+      TotalMilliseconds: 10.0792
+      TotalMinutes: 0.000167986666666667
+      TotalSeconds: 0.0100792
+      FileName: Different Ways To Iterate
+      GroupName: 
+      BenchmarkInput: 
+        ScriptBlock: foreach ($_ in 1..100) { $_ }
+        FileName: Different Ways To Iterate
+    RelativeSpeed: 1.50823008319866
+    ClockSpeed: 2594
+    FileName: Different Ways To Iterate
+    RepeatCount: 100
+    Throughput: 9921.42233510596
     BenchmarkInput: 
       FileName: Different Ways To Iterate
   - Technique: Pipe to ScriptBlock
     Time: 
-      Ticks: 146475
+      Ticks: 148848
       Days: 0
       Hours: 0
       Milliseconds: 14
       Minutes: 0
       Seconds: 0
-      TotalDays: 1.6953125e-07
-      TotalHours: 4.06875e-06
-      TotalMilliseconds: 14.6475
-      TotalMinutes: 0.000244125
-      TotalSeconds: 0.0146475
+      TotalDays: 1.72277777777778e-07
+      TotalHours: 4.13466666666667e-06
+      TotalMilliseconds: 14.8848
+      TotalMinutes: 0.00024808
+      TotalSeconds: 0.0148848
       FileName: Different Ways To Iterate
       GroupName: 
       BenchmarkInput: 
         ScriptBlock: 1..100 | . { process { $_ }}
         FileName: Different Ways To Iterate
-    RelativeSpeed: 2.33273876829482
+    RelativeSpeed: 2.2273298617346
     ClockSpeed: 2594
     FileName: Different Ways To Iterate
     RepeatCount: 100
-    Throughput: 6827.10360129715
+    Throughput: 6718.26292593787
     BenchmarkInput: 
       FileName: Different Ways To Iterate
   - Technique: Foreach-Object
     Time: 
-      Ticks: 769136
+      Ticks: 772028
       Days: 0
       Hours: 0
-      Milliseconds: 76
+      Milliseconds: 77
       Minutes: 0
       Seconds: 0
-      TotalDays: 8.90203703703704e-07
-      TotalHours: 2.13648888888889e-05
-      TotalMilliseconds: 76.9136
-      TotalMinutes: 0.00128189333333333
-      TotalSeconds: 0.0769136
+      TotalDays: 8.93550925925926e-07
+      TotalHours: 2.14452222222222e-05
+      TotalMilliseconds: 77.2028
+      TotalMinutes: 0.00128671333333333
+      TotalSeconds: 0.0772028
       FileName: Different Ways To Iterate
       GroupName: 
       BenchmarkInput: 
         ScriptBlock: 1..100 | ForEach-Object { $_ }
         FileName: Different Ways To Iterate
-    RelativeSpeed: 12.249143985603
+    RelativeSpeed: 11.5524630394445
     ClockSpeed: 2594
     FileName: Different Ways To Iterate
     RepeatCount: 100
-    Throughput: 1300.16017973414
+    Throughput: 1295.28980814167
     BenchmarkInput: 
       FileName: Different Ways To Iterate
 FileName: Different Ways To Iterate
@@ -162,9 +162,9 @@ ClockSpeed: 2594
 
 |Technique          |RepeatCount|Time           |RelativeSpeed|Throughput|
 |-------------------|-----------|---------------|-------------|----------|
-|Foreach Statement  |100        |00:00:00.006279|1x           |15925.85/s|
-|Foreach _          |100        |00:00:00.006567|1.05x        |15226.26/s|
-|For loop           |100        |00:00:00.007581|1.21x        |13190.18/s|
-|For _              |100        |00:00:00.009410|1.5x         |10626.2/s |
-|Pipe to ScriptBlock|100        |00:00:00.014647|2.33x        |6827.1/s  |
-|Foreach-Object     |100        |00:00:00.076913|12.25x       |1300.16/s |
+|Foreach Statement  |100        |00:00:00.006682|1x           |14963.79/s|
+|For loop           |100        |00:00:00.007143|1.07x        |13997.96/s|
+|For _              |100        |00:00:00.007332|1.1x         |13638.47/s|
+|Foreach _          |100        |00:00:00.010079|1.51x        |9921.42/s |
+|Pipe to ScriptBlock|100        |00:00:00.014884|2.23x        |6718.26/s |
+|Foreach-Object     |100        |00:00:00.077202|11.55x       |1295.29/s |

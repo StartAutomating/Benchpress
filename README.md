@@ -12,6 +12,12 @@ Measure-Benchmark -Technique @{
 }
 ~~~
 
+You can install Benchpress from the PowerShell Gallery:
+
+~~~PowerShell
+Install-Module Benchpress -Scope CurrentUser -Force
+~~~
+
 Benchmark comes with a number of PowerShell Performance experiments.
 
 

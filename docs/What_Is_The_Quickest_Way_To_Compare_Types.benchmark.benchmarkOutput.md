@@ -5,193 +5,193 @@ title: What Is The Quickest Way To Compare Types
 Data: 
   - Technique: -is operator
     Time: 
-      Ticks: 57735
+      Ticks: 38102
       Days: 0
       Hours: 0
-      Milliseconds: 5
+      Milliseconds: 3
       Minutes: 0
       Seconds: 0
-      TotalDays: 6.68229166666667e-08
-      TotalHours: 1.60375e-06
-      TotalMilliseconds: 5.7735
-      TotalMinutes: 9.6225e-05
-      TotalSeconds: 0.0057735
+      TotalDays: 4.4099537037037e-08
+      TotalHours: 1.05838888888889e-06
+      TotalMilliseconds: 3.8102
+      TotalMinutes: 6.35033333333333e-05
+      TotalSeconds: 0.0038102
       FileName: What Is The Quickest Way To Compare Types
       GroupName: Single Type comparison
       BenchmarkInput: 
-        FileName: What Is The Quickest Way To Compare Types
-        GroupName: Single Type comparison
         ScriptBlock: |
           
                   1 -is [int]
               
+        GroupName: Single Type comparison
+        FileName: What Is The Quickest Way To Compare Types
     RelativeSpeed: 1
     GroupName: Single Type comparison
-    ClockSpeed: 2295
+    ClockSpeed: 2594
     FileName: What Is The Quickest Way To Compare Types
     RepeatCount: 100
-    Throughput: 17320.5161513813
+    Throughput: 26245.3414518923
     BenchmarkInput: 
-      FileName: What Is The Quickest Way To Compare Types
       GroupName: Single Type comparison
-  - Technique: .GetType() -eq
-    Time: 
-      Ticks: 88824
-      Days: 0
-      Hours: 0
-      Milliseconds: 8
-      Minutes: 0
-      Seconds: 0
-      TotalDays: 1.02805555555556e-07
-      TotalHours: 2.46733333333333e-06
-      TotalMilliseconds: 8.8824
-      TotalMinutes: 0.00014804
-      TotalSeconds: 0.0088824
       FileName: What Is The Quickest Way To Compare Types
-      GroupName: Single Type comparison
-      BenchmarkInput: 
-        FileName: What Is The Quickest Way To Compare Types
-        GroupName: Single Type comparison
-        ScriptBlock: |
-                  
-                  (1).GetType() -eq [int]
-              
-    RelativeSpeed: 1.53847752663029
-    GroupName: Single Type comparison
-    ClockSpeed: 2295
-    FileName: What Is The Quickest Way To Compare Types
-    RepeatCount: 100
-    Throughput: 11258.2184995046
-    BenchmarkInput: 
-      FileName: What Is The Quickest Way To Compare Types
-      GroupName: Single Type comparison
   - Technique: .GetType().Name
     Time: 
-      Ticks: 89091
-      Days: 0
-      Hours: 0
-      Milliseconds: 8
-      Minutes: 0
-      Seconds: 0
-      TotalDays: 1.03114583333333e-07
-      TotalHours: 2.47475e-06
-      TotalMilliseconds: 8.9091
-      TotalMinutes: 0.000148485
-      TotalSeconds: 0.0089091
-      FileName: What Is The Quickest Way To Compare Types
-      GroupName: Single Type comparison
-      BenchmarkInput: 
-        FileName: What Is The Quickest Way To Compare Types
-        GroupName: Single Type comparison
-        ScriptBlock: |
-          
-                  (1).GetType().Name -eq 'int32'
-              
-    RelativeSpeed: 1.54310210444271
-    GroupName: Single Type comparison
-    ClockSpeed: 2295
-    FileName: What Is The Quickest Way To Compare Types
-    RepeatCount: 100
-    Throughput: 11224.478342369
-    BenchmarkInput: 
-      FileName: What Is The Quickest Way To Compare Types
-      GroupName: Single Type comparison
-  - Technique: -is operator
-    Time: 
-      Ticks: 56949
+      Ticks: 55577
       Days: 0
       Hours: 0
       Milliseconds: 5
       Minutes: 0
       Seconds: 0
-      TotalDays: 6.59131944444444e-08
-      TotalHours: 1.58191666666667e-06
-      TotalMilliseconds: 5.6949
-      TotalMinutes: 9.4915e-05
-      TotalSeconds: 0.0056949
+      TotalDays: 6.43252314814815e-08
+      TotalHours: 1.54380555555556e-06
+      TotalMilliseconds: 5.5577
+      TotalMinutes: 9.26283333333333e-05
+      TotalSeconds: 0.0055577
       FileName: What Is The Quickest Way To Compare Types
-      GroupName: Multitype comparison
+      GroupName: Single Type comparison
       BenchmarkInput: 
-        FileName: What Is The Quickest Way To Compare Types
-        GroupName: Multitype comparison
         ScriptBlock: |
           
-                  1 -is [double] -or 1 -is [int]
+                  (1).GetType().Name -eq 'int32'
               
-    RelativeSpeed: 1
-    GroupName: Multitype comparison
-    ClockSpeed: 2295
+        GroupName: Single Type comparison
+        FileName: What Is The Quickest Way To Compare Types
+    RelativeSpeed: 1.45863734187182
+    GroupName: Single Type comparison
+    ClockSpeed: 2594
     FileName: What Is The Quickest Way To Compare Types
     RepeatCount: 100
-    Throughput: 17559.5708440886
+    Throughput: 17993.0546808932
     BenchmarkInput: 
+      GroupName: Single Type comparison
       FileName: What Is The Quickest Way To Compare Types
-      GroupName: Multitype comparison
   - Technique: .GetType() -eq
     Time: 
-      Ticks: 75144
+      Ticks: 64881
       Days: 0
       Hours: 0
-      Milliseconds: 7
+      Milliseconds: 6
       Minutes: 0
       Seconds: 0
-      TotalDays: 8.69722222222222e-08
-      TotalHours: 2.08733333333333e-06
-      TotalMilliseconds: 7.5144
-      TotalMinutes: 0.00012524
-      TotalSeconds: 0.0075144
+      TotalDays: 7.509375e-08
+      TotalHours: 1.80225e-06
+      TotalMilliseconds: 6.4881
+      TotalMinutes: 0.000108135
+      TotalSeconds: 0.0064881
+      FileName: What Is The Quickest Way To Compare Types
+      GroupName: Single Type comparison
+      BenchmarkInput: 
+        ScriptBlock: |
+                  
+                  (1).GetType() -eq [int]
+              
+        GroupName: Single Type comparison
+        FileName: What Is The Quickest Way To Compare Types
+    RelativeSpeed: 1.70282399874022
+    GroupName: Single Type comparison
+    ClockSpeed: 2594
+    FileName: What Is The Quickest Way To Compare Types
+    RepeatCount: 100
+    Throughput: 15412.8327245264
+    BenchmarkInput: 
+      GroupName: Single Type comparison
+      FileName: What Is The Quickest Way To Compare Types
+  - Technique: .GetType().Name
+    Time: 
+      Ticks: 43115
+      Days: 0
+      Hours: 0
+      Milliseconds: 4
+      Minutes: 0
+      Seconds: 0
+      TotalDays: 4.99016203703704e-08
+      TotalHours: 1.19763888888889e-06
+      TotalMilliseconds: 4.3115
+      TotalMinutes: 7.18583333333333e-05
+      TotalSeconds: 0.0043115
       FileName: What Is The Quickest Way To Compare Types
       GroupName: Multitype comparison
       BenchmarkInput: 
-        FileName: What Is The Quickest Way To Compare Types
+        ScriptBlock: |
+          
+                  (1).GetType().Name -in 'double','int32'
+              
         GroupName: Multitype comparison
+        FileName: What Is The Quickest Way To Compare Types
+    RelativeSpeed: 1
+    GroupName: Multitype comparison
+    ClockSpeed: 2594
+    FileName: What Is The Quickest Way To Compare Types
+    RepeatCount: 100
+    Throughput: 23193.7840658703
+    BenchmarkInput: 
+      GroupName: Multitype comparison
+      FileName: What Is The Quickest Way To Compare Types
+  - Technique: .GetType() -eq
+    Time: 
+      Ticks: 48820
+      Days: 0
+      Hours: 0
+      Milliseconds: 4
+      Minutes: 0
+      Seconds: 0
+      TotalDays: 5.65046296296296e-08
+      TotalHours: 1.35611111111111e-06
+      TotalMilliseconds: 4.882
+      TotalMinutes: 8.13666666666667e-05
+      TotalSeconds: 0.004882
+      FileName: What Is The Quickest Way To Compare Types
+      GroupName: Multitype comparison
+      BenchmarkInput: 
         ScriptBlock: |
           
                   $one = 1
                   $one.GetType() -eq [double] -or $one.GetType() -eq [int]
               
-    RelativeSpeed: 1.31949639150819
+        GroupName: Multitype comparison
+        FileName: What Is The Quickest Way To Compare Types
+    RelativeSpeed: 1.13232053809579
     GroupName: Multitype comparison
-    ClockSpeed: 2295
+    ClockSpeed: 2594
     FileName: What Is The Quickest Way To Compare Types
     RepeatCount: 100
-    Throughput: 13307.7823911423
+    Throughput: 20483.4084391643
     BenchmarkInput: 
-      FileName: What Is The Quickest Way To Compare Types
       GroupName: Multitype comparison
-  - Technique: .GetType().Name
+      FileName: What Is The Quickest Way To Compare Types
+  - Technique: -is operator
     Time: 
-      Ticks: 88032
+      Ticks: 340733
       Days: 0
       Hours: 0
-      Milliseconds: 8
+      Milliseconds: 34
       Minutes: 0
       Seconds: 0
-      TotalDays: 1.01888888888889e-07
-      TotalHours: 2.44533333333333e-06
-      TotalMilliseconds: 8.8032
-      TotalMinutes: 0.00014672
-      TotalSeconds: 0.0088032
+      TotalDays: 3.94366898148148e-07
+      TotalHours: 9.46480555555556e-06
+      TotalMilliseconds: 34.0733
+      TotalMinutes: 0.000567888333333333
+      TotalSeconds: 0.0340733
       FileName: What Is The Quickest Way To Compare Types
       GroupName: Multitype comparison
       BenchmarkInput: 
-        FileName: What Is The Quickest Way To Compare Types
-        GroupName: Multitype comparison
         ScriptBlock: |
           
-                  (1).GetType().Name -in 'double','int32'
+                  1 -is [double] -or 1 -is [int]
               
-    RelativeSpeed: 1.54580414054681
+        GroupName: Multitype comparison
+        FileName: What Is The Quickest Way To Compare Types
+    RelativeSpeed: 7.9028876261162
     GroupName: Multitype comparison
-    ClockSpeed: 2295
+    ClockSpeed: 2594
     FileName: What Is The Quickest Way To Compare Types
     RepeatCount: 100
-    Throughput: 11359.5056343148
+    Throughput: 2934.84928081518
     BenchmarkInput: 
-      FileName: What Is The Quickest Way To Compare Types
       GroupName: Multitype comparison
+      FileName: What Is The Quickest Way To Compare Types
 FileName: What Is The Quickest Way To Compare Types
-ClockSpeed: 2295
+ClockSpeed: 2594
 ---
 
 
@@ -200,9 +200,9 @@ ClockSpeed: 2295
 
 |Technique      |RepeatCount|Time           |RelativeSpeed|Throughput|
 |---------------|-----------|---------------|-------------|----------|
-|-is operator   |100        |00:00:00.005694|1x           |17559.57/s|
-|.GetType() -eq |100        |00:00:00.007514|1.32x        |13307.78/s|
-|.GetType().Name|100        |00:00:00.008803|1.55x        |11359.51/s|
+|.GetType().Name|100        |00:00:00.004311|1x           |23193.78/s|
+|.GetType() -eq |100        |00:00:00.004882|1.13x        |20483.41/s|
+|-is operator   |100        |00:00:00.034073|7.9x         |2934.85/s |
 
 
 ### Single Type comparison
@@ -210,6 +210,6 @@ ClockSpeed: 2295
 
 |Technique      |RepeatCount|Time           |RelativeSpeed|Throughput|
 |---------------|-----------|---------------|-------------|----------|
-|-is operator   |100        |00:00:00.005773|1x           |17320.52/s|
-|.GetType() -eq |100        |00:00:00.008882|1.54x        |11258.22/s|
-|.GetType().Name|100        |00:00:00.008909|1.54x        |11224.48/s|
+|-is operator   |100        |00:00:00.003810|1x           |26245.34/s|
+|.GetType().Name|100        |00:00:00.005557|1.46x        |17993.05/s|
+|.GetType() -eq |100        |00:00:00.006488|1.7x         |15412.83/s|

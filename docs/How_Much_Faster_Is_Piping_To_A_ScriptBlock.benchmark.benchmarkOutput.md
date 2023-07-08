@@ -5,84 +5,86 @@ title: How Much Faster Is Piping To A ScriptBlock
 Data: 
   - Technique: ScriptBlock
     Time: 
-      Ticks: 1947970
+      Ticks: 1465311
       Days: 0
       Hours: 0
-      Milliseconds: 194
+      Milliseconds: 146
       Minutes: 0
       Seconds: 0
-      TotalDays: 2.25459490740741e-06
-      TotalHours: 5.41102777777778e-05
-      TotalMilliseconds: 194.797
-      TotalMinutes: 0.00324661666666667
-      TotalSeconds: 0.194797
+      TotalDays: 1.69596180555556e-06
+      TotalHours: 4.07030833333333e-05
+      TotalMilliseconds: 146.5311
+      TotalMinutes: 0.002442185
+      TotalSeconds: 0.1465311
       FileName: How Much Faster Is Piping To A ScriptBlock
       GroupName: 
       BenchmarkInput: 
+        RepeatCount: 1024
+        FileName: How Much Faster Is Piping To A ScriptBlock
         ScriptBlock: |
           
                           1..100 | &{
                               process { $_}
                           }
                       
-        RepeatCount: 1024
-        FileName: How Much Faster Is Piping To A ScriptBlock
     RelativeSpeed: 1
-    ClockSpeed: 2295
+    ClockSpeed: 2095
     FileName: How Much Faster Is Piping To A ScriptBlock
     RepeatCount: 1024
-    Throughput: 5256.75446747127
+    Throughput: 6988.27757383927
     BenchmarkInput: 
-      FileName: How Much Faster Is Piping To A ScriptBlock
       RepeatCount: 1024
+      FileName: How Much Faster Is Piping To A ScriptBlock
   - Technique: DotScriptBlock
     Time: 
-      Ticks: 2167368
+      Ticks: 1572168
       Days: 0
       Hours: 0
-      Milliseconds: 216
+      Milliseconds: 157
       Minutes: 0
       Seconds: 0
-      TotalDays: 2.50852777777778e-06
-      TotalHours: 6.02046666666667e-05
-      TotalMilliseconds: 216.7368
-      TotalMinutes: 0.00361228
-      TotalSeconds: 0.2167368
+      TotalDays: 1.81963888888889e-06
+      TotalHours: 4.36713333333333e-05
+      TotalMilliseconds: 157.2168
+      TotalMinutes: 0.00262028
+      TotalSeconds: 0.1572168
       FileName: How Much Faster Is Piping To A ScriptBlock
       GroupName: 
       BenchmarkInput: 
+        RepeatCount: 1024
+        FileName: How Much Faster Is Piping To A ScriptBlock
         ScriptBlock: |
           
                           1..100 | . {
                               process { $_ } 
                           }
                       
-        RepeatCount: 1024
-        FileName: How Much Faster Is Piping To A ScriptBlock
-    RelativeSpeed: 1.11262904459514
-    ClockSpeed: 2295
+    RelativeSpeed: 1.07292445085037
+    ClockSpeed: 2095
     FileName: How Much Faster Is Piping To A ScriptBlock
     RepeatCount: 1024
-    Throughput: 4724.62452153949
+    Throughput: 6513.29883320358
     BenchmarkInput: 
-      FileName: How Much Faster Is Piping To A ScriptBlock
       RepeatCount: 1024
+      FileName: How Much Faster Is Piping To A ScriptBlock
   - Technique: ScriptBlockWithPipelineParameter
     Time: 
-      Ticks: 7665939
+      Ticks: 6869085
       Days: 0
       Hours: 0
-      Milliseconds: 766
+      Milliseconds: 686
       Minutes: 0
       Seconds: 0
-      TotalDays: 8.87261458333333e-06
-      TotalHours: 0.00021294275
-      TotalMilliseconds: 766.5939
-      TotalMinutes: 0.012776565
-      TotalSeconds: 0.7665939
+      TotalDays: 7.95032986111111e-06
+      TotalHours: 0.000190807916666667
+      TotalMilliseconds: 686.9085
+      TotalMinutes: 0.011448475
+      TotalSeconds: 0.6869085
       FileName: How Much Faster Is Piping To A ScriptBlock
       GroupName: 
       BenchmarkInput: 
+        RepeatCount: 1024
+        FileName: How Much Faster Is Piping To A ScriptBlock
         ScriptBlock: |
           
                       1..100 | & {
@@ -90,50 +92,48 @@ Data:
                           process { $inputObject } 
                       }
                       
-        RepeatCount: 1024
-        FileName: How Much Faster Is Piping To A ScriptBlock
-    RelativeSpeed: 3.93534756695432
-    ClockSpeed: 2295
+    RelativeSpeed: 4.68780006428669
+    ClockSpeed: 2095
     FileName: How Much Faster Is Piping To A ScriptBlock
     RepeatCount: 1024
-    Throughput: 1335.77895675924
+    Throughput: 1490.73712146523
     BenchmarkInput: 
-      FileName: How Much Faster Is Piping To A ScriptBlock
       RepeatCount: 1024
+      FileName: How Much Faster Is Piping To A ScriptBlock
   - Technique: ForeachObject
     Time: 
-      Ticks: 9564373
+      Ticks: 8229086
       Days: 0
       Hours: 0
-      Milliseconds: 956
+      Milliseconds: 822
       Minutes: 0
       Seconds: 0
-      TotalDays: 1.10698761574074e-05
-      TotalHours: 0.000265677027777778
-      TotalMilliseconds: 956.4373
-      TotalMinutes: 0.0159406216666667
-      TotalSeconds: 0.9564373
+      TotalDays: 9.52440509259259e-06
+      TotalHours: 0.000228585722222222
+      TotalMilliseconds: 822.9086
+      TotalMinutes: 0.0137151433333333
+      TotalSeconds: 0.8229086
       FileName: How Much Faster Is Piping To A ScriptBlock
       GroupName: 
       BenchmarkInput: 
+        RepeatCount: 1024
+        FileName: How Much Faster Is Piping To A ScriptBlock
         ScriptBlock: |
           
                           1..100 | % {
                               $_
                           }            
                       
-        RepeatCount: 1024
-        FileName: How Much Faster Is Piping To A ScriptBlock
-    RelativeSpeed: 4.90991801721792
-    ClockSpeed: 2295
+    RelativeSpeed: 5.6159313620112
+    ClockSpeed: 2095
     FileName: How Much Faster Is Piping To A ScriptBlock
     RepeatCount: 1024
-    Throughput: 1070.63996772188
+    Throughput: 1244.366628323
     BenchmarkInput: 
-      FileName: How Much Faster Is Piping To A ScriptBlock
       RepeatCount: 1024
+      FileName: How Much Faster Is Piping To A ScriptBlock
 FileName: How Much Faster Is Piping To A ScriptBlock
-ClockSpeed: 2295
+ClockSpeed: 2095
 ---
 
 
@@ -141,7 +141,7 @@ ClockSpeed: 2295
 
 |Technique                       |RepeatCount|Time           |RelativeSpeed|Throughput|
 |--------------------------------|-----------|---------------|-------------|----------|
-|ScriptBlock                     |1024       |00:00:00.194797|1x           |5256.75/s |
-|DotScriptBlock                  |1024       |00:00:00.216736|1.11x        |4724.62/s |
-|ScriptBlockWithPipelineParameter|1024       |00:00:00.766593|3.94x        |1335.78/s |
-|ForeachObject                   |1024       |00:00:00.956437|4.91x        |1070.64/s |
+|ScriptBlock                     |1024       |00:00:00.146531|1x           |6988.28/s |
+|DotScriptBlock                  |1024       |00:00:00.157216|1.07x        |6513.3/s  |
+|ScriptBlockWithPipelineParameter|1024       |00:00:00.686908|4.69x        |1490.74/s |
+|ForeachObject                   |1024       |00:00:00.822908|5.62x        |1244.37/s |

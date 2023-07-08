@@ -5,171 +5,171 @@ title: Which Random Is Faster
 Data: 
   - Technique: Guid
     Time: 
-      Ticks: 752397
+      Ticks: 520332
       Days: 0
       Hours: 0
-      Milliseconds: 75
+      Milliseconds: 52
       Minutes: 0
       Seconds: 0
-      TotalDays: 8.70829861111111e-07
-      TotalHours: 2.08999166666667e-05
-      TotalMilliseconds: 75.2397
-      TotalMinutes: 0.001253995
-      TotalSeconds: 0.0752397
+      TotalDays: 6.02236111111111e-07
+      TotalHours: 1.44536666666667e-05
+      TotalMilliseconds: 52.0332
+      TotalMinutes: 0.00086722
+      TotalSeconds: 0.0520332
       FileName: Which Random Is Faster
       GroupName: RandomLetters
       BenchmarkInput: 
+        RepeatCount: 1024
         FileName: Which Random Is Faster
         ScriptBlock: |
           
                   [guid]::NewGuid()
               
         GroupName: RandomLetters
-        RepeatCount: 1024
     RelativeSpeed: 1
     GroupName: RandomLetters
-    ClockSpeed: 2095
+    ClockSpeed: 2594
     FileName: Which Random Is Faster
     RepeatCount: 1024
-    Throughput: 13609.8362965296
+    Throughput: 19679.7429333579
     BenchmarkInput: 
+      RepeatCount: 1024
       FileName: Which Random Is Faster
       GroupName: RandomLetters
-      RepeatCount: 1024
   - Technique: [BitConverter] + [Random]
     Time: 
-      Ticks: 787617
+      Ticks: 533590
       Days: 0
       Hours: 0
-      Milliseconds: 78
+      Milliseconds: 53
       Minutes: 0
       Seconds: 0
-      TotalDays: 9.1159375e-07
-      TotalHours: 2.187825e-05
-      TotalMilliseconds: 78.7617
-      TotalMinutes: 0.001312695
-      TotalSeconds: 0.0787617
+      TotalDays: 6.17581018518519e-07
+      TotalHours: 1.48219444444444e-05
+      TotalMilliseconds: 53.359
+      TotalMinutes: 0.000889316666666667
+      TotalSeconds: 0.053359
       FileName: Which Random Is Faster
       GroupName: RandomLetters
       BenchmarkInput: 
+        RepeatCount: 1024
         FileName: Which Random Is Faster
         ScriptBlock: |
           
                   [BitConverter]::ToString([BitConverter]::GetBytes($([Random]::new().next())))
               
         GroupName: RandomLetters
-        RepeatCount: 1024
-    RelativeSpeed: 1.04681039398084
+    RelativeSpeed: 1.02547988591899
     GroupName: RandomLetters
-    ClockSpeed: 2095
+    ClockSpeed: 2594
     FileName: Which Random Is Faster
     RepeatCount: 1024
-    Throughput: 13001.2429899304
+    Throughput: 19190.764444611
     BenchmarkInput: 
+      RepeatCount: 1024
       FileName: Which Random Is Faster
       GroupName: RandomLetters
-      RepeatCount: 1024
   - Technique: [BitConverter] + Get-Random
     Time: 
-      Ticks: 1448384
+      Ticks: 1169486
       Days: 0
       Hours: 0
-      Milliseconds: 144
+      Milliseconds: 116
       Minutes: 0
       Seconds: 0
-      TotalDays: 1.67637037037037e-06
-      TotalHours: 4.02328888888889e-05
-      TotalMilliseconds: 144.8384
-      TotalMinutes: 0.00241397333333333
-      TotalSeconds: 0.1448384
+      TotalDays: 1.35357175925926e-06
+      TotalHours: 3.24857222222222e-05
+      TotalMilliseconds: 116.9486
+      TotalMinutes: 0.00194914333333333
+      TotalSeconds: 0.1169486
       FileName: Which Random Is Faster
       GroupName: RandomLetters
       BenchmarkInput: 
+        RepeatCount: 1024
         FileName: Which Random Is Faster
         ScriptBlock: |
           
                   [BitConverter]::ToString([BitConverter]::GetBytes((Get-Random)))
               
         GroupName: RandomLetters
-        RepeatCount: 1024
-    RelativeSpeed: 1.92502628266726
+    RelativeSpeed: 2.24757654728135
     GroupName: RandomLetters
-    ClockSpeed: 2095
+    ClockSpeed: 2594
     FileName: Which Random Is Faster
     RepeatCount: 1024
-    Throughput: 7069.94830100305
+    Throughput: 8755.98339783461
     BenchmarkInput: 
+      RepeatCount: 1024
       FileName: Which Random Is Faster
       GroupName: RandomLetters
-      RepeatCount: 1024
   - Technique: [Random]::new().Next()
     Time: 
-      Ticks: 667497
+      Ticks: 521167
       Days: 0
       Hours: 0
-      Milliseconds: 66
+      Milliseconds: 52
       Minutes: 0
       Seconds: 0
-      TotalDays: 7.72565972222222e-07
-      TotalHours: 1.85415833333333e-05
-      TotalMilliseconds: 66.7497
-      TotalMinutes: 0.001112495
-      TotalSeconds: 0.0667497
+      TotalDays: 6.03202546296296e-07
+      TotalHours: 1.44768611111111e-05
+      TotalMilliseconds: 52.1167
+      TotalMinutes: 0.000868611666666667
+      TotalSeconds: 0.0521167
       FileName: Which Random Is Faster
       GroupName: RandomNumbers
       BenchmarkInput: 
+        RepeatCount: 1024
         FileName: Which Random Is Faster
         ScriptBlock: |
           
                   $([Random]::new().Next())
               
         GroupName: RandomNumbers
-        RepeatCount: 1024
     RelativeSpeed: 1
     GroupName: RandomNumbers
-    ClockSpeed: 2095
+    ClockSpeed: 2594
     FileName: Which Random Is Faster
     RepeatCount: 1024
-    Throughput: 15340.8929178708
+    Throughput: 19648.2125690997
     BenchmarkInput: 
+      RepeatCount: 1024
       FileName: Which Random Is Faster
       GroupName: RandomNumbers
-      RepeatCount: 1024
   - Technique: Get-Random
     Time: 
-      Ticks: 1360783
+      Ticks: 1113832
       Days: 0
       Hours: 0
-      Milliseconds: 136
+      Milliseconds: 111
       Minutes: 0
       Seconds: 0
-      TotalDays: 1.57498032407407e-06
-      TotalHours: 3.77995277777778e-05
-      TotalMilliseconds: 136.0783
-      TotalMinutes: 0.00226797166666667
-      TotalSeconds: 0.1360783
+      TotalDays: 1.28915740740741e-06
+      TotalHours: 3.09397777777778e-05
+      TotalMilliseconds: 111.3832
+      TotalMinutes: 0.00185638666666667
+      TotalSeconds: 0.1113832
       FileName: Which Random Is Faster
       GroupName: RandomNumbers
       BenchmarkInput: 
+        RepeatCount: 1024
         FileName: Which Random Is Faster
         ScriptBlock: |
           
                   Get-Random
               
         GroupName: RandomNumbers
-        RepeatCount: 1024
-    RelativeSpeed: 2.03863537963467
+    RelativeSpeed: 2.13718827170561
     GroupName: RandomNumbers
-    ClockSpeed: 2095
+    ClockSpeed: 2594
     FileName: Which Random Is Faster
     RepeatCount: 1024
-    Throughput: 7525.07931095553
+    Throughput: 9193.48698906119
     BenchmarkInput: 
+      RepeatCount: 1024
       FileName: Which Random Is Faster
       GroupName: RandomNumbers
-      RepeatCount: 1024
 FileName: Which Random Is Faster
-ClockSpeed: 2095
+ClockSpeed: 2594
 ---
 
 
@@ -178,9 +178,9 @@ ClockSpeed: 2095
 
 |Technique                  |RepeatCount|Time           |RelativeSpeed|Throughput|
 |---------------------------|-----------|---------------|-------------|----------|
-|Guid                       |1024       |00:00:00.075239|1x           |13609.84/s|
-|[BitConverter] + [Random]  |1024       |00:00:00.078761|1.05x        |13001.24/s|
-|[BitConverter] + Get-Random|1024       |00:00:00.144838|1.93x        |7069.95/s |
+|Guid                       |1024       |00:00:00.052033|1x           |19679.74/s|
+|[BitConverter] + [Random]  |1024       |00:00:00.053359|1.03x        |19190.76/s|
+|[BitConverter] + Get-Random|1024       |00:00:00.116948|2.25x        |8755.98/s |
 
 
 ### RandomNumbers
@@ -188,5 +188,5 @@ ClockSpeed: 2095
 
 |Technique             |RepeatCount|Time           |RelativeSpeed|Throughput|
 |----------------------|-----------|---------------|-------------|----------|
-|[Random]::new().Next()|1024       |00:00:00.066749|1x           |15340.89/s|
-|Get-Random            |1024       |00:00:00.136078|2.04x        |7525.08/s |
+|[Random]::new().Next()|1024       |00:00:00.052116|1x           |19648.21/s|
+|Get-Random            |1024       |00:00:00.111383|2.14x        |9193.49/s |

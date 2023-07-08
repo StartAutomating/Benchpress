@@ -5,17 +5,17 @@ title: Should I Include The System Namespace
 Data: 
   - Technique: NoSytemNamespace
     Time: 
-      Ticks: 38824
+      Ticks: 40240
       Days: 0
       Hours: 0
-      Milliseconds: 3
+      Milliseconds: 4
       Minutes: 0
       Seconds: 0
-      TotalDays: 4.49351851851852e-08
-      TotalHours: 1.07844444444444e-06
-      TotalMilliseconds: 3.8824
-      TotalMinutes: 6.47066666666667e-05
-      TotalSeconds: 0.0038824
+      TotalDays: 4.65740740740741e-08
+      TotalHours: 1.11777777777778e-06
+      TotalMilliseconds: 4.024
+      TotalMinutes: 6.70666666666667e-05
+      TotalSeconds: 0.004024
       FileName: Should I Include The System Namespace
       GroupName: 
       BenchmarkInput: 
@@ -25,25 +25,25 @@ Data:
               
         FileName: Should I Include The System Namespace
     RelativeSpeed: 1
-    ClockSpeed: 2095
+    ClockSpeed: 2594
     FileName: Should I Include The System Namespace
     RepeatCount: 100
-    Throughput: 25757.2635483206
+    Throughput: 24850.8946322068
     BenchmarkInput: 
       FileName: Should I Include The System Namespace
   - Technique: SystemNamespaceIncluded
     Time: 
-      Ticks: 46686
+      Ticks: 51327
       Days: 0
       Hours: 0
-      Milliseconds: 4
+      Milliseconds: 5
       Minutes: 0
       Seconds: 0
-      TotalDays: 5.40347222222222e-08
-      TotalHours: 1.29683333333333e-06
-      TotalMilliseconds: 4.6686
-      TotalMinutes: 7.781e-05
-      TotalSeconds: 0.0046686
+      TotalDays: 5.940625e-08
+      TotalHours: 1.42575e-06
+      TotalMilliseconds: 5.1327
+      TotalMinutes: 8.5545e-05
+      TotalSeconds: 0.0051327
       FileName: Should I Include The System Namespace
       GroupName: 
       BenchmarkInput: 
@@ -52,15 +52,15 @@ Data:
                   [System.IO.Path]
               
         FileName: Should I Include The System Namespace
-    RelativeSpeed: 1.2025036060169
-    ClockSpeed: 2095
+    RelativeSpeed: 1.27552186878728
+    ClockSpeed: 2594
     FileName: Should I Include The System Namespace
     RepeatCount: 100
-    Throughput: 21419.6975538705
+    Throughput: 19482.9232177996
     BenchmarkInput: 
       FileName: Should I Include The System Namespace
 FileName: Should I Include The System Namespace
-ClockSpeed: 2095
+ClockSpeed: 2594
 ---
 
 
@@ -68,5 +68,5 @@ ClockSpeed: 2095
 
 |Technique              |RepeatCount|Time           |RelativeSpeed|Throughput|
 |-----------------------|-----------|---------------|-------------|----------|
-|NoSytemNamespace       |100        |00:00:00.003882|1x           |25757.26/s|
-|SystemNamespaceIncluded|100        |00:00:00.004668|1.2x         |21419.7/s |
+|NoSytemNamespace       |100        |00:00:00.004024|1x           |24850.89/s|
+|SystemNamespaceIncluded|100        |00:00:00.005132|1.28x        |19482.92/s|

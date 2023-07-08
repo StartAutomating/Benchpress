@@ -5,183 +5,185 @@ title: Creating Property Bags
 Data: 
   - Technique: PSCustomObject
     Time: 
-      Ticks: 81063
+      Ticks: 94289
       Days: 0
       Hours: 0
-      Milliseconds: 8
+      Milliseconds: 9
       Minutes: 0
       Seconds: 0
-      TotalDays: 9.38229166666667e-08
-      TotalHours: 2.25175e-06
-      TotalMilliseconds: 8.1063
-      TotalMinutes: 0.000135105
-      TotalSeconds: 0.0081063
+      TotalDays: 1.09130787037037e-07
+      TotalHours: 2.61913888888889e-06
+      TotalMilliseconds: 9.4289
+      TotalMinutes: 0.000157148333333333
+      TotalSeconds: 0.0094289
       FileName: Creating Property Bags
       GroupName: (1 property)
       BenchmarkInput: 
+        GroupName: (1 property)
+        FileName: Creating Property Bags
         ScriptBlock: |
           
                   [PSCustomObject]@{
                       a='b'
                   }
               
-        FileName: Creating Property Bags
-        GroupName: (1 property)
     RelativeSpeed: 1
     GroupName: (1 property)
-    ClockSpeed: 2594
+    ClockSpeed: 2095
     FileName: Creating Property Bags
     RepeatCount: 100
-    Throughput: 12336.0842801278
+    Throughput: 10605.691013798
     BenchmarkInput: 
       FileName: Creating Property Bags
       GroupName: (1 property)
   - Technique: Static Constructors Only
     Time: 
-      Ticks: 147774
+      Ticks: 163860
       Days: 0
       Hours: 0
-      Milliseconds: 14
+      Milliseconds: 16
       Minutes: 0
       Seconds: 0
-      TotalDays: 1.71034722222222e-07
-      TotalHours: 4.10483333333333e-06
-      TotalMilliseconds: 14.7774
-      TotalMinutes: 0.00024629
-      TotalSeconds: 0.0147774
+      TotalDays: 1.89652777777778e-07
+      TotalHours: 4.55166666666667e-06
+      TotalMilliseconds: 16.386
+      TotalMinutes: 0.0002731
+      TotalSeconds: 0.016386
       FileName: Creating Property Bags
       GroupName: (1 property)
       BenchmarkInput: 
+        GroupName: (1 property)
+        FileName: Creating Property Bags
         ScriptBlock: |
           
                   $o = [PSObject]::new()
                   $o.psobject.Properties.Add([Management.Automation.PSNoteProperty]::new('a','b'))
                   $o
               
-        FileName: Creating Property Bags
-        GroupName: (1 property)
-    RelativeSpeed: 1.82295251841161
+    RelativeSpeed: 1.73784852952094
     GroupName: (1 property)
-    ClockSpeed: 2594
+    ClockSpeed: 2095
     FileName: Creating Property Bags
     RepeatCount: 100
-    Throughput: 6767.0902865186
+    Throughput: 6102.77065787868
     BenchmarkInput: 
       FileName: Creating Property Bags
       GroupName: (1 property)
   - Technique: New-Object PSObject -Property @{}
     Time: 
-      Ticks: 219937
+      Ticks: 171081
       Days: 0
       Hours: 0
-      Milliseconds: 21
+      Milliseconds: 17
       Minutes: 0
       Seconds: 0
-      TotalDays: 2.54556712962963e-07
-      TotalHours: 6.10936111111111e-06
-      TotalMilliseconds: 21.9937
-      TotalMinutes: 0.000366561666666667
-      TotalSeconds: 0.0219937
+      TotalDays: 1.98010416666667e-07
+      TotalHours: 4.75225e-06
+      TotalMilliseconds: 17.1081
+      TotalMinutes: 0.000285135
+      TotalSeconds: 0.0171081
       FileName: Creating Property Bags
       GroupName: (1 property)
       BenchmarkInput: 
+        GroupName: (1 property)
+        FileName: Creating Property Bags
         ScriptBlock: |
           
                   New-Object PSObject -Property @{
                       a = 'b'
                   }
               
-        FileName: Creating Property Bags
-        GroupName: (1 property)
-    RelativeSpeed: 2.71316136831847
+    RelativeSpeed: 1.81443222433158
     GroupName: (1 property)
-    ClockSpeed: 2594
+    ClockSpeed: 2095
     FileName: Creating Property Bags
     RepeatCount: 100
-    Throughput: 4546.75657119993
+    Throughput: 5845.18444479516
     BenchmarkInput: 
       FileName: Creating Property Bags
       GroupName: (1 property)
   - Technique: New-Object ; Add-Member
     Time: 
-      Ticks: 251748
+      Ticks: 298185
       Days: 0
       Hours: 0
-      Milliseconds: 25
+      Milliseconds: 29
       Minutes: 0
       Seconds: 0
-      TotalDays: 2.91375e-07
-      TotalHours: 6.993e-06
-      TotalMilliseconds: 25.1748
-      TotalMinutes: 0.00041958
-      TotalSeconds: 0.0251748
+      TotalDays: 3.45121527777778e-07
+      TotalHours: 8.28291666666667e-06
+      TotalMilliseconds: 29.8185
+      TotalMinutes: 0.000496975
+      TotalSeconds: 0.0298185
       FileName: Creating Property Bags
       GroupName: (1 property)
       BenchmarkInput: 
+        GroupName: (1 property)
+        FileName: Creating Property Bags
         ScriptBlock: |
           
                   $o = New-Object PSObject
                   Add-Member -InputObject $o -MemberType NoteProperty -Name a -Value b  -PassThru
               
-        FileName: Creating Property Bags
-        GroupName: (1 property)
-    RelativeSpeed: 3.10558454535361
+    RelativeSpeed: 3.16245797494936
     GroupName: (1 property)
-    ClockSpeed: 2594
+    ClockSpeed: 2095
     FileName: Creating Property Bags
     RepeatCount: 100
-    Throughput: 3972.22619444842
+    Throughput: 3353.62275097674
     BenchmarkInput: 
       FileName: Creating Property Bags
       GroupName: (1 property)
   - Technique: New-Object | Add-Member
     Time: 
-      Ticks: 695872
+      Ticks: 870679
       Days: 0
       Hours: 0
-      Milliseconds: 69
+      Milliseconds: 87
       Minutes: 0
       Seconds: 0
-      TotalDays: 8.05407407407407e-07
-      TotalHours: 1.93297777777778e-05
-      TotalMilliseconds: 69.5872
-      TotalMinutes: 0.00115978666666667
-      TotalSeconds: 0.0695872
+      TotalDays: 1.00773032407407e-06
+      TotalHours: 2.41855277777778e-05
+      TotalMilliseconds: 87.0679
+      TotalMinutes: 0.00145113166666667
+      TotalSeconds: 0.0870679
       FileName: Creating Property Bags
       GroupName: (1 property)
       BenchmarkInput: 
+        GroupName: (1 property)
+        FileName: Creating Property Bags
         ScriptBlock: |
            
                   New-Object PSObject | 
                       Add-Member NoteProperty a b -PassThru
               
-        FileName: Creating Property Bags
-        GroupName: (1 property)
-    RelativeSpeed: 8.58433564018109
+    RelativeSpeed: 9.23415244620263
     GroupName: (1 property)
-    ClockSpeed: 2594
+    ClockSpeed: 2095
     FileName: Creating Property Bags
     RepeatCount: 100
-    Throughput: 1437.04589349765
+    Throughput: 1148.52890674979
     BenchmarkInput: 
       FileName: Creating Property Bags
       GroupName: (1 property)
   - Technique: PSCustomObject
     Time: 
-      Ticks: 59095
+      Ticks: 69700
       Days: 0
       Hours: 0
-      Milliseconds: 5
+      Milliseconds: 6
       Minutes: 0
       Seconds: 0
-      TotalDays: 6.83969907407407e-08
-      TotalHours: 1.64152777777778e-06
-      TotalMilliseconds: 5.9095
-      TotalMinutes: 9.84916666666667e-05
-      TotalSeconds: 0.0059095
+      TotalDays: 8.06712962962963e-08
+      TotalHours: 1.93611111111111e-06
+      TotalMilliseconds: 6.97
+      TotalMinutes: 0.000116166666666667
+      TotalSeconds: 0.00697
       FileName: Creating Property Bags
       GroupName: (2 properties)
       BenchmarkInput: 
+        GroupName: (2 properties)
+        FileName: Creating Property Bags
         ScriptBlock: |
           
                   [PSCustomObject]@{
@@ -189,67 +191,33 @@ Data:
                       c='d'
                   }
               
-        FileName: Creating Property Bags
-        GroupName: (2 properties)
     RelativeSpeed: 1
     GroupName: (2 properties)
-    ClockSpeed: 2594
+    ClockSpeed: 2095
     FileName: Creating Property Bags
     RepeatCount: 100
-    Throughput: 16921.9054065488
-    BenchmarkInput: 
-      FileName: Creating Property Bags
-      GroupName: (2 properties)
-  - Technique: New-Object PSObject -Property @{}
-    Time: 
-      Ticks: 139815
-      Days: 0
-      Hours: 0
-      Milliseconds: 13
-      Minutes: 0
-      Seconds: 0
-      TotalDays: 1.61822916666667e-07
-      TotalHours: 3.88375e-06
-      TotalMilliseconds: 13.9815
-      TotalMinutes: 0.000233025
-      TotalSeconds: 0.0139815
-      FileName: Creating Property Bags
-      GroupName: (2 properties)
-      BenchmarkInput: 
-        ScriptBlock: |
-          
-                  New-Object PSObject -Property @{
-                      a = 'b'
-                      c = 'd'
-                  }
-              
-        FileName: Creating Property Bags
-        GroupName: (2 properties)
-    RelativeSpeed: 2.36593620441662
-    GroupName: (2 properties)
-    ClockSpeed: 2594
-    FileName: Creating Property Bags
-    RepeatCount: 100
-    Throughput: 7152.30840753853
+    Throughput: 14347.2022955524
     BenchmarkInput: 
       FileName: Creating Property Bags
       GroupName: (2 properties)
   - Technique: Static Constructors Only
     Time: 
-      Ticks: 187817
+      Ticks: 106338
       Days: 0
       Hours: 0
-      Milliseconds: 18
+      Milliseconds: 10
       Minutes: 0
       Seconds: 0
-      TotalDays: 2.17380787037037e-07
-      TotalHours: 5.21713888888889e-06
-      TotalMilliseconds: 18.7817
-      TotalMinutes: 0.000313028333333333
-      TotalSeconds: 0.0187817
+      TotalDays: 1.23076388888889e-07
+      TotalHours: 2.95383333333333e-06
+      TotalMilliseconds: 10.6338
+      TotalMinutes: 0.00017723
+      TotalSeconds: 0.0106338
       FileName: Creating Property Bags
       GroupName: (2 properties)
       BenchmarkInput: 
+        GroupName: (2 properties)
+        FileName: Creating Property Bags
         ScriptBlock: |
           
                   $o = [PSObject]::new()
@@ -257,107 +225,139 @@ Data:
                   $o.psobject.Properties.Add([Management.Automation.PSNoteProperty]::new('c','d'))
                   $o
               
-        FileName: Creating Property Bags
-        GroupName: (2 properties)
-    RelativeSpeed: 3.17822150774177
+    RelativeSpeed: 1.52565279770445
     GroupName: (2 properties)
-    ClockSpeed: 2594
+    ClockSpeed: 2095
     FileName: Creating Property Bags
     RepeatCount: 100
-    Throughput: 5324.33166326797
+    Throughput: 9403.97600105324
+    BenchmarkInput: 
+      FileName: Creating Property Bags
+      GroupName: (2 properties)
+  - Technique: New-Object PSObject -Property @{}
+    Time: 
+      Ticks: 168954
+      Days: 0
+      Hours: 0
+      Milliseconds: 16
+      Minutes: 0
+      Seconds: 0
+      TotalDays: 1.95548611111111e-07
+      TotalHours: 4.69316666666667e-06
+      TotalMilliseconds: 16.8954
+      TotalMinutes: 0.00028159
+      TotalSeconds: 0.0168954
+      FileName: Creating Property Bags
+      GroupName: (2 properties)
+      BenchmarkInput: 
+        GroupName: (2 properties)
+        FileName: Creating Property Bags
+        ScriptBlock: |
+          
+                  New-Object PSObject -Property @{
+                      a = 'b'
+                      c = 'd'
+                  }
+              
+    RelativeSpeed: 2.42401721664275
+    GroupName: (2 properties)
+    ClockSpeed: 2095
+    FileName: Creating Property Bags
+    RepeatCount: 100
+    Throughput: 5918.7707896824
     BenchmarkInput: 
       FileName: Creating Property Bags
       GroupName: (2 properties)
   - Technique: New-Object ; Add-Member
     Time: 
-      Ticks: 350569
+      Ticks: 458924
       Days: 0
       Hours: 0
-      Milliseconds: 35
+      Milliseconds: 45
       Minutes: 0
       Seconds: 0
-      TotalDays: 4.05751157407407e-07
-      TotalHours: 9.73802777777778e-06
-      TotalMilliseconds: 35.0569
-      TotalMinutes: 0.000584281666666667
-      TotalSeconds: 0.0350569
+      TotalDays: 5.31162037037037e-07
+      TotalHours: 1.27478888888889e-05
+      TotalMilliseconds: 45.8924
+      TotalMinutes: 0.000764873333333333
+      TotalSeconds: 0.0458924
       FileName: Creating Property Bags
       GroupName: (2 properties)
       BenchmarkInput: 
+        GroupName: (2 properties)
+        FileName: Creating Property Bags
         ScriptBlock: |
           
                   $o = New-Object PSObject
                   Add-Member -InputObject $o -MemberType NoteProperty -Name a -Value b  
                   Add-Member -InputObject $o -MemberType NoteProperty -Name c -Value d  -PassThru
               
-        FileName: Creating Property Bags
-        GroupName: (2 properties)
-    RelativeSpeed: 5.9322954564684
+    RelativeSpeed: 6.58427546628408
     GroupName: (2 properties)
-    ClockSpeed: 2594
+    ClockSpeed: 2095
     FileName: Creating Property Bags
     RepeatCount: 100
-    Throughput: 2852.50549820435
+    Throughput: 2179.01003216219
     BenchmarkInput: 
       FileName: Creating Property Bags
       GroupName: (2 properties)
   - Technique: New-Object | Add-Member
     Time: 
-      Ticks: 1245510
+      Ticks: 1461194
       Days: 0
       Hours: 0
-      Milliseconds: 124
+      Milliseconds: 146
       Minutes: 0
       Seconds: 0
-      TotalDays: 1.4415625e-06
-      TotalHours: 3.45975e-05
-      TotalMilliseconds: 124.551
-      TotalMinutes: 0.00207585
-      TotalSeconds: 0.124551
+      TotalDays: 1.69119675925926e-06
+      TotalHours: 4.05887222222222e-05
+      TotalMilliseconds: 146.1194
+      TotalMinutes: 0.00243532333333333
+      TotalSeconds: 0.1461194
       FileName: Creating Property Bags
       GroupName: (2 properties)
       BenchmarkInput: 
+        GroupName: (2 properties)
+        FileName: Creating Property Bags
         ScriptBlock: |
            
                   New-Object PSObject | 
                       Add-Member NoteProperty a b -PassThru |
                       Add-Member NoteProperty c d -PassThru
               
-        FileName: Creating Property Bags
-        GroupName: (2 properties)
-    RelativeSpeed: 21.0764024029106
+    RelativeSpeed: 20.9640459110474
     GroupName: (2 properties)
-    ClockSpeed: 2594
+    ClockSpeed: 2095
     FileName: Creating Property Bags
     RepeatCount: 100
-    Throughput: 802.88395918138
+    Throughput: 684.371821948352
     BenchmarkInput: 
       FileName: Creating Property Bags
       GroupName: (2 properties)
 FileName: Creating Property Bags
-ClockSpeed: 2594
+ClockSpeed: 2095
 ---
 
 
 ### (1 property)
 
 
-|Technique                        |Time           |RelativeSpeed|Throughput|
-|---------------------------------|---------------|-------------|----------|
-|PSCustomObject                   |00:00:00.008106|1x           |12336.08/s|
-|Static Constructors Only         |00:00:00.014777|1.82x        |6767.09/s |
-|New-Object PSObject -Property @{}|00:00:00.021993|2.71x        |4546.76/s |
-|New-Object ; Add-Member          |00:00:00.025174|3.11x        |3972.23/s |
-|New-Object \| Add-Member         |00:00:00.069587|8.58x        |1437.05/s |
+|Technique                        |RepeatCount|Time           |RelativeSpeed|Throughput|
+|---------------------------------|-----------|---------------|-------------|----------|
+|PSCustomObject                   |100        |00:00:00.009428|1x           |10605.69/s|
+|Static Constructors Only         |100        |00:00:00.016386|1.74x        |6102.77/s |
+|New-Object PSObject -Property @{}|100        |00:00:00.017108|1.81x        |5845.18/s |
+|New-Object ; Add-Member          |100        |00:00:00.029818|3.16x        |3353.62/s |
+|New-Object \| Add-Member         |100        |00:00:00.087067|9.23x        |1148.53/s |
 
 
 ### (2 properties)
 
 
-|Technique                        |Time           |RelativeSpeed|Throughput|
-|---------------------------------|---------------|-------------|----------|
-|PSCustomObject                   |00:00:00.005909|1x           |16921.91/s|
-|New-Object PSObject -Property @{}|00:00:00.013981|2.37x        |7152.31/s |
-|Static Constructors Only         |00:00:00.018781|3.18x        |5324.33/s |
-|New-Object ; Add-Member          |00:00:00.035056|5.93x        |2852.51/s |
-|New-Object \| Add-Member         |00:00:00.124551|21.08x       |802.88/s  |
+|Technique                        |RepeatCount|Time           |RelativeSpeed|Throughput|
+|---------------------------------|-----------|---------------|-------------|----------|
+|PSCustomObject                   |100        |00:00:00.006970|1x           |14347.2/s |
+|Static Constructors Only         |100        |00:00:00.010633|1.53x        |9403.98/s |
+|New-Object PSObject -Property @{}|100        |00:00:00.016895|2.42x        |5918.77/s |
+|New-Object ; Add-Member          |100        |00:00:00.045892|6.58x        |2179.01/s |
+|New-Object \| Add-Member         |100        |00:00:00.146119|20.96x       |684.37/s  |

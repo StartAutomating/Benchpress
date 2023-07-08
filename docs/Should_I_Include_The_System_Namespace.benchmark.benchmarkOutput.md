@@ -3,62 +3,64 @@ layout: Benchmark
 title: Should I Include The System Namespace
 
 Data: 
-  - Technique: NoSytemNamespace
-    Time: 
-      Ticks: 60220
-      Days: 0
-      Hours: 0
-      Milliseconds: 6
-      Minutes: 0
-      Seconds: 0
-      TotalDays: 6.96990740740741e-08
-      TotalHours: 1.67277777777778e-06
-      TotalMilliseconds: 6.022
-      TotalMinutes: 0.000100366666666667
-      TotalSeconds: 0.006022
-      FileName: Should I Include The System Namespace
-      GroupName: 
-      BenchmarkInput: 
-        ScriptBlock: |
-          
-                  [IO.Path]
-              
-        FileName: Should I Include The System Namespace
-    RelativeSpeed: 1
-    ClockSpeed: 2397
-    FileName: Should I Include The System Namespace
-    Throughput: 16605.7788110262
-    BenchmarkInput: 
-      FileName: Should I Include The System Namespace
   - Technique: SystemNamespaceIncluded
     Time: 
-      Ticks: 317573
+      Ticks: 46568
       Days: 0
       Hours: 0
-      Milliseconds: 31
+      Milliseconds: 4
       Minutes: 0
       Seconds: 0
-      TotalDays: 3.67561342592593e-07
-      TotalHours: 8.82147222222222e-06
-      TotalMilliseconds: 31.7573
-      TotalMinutes: 0.000529288333333333
-      TotalSeconds: 0.0317573
+      TotalDays: 5.38981481481481e-08
+      TotalHours: 1.29355555555556e-06
+      TotalMilliseconds: 4.6568
+      TotalMinutes: 7.76133333333333e-05
+      TotalSeconds: 0.0046568
       FileName: Should I Include The System Namespace
       GroupName: 
       BenchmarkInput: 
+        FileName: Should I Include The System Namespace
         ScriptBlock: |
           
                   [System.IO.Path]
               
-        FileName: Should I Include The System Namespace
-    RelativeSpeed: 5.27354699435404
-    ClockSpeed: 2397
+    RelativeSpeed: 1
+    ClockSpeed: 2793
     FileName: Should I Include The System Namespace
-    Throughput: 3148.88230422611
+    RepeatCount: 100
+    Throughput: 21473.9735440646
+    BenchmarkInput: 
+      FileName: Should I Include The System Namespace
+  - Technique: NoSytemNamespace
+    Time: 
+      Ticks: 290645
+      Days: 0
+      Hours: 0
+      Milliseconds: 29
+      Minutes: 0
+      Seconds: 0
+      TotalDays: 3.36394675925926e-07
+      TotalHours: 8.07347222222222e-06
+      TotalMilliseconds: 29.0645
+      TotalMinutes: 0.000484408333333333
+      TotalSeconds: 0.0290645
+      FileName: Should I Include The System Namespace
+      GroupName: 
+      BenchmarkInput: 
+        FileName: Should I Include The System Namespace
+        ScriptBlock: |
+          
+                  [IO.Path]
+              
+    RelativeSpeed: 6.24130304071465
+    ClockSpeed: 2793
+    FileName: Should I Include The System Namespace
+    RepeatCount: 100
+    Throughput: 3440.6234409675
     BenchmarkInput: 
       FileName: Should I Include The System Namespace
 FileName: Should I Include The System Namespace
-ClockSpeed: 2397
+ClockSpeed: 2793
 ---
 
 
@@ -67,5 +69,5 @@ ClockSpeed: 2397
 
 |Technique              |Time           |RelativeSpeed|Throughput|
 |-----------------------|---------------|-------------|----------|
-|NoSytemNamespace       |00:00:00.006022|1x           |16605.78/s|
-|SystemNamespaceIncluded|00:00:00.031757|5.27x        |3148.88/s |
+|SystemNamespaceIncluded|00:00:00.004656|1x           |21473.97/s|
+|NoSytemNamespace       |00:00:00.029064|6.24x        |3440.62/s |

@@ -5,21 +5,9 @@ layout: default
 <h1>{{page.title}}</h1>
 {% endif %}
 {% if page.ClockSpeed %}
-<h3>@ {{page.ClockSpeed}} Mhz</h3>
+<br/>
+(@ {{page.ClockSpeed}} Mhz)
+<br/>
 {% endif %}
-
-{% assign current_group_name = "" %}
-{% for benchmarkData in page.Data %}
-    
-    {% if benchmarkData.GroupName %}
-        {% if benchmarkData.GroupName != current_group_name %}
-            {% assign current_group_name = benchmarkData.GroupName %}
-            <h2>{{current_group_name}}</h2>
-        {% endif %}
-    {% endif %}
-    <h3>
-        {{benchmarkData.Technique}} ({{benchmarkData.RepeatCount}}x{% if page.ClockSpeed %} @ {{page.ClockSpeed}} Mhz {% endif %})
-    </h3>
-{% endfor %}
-
+---
 {{ content }}

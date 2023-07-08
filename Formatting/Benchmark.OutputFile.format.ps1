@@ -11,17 +11,20 @@ Write-FormatView -TypeName Benchmark.OutputFile -Action {
     [Environment]::Newline
 
     foreach ($group in $outputFileInfo.Data | Group-Object GroupName) {
-        Format-Markdown -Heading $group.Name -HeadingSize 3
+        if ($group.Name) {
+            Format-Markdown -Heading $group.Name -HeadingSize 3
+        }        
         
         [Environment]::Newline
 
         $group.Group |            
-            Select-Object Technique, @{
+            Select-Object Technique, RepeatCount, @{
                 Name='Time'
                 Expression = {
                     $_.Time.ToString().Substring(0,15)
                 }
-            }, @{
+            }, 
+            @{
                 Name = 'RelativeSpeed'
                 Expression = {
                     [Math]::Round($_.RelativeSpeed, 2).ToString() + 'x'

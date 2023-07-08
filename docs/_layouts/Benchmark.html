@@ -8,6 +8,7 @@ layout: default
 <h3>@ {{page.ClockSpeed}} Mhz</h3>
 {% endif %}
 
+{% assign current_group_name = "" %}
 {% for benchmarkData in page.Data %}
     
     {% if benchmarkData.GroupName %}

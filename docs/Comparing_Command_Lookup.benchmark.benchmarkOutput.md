@@ -5,370 +5,367 @@ title: Comparing Command Lookup
 Data: 
   - Technique: $executionContext
     Time: 
-      Ticks: 7045802
+      Ticks: 6304081
       Days: 0
       Hours: 0
-      Milliseconds: 704
+      Milliseconds: 630
       Minutes: 0
       Seconds: 0
-      TotalDays: 8.15486342592593e-06
-      TotalHours: 0.000195716722222222
-      TotalMilliseconds: 704.5802
-      TotalMinutes: 0.0117430033333333
-      TotalSeconds: 0.7045802
+      TotalDays: 7.2963900462963e-06
+      TotalHours: 0.000175113361111111
+      TotalMilliseconds: 630.4081
+      TotalMinutes: 0.0105068016666667
+      TotalSeconds: 0.6304081
       FileName: Comparing Command Lookup
       GroupName: Applications
       BenchmarkInput: 
+        GroupName: Applications
         ScriptBlock: |
           
                   $ExecutionContext.SessionState.InvokeCommand.GetCommand('git','Application')
               
-        GroupName: Applications
         FileName: Comparing Command Lookup
     RelativeSpeed: 1
     GroupName: Applications
-    ClockSpeed: 2295
+    ClockSpeed: 2594
     FileName: Comparing Command Lookup
-    Throughput: 141.928484507512
+    Throughput: 158.627403423275
     BenchmarkInput: 
       GroupName: Applications
       FileName: Comparing Command Lookup
   - Technique: Get-Command
     Time: 
-      Ticks: 20266446
+      Ticks: 17371990
       Days: 0
       Hours: 0
-      Milliseconds: 26
+      Milliseconds: 737
       Minutes: 0
-      Seconds: 2
-      TotalDays: 2.34565347222222e-05
-      TotalHours: 0.000562956833333333
-      TotalMilliseconds: 2026.6446
-      TotalMinutes: 0.03377741
-      TotalSeconds: 2.0266446
+      Seconds: 1
+      TotalDays: 2.01064699074074e-05
+      TotalHours: 0.000482555277777778
+      TotalMilliseconds: 1737.199
+      TotalMinutes: 0.0289533166666667
+      TotalSeconds: 1.737199
       FileName: Comparing Command Lookup
       GroupName: Applications
       BenchmarkInput: 
+        GroupName: Applications
         ScriptBlock: |
           
                   Get-Command git -CommandType Application
               
-        GroupName: Applications
         FileName: Comparing Command Lookup
-    RelativeSpeed: 2.87638596713334
+    RelativeSpeed: 2.75567366599509
     GroupName: Applications
-    ClockSpeed: 2295
+    ClockSpeed: 2594
     FileName: Comparing Command Lookup
-    Throughput: 49.3426425136405
+    Throughput: 57.5639290605164
     BenchmarkInput: 
       GroupName: Applications
       FileName: Comparing Command Lookup
   - Technique: $executionContext
     Time: 
-      Ticks: 92769
+      Ticks: 62671
+      Days: 0
+      Hours: 0
+      Milliseconds: 6
+      Minutes: 0
+      Seconds: 0
+      TotalDays: 7.25358796296296e-08
+      TotalHours: 1.74086111111111e-06
+      TotalMilliseconds: 6.2671
+      TotalMinutes: 0.000104451666666667
+      TotalSeconds: 0.0062671
+      FileName: Comparing Command Lookup
+      GroupName: Cmdlets
+      BenchmarkInput: 
+        GroupName: Cmdlets
+        ScriptBlock: |
+          
+                  $ExecutionContext.SessionState.InvokeCommand.GetCommand('Get-Process','Cmdlet')
+              
+        FileName: Comparing Command Lookup
+    RelativeSpeed: 1
+    GroupName: Cmdlets
+    ClockSpeed: 2594
+    FileName: Comparing Command Lookup
+    Throughput: 15956.3434443363
+    BenchmarkInput: 
+      GroupName: Cmdlets
+      FileName: Comparing Command Lookup
+  - Technique: Get-Command
+    Time: 
+      Ticks: 122871
+      Days: 0
+      Hours: 0
+      Milliseconds: 12
+      Minutes: 0
+      Seconds: 0
+      TotalDays: 1.42211805555556e-07
+      TotalHours: 3.41308333333333e-06
+      TotalMilliseconds: 12.2871
+      TotalMinutes: 0.000204785
+      TotalSeconds: 0.0122871
+      FileName: Comparing Command Lookup
+      GroupName: Cmdlets
+      BenchmarkInput: 
+        GroupName: Cmdlets
+        ScriptBlock: |
+          
+                  Get-Command Get-Process -CommandType Cmdlet
+              
+        FileName: Comparing Command Lookup
+    RelativeSpeed: 1.96057187534905
+    GroupName: Cmdlets
+    ClockSpeed: 2594
+    FileName: Comparing Command Lookup
+    Throughput: 8138.61692344003
+    BenchmarkInput: 
+      GroupName: Cmdlets
+      FileName: Comparing Command Lookup
+  - Technique: $executionContext
+    Time: 
+      Ticks: 97162
       Days: 0
       Hours: 0
       Milliseconds: 9
       Minutes: 0
       Seconds: 0
-      TotalDays: 1.07371527777778e-07
-      TotalHours: 2.57691666666667e-06
-      TotalMilliseconds: 9.2769
-      TotalMinutes: 0.000154615
-      TotalSeconds: 0.0092769
-      FileName: Comparing Command Lookup
-      GroupName: Cmdlets
-      BenchmarkInput: 
-        ScriptBlock: |
-          
-                  $ExecutionContext.SessionState.InvokeCommand.GetCommand('Get-Process','Cmdlet')
-              
-        GroupName: Cmdlets
-        FileName: Comparing Command Lookup
-    RelativeSpeed: 1
-    GroupName: Cmdlets
-    ClockSpeed: 2295
-    FileName: Comparing Command Lookup
-    Throughput: 10779.462967155
-    BenchmarkInput: 
-      GroupName: Cmdlets
-      FileName: Comparing Command Lookup
-  - Technique: Get-Command
-    Time: 
-      Ticks: 244836
-      Days: 0
-      Hours: 0
-      Milliseconds: 24
-      Minutes: 0
-      Seconds: 0
-      TotalDays: 2.83375e-07
-      TotalHours: 6.801e-06
-      TotalMilliseconds: 24.4836
-      TotalMinutes: 0.00040806
-      TotalSeconds: 0.0244836
-      FileName: Comparing Command Lookup
-      GroupName: Cmdlets
-      BenchmarkInput: 
-        ScriptBlock: |
-          
-                  Get-Command Get-Process -CommandType Cmdlet
-              
-        GroupName: Cmdlets
-        FileName: Comparing Command Lookup
-    RelativeSpeed: 2.63920059502636
-    GroupName: Cmdlets
-    ClockSpeed: 2295
-    FileName: Comparing Command Lookup
-    Throughput: 4084.36667810289
-    BenchmarkInput: 
-      GroupName: Cmdlets
-      FileName: Comparing Command Lookup
-  - Technique: $executionContext
-    Time: 
-      Ticks: 88750
-      Days: 0
-      Hours: 0
-      Milliseconds: 8
-      Minutes: 0
-      Seconds: 0
-      TotalDays: 1.02719907407407e-07
-      TotalHours: 2.46527777777778e-06
-      TotalMilliseconds: 8.875
-      TotalMinutes: 0.000147916666666667
-      TotalSeconds: 0.008875
+      TotalDays: 1.12456018518519e-07
+      TotalHours: 2.69894444444444e-06
+      TotalMilliseconds: 9.7162
+      TotalMinutes: 0.000161936666666667
+      TotalSeconds: 0.0097162
       FileName: Comparing Command Lookup
       GroupName: Aliases
       BenchmarkInput: 
+        GroupName: Aliases
         ScriptBlock: |
           
                   $ExecutionContext.SessionState.InvokeCommand.GetCommand('gps','Alias')
               
-        GroupName: Aliases
         FileName: Comparing Command Lookup
     RelativeSpeed: 1
     GroupName: Aliases
-    ClockSpeed: 2295
+    ClockSpeed: 2594
     FileName: Comparing Command Lookup
-    Throughput: 11267.6056338028
+    Throughput: 10292.0895000103
     BenchmarkInput: 
       GroupName: Aliases
       FileName: Comparing Command Lookup
   - Technique: Get-Command
     Time: 
-      Ticks: 224303
+      Ticks: 150551
       Days: 0
       Hours: 0
-      Milliseconds: 22
+      Milliseconds: 15
       Minutes: 0
       Seconds: 0
-      TotalDays: 2.59609953703704e-07
-      TotalHours: 6.23063888888889e-06
-      TotalMilliseconds: 22.4303
-      TotalMinutes: 0.000373838333333333
-      TotalSeconds: 0.0224303
+      TotalDays: 1.74248842592593e-07
+      TotalHours: 4.18197222222222e-06
+      TotalMilliseconds: 15.0551
+      TotalMinutes: 0.000250918333333333
+      TotalSeconds: 0.0150551
       FileName: Comparing Command Lookup
       GroupName: Aliases
       BenchmarkInput: 
+        GroupName: Aliases
         ScriptBlock: |
           
                   Get-Command gps -CommandType Alias
               
-        GroupName: Aliases
         FileName: Comparing Command Lookup
-    RelativeSpeed: 2.52735774647887
+    RelativeSpeed: 1.54948436631605
     GroupName: Aliases
-    ClockSpeed: 2295
+    ClockSpeed: 2594
     FileName: Comparing Command Lookup
-    Throughput: 4458.25512810796
+    Throughput: 6642.26740440117
     BenchmarkInput: 
       GroupName: Aliases
       FileName: Comparing Command Lookup
   - Technique: $executionContext
     Time: 
-      Ticks: 83448
+      Ticks: 56632
       Days: 0
       Hours: 0
-      Milliseconds: 8
+      Milliseconds: 5
       Minutes: 0
       Seconds: 0
-      TotalDays: 9.65833333333333e-08
-      TotalHours: 2.318e-06
-      TotalMilliseconds: 8.3448
-      TotalMinutes: 0.00013908
-      TotalSeconds: 0.0083448
+      TotalDays: 6.55462962962963e-08
+      TotalHours: 1.57311111111111e-06
+      TotalMilliseconds: 5.6632
+      TotalMinutes: 9.43866666666667e-05
+      TotalSeconds: 0.0056632
       FileName: Comparing Command Lookup
       GroupName: Function
       BenchmarkInput: 
+        GroupName: Function
         ScriptBlock: |
           
                   $ExecutionContext.SessionState.InvokeCommand.GetCommand('Measure-Benchmark','Function')
               
-        GroupName: Function
         FileName: Comparing Command Lookup
     RelativeSpeed: 1
     GroupName: Function
-    ClockSpeed: 2295
+    ClockSpeed: 2594
     FileName: Comparing Command Lookup
-    Throughput: 11983.5106892915
+    Throughput: 17657.8612798418
     BenchmarkInput: 
       GroupName: Function
       FileName: Comparing Command Lookup
   - Technique: Get-Command
     Time: 
-      Ticks: 192852
+      Ticks: 127815
       Days: 0
       Hours: 0
-      Milliseconds: 19
+      Milliseconds: 12
       Minutes: 0
       Seconds: 0
-      TotalDays: 2.23208333333333e-07
-      TotalHours: 5.357e-06
-      TotalMilliseconds: 19.2852
-      TotalMinutes: 0.00032142
-      TotalSeconds: 0.0192852
+      TotalDays: 1.47934027777778e-07
+      TotalHours: 3.55041666666667e-06
+      TotalMilliseconds: 12.7815
+      TotalMinutes: 0.000213025
+      TotalSeconds: 0.0127815
       FileName: Comparing Command Lookup
       GroupName: Function
       BenchmarkInput: 
+        GroupName: Function
         ScriptBlock: |
           
                   Get-Command Measure-Benchmark -CommandType Function
               
-        GroupName: Function
         FileName: Comparing Command Lookup
-    RelativeSpeed: 2.31104400345125
+    RelativeSpeed: 2.25693953948298
     GroupName: Function
-    ClockSpeed: 2295
+    ClockSpeed: 2594
     FileName: Comparing Command Lookup
-    Throughput: 5185.32346047747
+    Throughput: 7823.80784727927
     BenchmarkInput: 
       GroupName: Function
       FileName: Comparing Command Lookup
   - Technique: $executionContext
     Time: 
-      Ticks: 132194
+      Ticks: 54737
       Days: 0
       Hours: 0
-      Milliseconds: 13
+      Milliseconds: 5
       Minutes: 0
       Seconds: 0
-      TotalDays: 1.53002314814815e-07
-      TotalHours: 3.67205555555556e-06
-      TotalMilliseconds: 13.2194
-      TotalMinutes: 0.000220323333333333
-      TotalSeconds: 0.0132194
+      TotalDays: 6.33530092592593e-08
+      TotalHours: 1.52047222222222e-06
+      TotalMilliseconds: 5.4737
+      TotalMinutes: 9.12283333333333e-05
+      TotalSeconds: 0.0054737
       FileName: Comparing Command Lookup
       GroupName: All
       BenchmarkInput: 
+        GroupName: All
         ScriptBlock: |
           
                   $ExecutionContext.SessionState.InvokeCommand.GetCommand('Measure-Benchmark','All')
               
-        GroupName: All
         FileName: Comparing Command Lookup
     RelativeSpeed: 1
     GroupName: All
-    ClockSpeed: 2295
+    ClockSpeed: 2594
     FileName: Comparing Command Lookup
-    Throughput: 7564.63984749686
+    Throughput: 18269.1780696786
     BenchmarkInput: 
       GroupName: All
       FileName: Comparing Command Lookup
   - Technique: Get-Command
     Time: 
-      Ticks: 228635
+      Ticks: 177934
       Days: 0
       Hours: 0
-      Milliseconds: 22
+      Milliseconds: 17
       Minutes: 0
       Seconds: 0
-      TotalDays: 2.64623842592593e-07
-      TotalHours: 6.35097222222222e-06
-      TotalMilliseconds: 22.8635
-      TotalMinutes: 0.000381058333333333
-      TotalSeconds: 0.0228635
+      TotalDays: 2.0594212962963e-07
+      TotalHours: 4.94261111111111e-06
+      TotalMilliseconds: 17.7934
+      TotalMinutes: 0.000296556666666667
+      TotalSeconds: 0.0177934
       FileName: Comparing Command Lookup
       GroupName: All
       BenchmarkInput: 
+        GroupName: All
         ScriptBlock: |
           
                   Get-Command Measure-Benchmark
               
-        GroupName: All
         FileName: Comparing Command Lookup
-    RelativeSpeed: 1.72954143153244
+    RelativeSpeed: 3.2507079306502
     GroupName: All
-    ClockSpeed: 2295
+    ClockSpeed: 2594
     FileName: Comparing Command Lookup
-    Throughput: 4373.78354145253
+    Throughput: 5620.06137107017
     BenchmarkInput: 
       GroupName: All
       FileName: Comparing Command Lookup
   - Technique: $executionContext
     Time: 
-      Ticks: 13038722
+      Ticks: 11207545
       Days: 0
       Hours: 0
-      Milliseconds: 303
+      Milliseconds: 120
       Minutes: 0
       Seconds: 1
-      TotalDays: 1.50911134259259e-05
-      TotalHours: 0.000362186722222222
-      TotalMilliseconds: 1303.8722
-      TotalMinutes: 0.0217312033333333
-      TotalSeconds: 1.3038722
+      TotalDays: 1.29716956018519e-05
+      TotalHours: 0.000311320694444444
+      TotalMilliseconds: 1120.7545
+      TotalMinutes: 0.0186792416666667
+      TotalSeconds: 1.1207545
       FileName: Comparing Command Lookup
       GroupName: WildcardMiss
       BenchmarkInput: 
+        GroupName: WildcardMiss
         ScriptBlock: |
           
                   $ExecutionContext.SessionState.InvokeCommand.GetCommands('*ThereShouldBeNoCommandNamedLikeThisOrSomeoneIsBeingVeryRude*','All', $true)
               
-        GroupName: WildcardMiss
         FileName: Comparing Command Lookup
     RelativeSpeed: 1
     GroupName: WildcardMiss
-    ClockSpeed: 2295
+    ClockSpeed: 2594
     FileName: Comparing Command Lookup
-    Throughput: 76.6946331089811
+    Throughput: 89.225606499907
     BenchmarkInput: 
       GroupName: WildcardMiss
       FileName: Comparing Command Lookup
   - Technique: Get-Command
     Time: 
-      Ticks: 40742716
+      Ticks: 35176811
       Days: 0
       Hours: 0
-      Milliseconds: 74
+      Milliseconds: 517
       Minutes: 0
-      Seconds: 4
-      TotalDays: 4.71559212962963e-05
-      TotalHours: 0.00113174211111111
-      TotalMilliseconds: 4074.2716
-      TotalMinutes: 0.0679045266666667
-      TotalSeconds: 4.0742716
+      Seconds: 3
+      TotalDays: 4.07139016203704e-05
+      TotalHours: 0.000977133638888889
+      TotalMilliseconds: 3517.6811
+      TotalMinutes: 0.0586280183333333
+      TotalSeconds: 3.5176811
       FileName: Comparing Command Lookup
       GroupName: WildcardMiss
       BenchmarkInput: 
+        GroupName: WildcardMiss
         ScriptBlock: |
           
                   Get-Command *ThereShouldBeNoCommandNamedLikeThisOrSomeoneIsBeingVeryRude*
               
-        GroupName: WildcardMiss
         FileName: Comparing Command Lookup
-    RelativeSpeed: 3.12474765548341
+    RelativeSpeed: 3.1386722962076
     GroupName: WildcardMiss
-    ClockSpeed: 2295
+    ClockSpeed: 2594
     FileName: Comparing Command Lookup
-    Throughput: 24.5442645502573
+    Throughput: 28.427818542164
     BenchmarkInput: 
       GroupName: WildcardMiss
       FileName: Comparing Command Lookup
 FileName: Comparing Command Lookup
-ClockSpeed: 2295
+ClockSpeed: 2594
 ---
-Comparing Command Lookup
-------------------------
-> @2295 Mhz
 
 
 ### Aliases
@@ -376,8 +373,8 @@ Comparing Command Lookup
 
 |Technique        |Time           |RelativeSpeed|Throughput|
 |-----------------|---------------|-------------|----------|
-|$executionContext|00:00:00.008875|1x           |11267.61/s|
-|Get-Command      |00:00:00.022430|2.53x        |4458.26/s |
+|$executionContext|00:00:00.009716|1x           |10292.09/s|
+|Get-Command      |00:00:00.015055|1.55x        |6642.27/s |
 
 
 ### All
@@ -385,8 +382,8 @@ Comparing Command Lookup
 
 |Technique        |Time           |RelativeSpeed|Throughput|
 |-----------------|---------------|-------------|----------|
-|$executionContext|00:00:00.013219|1x           |7564.64/s |
-|Get-Command      |00:00:00.022863|1.73x        |4373.78/s |
+|$executionContext|00:00:00.005473|1x           |18269.18/s|
+|Get-Command      |00:00:00.017793|3.25x        |5620.06/s |
 
 
 ### Applications
@@ -394,8 +391,8 @@ Comparing Command Lookup
 
 |Technique        |Time           |RelativeSpeed|Throughput|
 |-----------------|---------------|-------------|----------|
-|$executionContext|00:00:00.704580|1x           |141.93/s  |
-|Get-Command      |00:00:02.026644|2.88x        |49.34/s   |
+|$executionContext|00:00:00.630408|1x           |158.63/s  |
+|Get-Command      |00:00:01.737199|2.76x        |57.56/s   |
 
 
 ### Cmdlets
@@ -403,8 +400,8 @@ Comparing Command Lookup
 
 |Technique        |Time           |RelativeSpeed|Throughput|
 |-----------------|---------------|-------------|----------|
-|$executionContext|00:00:00.009276|1x           |10779.46/s|
-|Get-Command      |00:00:00.024483|2.64x        |4084.37/s |
+|$executionContext|00:00:00.006267|1x           |15956.34/s|
+|Get-Command      |00:00:00.012287|1.96x        |8138.62/s |
 
 
 ### Function
@@ -412,8 +409,8 @@ Comparing Command Lookup
 
 |Technique        |Time           |RelativeSpeed|Throughput|
 |-----------------|---------------|-------------|----------|
-|$executionContext|00:00:00.008344|1x           |11983.51/s|
-|Get-Command      |00:00:00.019285|2.31x        |5185.32/s |
+|$executionContext|00:00:00.005663|1x           |17657.86/s|
+|Get-Command      |00:00:00.012781|2.26x        |7823.81/s |
 
 
 ### WildcardMiss
@@ -421,5 +418,5 @@ Comparing Command Lookup
 
 |Technique        |Time           |RelativeSpeed|Throughput|
 |-----------------|---------------|-------------|----------|
-|$executionContext|00:00:01.303872|1x           |76.69/s   |
-|Get-Command      |00:00:04.074271|3.12x        |24.54/s   |
+|$executionContext|00:00:01.120754|1x           |89.23/s   |
+|Get-Command      |00:00:03.517681|3.14x        |28.43/s   |
